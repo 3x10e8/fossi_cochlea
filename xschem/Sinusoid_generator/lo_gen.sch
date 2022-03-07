@@ -187,7 +187,7 @@ C {devices/lab_pin.sym} -1576486135 -284838220 0 0 {name=l6 sig_type=std_logic l
 C {devices/vsource.sym} -1576486245 -284838335 0 0 {name=V2 value=1.2}
 C {devices/gnd.sym} -1576486245 -284838305 0 0 {name=l13 lab=GND}
 C {devices/vdd.sym} -1576486245 -284838365 0 0 {name=l15 lab=VDD}
-C {devices/vsource.sym} -1576486225 -284838190 0 1 {name=V9 value="DC 0 PWL(0 0 6u 0 6.01u 1.2 10u 1.2 10.01u 0 15u 0 15.01u 1.2)"}
+C {devices/vsource.sym} -1576486225 -284838190 0 1 {name=V9 value="DC 0 PWL(0u 0 2u 0 2.01u 1.2 3u 1.2 3.01u 0 4u 0 4.01u 1.2)"}
 C {devices/gnd.sym} -1576486225 -284838160 0 0 {name=l88 lab=GND}
 C {devices/gnd.sym} -1576486260 -284838000 0 0 {name=l89 lab=GND}
 C {devices/vsource.sym} -1576486260 -284838030 0 1 {name=V10 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_cycle*1/f\} \{1/f\})"}
@@ -197,7 +197,7 @@ C {devices/netlist.sym} -1576483830 -284838250 0 0 {name=s1 value="
 .options abstol=1e-14 reltol=1e-4
 .param f=2560k
 .param duty_cycle=0.5
-.tran \{(1/100)*(1/f)\} \{256/f\}
+.tran \{(1/100)*(1/f)\} \{100/f\}
 .save all
 "}
 C {devices/lab_pin.sym} -1576486140 -284838140 0 0 {name=l4 sig_type=std_logic lab=VDD}
