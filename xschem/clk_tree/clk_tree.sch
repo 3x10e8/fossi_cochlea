@@ -12,8 +12,6 @@ clock frequency } -141605 -31680 0 0 0.4 0.4 {}
 T {Beware!!
 Setup violation in the generation of 'f' clock signal.
 } -141605 -31820 0 0 0.4 0.4 {}
-T {The first block is being added to remove the 1 cycle delay between all the subsequent div-2 clocks
-} -141605 -31995 0 0 0.4 0.4 {}
 N -142200 -31880 -142170 -31880 { lab=#net1}
 N -142200 -31940 -142200 -31880 { lab=#net1}
 N -142200 -31940 -141960 -31940 { lab=#net1}

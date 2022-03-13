@@ -82,7 +82,7 @@ C {devices/lab_pin.sym} 1975 -45 0 0 {name=l6 sig_type=std_logic lab=in3}
 C {devices/lab_pin.sym} 4010 -580 2 0 {name=l7 sig_type=std_logic lab=out}
 C {devices/gnd.sym} 1975 -210 0 1 {name=l89 lab=GND}
 C {devices/vsource.sym} 2055 -240 0 0 {name=V10 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_clk*1/f\} \{1/f\})"}
-C {devices/lab_pin.sym} 2055 -270 0 1 {name=l8 sig_type=std_logic lab=sinusoid}
+C {devices/lab_pin.sym} 2055 -270 0 1 {name=l8 sig_type=std_logic lab=clk}
 C {devices/gnd.sym} 1845 -685 0 0 {name=l88 lab=GND}
 C {devices/lab_pin.sym} 1975 -270 0 0 {name=l9 sig_type=std_logic lab=rstb}
 C {devices/gnd.sym} 1975 -90 0 1 {name=l10 lab=GND}
@@ -261,7 +261,4 @@ C {devices/lab_pin.sym} 2670 205 0 0 {name=l111 sig_type=std_logic lab=clk_32b}
 C {devices/lab_pin.sym} 2670 280 0 0 {name=l112 sig_type=std_logic lab=clk_128}
 C {sky130_stdcells/and4_1.sym} 2850 -405 0 0 {name=x30 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 1920 -540 0 0 {name=l32 sig_type=std_logic lab=rstb}
-C {devices/lab_pin.sym} 1920 -580 1 0 {name=l113 sig_type=std_logic lab=clk}
-C {sky130_stdcells/and2_1.sym} 1860 -580 0 0 {name=x31 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {devices/lab_pin.sym} 1800 -560 0 0 {name=l20 sig_type=std_logic lab=rstb}
-C {devices/lab_pin.sym} 1800 -600 0 0 {name=l70 sig_type=std_logic lab=sinusoid}
+C {devices/lab_pin.sym} 1920 -580 0 0 {name=l113 sig_type=std_logic lab=clk}
