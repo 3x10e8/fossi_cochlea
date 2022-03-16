@@ -82,9 +82,9 @@ C {devices/lab_pin.sym} 1975 -45 0 0 {name=l6 sig_type=std_logic lab=in3}
 C {devices/lab_pin.sym} 4010 -580 2 0 {name=l7 sig_type=std_logic lab=out}
 C {devices/gnd.sym} 1975 -210 0 1 {name=l89 lab=GND}
 C {devices/vsource.sym} 2055 -240 0 0 {name=V10 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_clk*1/f\} \{1/f\})"}
-C {devices/lab_pin.sym} 2055 -270 0 1 {name=l8 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 2055 -270 0 1 {name=l8 sig_type=std_logic lab=clk_ext}
 C {devices/gnd.sym} 1845 -685 0 0 {name=l88 lab=GND}
-C {devices/lab_pin.sym} 1975 -270 0 0 {name=l9 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 1975 -270 0 0 {name=l9 sig_type=std_logic lab=rst_ext}
 C {devices/gnd.sym} 1975 -90 0 1 {name=l10 lab=GND}
 C {devices/gnd.sym} 1975 15 0 1 {name=V7 value="DC 0 PULSE(1.2 0 1n 1n 1n \{duty_cycle*1/(4*f)\} \{1/(4*f)\})"
 }
@@ -104,9 +104,8 @@ C {devices/netlist.sym} 3465 -930 0 0 {name=s1 value="
 "}
 C {sky130_stdcells/ebufn_1.sym} 3720 -480 0 0 {name=x4 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/ebufn_1.sym} 3720 -400 0 0 {name=x6 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {devices/vsource.sym} 1975 -240 0 1 {name=V9 value="DC 0 PWL(0u 0 0.6u 0 0.61u 1.2 6u 1.2)"}
+C {devices/vsource.sym} 1975 -240 0 1 {name=V9 value="DC 0 PWL(0u 1.2 0.6u 1.2 0.61u 0 6u 0)"}
 C {sky130_stdcells/ebufn_1.sym} 3720 -560 0 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {inv/inv.sym} 3095 -810 0 0 {name=X1 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
 C {devices/vsource.sym} 1975 -120 0 1 {name=V16   value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_cycle1*1/f\} \{1/f\} phase1)"}
 C {devices/vsource.sym} 2055 -120 0 0 {name=V3 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_cycle1*2/f\} \{2/f\} phase1)"}
 C {devices/vsource.sym} 1975 -15 0 1 {name=V4 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_cycle1*4/f\} \{4/f\} phase1)"}
@@ -114,8 +113,7 @@ C {devices/lab_pin.sym} 2150 -520 2 0 {name=l16 sig_type=std_logic lab=clk_8}
 C {devices/lab_pin.sym} 2150 -540 2 0 {name=l17 sig_type=std_logic lab=clk_4}
 C {devices/lab_pin.sym} 2150 -560 2 0 {name=l18 sig_type=std_logic lab=clk_2}
 C {devices/lab_pin.sym} 2150 -500 2 0 {name=l19 sig_type=std_logic lab=clk_16}
-C {devices/lab_pin.sym} 3045 -810 0 0 {name=l24 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 3145 -810 2 0 {name=l25 sig_type=std_logic lab=ctr1}
+C {devices/lab_pin.sym} 3295 -875 2 0 {name=l25 sig_type=std_logic lab=ctr1}
 C {devices/lab_pin.sym} 3490 -560 0 0 {name=l28 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 3490 -480 0 0 {name=l23 sig_type=std_logic lab=in2}
 C {devices/lab_pin.sym} 3490 -400 0 0 {name=l36 sig_type=std_logic lab=in3}
@@ -262,3 +260,15 @@ C {devices/lab_pin.sym} 2670 280 0 0 {name=l112 sig_type=std_logic lab=clk_128}
 C {sky130_stdcells/and4_1.sym} 2850 -405 0 0 {name=x30 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 1920 -540 0 0 {name=l32 sig_type=std_logic lab=rstb}
 C {devices/lab_pin.sym} 1920 -580 0 0 {name=l113 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 2995 -835 0 0 {name=l20 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 2995 -815 0 0 {name=l70 sig_type=std_logic lab=rstb}
+C {sky130_stdcells/dfrtp_1.sym} 3085 -835 0 0 {name=x32 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 2995 -855 0 0 {name=l71 sig_type=std_logic lab=clk}
+C {sky130_stdcells/nand2_1.sym} 3235 -875 0 0 {name=x31 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 3175 -895 0 0 {name=l24 sig_type=std_logic lab=clk}
+C {Clock Synchronizer/synchronizer.sym} -1135 840 0 0 {name=X1}
+C {devices/lab_pin.sym} 1795 -580 2 0 {name=l114 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 1795 -540 2 0 {name=l115 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 1525 -580 0 0 {name=l116 sig_type=std_logic lab=rst_ext}
+C {devices/lab_pin.sym} 1525 -540 2 1 {name=l117 sig_type=std_logic lab=clk_ext}
+C {devices/lab_pin.sym} 1525 -500 2 1 {name=l118 sig_type=std_logic lab=VDD}
