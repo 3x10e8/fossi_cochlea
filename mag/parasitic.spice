@@ -1,0 +1,32 @@
+* SPICE3 file created from parasitic.ext - technology: sky130A
+
+X0 gnd out1 sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X1 gnd out1 sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3.002e+07u
+X2 gnd out1 sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3.002e+07u
+X3 cs1top phi1b in w_1599_n44# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 out2 phi2 mimsmall2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X5 out1 gnd sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3e+07u
+X6 gnd out3 sky130_fd_pr__cap_mim_m3_1 l=2.75e+07u w=2.75e+07u
+X7 gnd out1 sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X8 out1 gnd sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3.002e+07u
+X9 gnd cs1top sky130_fd_pr__cap_mim_m3_1 l=7e+06u w=7e+06u
+X10 out1 gnd sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3.002e+07u
+X11 mimsmall2 phi1 out1 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X12 gnd mimsmall2 sky130_fd_pr__cap_mim_m3_1 l=3.89e+06u w=3.89e+06u
+X13 out2 phi2b mimsmall2 out1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X14 mimsmall3 phi1 out2 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X15 out1 gnd sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3e+07u
+X16 mimsmall2 phi1b out1 out1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X17 gnd out2 sky130_fd_pr__cap_mim_m3_1 l=2.4e+07u w=2.4e+07u
+X18 out3 phi2 mimsmall3 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X19 mimsmall3 phi1b out2 out2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X20 gnd out2 sky130_fd_pr__cap_mim_m3_1 l=2.4e+07u w=2.4e+07u
+X21 out1 phi2 cs1top gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X22 out2 gnd sky130_fd_pr__cap_mim_m3_2 l=2.4e+07u w=2.4e+07u
+X23 out3 phi2b mimsmall3 out2 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X24 out1 phi2b cs1top w_1599_n44# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X25 cs1top phi1 in gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X26 gnd mimsmall3 sky130_fd_pr__cap_mim_m3_1 l=2.2e+06u w=2.3e+06u
+X27 out2 gnd sky130_fd_pr__cap_mim_m3_2 l=2.4e+07u w=2.4e+07u
+C0 cs1top gnd 3.53fF
+C1 out3 gnd 15.67fF

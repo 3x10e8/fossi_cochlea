@@ -1,0 +1,57 @@
+* SPICE3 file created from 256bit_q14_37.ext - technology: sky130A
+
+.option scale=10000u
+
+X0 c1 PHI2 cs1 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X1 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=3000
+X2 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=1500
+X3 cs3 GND sky130_fd_pr__cap_mim_m3_1 l=200 w=250
+X4 c2 GND sky130_fd_pr__cap_mim_m3_1 l=3000 w=2500
+X5 GND c3 sky130_fd_pr__cap_mim_m3_2 l=3000 w=2501
+X6 cs2 PHI1 c1 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X7 cs2 GND sky130_fd_pr__cap_mim_m3_1 l=200 w=500
+X8 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=3000
+X9 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=3000
+X10 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=1500
+X11 c2 PHI2b cs2 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X12 c3 PHI2b cs3 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X13 GND c2 sky130_fd_pr__cap_mim_m3_2 l=3000 w=2500
+X14 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=3000
+X15 cs3 PHI1b c2 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X16 cs1 PHI1 in GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X17 c2 GND sky130_fd_pr__cap_mim_m3_1 l=3000 w=2500
+X18 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=3000
+X19 c1 PHI2b cs1 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X20 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=3000
+X21 cs1 GND sky130_fd_pr__cap_mim_m3_1 l=400 w=500
+X22 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=3000
+X23 GND c2 sky130_fd_pr__cap_mim_m3_2 l=3000 w=2500
+X24 cs2 PHI1b c1 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X25 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=3000
+X26 c2 PHI2 cs2 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X27 c3 PHI2 cs3 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X28 c1 GND sky130_fd_pr__cap_mim_m3_1 l=2000 w=1500
+X29 cs1 PHI1b in VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X30 cs3 PHI1 c2 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X31 c3 GND sky130_fd_pr__cap_mim_m3_1 l=3000 w=2501
+X32 GND c1 sky130_fd_pr__cap_mim_m3_2 l=2000 w=1500
+C0 c3 VDD 3.14fF
+C1 PHI1 PHI2b 8.58fF
+C2 c3 c2 3.80fF
+C3 in PHI1b 7.01fF
+C4 PHI1 PHI1b 2.18fF
+C5 c3 PHI1b 3.74fF
+C6 PHI1 PHI2 3.46fF
+C7 PHI1b VDD 4.12fF
+C8 PHI2b PHI1b 3.48fF
+C9 in VDD 5.55fF
+C10 PHI2b PHI2 2.18fF
+C11 PHI2 GND 18.68fF
+C12 PHI1 GND 9.80fF
+C13 c3 GND 72.66fF
+C14 c2 GND 140.11fF
+C15 c1 GND 281.77fF
+C16 in GND 5.01fF
+C17 PHI2b GND 7.54fF
+C18 PHI1b GND 7.50fF
+C19 VDD GND 7.99fF
