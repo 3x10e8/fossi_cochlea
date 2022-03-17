@@ -14,7 +14,7 @@ N 0 0 20 0 { lab=CLK}
 N 0 0 0 90 { lab=CLK}
 N -230 90 0 90 { lab=CLK}
 C {sky130_stdcells/xor2_1.sym} -90 20 0 0 {name=x3 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/dfxtp_1.sym} 110 10 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/ipin.sym} -230 40 0 0 {name=p1 lab=T}
 C {devices/ipin.sym} -230 90 0 0 {name=p2 lab=CLK}
 C {devices/opin.sym} 270 0 0 0 {name=p3 lab=Q}
+C {sky130_stdcells/dfxtp_1.sym} 110 10 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
