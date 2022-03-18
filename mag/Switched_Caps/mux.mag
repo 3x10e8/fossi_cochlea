@@ -1,0 +1,114 @@
+magic
+tech sky130A
+timestamp 1647510647
+<< nwell >>
+rect -59 95 110 182
+<< nmos >>
+rect -1 -21 14 21
+rect 43 -21 58 21
+<< pmos >>
+rect -1 114 14 156
+rect 43 114 58 156
+<< ndiff >>
+rect -30 9 -1 21
+rect -30 -8 -24 9
+rect -7 -8 -1 9
+rect -30 -21 -1 -8
+rect 14 9 43 21
+rect 14 -8 20 9
+rect 37 -8 43 9
+rect 14 -21 43 -8
+rect 58 9 87 21
+rect 58 -8 64 9
+rect 81 -8 87 9
+rect 58 -21 87 -8
+<< pdiff >>
+rect -30 144 -1 156
+rect -30 127 -24 144
+rect -7 127 -1 144
+rect -30 114 -1 127
+rect 14 144 43 156
+rect 14 127 20 144
+rect 37 127 43 144
+rect 14 114 43 127
+rect 58 144 87 156
+rect 58 127 64 144
+rect 81 127 87 144
+rect 58 114 87 127
+<< ndiffc >>
+rect -24 -8 -7 9
+rect 20 -8 37 9
+rect 64 -8 81 9
+<< pdiffc >>
+rect -24 127 -7 144
+rect 20 127 37 144
+rect 64 127 81 144
+<< poly >>
+rect -52 205 -25 206
+rect -52 198 58 205
+rect -52 189 -47 198
+rect -59 181 -47 189
+rect -30 190 58 198
+rect -30 181 -22 190
+rect -59 173 -22 181
+rect -59 44 -41 173
+rect -1 156 14 169
+rect 43 156 58 190
+rect -1 80 14 114
+rect 43 101 58 114
+rect -1 65 58 80
+rect -59 29 14 44
+rect -1 21 14 29
+rect 43 21 58 65
+rect -1 -34 14 -21
+rect 43 -38 58 -21
+rect 37 -46 64 -38
+rect 37 -63 42 -46
+rect 59 -63 64 -46
+rect 37 -71 64 -63
+<< polycont >>
+rect -47 181 -30 198
+rect 42 -63 59 -46
+<< locali >>
+rect -50 198 -27 206
+rect -50 181 -47 198
+rect -30 181 -27 198
+rect -50 173 -27 181
+rect -28 144 -3 156
+rect -28 127 -24 144
+rect -7 127 -3 144
+rect -28 114 -3 127
+rect 16 144 41 156
+rect 16 127 20 144
+rect 37 127 41 144
+rect 16 114 41 127
+rect 60 144 85 156
+rect 60 127 64 144
+rect 81 127 85 144
+rect 60 114 85 127
+rect -27 21 -10 114
+rect 20 21 37 114
+rect 65 21 82 114
+rect -28 9 -3 21
+rect -28 -8 -24 9
+rect -7 -8 -3 9
+rect -28 -21 -3 -8
+rect 16 9 41 21
+rect 16 -8 20 9
+rect 37 -8 41 9
+rect 16 -21 41 -8
+rect 60 9 85 21
+rect 60 -8 64 9
+rect 81 -8 85 9
+rect 60 -21 85 -8
+rect 39 -46 62 -38
+rect 39 -63 42 -46
+rect 59 -63 62 -46
+rect 39 -71 62 -63
+<< labels >>
+flabel locali -26 -20 -4 -9 0 FreeSans 80 0 0 0 Vref1
+flabel locali 61 -21 83 -10 0 FreeSans 80 0 0 0 Vref2
+flabel locali 18 -20 40 -9 0 FreeSans 80 0 0 0 Out
+flabel space -51 200 -29 211 0 FreeSans 80 0 0 0 C
+flabel space 39 -76 61 -65 0 FreeSans 80 0 0 0 Cbar
+<< end >>
