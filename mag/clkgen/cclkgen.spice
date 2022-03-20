@@ -1,0 +1,23 @@
+* SPICE3 file created from cclkgen.ext - technology: sky130A
+
+.option scale=0.01u
+
+X0 GND comp_clks_0/this comp_clks_0/clka GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X1 GND comp_clks_0/clk comp_clks_0/this GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X2 comp_clks_0/clkt VDD comp_clks_0/clk GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X3 VDD comp_clks_0/this comp_clks_0/clka VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X4 VDD comp_clks_0/clk comp_clks_0/this VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X5 comp_clks_0/clkt GND comp_clks_0/clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X6 comp_clks_0/clkb comp_clks_0/clkt GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X7 comp_clks_0/clkb comp_clks_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X8 comp_clks_0/clk out VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X9 comp_clks_0/clk Vnb inv_weak_pulldown_0/int GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X10 inv_weak_pulldown_0/int out GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X11 out in VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X12 out Vnb int GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+X13 int in GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=4.2e+07 l=1.5e+07
+Xsky130_fd_sc_lp__dfrbp_1_0 sky130_fd_sc_lp__and2_1_0/A sky130_fd_sc_lp__dfrbp_1_0/D
++ sky130_fd_sc_lp__dfrbp_1_0/RESET_B GND GND VDD VDD sky130_fd_sc_lp__and2_1_0/B sky130_fd_sc_lp__dfrbp_1_0/D
++ sky130_fd_sc_lp__dfrbp_1
+Xsky130_fd_sc_lp__and2_1_0 sky130_fd_sc_lp__and2_1_0/A sky130_fd_sc_lp__and2_1_0/B
++ GND GND VDD VDD in sky130_fd_sc_lp__and2_1

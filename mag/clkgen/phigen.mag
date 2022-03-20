@@ -1,8 +1,9 @@
 magic
 tech sky130A
-timestamp 1647673025
+timestamp 1647673293
 << nwell >>
-rect 94 222 244 310
+rect 242 310 327 323
+rect 34 222 327 310
 << nmos >>
 rect 183 75 198 117
 << pmos >>
@@ -66,11 +67,9 @@ rect 183 62 198 75
 rect 181 182 198 199
 rect 133 149 150 166
 << locali >>
-rect 77 349 95 366
-rect 112 349 143 366
+rect 77 349 143 366
 rect 160 349 191 366
-rect 208 349 239 366
-rect 256 349 269 366
+rect 208 349 269 366
 rect 116 270 133 349
 rect 116 245 133 253
 rect 160 270 177 278
@@ -93,32 +92,33 @@ rect 160 33 177 80
 rect 77 16 95 33
 rect 112 16 143 33
 rect 160 16 191 33
-rect 208 16 239 33
-rect 256 16 269 33
+rect 208 16 269 33
 << viali >>
-rect 95 349 112 366
 rect 143 349 160 366
 rect 191 349 208 366
-rect 239 349 256 366
 rect 95 16 112 33
 rect 143 16 160 33
 rect 191 16 208 33
-rect 239 16 256 33
 << metal1 >>
 rect 77 366 269 382
-rect 77 349 95 366
-rect 112 349 143 366
+rect 77 349 143 366
 rect 160 349 191 366
-rect 208 349 239 366
-rect 256 349 269 366
+rect 208 349 269 366
 rect 77 333 269 349
 rect 77 33 269 49
 rect 77 16 95 33
 rect 112 16 143 33
 rect 160 16 191 33
-rect 208 16 239 33
-rect 256 16 269 33
+rect 208 16 269 33
 rect 77 0 269 16
+use inv_weak_pulldown  inv_weak_pulldown_0
+timestamp 1647673223
+transform 1 0 -144 0 1 0
+box 77 0 269 382
+use comp_clks  comp_clks_0
+timestamp 1647662433
+transform 1 0 72 0 1 0
+box 151 0 596 382
 << labels >>
 rlabel locali 269 358 269 358 3 VDD
 rlabel locali 269 24 269 24 3 GND

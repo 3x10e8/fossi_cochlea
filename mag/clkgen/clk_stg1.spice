@@ -1,0 +1,8 @@
+* SPICE3 file created from clk_stg1.ext - technology: sky130A
+
+.option scale=5000u
+
+X0 GND clk clki GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X1 clkt VDD clk GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X2 VDD clk clki VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X3 clkt GND clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30

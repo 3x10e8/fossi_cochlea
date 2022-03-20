@@ -1,0 +1,160 @@
+**.subckt phi2gen clk phi2 phi2b Vpb Vnb phi1 phi1b
+*.ipin clk
+*.opin phi2
+*.opin phi2b
+*.ipin Vpb
+*.ipin Vnb
+*.opin phi1
+*.opin phi1b
+X4 phi2dd phi2 phi2b comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X1 clk clki clkt comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X2 clki phi2d Vnb inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X3 phi2d phi2dd Vpb inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
+XM1 net3 clkt GND GND sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 phi1d clkt VDD VDD sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 phi1d Vnb net3 GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 phi1dd phi1d GND GND sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM5 net4 phi1d VDD VDD sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM6 phi1dd Vpb net4 VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM7 GND phi1dd net1 GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM8 VDD phi1dd net1 VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM9 GND net1 phi1 GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM10 VDD net1 phi1 VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM11 phi1b net2 GND GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM12 phi1b net2 VDD VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM13 net2 VDD phi1dd GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM14 net2 GND phi1dd VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+**.ends
+
+* expanding   symbol:  clkgen/comp_clks.sym # of pins=3
+* sym_path: /home/sky/fossi_cochlea/xschem/clkgen/comp_clks.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/clkgen/comp_clks.sch
+.subckt comp_clks  clk clka clkb   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.ipin clk
+*.opin clka
+*.opin clkb
+X3 clk clkt GND VDD transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X1 clk clki inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X2 clki clka inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+XM7 clkb clkt GND GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM8 clkb clkt VDD VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  clkgen/comp_clks_1stage.sym # of pins=3
+* sym_path: /home/sky/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sch
+.subckt comp_clks_1stage  clk clka clkb   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.ipin clk
+*.opin clka
+*.opin clkb
+X3 clk clkb GND VDD transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X1 clk clka inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+.ends
+
+
+* expanding   symbol:  inv/inv_weak_pulldown.sym # of pins=3
+* sym_path: /home/sky/fossi_cochlea/xschem/inv/inv_weak_pulldown.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/inv/inv_weak_pulldown.sch
+.subckt inv_weak_pulldown  in out Vnb   Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54
+*.ipin in
+*.iopin out
+*.ipin Vnb
+XM1 net1 in GND GND sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 out in VDD VDD sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 out Vnb net1 GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  inv/inv_weak_pullup.sym # of pins=3
+* sym_path: /home/sky/fossi_cochlea/xschem/inv/inv_weak_pullup.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/inv/inv_weak_pullup.sch
+.subckt inv_weak_pullup  in out Vpb   Wpmos=1.26 Lpmos=0.54 Wmin=0.42 Lmin=0.18
+*.ipin in
+*.iopin out
+*.ipin Vpb
+XM1 out in GND GND sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 net1 in VDD VDD sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 out Vpb net1 VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  transmission_gate/transmission_gate.sym # of pins=4
+* sym_path: /home/sky/fossi_cochlea/xschem/transmission_gate/transmission_gate.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/transmission_gate/transmission_gate.sch
+.subckt transmission_gate  in out ctrl_ ctrl   Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.iopin in
+*.iopin out
+*.ipin ctrl_
+*.ipin ctrl
+XM1 out ctrl in GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 out ctrl_ in VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  inv/inv.sym # of pins=2
+* sym_path: /home/sky/fossi_cochlea/xschem/inv/inv.sym
+* sch_path: /home/sky/fossi_cochlea/xschem/inv/inv.sch
+.subckt inv  in out   Wpmos=3 Lpmos=0.18 Wnmos=1 Lnmos=0.18
+*.ipin in
+*.iopin out
+XM1 GND in out GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 VDD in out VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+** flattened .save nodes
+.end

@@ -22,4 +22,4 @@ C {sky130_stdcells/xor2_1.sym} -790 -370 2 1 {name=x3 VGND=GND VNB=GND VPB=VDD V
 C {devices/ipin.sym} -930 -350 0 0 {name=p1 lab=T}
 C {devices/ipin.sym} -930 -300 0 0 {name=p2 lab=CLK}
 C {devices/opin.sym} -430 -390 0 0 {name=p3 lab=Q}
-C {devices/ipin.sym} -930 -270 0 0 {name=p4 lab=RST_bar}
+C {devices/ipin.sym} -930 -270 0 0 {name=p4 lab=RSTB}

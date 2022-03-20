@@ -1,0 +1,17 @@
+* SPICE3 file created from comp_single_tail.ext - technology: sky130A
+
+.option scale=10000u
+
+X0 tail inp FP GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X1 FN inm tail GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X2 GND phi1 tail GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X3 high phi1b GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X4 pfetw FP high VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X5 VDD low pfetw VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X6 low high GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X7 VDD phi1 FP VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X8 GND phi1b low GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X9 FN phi1 VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X10 GND low high GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=42 l=15
+X11 low FN pfete VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X12 pfete high VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
