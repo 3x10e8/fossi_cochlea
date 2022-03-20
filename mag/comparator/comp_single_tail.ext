@@ -1,89 +1,89 @@
-timestamp 1647621912
+timestamp 1647785561
 version 8.3
 tech sky130A
 style ngspice()
-scale 1000 1 1e+06
+scale 1000 1 500000
 resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
 parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters sky130_fd_pr__nfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
-node "phi1b" 1248 656.965 0 -182 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6156 822 0 0 561 100 0 0 0 0 0 0 0 0 0 0 0 0
-node "tail" 885 429.109 -184 -133 ndif 0 0 0 0 0 0 0 0 2478 286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4150 494 0 0 0 0 0 0 0 0 0 0 0 0
-node "inm" 402 155.388 -163 -57 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2226 298 0 0 561 100 0 0 0 0 0 0 0 0 0 0 0 0
-node "pfete" 301 0 103 17 pdif 0 0 0 0 0 0 0 0 0 0 1218 142 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 825 116 0 0 0 0 0 0 0 0 0 0 0 0
-node "pfetw" 301 0 15 17 pdif 0 0 0 0 0 0 0 0 0 0 1218 142 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 825 116 0 0 0 0 0 0 0 0 0 0 0 0
-node "high" 1403 568.802 -27 17 pdif 0 0 0 0 0 0 0 0 1218 142 1134 138 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3666 490 0 0 6053 716 0 0 0 0 0 0 0 0 0 0 0 0
-node "low" 1353 612.06 36 -75 p 0 0 0 0 0 0 0 0 1218 142 1260 144 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3690 490 0 0 5906 688 0 0 0 0 0 0 0 0 0 0 0 0
-node "inp" 572 225.626 -245 -42 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3218 416 0 0 595 104 0 0 0 0 0 0 0 0 0 0 0 0
-node "phi1" 1472 482.349 -144 -8 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7793 1000 0 0 561 100 0 0 0 0 0 0 0 0 0 0 0 0
-node "FP" 1958 753.108 -228 -133 ndif 0 0 0 0 0 0 0 0 1218 142 1218 142 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6426 858 0 0 6568 722 0 0 0 0 0 0 0 0 0 0 0 0
-node "FN" 1481 612.916 -137 -133 ndif 0 0 0 0 0 0 0 0 1134 138 1134 138 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3795 500 0 0 7794 902 0 0 0 0 0 0 0 0 0 0 0 0
-node "VDD" 10344 1812.93 -191 -3 nw 0 0 0 0 35445 1004 0 0 1302 146 2436 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15957 1858 27146 1206 0 0 0 0 0 0 0 0 0 0
-substrate "GND" 0 0 -37 -133 ndif 0 0 0 0 0 0 0 0 4032 444 1302 146 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16026 1878 27146 1206 0 0 0 0 0 0 0 0 0 0
-cap "FN" "pfete" 6.68098
-cap "high" "inp" 2.72165
-cap "phi1b" "FP" 5
-cap "pfetw" "low" 10.6853
-cap "pfetw" "FP" 6.68098
-cap "VDD" "FN" 547.105
-cap "high" "pfete" 11.6776
-cap "inm" "VDD" 3.48447
-cap "low" "FN" 38.1246
-cap "inp" "phi1" 27.9785
-cap "phi1b" "FN" 5.65574
-cap "FP" "FN" 171.23
-cap "low" "inm" 13.0802
-cap "VDD" "high" 133.155
-cap "phi1b" "inm" 4.36496
-cap "inm" "FP" 52.4441
-cap "pfetw" "FN" 37.9024
-cap "low" "high" 445.821
-cap "VDD" "tail" 4.91071
-cap "phi1b" "high" 109.629
-cap "FP" "high" 94.1345
-cap "low" "tail" 6.84906
-cap "pfetw" "high" 89.8927
-cap "FP" "tail" 67.5657
-cap "VDD" "phi1" 6.44379
-cap "inm" "FN" 57.3158
-cap "low" "phi1" 42.1657
-cap "phi1b" "phi1" 32.8295
-cap "FP" "phi1" 100.404
-cap "FN" "high" 189.867
-cap "inm" "high" 7.51034
-cap "FN" "tail" 158.728
-cap "VDD" "inp" 3.9507
-cap "inm" "tail" 19.7616
-cap "VDD" "pfete" 92.4882
-cap "phi1b" "inp" 3.25
-cap "FP" "inp" 106.327
-cap "FN" "phi1" 185.093
-cap "high" "tail" 23.2055
-cap "low" "pfete" 76.9492
-cap "inm" "phi1" 83.7719
-cap "high" "phi1" 32.5608
-cap "pfetw" "pfete" 17.2857
-cap "low" "VDD" 129.819
-cap "FN" "inp" 11.3235
-cap "tail" "phi1" 65.4748
-cap "phi1b" "VDD" 3.24277
-cap "FP" "VDD" 182.887
-cap "inm" "inp" 50.0273
-cap "phi1b" "low" 172.304
-cap "low" "FP" 37.9184
+node "phi1b" 1248 656.965 0 -364 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24624 1644 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "tail" 885 429.109 -368 -266 ndif 0 0 0 0 0 0 0 0 9912 572 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16600 988 0 0 0 0 0 0 0 0 0 0 0 0
+node "inm" 402 155.388 -326 -114 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8904 596 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "pfete" 301 0 206 34 pdif 0 0 0 0 0 0 0 0 0 0 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3300 232 0 0 0 0 0 0 0 0 0 0 0 0
+node "pfetw" 301 0 30 34 pdif 0 0 0 0 0 0 0 0 0 0 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3300 232 0 0 0 0 0 0 0 0 0 0 0 0
+node "high" 1403 568.802 -54 34 pdif 0 0 0 0 0 0 0 0 4872 284 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14664 980 0 0 24212 1432 0 0 0 0 0 0 0 0 0 0 0 0
+node "low" 1353 612.06 72 -150 p 0 0 0 0 0 0 0 0 4872 284 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14760 980 0 0 23624 1376 0 0 0 0 0 0 0 0 0 0 0 0
+node "inp" 572 225.626 -490 -84 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12872 832 0 0 2380 208 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1" 1472 482.349 -288 -16 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 31172 2000 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "FP" 1958 753.108 -456 -266 ndif 0 0 0 0 0 0 0 0 4872 284 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25704 1716 0 0 26272 1444 0 0 0 0 0 0 0 0 0 0 0 0
+node "FN" 1481 612.916 -274 -266 ndif 0 0 0 0 0 0 0 0 4536 276 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15180 1000 0 0 31176 1804 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 10344 1812.93 -382 -6 nw 0 0 0 0 141780 2008 0 0 5208 292 9744 568 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63828 3716 108584 2412 0 0 0 0 0 0 0 0 0 0
+substrate "GND" 0 0 -74 -266 ndif 0 0 0 0 0 0 0 0 16128 888 5208 292 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64104 3756 108584 2412 0 0 0 0 0 0 0 0 0 0
+cap "tail" "FN" 158.728
 cap "pfetw" "VDD" 84.3527
-device msubckt sky130_fd_pr__nfet_01v8_lvt 132 -133 133 -132 l=15 w=42 "GND" "phi1b" 30 0 "low" 42 0 "GND" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt 88 -133 89 -132 l=15 w=42 "GND" "high" 30 0 "GND" 42 0 "low" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt 44 -133 45 -132 l=15 w=42 "GND" "low" 30 0 "high" 42 0 "GND" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt 0 -133 1 -132 l=15 w=42 "GND" "phi1b" 30 0 "GND" 42 0 "high" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt -52 -133 -51 -132 l=15 w=42 "GND" "phi1" 30 0 "tail" 42 0 "GND" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt -152 -133 -151 -132 l=15 w=42 "GND" "inm" 30 0 "tail" 42 0 "FN" 42 0
-device msubckt sky130_fd_pr__nfet_01v8_lvt -199 -133 -198 -132 l=15 w=42 "GND" "inp" 30 0 "FP" 42 0 "tail" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 132 17 133 18 l=15 w=42 "VDD" "FN" 30 0 "pfete" 42 0 "low" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 88 17 89 18 l=15 w=42 "VDD" "high" 30 0 "VDD" 42 0 "pfete" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 44 17 45 18 l=15 w=42 "VDD" "low" 30 0 "pfetw" 42 0 "VDD" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 0 17 1 18 l=15 w=42 "VDD" "FP" 30 0 "high" 42 0 "pfetw" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 -100 17 -99 18 l=15 w=42 "VDD" "phi1" 30 0 "VDD" 42 0 "FN" 42 0
-device msubckt sky130_fd_pr__pfet_01v8 -144 17 -143 18 l=15 w=42 "VDD" "phi1" 30 0 "FP" 42 0 "VDD" 42 0
+cap "low" "VDD" 129.819
+cap "pfete" "high" 11.6776
+cap "phi1b" "low" 172.304
+cap "low" "inm" 13.0802
+cap "low" "phi1" 42.1657
+cap "phi1b" "VDD" 3.24277
+cap "inm" "VDD" 3.48447
+cap "phi1" "VDD" 6.44379
+cap "pfete" "low" 76.9492
+cap "pfetw" "pfete" 17.2857
+cap "FP" "tail" 67.5657
+cap "pfete" "VDD" 92.4882
+cap "phi1b" "inm" 4.36496
+cap "phi1b" "phi1" 32.8295
+cap "phi1" "inm" 83.7719
+cap "high" "FN" 189.867
+cap "inp" "FN" 11.3235
+cap "pfetw" "FN" 37.9024
+cap "low" "FN" 38.1246
+cap "FP" "high" 94.1345
+cap "FP" "inp" 106.327
+cap "FN" "VDD" 547.105
+cap "phi1b" "FN" 5.65574
+cap "inm" "FN" 57.3158
+cap "phi1" "FN" 185.093
+cap "pfetw" "FP" 6.68098
+cap "FP" "low" 37.9184
+cap "pfete" "FN" 6.68098
+cap "FP" "VDD" 182.887
+cap "phi1b" "FP" 5
+cap "FP" "inm" 52.4441
+cap "FP" "phi1" 100.404
+cap "tail" "high" 23.2055
+cap "low" "tail" 6.84906
+cap "tail" "VDD" 4.91071
+cap "tail" "inm" 19.7616
+cap "inp" "high" 2.72165
+cap "phi1" "tail" 65.4748
+cap "FP" "FN" 171.23
+cap "pfetw" "high" 89.8927
+cap "low" "high" 445.821
+cap "high" "VDD" 133.155
+cap "inp" "VDD" 3.9507
+cap "high" "inm" 7.51034
+cap "phi1b" "high" 109.629
+cap "pfetw" "low" 10.6853
+cap "phi1b" "inp" 3.25
+cap "inp" "inm" 50.0273
+cap "phi1" "high" 32.5608
+cap "inp" "phi1" 27.9785
+device msubckt sky130_fd_pr__nfet_01v8_lvt 264 -266 265 -265 l=30 w=84 "GND" "phi1b" 60 0 "low" 84 0 "GND" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 176 -266 177 -265 l=30 w=84 "GND" "high" 60 0 "GND" 84 0 "low" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 88 -266 89 -265 l=30 w=84 "GND" "low" 60 0 "high" 84 0 "GND" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 0 -266 1 -265 l=30 w=84 "GND" "phi1b" 60 0 "GND" 84 0 "high" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt -104 -266 -103 -265 l=30 w=84 "GND" "phi1" 60 0 "tail" 84 0 "GND" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt -304 -266 -303 -265 l=30 w=84 "GND" "inm" 60 0 "tail" 84 0 "FN" 84 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt -398 -266 -397 -265 l=30 w=84 "GND" "inp" 60 0 "FP" 84 0 "tail" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 264 34 265 35 l=30 w=84 "VDD" "FN" 60 0 "pfete" 84 0 "low" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 176 34 177 35 l=30 w=84 "VDD" "high" 60 0 "VDD" 84 0 "pfete" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 88 34 89 35 l=30 w=84 "VDD" "low" 60 0 "pfetw" 84 0 "VDD" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 0 34 1 35 l=30 w=84 "VDD" "FP" 60 0 "high" 84 0 "pfetw" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 -200 34 -199 35 l=30 w=84 "VDD" "phi1" 60 0 "VDD" 84 0 "FN" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 -288 34 -287 35 l=30 w=84 "VDD" "phi1" 60 0 "FP" 84 0 "VDD" 84 0
 subcap "phi1b" -226.667
 subcap "tail" -303.668
 subcap "inm" -4.59836
@@ -92,5 +92,5 @@ subcap "low" -219.377
 subcap "phi1" -8.37692
 subcap "FP" -28.6688
 subcap "FN" -44.4311
-subcap "VDD" -197.323
-subcap "GND" -189.152
+subcap "VDD" -179.402
+subcap "GND" -171.264
