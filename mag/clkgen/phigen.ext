@@ -1,0 +1,73 @@
+timestamp 1647739876
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use inv_weak_pulldown inv_weak_pulldown_0 1 0 -288 0 1 0
+use comp_clks comp_clks_0 1 0 144 0 1 0
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "out" 644 231.202 396 150 ndif 0 0 0 0 0 0 0 0 4704 280 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14960 948 0 0 0 0 0 0 0 0 0 0 0 0
+node "int" 309 4.25 308 480 pdif 0 0 0 0 0 0 0 0 0 0 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 519 516.447 224 480 pdif 0 0 0 0 0 0 0 0 0 0 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20128 1252 37632 964 0 0 0 0 0 0 0 0 0 0
+node "Vpb" 399 147.787 352 348 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8844 592 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "in" 898 307.551 256 282 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18180 1212 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_68_444#" 5927 322.668 68 444 nw 0 0 0 0 107556 1576 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "GND" 0 0 248 150 ppd 0 0 0 0 0 0 0 0 5040 288 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22984 1292 37632 964 0 0 0 0 0 0 0 0 0 0
+cap "VDD" "Vpb" 3.9507
+cap "in" "VDD" 3.20571
+cap "Vpb" "out" 64.0588
+cap "in" "out" 16.7538
+cap "w_68_444#" "VDD" 1.7612
+cap "VDD" "out" 27.4119
+cap "VDD" "int" 48.2347
+cap "w_68_444#" "out" 1.702
+cap "in" "Vpb" 87.8494
+cap "int" "out" 40.3333
+device msubckt sky130_fd_pr__nfet_01v8 366 150 367 151 l=30 w=84 "GND" "in" 60 0 "GND" 84 0 "out" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 366 480 367 481 l=30 w=84 "w_68_444#" "Vpb" 60 0 "int" 84 0 "out" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 278 480 279 481 l=30 w=84 "w_68_444#" "in" 60 0 "VDD" 84 0 "int" 84 0
+subcap "out" -58.0314
+subcap "int" -4.25
+subcap "Vpb" -3.97872
+subcap "in" -25.2302
+cap "out" "inv_weak_pulldown_0/Vnb" 6.15254
+cap "inv_weak_pulldown_0/int" "inv_weak_pulldown_0/GND" 10.0833
+cap "in" "inv_weak_pulldown_0/out" 17.8525
+cap "inv_weak_pulldown_0/out" "out" 46.539
+cap "Vpb" "comp_clks_0/clk" 8.45847
+cap "comp_clks_0/clka" "inv_weak_pulldown_0/GND" 16.5
+cap "int" "inv_weak_pulldown_0/VDD" 12.0518
+cap "inv_weak_pulldown_0/out" "inv_weak_pulldown_0/VDD" 23.6389
+cap "int" "comp_clks_0/this" 6.05
+cap "Vpb" "inv_weak_pulldown_0/in" 11.5032
+cap "inv_weak_pulldown_0/VDD" "comp_clks_0/clkt" 2.22045e-16
+cap "out" "inv_weak_pulldown_0/VDD" 29.7897
+cap "inv_weak_pulldown_0/out" "inv_weak_pulldown_0/GND" 18.6389
+cap "out" "comp_clks_0/this" 62.0185
+cap "in" "comp_clks_0/this" 25.5798
+cap "Vpb" "comp_clks_0/clka" 17.2857
+cap "out" "inv_weak_pulldown_0/GND" 14.3976
+cap "out" "comp_clks_0/clk" 6.84906
+cap "in" "comp_clks_0/clk" 4.04396
+cap "inv_weak_pulldown_0/GND" "inv_weak_pulldown_0/VDD" 3.55271e-15
+cap "inv_weak_pulldown_0/out" "Vpb" 9.99083
+cap "inv_weak_pulldown_0/GND" "comp_clks_0/this" 7.7
+cap "inv_weak_pulldown_0/VDD" "comp_clks_0/clk" 1.13243e-14
+cap "int" "comp_clks_0/clka" 12.9643
+cap "in" "inv_weak_pulldown_0/in" 26.4625
+cap "inv_weak_pulldown_0/out" "comp_clks_0/clka" 34.3609
+cap "inv_weak_pulldown_0/int" "out" 5.85484
+cap "in" "comp_clks_0/clka" 9.81081
+cap "out" "comp_clks_0/clka" 215.297
+cap "inv_weak_pulldown_0/out" "int" 12.0689
+cap "Vpb" "comp_clks_0/this" 28.7227
+cap "comp_clks_0/clka" "inv_weak_pulldown_0/VDD" 13.7021
+cap "in" "inv_weak_pulldown_0/Vnb" 24.1038
+merge "comp_clks_0/GND" "inv_weak_pulldown_0/SUB" -311.973 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6392 -512 -18424 -768 0 0 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_0/SUB" "inv_weak_pulldown_0/GND"
+merge "inv_weak_pulldown_0/GND" "GND"
+merge "comp_clks_0/VDD" "inv_weak_pulldown_0/VDD" -456.621 0 0 0 0 -48216 -1256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6392 -512 -18424 -768 0 0 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_0/VDD" "VDD"
+merge "VDD" "w_68_444#"

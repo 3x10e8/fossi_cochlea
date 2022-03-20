@@ -1,16 +1,9 @@
-**.subckt comp_clks clk clka clkb
+**.subckt comp_clks_1stage clk clka clkb
 *.ipin clk
 *.opin clka
 *.opin clkb
-X3 clk clkt GND VDD transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X1 clk clki inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X2 clki clka inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-XM7 clkb clkt GND GND sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1 
-XM8 clkb clkt VDD VDD sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1 
+X3 clk clkb GND VDD transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X1 clk clka inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
 **.ends
 
 * expanding   symbol:  transmission_gate/transmission_gate.sym # of pins=4

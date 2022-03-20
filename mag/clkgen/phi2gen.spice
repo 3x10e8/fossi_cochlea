@@ -1,0 +1,36 @@
+* SPICE3 file created from phi2gen.ext - technology: sky130A
+
+.option scale=10000u
+
+X0 clk_stg1_0/SUB comp_clks_0/clk comp_clks_0/this clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X1 VDD comp_clks_0/this comp_clks_0/clka VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X2 comp_clks_0/clkt clk_stg1_0/SUB comp_clks_0/clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=42 l=15
+X3 VDD comp_clks_0/clk comp_clks_0/this VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X4 clk_stg1_0/SUB comp_clks_0/this comp_clks_0/clka clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X5 comp_clks_0/clkb comp_clks_0/clkt clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X6 comp_clks_0/clkb comp_clks_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X7 comp_clks_0/clkt VDD comp_clks_0/clk clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X8 clk_stg1_0/SUB clk_stg1_0/clk clk_stg1_0/clki clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X9 clk_stg1_0/clkt clk_stg1_0/SUB clk_stg1_0/clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X10 VDD clk_stg1_0/clk clk_stg1_0/clki VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X11 clk_stg1_0/clkt VDD clk_stg1_0/clk clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X12 inv_weak_pulldown_0/int clk_stg1_0/clki clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X13 inv_weak_pulldown_0/out clk_stg1_0/clki VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X14 inv_weak_pulldown_0/out inv_weak_pulldown_0/in inv_weak_pulldown_0/int clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X15 comp_clks_0/clk a_176_n158# a_154_240# VDD sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=42 l=15
+X16 a_491_n250# clk_stg1_0/SUB a_198_n233# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X17 comp_clks_0/clk inv_weak_pulldown_0/out clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X18 a_154_n233# a_39_n233# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X19 a_198_n233# a_176_n158# a_154_n233# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X20 a_154_240# inv_weak_pulldown_0/out VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X21 clk_stg1_0/SUB a_284_n263# a_254_n250# clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X22 clk_stg1_0/SUB a_198_n233# a_284_n263# clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X23 a_491_n250# VDD a_198_n233# clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X24 a_198_n233# a_39_n233# clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X25 a_n5_n68# clk_stg1_0/clkt clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X26 a_606_n250# a_491_n250# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X27 VDD a_198_n233# a_284_n263# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X28 a_606_n250# a_491_n250# clk_stg1_0/SUB clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X29 a_39_n233# clk_stg1_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X30 VDD a_284_n263# a_254_n250# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15
+X31 a_39_n233# inv_weak_pulldown_0/in a_n5_n68# clk_stg1_0/SUB sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=42 l=15

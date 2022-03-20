@@ -1,119 +1,128 @@
 magic
 tech sky130A
-timestamp 1640758320
+timestamp 1647739876
 << nwell >>
-rect -61 72 91 236
+rect 91 222 229 310
 << nmos >>
-rect -10 -14 8 28
-rect 37 -14 55 28
+rect 124 75 139 117
+rect 168 75 183 117
 << pmos >>
-rect -10 91 8 217
+rect 168 240 183 282
 << ndiff >>
-rect -42 15 -10 28
-rect -42 -2 -33 15
-rect -16 -2 -10 15
-rect -42 -14 -10 -2
-rect 8 15 37 28
-rect 8 -2 14 15
-rect 31 -2 37 15
-rect 8 -14 37 -2
-rect 55 15 82 28
-rect 55 -2 61 15
-rect 78 -2 82 15
-rect 55 -14 82 -2
+rect 94 105 124 117
+rect 94 88 101 105
+rect 118 88 124 105
+rect 94 75 124 88
+rect 139 105 168 117
+rect 139 88 145 105
+rect 162 88 168 105
+rect 139 75 168 88
+rect 183 105 210 117
+rect 183 88 189 105
+rect 206 88 210 105
+rect 183 75 210 88
 << pdiff >>
-rect -42 204 -10 217
-rect -42 187 -33 204
-rect -16 187 -10 204
-rect -42 162 -10 187
-rect -42 145 -33 162
-rect -16 145 -10 162
-rect -42 91 -10 145
-rect 8 204 37 217
-rect 8 187 14 204
-rect 31 187 37 204
-rect 8 162 37 187
-rect 8 145 14 162
-rect 31 145 37 162
-rect 8 120 37 145
-rect 8 103 14 120
-rect 31 103 37 120
-rect 8 91 37 103
+rect 138 270 168 282
+rect 138 253 145 270
+rect 162 253 168 270
+rect 138 240 168 253
+rect 183 270 210 282
+rect 183 253 189 270
+rect 206 253 210 270
+rect 183 240 210 253
 << ndiffc >>
-rect -33 -2 -16 15
-rect 14 -2 31 15
-rect 61 -2 78 15
+rect 101 88 118 105
+rect 145 88 162 105
+rect 189 88 206 105
 << pdiffc >>
-rect -33 187 -16 204
-rect -33 145 -16 162
-rect 14 187 31 204
-rect 14 145 31 162
-rect 14 103 31 120
+rect 145 253 162 270
+rect 189 253 206 270
+<< nsubdiff >>
+rect 109 270 138 282
+rect 109 253 111 270
+rect 128 253 138 270
+rect 109 240 138 253
+<< nsubdiffcont >>
+rect 111 253 128 270
 << poly >>
-rect -10 217 8 230
-rect 59 138 86 146
-rect 59 121 64 138
-rect 81 121 86 138
-rect 59 113 86 121
-rect -10 73 8 91
-rect 59 79 74 113
-rect -34 67 8 73
-rect -34 50 -25 67
-rect -8 50 8 67
-rect -34 45 8 50
-rect -10 28 8 45
-rect 37 64 74 79
-rect 37 28 55 64
-rect -10 -27 8 -14
-rect 37 -27 55 -14
+rect 168 282 183 295
+rect 168 223 183 240
+rect 124 208 183 223
+rect 102 200 139 208
+rect 102 183 107 200
+rect 124 183 139 200
+rect 102 175 139 183
+rect 124 117 139 175
+rect 160 161 187 169
+rect 160 144 165 161
+rect 182 144 187 161
+rect 160 136 187 144
+rect 168 117 183 136
+rect 124 62 139 75
+rect 168 62 183 75
 << polycont >>
-rect 64 121 81 138
-rect -25 50 -8 67
+rect 107 183 124 200
+rect 165 144 182 161
 << locali >>
-rect -42 204 -10 217
-rect -42 187 -33 204
-rect -16 187 -10 204
-rect -42 162 -10 187
-rect -42 145 -33 162
-rect -16 145 -10 162
-rect -42 136 -10 145
-rect 8 204 37 217
-rect 8 187 14 204
-rect 31 187 37 204
-rect 8 162 37 187
-rect 8 145 14 162
-rect 31 145 37 162
-rect 8 120 37 145
-rect 8 103 14 120
-rect 31 103 37 120
-rect 59 138 86 146
-rect 59 121 64 138
-rect 81 121 86 138
-rect 59 113 86 121
-rect 8 91 37 103
-rect -34 67 1 73
-rect -34 50 -25 67
-rect -8 50 1 67
-rect 20 72 37 91
-rect 20 55 72 72
-rect -34 45 1 50
-rect 55 28 72 55
-rect -42 15 -10 24
-rect -42 -2 -33 15
-rect -16 -2 -10 15
-rect -42 -14 -10 -2
-rect 8 15 37 28
-rect 8 -2 14 15
-rect 31 -2 37 15
-rect 8 -14 37 -2
-rect 55 15 82 28
-rect 55 -2 61 15
-rect 78 -2 82 15
-rect 55 -14 82 -2
+rect 77 349 95 366
+rect 112 349 143 366
+rect 160 349 191 366
+rect 208 349 239 366
+rect 256 349 269 366
+rect 145 278 162 349
+rect 111 270 162 278
+rect 128 253 145 270
+rect 111 245 162 253
+rect 189 270 206 278
+rect 206 253 216 270
+rect 189 245 216 253
+rect 107 200 124 208
+rect 107 175 124 183
+rect 165 161 182 169
+rect 165 136 182 144
+rect 199 113 216 245
+rect 101 105 118 113
+rect 101 33 118 88
+rect 145 105 162 113
+rect 145 80 162 88
+rect 189 105 216 113
+rect 206 96 216 105
+rect 189 80 206 88
+rect 77 16 95 33
+rect 112 16 143 33
+rect 160 16 191 33
+rect 208 16 239 33
+rect 256 16 269 33
+<< viali >>
+rect 95 349 112 366
+rect 143 349 160 366
+rect 191 349 208 366
+rect 239 349 256 366
+rect 95 16 112 33
+rect 143 16 160 33
+rect 191 16 208 33
+rect 239 16 256 33
 << metal1 >>
-rect -61 227 91 243
-rect -61 -39 91 -23
+rect 77 366 269 382
+rect 77 349 95 366
+rect 112 349 143 366
+rect 160 349 191 366
+rect 208 349 239 366
+rect 256 349 269 366
+rect 77 333 269 349
+rect 77 33 269 49
+rect 77 16 95 33
+rect 112 16 143 33
+rect 160 16 191 33
+rect 208 16 239 33
+rect 256 16 269 33
+rect 77 0 269 16
 << labels >>
-rlabel metal1 91 236 91 236 3 VDD
-rlabel metal1 91 -35 91 -35 3 GND
+rlabel locali 269 358 269 358 3 VDD
+rlabel locali 269 24 269 24 3 GND
+rlabel locali 216 166 216 166 3 out
+flabel ndiffc 189 88 206 105 0 FreeSans 80 0 0 0 out
+rlabel locali 153 80 153 80 5 int
+flabel polycont 165 144 182 161 0 FreeSans 80 0 0 0 Vnb
+flabel polycont 107 183 124 200 0 FreeSans 80 0 0 0 in
 << end >>

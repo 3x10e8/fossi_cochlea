@@ -1,0 +1,55 @@
+* SPICE3 file created from filter_clkgen.ext - technology: sky130A
+
+.option scale=5000u
+
+X0 GND comp_clks_0/this comp_clks_0/clka GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X1 GND comp_clks_0/clk comp_clks_0/this GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X2 comp_clks_0/clkt VDD comp_clks_0/clk GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X3 VDD comp_clks_0/this comp_clks_0/clka VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X4 VDD comp_clks_0/clk comp_clks_0/this VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X5 comp_clks_0/clkt GND comp_clks_0/clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X6 comp_clks_0/clkb comp_clks_0/clkt GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X7 comp_clks_0/clkb comp_clks_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X8 GND phi2gen_0/comp_clks_0/this phi2gen_0/comp_clks_0/clka GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X9 GND phi2gen_0/comp_clks_0/clk phi2gen_0/comp_clks_0/this GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X10 phi2gen_0/comp_clks_0/clkt VDD phi2gen_0/comp_clks_0/clk GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X11 VDD phi2gen_0/comp_clks_0/this phi2gen_0/comp_clks_0/clka VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X12 VDD phi2gen_0/comp_clks_0/clk phi2gen_0/comp_clks_0/this VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X13 phi2gen_0/comp_clks_0/clkt GND phi2gen_0/comp_clks_0/clk VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=84 l=30
+X14 phi2gen_0/comp_clks_0/clkb phi2gen_0/comp_clks_0/clkt GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X15 phi2gen_0/comp_clks_0/clkb phi2gen_0/comp_clks_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X16 GND sky130_fd_sc_lp__and2_1_0/A phi2gen_0/clk_stg1_0/clki GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X17 phi2gen_0/clk_stg1_0/clkt VDD sky130_fd_sc_lp__and2_1_0/A GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X18 VDD sky130_fd_sc_lp__and2_1_0/A phi2gen_0/clk_stg1_0/clki VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X19 phi2gen_0/clk_stg1_0/clkt GND sky130_fd_sc_lp__and2_1_0/A VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X20 phi2gen_0/inv_weak_pulldown_0/out phi2gen_0/clk_stg1_0/clki VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X21 phi2gen_0/inv_weak_pulldown_0/out Vnb phi2gen_0/inv_weak_pulldown_0/int GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X22 phi2gen_0/inv_weak_pulldown_0/int phi2gen_0/clk_stg1_0/clki GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X23 phi2gen_0/a_308_480# phi2gen_0/inv_weak_pulldown_0/out VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X24 GND phi2gen_0/a_568_n526# phi2gen_0/a_508_n500# GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X25 phi2gen_0/a_396_n466# phi2gen_0/a_352_n316# phi2gen_0/a_308_n466# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X26 VDD phi2gen_0/a_396_n466# phi2gen_0/a_568_n526# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X27 phi2gen_0/a_396_n466# phi2gen_0/a_78_n466# GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X28 phi2gen_0/a_982_n500# GND phi2gen_0/a_396_n466# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X29 phi2gen_0/a_308_n466# phi2gen_0/a_78_n466# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X30 VDD phi2gen_0/a_568_n526# phi2gen_0/a_508_n500# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X31 phi2gen_0/a_1212_n500# phi2gen_0/a_982_n500# GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X32 phi2gen_0/a_78_n466# phi2gen_0/clk_stg1_0/clkt VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X33 phi2gen_0/a_78_n466# Vnb phi2gen_0/a_n10_n136# GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X34 phi2gen_0/comp_clks_0/clk phi2gen_0/a_352_n316# phi2gen_0/a_308_480# VDD sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=84 l=30
+X35 phi2gen_0/comp_clks_0/clk phi2gen_0/inv_weak_pulldown_0/out GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X36 GND phi2gen_0/a_396_n466# phi2gen_0/a_568_n526# GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X37 phi2gen_0/a_n10_n136# phi2gen_0/clk_stg1_0/clkt GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X38 phi2gen_0/a_982_n500# VDD phi2gen_0/a_396_n466# GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X39 phi2gen_0/a_1212_n500# phi2gen_0/a_982_n500# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X40 comp_clks_0/clk out VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X41 comp_clks_0/clk Vnb inv_weak_pulldown_0/int GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X42 inv_weak_pulldown_0/int out GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X43 out in VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X44 out Vnb int GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X45 int in GND GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+Xsky130_fd_sc_lp__dfrbp_1_0 sky130_fd_sc_lp__and2_1_0/A sky130_fd_sc_lp__dfrbp_1_0/D
++ sky130_fd_sc_lp__dfrbp_1_0/RESET_B GND GND VDD VDD sky130_fd_sc_lp__and2_1_0/B sky130_fd_sc_lp__dfrbp_1_0/D
++ sky130_fd_sc_lp__dfrbp_1
+Xsky130_fd_sc_lp__and2_1_0 sky130_fd_sc_lp__and2_1_0/A sky130_fd_sc_lp__and2_1_0/B
++ GND GND VDD VDD in sky130_fd_sc_lp__and2_1
