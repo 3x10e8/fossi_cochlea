@@ -25,6 +25,7 @@ T {bit13} 3955 -195 0 0 0.4 0.4 {}
 T {bit14} 3955 -115 0 0 0.4 0.4 {}
 T {bit15} 3955 -40 0 0 0.4 0.4 {}
 T {comparator out replicated by comp_out signal} 1610 -400 0 0 0.4 0.4 {}
+T {THis needs to be an up down counter} 2120 -30 0 0 0.4 0.4 {}
 N 3880 -660 3890 -660 { lab=out}
 N 3890 -660 3940 -660 { lab=out}
 N 3880 -580 3890 -580 { lab=out}
@@ -33,32 +34,32 @@ N 3900 -740 3940 -740 { lab=out}
 N 3880 -740 3900 -740 { lab=out}
 N 3940 -740 3940 -260 { lab=out}
 N 3940 -740 4010 -740 { lab=out}
-N 3610 -740 3730 -740 { lab=bit6}
-N 3730 -740 3800 -740 { lab=bit6}
-N 3610 -660 3730 -660 { lab=bit7}
-N 3730 -660 3800 -660 { lab=bit7}
-N 3610 -580 3730 -580 { lab=bit8}
-N 3730 -580 3800 -580 { lab=bit8}
+N 3610 -740 3730 -740 { lab=bit15}
+N 3730 -740 3800 -740 { lab=bit15}
+N 3610 -660 3730 -660 { lab=bit14}
+N 3730 -660 3800 -660 { lab=bit14}
+N 3610 -580 3730 -580 { lab=bit13}
+N 3730 -580 3800 -580 { lab=bit13}
 N 3880 -420 3890 -420 { lab=out}
 N 3890 -420 3940 -420 { lab=out}
 N 3880 -340 3890 -340 { lab=out}
 N 3890 -340 3940 -340 { lab=out}
 N 3900 -500 3940 -500 { lab=out}
 N 3880 -500 3900 -500 { lab=out}
-N 3610 -500 3730 -500 { lab=bit9}
-N 3730 -500 3800 -500 { lab=bit9}
-N 3610 -420 3730 -420 { lab=bit10}
-N 3730 -420 3800 -420 { lab=bit10}
-N 3610 -340 3730 -340 { lab=bit11}
-N 3730 -340 3800 -340 { lab=bit11}
+N 3610 -500 3730 -500 { lab=bit12}
+N 3730 -500 3800 -500 { lab=bit12}
+N 3610 -420 3730 -420 { lab=bit11}
+N 3730 -420 3800 -420 { lab=bit11}
+N 3610 -340 3730 -340 { lab=bit10}
+N 3730 -340 3800 -340 { lab=bit10}
 N 3880 -260 3890 -260 { lab=out}
 N 3890 -260 3940 -260 { lab=out}
 N 3880 -180 3890 -180 { lab=out}
 N 3890 -180 3940 -180 { lab=out}
-N 3610 -260 3730 -260 { lab=bit12}
-N 3730 -260 3800 -260 { lab=bit12}
-N 3610 -180 3730 -180 { lab=bit13}
-N 3730 -180 3800 -180 { lab=bit13}
+N 3610 -260 3730 -260 { lab=bit9}
+N 3730 -260 3800 -260 { lab=bit9}
+N 3610 -180 3730 -180 { lab=bit8}
+N 3730 -180 3800 -180 { lab=bit8}
 N 3940 -260 3940 -180 { lab=out}
 N 3025 -1245 3110 -1245 { lab=#net1}
 N 3025 -1150 3110 -1150 { lab=#net2}
@@ -80,10 +81,10 @@ N 3880 -95 3890 -95 { lab=out}
 N 3890 -95 3940 -95 { lab=out}
 N 3880 -15 3890 -15 { lab=out}
 N 3890 -15 3940 -15 { lab=out}
-N 3610 -95 3730 -95 { lab=bit14}
-N 3730 -95 3800 -95 { lab=bit14}
-N 3610 -15 3730 -15 { lab=bit15}
-N 3730 -15 3800 -15 { lab=bit15}
+N 3610 -95 3730 -95 { lab=bit7}
+N 3730 -95 3800 -95 { lab=bit7}
+N 3610 -15 3730 -15 { lab=bit6}
+N 3730 -15 3800 -15 { lab=bit6}
 N 3940 -95 3940 -15 { lab=out}
 N 3940 -180 3940 -95 { lab=out}
 N 3020 -170 3100 -170 { lab=#net11}
@@ -130,7 +131,7 @@ C {devices/lab_pin.sym} 2270 -720 2 0 {name=l17 sig_type=std_logic lab=clk_4}
 C {devices/lab_pin.sym} 2270 -740 2 0 {name=l18 sig_type=std_logic lab=clk_2}
 C {devices/lab_pin.sym} 2270 -680 2 0 {name=l19 sig_type=std_logic lab=clk_16}
 C {devices/lab_pin.sym} 3410 -1495 2 0 {name=l25 sig_type=std_logic lab=ctr1}
-C {devices/lab_pin.sym} 3610 -740 0 0 {name=l28 sig_type=std_logic lab=bit6}
+C {devices/lab_pin.sym} 3610 -740 0 0 {name=l28 sig_type=std_logic lab=bit15}
 C {devices/lab_pin.sym} 3800 -700 0 0 {name=l35 sig_type=std_logic lab=ctr1}
 C {devices/lab_pin.sym} 3800 -620 0 0 {name=l37 sig_type=std_logic lab=ctr2}
 C {devices/lab_pin.sym} 3800 -540 0 0 {name=l38 sig_type=std_logic lab=ctr3}
@@ -267,15 +268,15 @@ C {sky130_stdcells/ebufn_1.sym} 3840 -95 0 0 {name=x33 VGND=GND VNB=GND VPB=VDD 
 C {sky130_stdcells/ebufn_1.sym} 3840 -15 0 0 {name=x34 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 3800 -55 0 0 {name=l11 sig_type=std_logic lab=ctr9}
 C {devices/lab_pin.sym} 3800 25 0 0 {name=l12 sig_type=std_logic lab=ctr10}
-C {devices/lab_pin.sym} 3610 -660 0 0 {name=l14 sig_type=std_logic lab=bit7}
-C {devices/lab_pin.sym} 3610 -580 0 0 {name=l23 sig_type=std_logic lab=bit8}
-C {devices/lab_pin.sym} 3610 -500 0 0 {name=l29 sig_type=std_logic lab=bit9}
-C {devices/lab_pin.sym} 3610 -420 0 0 {name=l30 sig_type=std_logic lab=bit10}
-C {devices/lab_pin.sym} 3610 -340 0 0 {name=l36 sig_type=std_logic lab=bit11}
-C {devices/lab_pin.sym} 3610 -260 0 0 {name=l120 sig_type=std_logic lab=bit12}
-C {devices/lab_pin.sym} 3610 -180 0 0 {name=l121 sig_type=std_logic lab=bit13}
-C {devices/lab_pin.sym} 3610 -95 0 0 {name=l122 sig_type=std_logic lab=bit14}
-C {devices/lab_pin.sym} 3610 -15 0 0 {name=l123 sig_type=std_logic lab=bit15}
+C {devices/lab_pin.sym} 3610 -660 0 0 {name=l14 sig_type=std_logic lab=bit14}
+C {devices/lab_pin.sym} 3610 -580 0 0 {name=l23 sig_type=std_logic lab=bit13}
+C {devices/lab_pin.sym} 3610 -500 0 0 {name=l29 sig_type=std_logic lab=bit12}
+C {devices/lab_pin.sym} 3610 -420 0 0 {name=l30 sig_type=std_logic lab=bit11}
+C {devices/lab_pin.sym} 3610 -340 0 0 {name=l36 sig_type=std_logic lab=bit10}
+C {devices/lab_pin.sym} 3610 -260 0 0 {name=l120 sig_type=std_logic lab=bit9}
+C {devices/lab_pin.sym} 3610 -180 0 0 {name=l121 sig_type=std_logic lab=bit8}
+C {devices/lab_pin.sym} 3610 -95 0 0 {name=l122 sig_type=std_logic lab=bit7}
+C {devices/lab_pin.sym} 3610 -15 0 0 {name=l123 sig_type=std_logic lab=bit6}
 C {sky130_stdcells/and4_1.sym} 2960 -170 0 0 {name=x13 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/dfrtn_1.sym} 3195 -170 0 0 {name=x35 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 3105 -190 0 0 {name=l43 sig_type=std_logic lab=clk}
