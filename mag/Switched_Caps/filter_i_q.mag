@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1647898462
+timestamp 1647898595
 << nwell >>
 rect 14580 11851 14755 12005
 << locali >>
@@ -170,10 +170,6 @@ use filter_clkgen  filter_clkgen_0 ~/cochlea_latest/fossi_cochlea/mag/clkgen
 timestamp 1647896663
 transform 1 0 15039 0 1 11191
 box -1895 666 1540 2096
-use clk_tree  clk_tree_0
-timestamp 1647885779
-transform 0 1 -32698 -1 0 34491
-box 0 0 18561 6322
 << labels >>
 rlabel metal2 17283 9078 17283 9078 1 thresh_m
 rlabel metal2 17071 9078 17071 9078 3 thresh_p
