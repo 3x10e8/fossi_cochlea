@@ -1,0 +1,38 @@
+* SPICE3 file created from comparator_final.ext - technology: sky130A
+
+.option scale=5000u
+
+X0 low high GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X1 GND high a_470_n266# GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X2 high_buffered a_470_n266# GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X3 VDD low a_842_n266# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X4 GND low high GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X5 GND low a_842_n266# GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X6 low FN pfete VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X7 VDD phi1 FP VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X8 VDD low pfetw VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X9 VDD high a_470_n266# VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X10 low_buffered a_842_n266# GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X11 pfetw FP high VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X12 GND phi1b low GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X13 pfete high VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X14 FN phi1 VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X15 low_buffered a_842_n266# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X16 FN inm tail GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X17 GND phi1 tail GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X18 high_buffered a_470_n266# VDD VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=84 l=30
+X19 tail inp FP GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+X20 high phi1b GND GND sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=84 l=30
+Xsky130_fd_sc_lp__dfxtp_2_0 phi1b high_buffered GND GND VDD VDD sky130_fd_sc_lp__dfxtp_2_1/D
++ sky130_fd_sc_lp__dfxtp_2
+Xsky130_fd_sc_lp__dfxtp_2_1 phi1b sky130_fd_sc_lp__dfxtp_2_1/D GND GND VDD VDD sky130_fd_sc_lp__xor2_1_0/A
++ sky130_fd_sc_lp__dfxtp_2
+Xsky130_fd_sc_lp__dfxtp_2_2 phi1b sky130_fd_sc_lp__xor2_1_0/A GND GND VDD VDD sky130_fd_sc_lp__dfxtp_2_3/D
++ sky130_fd_sc_lp__dfxtp_2
+Xsky130_fd_sc_lp__dfxtp_2_3 phi1b sky130_fd_sc_lp__dfxtp_2_3/D GND GND VDD VDD sky130_fd_sc_lp__xor2_1_0/B
++ sky130_fd_sc_lp__dfxtp_2
+Xsky130_fd_sc_lp__buf_1_0 sky130_fd_sc_lp__buf_1_0/A GND GND VDD VDD events sky130_fd_sc_lp__buf_1
+Xsky130_fd_sc_lp__xor2_1_0 sky130_fd_sc_lp__xor2_1_0/A sky130_fd_sc_lp__xor2_1_0/B
++ GND GND VDD VDD sky130_fd_sc_lp__buf_1_0/A sky130_fd_sc_lp__xor2_1
+Xsky130_fd_sc_lp__and2_1_0 sky130_fd_sc_lp__xor2_1_0/A sky130_fd_sc_lp__buf_1_0/A
++ GND GND VDD VDD polxevent sky130_fd_sc_lp__and2_1
