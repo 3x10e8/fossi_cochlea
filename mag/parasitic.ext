@@ -1,0 +1,101 @@
+timestamp 1645590992
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
+parameters sky130_fd_pr__cap_mim_m3_2 w=w l=l
+node "phi2" 337 170.965 1946 -176 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1" 337 170.965 1676 -176 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi2" 337 170.965 7949 -54 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1" 337 170.965 7679 -54 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "cs1top" 2264 3529.68 1691 -126 ndif 0 0 0 0 0 0 0 0 2394 282 2394 282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12464 1182 3364 232 3364 232 562058 4018 0 0 0 0 0 0
+node "in" 538 155.416 1646 -126 ndif 0 0 0 0 0 0 0 0 1260 144 1260 144 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3338 362 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi2" 337 170.965 12080 -32 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1" 337 170.965 11810 -32 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "out3" 667 15666.9 12105 18 ndif 0 0 0 0 0 0 0 0 1134 138 1134 138 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8161 730 2303 192 2303 192 7733028 11604 0 0 0 0 0 0
+node "mimsmall3" 2264 2062.83 11825 18 ndif 0 0 0 0 0 0 0 0 2394 282 2394 282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12464 1182 3364 232 3364 232 81688 1688 0 0 0 0 0 0
+node "mimsmall2" 2264 2376.99 7694 -4 ndif 0 0 0 0 0 0 0 0 2394 282 2394 282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12464 1182 3364 232 3364 232 189095 2250 0 0 0 0 0 0
+node "phi2b" 337 170.965 1954 33 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1b" 337 170.965 1674 33 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi2b" 337 170.965 12088 177 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi2b" 337 170.965 7957 155 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1b" 337 170.965 7677 155 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "phi1b" 337 170.965 11808 177 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971 264 0 0 891 120 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_1599_n44#" 8439 420.336 1599 -44 nw 0 0 0 0 35028 1002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "out2" 12201 160625 11733 100 nw 0 0 0 0 35028 1002 0 0 3570 422 2394 282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 196502 9252 59904 980 59904 980 12298002 16056 90746 1206 3030027 28440 0 0
+node "out1" 11950 464385 7602 78 nw 0 0 0 0 35028 1002 0 0 3570 422 2394 282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 455273 12698 59904 980 59904 980 37717965 25846 90746 1206 8241581 68630 0 0
+substrate "gnd" 0 0 5850 7 ppd 0 0 0 0 0 0 0 0 0 0 27744 680 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27744 680 54115 1064 54115 1064 32606 750 50098164 38388 0 0 0 0
+cap "out3" "out2" 1.1988
+cap "phi2b" "phi2" 14.8665
+cap "w_1599_n44#" "in" 1.1322
+cap "phi1" "out2" 33
+cap "out2" "phi2b" 17.5038
+cap "phi1b" "phi1" 16.7756
+cap "phi2" "phi2b" 14.8665
+cap "phi2b" "phi2" 14.8665
+cap "in" "cs1top" 270.563
+cap "phi1" "phi1b" 16.7756
+cap "phi2" "cs1top" 17.5038
+cap "out3" "mimsmall3" 549.444
+cap "mimsmall2" "out1" 543.663
+cap "phi1" "phi1b" 16.7756
+cap "phi1" "mimsmall3" 38.4441
+cap "mimsmall2" "phi2" 17.5038
+cap "mimsmall2" "phi1" 38.4441
+cap "phi1" "cs1top" 38.4441
+cap "w_1599_n44#" "cs1top" 2.728
+cap "out2" "mimsmall3" 269.676
+cap "w_1599_n44#" "out1" 1.1988
+cap "mimsmall2" "out2" 625.385
+cap "cs1top" "phi1b" 17.5038
+cap "out1" "phi2b" 17.5038
+cap "out3" "phi2b" 17.5038
+cap "mimsmall2" "phi1b" 17.5038
+cap "out1" "cs1top" 1033.07
+cap "mimsmall3" "phi1b" 17.5038
+cap "out1" "phi1" 64.0588
+cap "phi2" "mimsmall3" 17.5038
+cap "out2" "out1" 1.1988
+device csubckt sky130_fd_pr__cap_mim_m3_2 8550 290 8551 291 w=2400 l=2400 "None" "out2" 1888 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 6052 290 6053 291 w=2400 l=2400 "None" "out2" 1888 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 2795 330 2796 331 w=3002 l=3000 "None" "out1" 1892 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -289 330 -288 331 w=3000 l=3000 "None" "out1" 1888 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 2795 3414 2796 3415 w=3002 l=3000 "None" "out1" 1888 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -289 3414 -288 3415 w=3000 l=3000 "None" "out1" 1888 0 "gnd" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 11416 -14 11417 -13 w=230 l=220 "None" "gnd" 400 0 "mimsmall3" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 7172 -208 7173 -207 w=389 l=389 "None" "gnd" 472 0 "mimsmall2" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 577 -454 578 -453 w=700 l=700 "None" "gnd" 360 0 "cs1top" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 11269 306 11270 307 w=2750 l=2750 "None" "gnd" 400 0 "out3" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 8550 290 8551 291 w=2400 l=2400 "None" "gnd" 1888 0 "out2" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 6052 290 6053 291 w=2400 l=2400 "None" "gnd" 1888 0 "out2" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 2795 330 2796 331 w=3002 l=3000 "None" "gnd" 1416 0 "out1" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 -289 330 -288 331 w=3000 l=3000 "None" "gnd" 1416 0 "out1" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 2795 3414 2796 3415 w=3002 l=3000 "None" "gnd" 1416 0 "out1" 42 0
+device csubckt sky130_fd_pr__cap_mim_m3_1 -289 3414 -288 3415 w=3000 l=3000 "None" "gnd" 1416 0 "out1" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 1956 -126 1957 -125 l=15 w=42 "gnd" "phi2" 30 0 "cs1top" 42 0 "out1" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 1676 -126 1677 -125 l=15 w=42 "gnd" "phi1" 30 0 "in" 42 0 "cs1top" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 12090 18 12091 19 l=15 w=42 "gnd" "phi2" 30 0 "mimsmall3" 42 0 "out3" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 11810 18 11811 19 l=15 w=42 "gnd" "phi1" 30 0 "out2" 42 0 "mimsmall3" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 7959 -4 7960 -3 l=15 w=42 "gnd" "phi2" 30 0 "mimsmall2" 42 0 "out2" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 7679 -4 7680 -3 l=15 w=42 "gnd" "phi1" 30 0 "out1" 42 0 "mimsmall2" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 1956 -26 1957 -25 l=15 w=42 "w_1599_n44#" "phi2b" 30 0 "cs1top" 42 0 "out1" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 1676 -26 1677 -25 l=15 w=42 "w_1599_n44#" "phi1b" 30 0 "in" 42 0 "cs1top" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 12090 118 12091 119 l=15 w=42 "out2" "phi2b" 30 0 "mimsmall3" 42 0 "out3" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 11810 118 11811 119 l=15 w=42 "out2" "phi1b" 30 0 "out2" 42 0 "mimsmall3" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 7959 96 7960 97 l=15 w=42 "out1" "phi2b" 30 0 "mimsmall2" 42 0 "out2" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 7679 96 7680 97 l=15 w=42 "out1" "phi1b" 30 0 "out1" 42 0 "mimsmall2" 42 0
+subcap "phi1" -32.9154
+subcap "phi1b" -27.8158
+subcap "w_1599_n44#" -328.608
+subcap "phi2" -9.7352
+subcap "mimsmall2" -1421.29
+subcap "phi2b" -30.1336
+subcap "out1" -463741
+subcap "phi2" -9.7352
+subcap "mimsmall3" -1075.38
+subcap "phi2b" -30.1336
+subcap "out2" -159967

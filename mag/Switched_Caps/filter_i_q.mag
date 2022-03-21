@@ -1,0 +1,12 @@
+magic
+tech sky130A
+timestamp 1647843894
+use filter_p_m_fin  filter_p_m_fin_1
+timestamp 1647843721
+transform 1 0 2810 0 -1 10738
+box -2642 -4841 14093 3199
+use filter_p_m_fin  filter_p_m_fin_0
+timestamp 1647843721
+transform 1 0 2810 0 1 1340
+box -2642 -4841 14093 3199
+<< end >>
