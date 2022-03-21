@@ -13,18 +13,18 @@ node "clk" 1552 664.917 616 108 p 0 0 0 0 0 0 0 0 4536 276 4536 276 0 0 0 0 0 0 
 node "this" 1549 631.741 424 108 p 0 0 0 0 0 0 0 0 4536 276 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18828 1216 0 0 19788 1232 0 0 0 0 0 0 0 0 0 0 0 0
 node "VDD" 11898 1933.46 328 478 nw 0 0 0 0 140448 2008 0 0 6720 328 14112 840 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14964 968 0 0 58632 3484 87220 1976 0 0 0 0 0 0 0 0 0 0
 substrate "GND" 0 0 454 134 ndif 0 0 0 0 0 0 0 0 14112 840 6720 328 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14964 1000 0 0 55556 3268 87220 1976 0 0 0 0 0 0 0 0 0 0
-cap "clkt" "VDD" 216.834
-cap "VDD" "clkb" 78.7226
-cap "clkt" "clk" 315.355
-cap "this" "clka" 126.384
-cap "clk" "clkb" 52.1626
-cap "this" "VDD" 226.074
-cap "clka" "VDD" 79.7668
-cap "clkt" "clkb" 109.701
+cap "VDD" "clk" 305.654
+cap "VDD" "clkt" 216.834
+cap "clk" "clkt" 315.355
+cap "clkb" "VDD" 78.7226
+cap "clkb" "clk" 52.1626
+cap "clkb" "clkt" 109.701
+cap "clka" "this" 126.384
+cap "VDD" "this" 226.074
 cap "clk" "this" 207.549
-cap "clk" "clka" 48.3401
-cap "clk" "VDD" 305.654
-cap "clkt" "this" 65.5681
+cap "this" "clkt" 65.5681
+cap "clka" "VDD" 79.7668
+cap "clka" "clk" 48.3401
 device msubckt sky130_fd_pr__nfet_01v8 1038 134 1039 135 l=30 w=84 "GND" "clkt" 60 0 "GND" 84 0 "clkb" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 808 134 809 135 l=30 w=84 "GND" "VDD" 60 0 "clk" 84 0 "clkt" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 616 134 617 135 l=30 w=84 "GND" "clk" 60 0 "this" 84 0 "GND" 84 0
