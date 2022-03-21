@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -47,7 +47,7 @@ spiceprefix=X
 C {devices/vdd.sym} -230 -120 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} -230 50 0 0 {name=l2 lab=GND}
 C {devices/netlist.sym} -240 -560 0 0 {name=SPICE only_toplevel=false value="
-.lib /home/sky/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .options abstol=1e-14 reltol=1e-4
 .tran 100u 1
 .save all
