@@ -4,8 +4,7 @@ K {}
 V {}
 S {}
 E {}
-T {comparator out replicated by comp_out signal} 1610 -400 0 0 0.4 0.4 {}
-T {THis needs to be an up down counter} 2120 -30 0 0 0.4 0.4 {}
+T {comparator out replicated by comp_out signal} 1410 -410 0 0 0.4 0.4 {}
 T {bit-3} 3810 -650 0 0 0.4 0.4 {}
 T {bit-2} 3805 -730 0 0 0.4 0.4 {}
 T {bit1} 3805 -785 0 0 0.4 0.4 {}
@@ -123,9 +122,6 @@ C {devices/vsource.sym} 1630 -650 0 0 {name=V18 value=1.2}
 C {devices/gnd.sym} 1630 -620 0 0 {name=l119 lab=GND}
 C {binary counter/bin_counter.sym} 1050 555 0 0 {name=X20}
 C {devices/lab_pin.sym} 2170 -445 0 0 {name=l4 sig_type=std_logic lab=en}
-C {devices/lab_pin.sym} 2170 -405 0 0 {name=l5 sig_type=std_logic lab=rstb_bin_counter}
-C {devices/vsource.sym} 2170 -375 0 0 {name=V1 value=1.2}
-C {devices/gnd.sym} 2170 -345 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 2400 -325 2 0 {name=l10 sig_type=std_logic lab=bit6}
 C {devices/lab_pin.sym} 2400 -305 2 0 {name=l22 sig_type=std_logic lab=bit7}
 C {devices/lab_pin.sym} 2400 -285 2 0 {name=l31 sig_type=std_logic lab=bit8}
@@ -143,12 +139,12 @@ C {devices/lab_pin.sym} 2400 -405 2 0 {name=l156 sig_type=std_logic lab=bit2}
 C {devices/lab_pin.sym} 2400 -425 2 0 {name=l157 sig_type=std_logic lab=bit1}
 C {devices/lab_pin.sym} 2400 -445 2 0 {name=l158 sig_type=std_logic lab=bit0}
 C {devices/lab_pin.sym} 2290 -85 0 0 {name=l159 sig_type=std_logic lab=latch_out}
-C {devices/lab_pin.sym} 1690 -510 0 0 {name=l163 sig_type=std_logic lab=clk_2b}
-C {devices/lab_pin.sym} 1870 -530 2 0 {name=l164 sig_type=std_logic lab=latch_out}
-C {devices/vsource.sym} 1625 -320 0 0 {name=V3 value="DC 0 PULSE(0 1.2 \{1.96u+(1/(4*f))\} 1n 1n \{duty_comp*1/f\} \{1/(f)\}" -180)}
-C {devices/lab_pin.sym} 1625 -350 0 1 {name=l165 sig_type=std_logic lab=comp_out}
+C {devices/lab_pin.sym} 1310 -65 0 0 {name=l163 sig_type=std_logic lab=clk_2b}
+C {devices/lab_pin.sym} 1490 -85 2 0 {name=l164 sig_type=std_logic lab=latch_out}
+C {devices/vsource.sym} 1625 -320 0 0 {name=V3 value="DC 0 PULSE(0 1.2 \{2/f\} 1n 1n \{duty_comp*1/f\} \{1/(f)\}) -18"}
+C {devices/lab_pin.sym} 1625 -350 0 1 {name=l165 sig_type=std_logic lab=phi}
 C {devices/gnd.sym} 1625 -290 0 1 {name=l166 lab=GND}
-C {devices/lab_pin.sym} 1690 -530 2 1 {name=l167 sig_type=std_logic lab=comp_out}
+C {devices/lab_pin.sym} 1310 -85 2 1 {name=l167 sig_type=std_logic lab=phi}
 C {devices/lab_pin.sym} 3960 -795 2 0 {name=l171 sig_type=std_logic lab=out}
 C {devices/netlist.sym} 3440 -1165 0 0 {name=s2 value="
 .lib /home/sky/sky130A/libs.tech/ngspice/sky130.lib.spice tt
@@ -156,7 +152,7 @@ C {devices/netlist.sym} 3440 -1165 0 0 {name=s2 value="
 .options abstol=1e-14 reltol=1e-4
 .param f=2560k
 .param duty_clk=0.5
-.param duty_comp=0.22
+.param duty_comp=0.45
 .ic v(out)=0
 .tran \{(1/100)*(1/f)\} \{100/f\}
 .save all
@@ -250,6 +246,15 @@ C {devices/lab_pin.sym} 3465 -795 0 0 {name=l35 sig_type=std_logic lab=bit15}
 C {inv/inv.sym} 2570 -820 0 0 {name=X5 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
 C {devices/lab_pin.sym} 2520 -820 0 0 {name=l36 sig_type=std_logic lab=clk_2}
 C {devices/lab_pin.sym} 2620 -820 2 0 {name=l37 sig_type=std_logic lab=clk_2b}
-C {sky130_stdcells/dlrtp_1.sym} 1780 -510 0 0 {name=x5 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {devices/lab_pin.sym} 1690 -490 0 0 {name=l38 sig_type=std_logic lab=rstb}
-C {devices/lab_pin.sym} 2270 -565 2 0 {name=l39 sig_type=std_logic lab=clk_1024}
+C {sky130_stdcells/dlrtp_1.sym} 1400 -65 0 0 {name=x5 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 1310 -45 0 0 {name=l38 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 2170 -405 2 1 {name=l5 sig_type=std_logic lab=rstb_bin_counter}
+C {devices/vsource.sym} 1630 -195 0 0 {name=V1 value="DC 0 PWL(0u 0 0.6u 1.2 1.1723u 1.2 1.1724u 0 6u 0)"}
+C {devices/gnd.sym} 1630 -165 0 1 {name=l40 lab=GND}
+C {devices/lab_pin.sym} 1630 -225 0 1 {name=l6 sig_type=std_logic lab=rstb_bin_counter}
+C {devices/lab_pin.sym} 1660 -60 0 0 {name=l39 sig_type=std_logic lab=clk_2b}
+C {devices/lab_pin.sym} 1840 -80 2 0 {name=l44 sig_type=std_logic lab=comp_out}
+C {devices/lab_pin.sym} 1660 -80 2 1 {name=l45 sig_type=std_logic lab=phi}
+C {sky130_stdcells/dlrtp_1.sym} 1750 -60 0 0 {name=x6 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 1660 -40 0 0 {name=l46 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 2170 -365 0 0 {name=l41 sig_type=std_logic lab=comp_out}
