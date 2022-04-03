@@ -29,9 +29,7 @@
  *-------------------------------------------------------------
  */
 
-module user_project_wrapper #(
-    parameter BITS = 32
-) (
+module user_project_wrapper  (
 `ifdef USE_POWER_PINS
     inout vdda1,	// User area 1 3.3V supply
     inout vdda2,	// User area 2 3.3V supply
@@ -82,12 +80,12 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_proj_example mprj (
+filter_p_m_fin mprj (
 `ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
+	.vdda1(vdda1),
+	.vssa1(vssa1),
 `endif
-
+/*
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),
 
@@ -107,15 +105,22 @@ user_proj_example mprj (
     .la_data_in(la_data_in),
     .la_data_out(la_data_out),
     .la_oenb (la_oenb),
-
+*/
     // IO Pads
-
-    .io_in (io_in),
-    .io_out(io_out),
-    .io_oeb(io_oeb),
+    .inp(analog_io[0]),
+    .inm(analog_io[1]),
+    .phi1(analog_io[2]),
+    .phi2(analog_io[3]),
+    .phi1b(analog_io[4]),
+    .phi2b(analog_io[5]),
+    .vbotp(analog_io[6]),
+    .vbotm(analog_io[7]),
+    .compout(analog_io[8]),
+    .pol(analog_io[9]),
+    .polxevent(analog_io[10]),
 
     // IRQ
-    .irq(user_irq)
+    //.irq(user_irq)
 );
 
 endmodule	// user_project_wrapper
