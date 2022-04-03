@@ -216,3 +216,4 @@ C {devices/gnd.sym} -1576486485 -284837940 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} -1576486485 -284838040 0 0 {name=l8 sig_type=std_logic lab=clk_ext}
 C {devices/lab_pin.sym} -1576486485 -284838080 0 0 {name=l9 sig_type=std_logic lab=rst_ext}
 C {devices/lab_pin.sym} -1576486655 -284838135 0 0 {name=l10 sig_type=std_logic lab=rst_ext}
+C {devices/lab_pin.sym} -1576486215 -284838040 0 0 {name=l11 sig_type=std_logic lab=clk_ext}

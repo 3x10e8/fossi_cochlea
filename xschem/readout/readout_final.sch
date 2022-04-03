@@ -70,7 +70,6 @@ N 4080 -40 4080 110 { lab=VDD}
 N 4080 80 4150 80 { lab=VDD}
 N 4080 -725 4165 -725 { lab=VDD}
 N 4080 -725 4080 -720 { lab=VDD}
-N 3320 -375 3345 -375 { lab=#net2}
 N 4080 -825 4165 -825 { lab=VDD}
 N 4080 -825 4080 -725 { lab=VDD}
 C {devices/vsource.sym} 3015 -705 0 0 {name=V2 value=1.2}
