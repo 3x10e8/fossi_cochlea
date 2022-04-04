@@ -125,7 +125,7 @@ rect 11614 -9650 11720 -9552
 rect 11614 -10048 11674 -9650
 rect 11596 -10088 11674 -10048
 rect 11126 -10172 11357 -10112
-use comparator_final  comparator_final_0
+use ../comparator/comparator_final  comparator_final_0
 timestamp 1647895372
 transform 1 0 11870 0 1 -10038
 box -574 -430 9642 401
