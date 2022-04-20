@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {This flop sets when resetb goes low because we want initial value as 16'b1000000000000000 } 9650 -1860 0 0 0.4 0.4 {}
 N 890 -1910 970 -1910 { lab=Clk}
 N 1060 -2240 1060 -2220 { lab=Q0}
 N 760 -2080 860 -2080 { lab=EN}
@@ -313,14 +314,14 @@ N 9720 -2080 9720 -2060 { lab=#net59}
 N 9720 -2080 9760 -2080 { lab=#net59}
 N 9160 -1860 9400 -1860 { lab=#net53}
 N 9160 -2170 9480 -2170 { lab=#net52}
-N 9890 -1910 9970 -1910 { lab=Clk}
-N 10080 -2240 10080 -2220 { lab=Q15}
+N 9880 -1910 9960 -1910 { lab=Clk}
+N 10060 -2240 10060 -2220 { lab=Q15}
 N 9760 -2080 9860 -2080 { lab=#net59}
 N 9760 -1980 9860 -1980 { lab=RSTB}
-N 10080 -2220 10080 -2130 { lab=Q15}
-N 10080 -2030 10120 -2030 { lab=Q15_N}
+N 10060 -2220 10060 -2130 { lab=Q15}
+N 10060 -2030 10100 -2030 { lab=Q15_N}
 N 9140 -1860 9160 -1860 { lab=#net53}
-N 10080 -2130 10080 -2080 { lab=Q15}
+N 10060 -2130 10060 -2080 { lab=Q15}
 N 9400 -1860 9480 -1860 { lab=#net53}
 N 8800 -1860 8880 -1860 { lab=#net49}
 N 8200 -1860 8280 -1860 { lab=#net45}
@@ -441,12 +442,12 @@ C {T_flip_flop/asyn_rst_t_ff.sym} 10310 -1660 0 0 {name=X7}
 C {sky130_stdcells/or2_0.sym} 9660 -2060 0 0 {name=x62 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/and2_1.sym} 9540 -1970 0 0 {name=x64 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 9290 -1910 0 0 {name=l12 sig_type=std_logic lab=Clk}
-C {devices/opin.sym} 10080 -2230 3 0 {name=p8 lab=Q15}
-C {T_flip_flop/asyn_rst_t_ff.sym} 10910 -1660 0 0 {name=X8}
+C {devices/opin.sym} 10060 -2230 3 0 {name=p8 lab=Q15}
 C {devices/lab_pin.sym} 9760 -1980 0 0 {name=l13 sig_type=std_logic lab=RSTB}
-C {devices/lab_pin.sym} 9890 -1910 0 0 {name=l14 sig_type=std_logic lab=Clk}
+C {devices/lab_pin.sym} 9880 -1910 0 0 {name=l14 sig_type=std_logic lab=Clk}
 C {devices/lab_pin.sym} 9160 -1980 0 0 {name=l15 sig_type=std_logic lab=RSTB}
-C {devices/lab_pin.sym} 10120 -2030 2 0 {name=l16 sig_type=std_logic lab=Q15_N}
+C {devices/lab_pin.sym} 10100 -2030 2 0 {name=l16 sig_type=std_logic lab=Q15_N}
 C {devices/lab_pin.sym} 5560 -1980 0 0 {name=l17 sig_type=std_logic lab=RSTB}
 C {devices/lab_pin.sym} 1460 -2080 1 0 {name=l18 sig_type=std_logic lab=T1}
 C {devices/lab_pin.sym} 2060 -2080 1 0 {name=l21 sig_type=std_logic lab=T2}
+C {T_flip_flop/asyn_st_tff.sym} 10440 -1630 0 0 {name=X8}

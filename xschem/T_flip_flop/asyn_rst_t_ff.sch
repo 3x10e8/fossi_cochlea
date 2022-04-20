@@ -26,4 +26,4 @@ C {devices/opin.sym} -430 -390 0 0 {name=p3 lab=Q}
 C {devices/ipin.sym} -930 -270 0 0 {name=p4 lab=RSTB}
 C {devices/opin.sym} -400 -310 0 0 {name=p5 lab=Q_N}
 C {sky130_stdcells/inv_1.sym} -470 -350 1 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/dfrtp_1.sym} -590 -370 0 0 {name=x4 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/dfrtp_1.sym} -590 -370 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
