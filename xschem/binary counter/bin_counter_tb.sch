@@ -61,4 +61,4 @@ C {devices/lab_pin.sym} 910 -1180 0 0 {name=l24 sig_type=std_logic lab=RSTB}
 C {devices/vsource.sym} 755 -1010 0 0 {name=V4 value="DC 0 PWL(0u 0 1u 0 1.01u 1.2)"}
 C {devices/gnd.sym} 755 -980 0 0 {name=l25 lab=GND}
 C {devices/lab_pin.sym} 755 -1040 0 0 {name=l26 sig_type=std_logic lab=RSTB}
-C {devices/gnd.sym} 910 -1140 0 0 {name=l27 lab=GND}
+C {devices/lab_pin.sym} 910 -1140 0 0 {name=l27 sig_type=std_logic lab=VDD}
