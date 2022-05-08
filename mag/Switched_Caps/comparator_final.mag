@@ -997,7 +997,6 @@ rect -318 -72 -196 -69
 rect -318 -139 -315 -72
 rect -251 -139 -196 -72
 rect -318 -141 -196 -139
-<<<<<<< HEAD
 use sky130_fd_sc_lp__buf_1  sky130_fd_sc_lp__buf_1_0 /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_lp/mag
 timestamp 1647888116
 transform -1 0 9539 0 1 -381
@@ -1011,21 +1010,6 @@ timestamp 1640850677
 transform 1 0 8099 0 1 -381
 box -38 -49 710 715
 use sky130_fd_sc_lp__dfxtp_2  sky130_fd_sc_lp__dfxtp_2_0 /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_lp/mag
-=======
-use sky130_fd_sc_lp__buf_1  sky130_fd_sc_lp__buf_1_0 ~/sky130A/libs.ref/sky130_fd_sc_lp/mag
-timestamp 1647888116
-transform -1 0 9539 0 1 -381
-box -38 -49 326 715
-use sky130_fd_sc_lp__and2_1  sky130_fd_sc_lp__and2_1_0 ~/sky130A/libs.ref/sky130_fd_sc_lp/mag
-timestamp 1626515395
-transform 1 0 8771 0 1 -381
-box -38 -49 518 715
-use sky130_fd_sc_lp__xor2_1  sky130_fd_sc_lp__xor2_1_0 ~/sky130A/libs.ref/sky130_fd_sc_lp/mag
-timestamp 1640850677
-transform 1 0 8099 0 1 -381
-box -38 -49 710 715
-use sky130_fd_sc_lp__dfxtp_2  sky130_fd_sc_lp__dfxtp_2_0 ~/sky130A/libs.ref/sky130_fd_sc_lp/mag
->>>>>>> ce108ae134f3bcf6ca1b74b122de55ad29a14983
 timestamp 1647887894
 transform 1 0 1187 0 1 -381
 box -38 -49 1766 715
