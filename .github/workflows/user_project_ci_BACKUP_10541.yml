@@ -1,15 +1,17 @@
 name: CI
 
+
 on:
-  # Runs on Every Push
-  push:
-  # Runs on Pull Requests
-  pull_request:
-  workflow_dispatch:
+    # Runs on Every Push
+    push:
+    # Runs on Pull Requests
+    pull_request:
+    workflow_dispatch:
 
 jobs:
-  pdk:
+  precheck:
     runs-on: ubuntu-latest
+    timeout-minutes: 720
     steps:
       - uses: actions/checkout@v2
 
@@ -19,6 +21,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+<<<<<<< HEAD
+      - name: Install The Precheck
+        run: sh ${GITHUB_WORKSPACE}/.github/scripts/precheck/precheckBuild.sh
+
+      - name: Run The Precheck
+        run: bash ${GITHUB_WORKSPACE}/.github/scripts/precheck/run-precheck.sh
+  
+  precheck-drc:
+=======
       - name: Export PDK ROOT
         run: echo "PDK_ROOT=/home/runner/work/pdk" >> $GITHUB_ENV
       
@@ -45,9 +56,9 @@ jobs:
 
 
   mpw_precheck:
+>>>>>>> a11292b5ad1ffdb085a7884807f9d9569dce13f5
     timeout-minutes: 720
     runs-on: ubuntu-latest
-    needs: [pdk]
     steps:
       - uses: actions/checkout@v2
 
@@ -57,6 +68,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+<<<<<<< HEAD
+      - name: Install The Precheck
+        run: sh ${GITHUB_WORKSPACE}/.github/scripts/precheck/precheckBuild.sh
+
+      - name: Run The Precheck
+        run: bash ${GITHUB_WORKSPACE}/.github/scripts/precheck/run-precheck-drc.sh
+  
+  dv_rtl:
+=======
       - name: Export PDK ROOT
         run: |
           echo "PDK_ROOT=/home/runner/work/pdk" >> $GITHUB_ENV
@@ -101,17 +121,53 @@ jobs:
 
   user_project_flow:
     timeout-minutes: 720
+>>>>>>> a11292b5ad1ffdb085a7884807f9d9569dce13f5
     runs-on: ubuntu-latest
-    needs: [pdk]
     steps:
-      - uses: actions/checkout@v2
+       - uses: actions/checkout@v2
+      
+       - name: Set up QEMU
+         uses: docker/setup-qemu-action@v1
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+       - name: Set up Docker Buildx
+         uses: docker/setup-buildx-action@v1
+        
+       - name: Install The PDK
+         run: bash ${GITHUB_WORKSPACE}/.github/scripts/dv/pdkBuild.sh
+         env: 
+          OPENLANE_TAG: 2021.09.16_03.28.21
+          
+       - name: Install The Dockerized DV Setup
+         run:  docker pull efabless/dv_setup:latest
+       
+       - name: Run DV tests
+         # Run test number 0,1,2,3,4 in one job                            <test-ids>   <sim-mode>
+         run: bash ${GITHUB_WORKSPACE}/.github/scripts/dv/run-dv-wrapper.sh 0,1,2,3,4      RTL
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+  dv_gl:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v2
+      
+       - name: Set up QEMU
+         uses: docker/setup-qemu-action@v1
 
+<<<<<<< HEAD
+       - name: Set up Docker Buildx
+         uses: docker/setup-buildx-action@v1
+        
+       - name: Install The PDK
+         run:  bash ${GITHUB_WORKSPACE}/.github/scripts/dv/pdkBuild.sh
+         env: 
+          OPENLANE_TAG: 2021.09.16_03.28.21
+          
+       - name: Install The Dockerized DV Setup
+         run:  docker pull efabless/dv_setup:latest
+       
+       - name: Run DV tests
+         # Run test number 0,1,2,3,4 in one job                             <test-ids>   <sim-mode>
+         run: bash ${GITHUB_WORKSPACE}/.github/scripts/dv/run-dv-wrapper.sh 0,1,2,3,4      GL
+=======
       - name: Export PDK ROOT
         run: echo "PDK_ROOT=/home/runner/work/pdk" >> $GITHUB_ENV
 
@@ -157,3 +213,4 @@ jobs:
           make verify-la_test2-gl 
           make verify-mprj_stimulus-gl 
           make verify-wb_port-gl
+>>>>>>> a11292b5ad1ffdb085a7884807f9d9569dce13f5
