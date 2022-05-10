@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -50,5 +50,5 @@ C {devices/lab_pin.sym} 200 220 2 0 {name=l3 sig_type=std_logic lab=c2b}
 C {devices/ipin.sym} -200 240 0 0 {name=p9 lab=thresh2}
 C {transmission_gate/transmission_gate.sym} -100 0 0 0 {name=X1 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 100 0 0 0 {name=X2 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
-C {comparator/analogMux.sym} -140 270 0 0 {name=x3}
 C {devices/ipin.sym} -200 280 0 0 {name=p10 lab=cclkb}
+C {mux/analogMux.sym} -140 270 0 0 {name=x3}

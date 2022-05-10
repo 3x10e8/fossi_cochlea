@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -33,8 +33,8 @@ N 60 -80 60 -60 { lab=cclkb}
 N -340 400 -340 420 { lab=Vnb}
 N -410 380 -410 420 { lab=Vpb}
 C {devices/netlist.sym} -240 -330 0 0 {name=SPICE only_toplevel=false value="
-.lib /home/sky/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-.include /home/sky/sky130A/libs.ref/sky130_fd_sc_lp/spice/sky130_fd_sc_lp.spice
+.lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/lib/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_lp/spice/sky130_fd_sc_lp.spice
 .options abstol=1e-14 reltol=1e-4
 .param f=2560k
 .param duty_cycle=0.5
