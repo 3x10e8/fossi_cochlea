@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -12,13 +12,12 @@ swapping clk} 10 80 2 0 0.4 0.4 {}
 T {Generate 
 non-overlapping 
 phi1/phi2 clks} 40 -260 2 0 0.4 0.4 {}
-T {Filter clk for bank} -420 -190 0 0 0.4 0.4 {}
-T {To next wavelet (octave)} 130 280 0 0 0.4 0.4 {}
+T {Gated clk from synchronizer} -420 -190 0 0 0.4 0.4 {}
+T {To next wavelet (unison)} 130 280 0 0 0.4 0.4 {}
 T {Comparator
 sampling clk} 390 -340 0 0 0.4 0.4 {}
 T {Last cap
 thresh clk} 460 -60 0 0 0.4 0.4 {}
-T {Phi1/Phi2 gated by rstb} -300 -120 0 0 0.4 0.4 {}
 N 460 -230 490 -230 { lab=phi2b}
 N 230 -130 230 -110 { lab=Vpb}
 N 90 -70 90 -50 { lab=Vnb}
@@ -53,10 +52,7 @@ N 90 150 90 170 { lab=Vnb}
 N 210 150 210 170 { lab=Vnb}
 N 190 130 210 130 { lab=div2d}
 N 310 130 340 130 { lab=div2dd}
-N -340 -160 -290 -160 { lab=clk}
-N -110 -160 -50 -160 { lab=gclk}
-N -320 -140 -290 -140 { lab=rstb}
-N -320 -140 -320 310 { lab=rstb}
+N -340 -160 -40 -160 { lab=clk}
 N -60 200 -60 270 { lab=clkdiv2}
 N -200 200 -60 200 { lab=clkdiv2}
 N -200 150 -200 200 { lab=clkdiv2}
@@ -89,8 +85,6 @@ C {clkgen/comp_clks.sym} 390 130 0 0 {name=X10 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 
 C {devices/lab_pin.sym} 90 170 3 0 {name=l1 sig_type=std_logic lab=Vnb}
 C {devices/lab_pin.sym} 210 170 3 0 {name=l2 sig_type=std_logic lab=Vnb}
 C {devices/lab_pin.sym} 320 130 1 0 {name=l3 sig_type=std_logic lab=div2dd}
-C {sky130_stdcells/dlclkp_1.sym} -200 -150 0 0 {name=x12 VGND=gnd VNB=gnd VPB=vdd VPWR=vdd prefix=sky130_fd_sc_lp__ }
-C {devices/lab_pin.sym} -90 -160 1 0 {name=l4 sig_type=std_logic lab=gclk}
 C {clkgen/comp_clks_1stage.sym} 0 -160 0 0 {name=X1 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {sky130_stdcells/and2_0.sym} -110 130 0 0 {name=x2 VGND=gnd VNB=gnd VPB=vdd VPWR=vdd prefix=sky130_fd_sc_lp__ }
 C {inv/inv_weak_pulldown.sym} 140 -250 0 0 {name=X2 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}

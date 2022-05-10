@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -84,7 +84,7 @@ C {devices/lab_pin.sym} 830 -160 3 1 {name=l372 sig_type=std_logic lab=latch_i}
 C {devices/lab_pin.sym} 650 -180 0 0 {name=l373 sig_type=std_logic lab=high_i}
 C {devices/ipin.sym} -390 -1000 0 0 {name=p10 lab=thresh1}
 C {devices/ipin.sym} -390 -970 0 0 {name=p11 lab=thresh2}
-C {tryandtest/champa/filter.sym} 700 -620 0 0 {name=X64}
+C {tryandtest/final/filter.sym} 700 -620 0 0 {name=X64}
 C {devices/lab_pin.sym} 860 -760 1 0 {name=l363 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} 900 -760 0 1 {name=l364 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} 860 -630 3 0 {name=l516 sig_type=std_logic lab=phi1b}
@@ -104,11 +104,11 @@ C {devices/lab_pin.sym} 1710 -740 0 0 {name=l548 sig_type=std_logic lab=inp_i_o}
 C {devices/lab_pin.sym} 1710 -700 0 0 {name=l549 sig_type=std_logic lab=inm_i_o}
 C {devices/lab_pin.sym} 1770 -670 0 1 {name=l550 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} 1770 -770 2 0 {name=l551 sig_type=std_logic lab=phi1}
-C {tryandtest/champa/filter.sym} 700 -340 0 0 {name=X66}
+C {tryandtest/final/filter.sym} 700 -340 0 0 {name=X66}
 C {devices/lab_pin.sym} 710 -430 0 0 {name=l556 sig_type=std_logic lab=inm_i_mux}
 C {devices/lab_pin.sym} 1030 -430 0 1 {name=l557 sig_type=std_logic lab=inm_i_o}
-C {devices/lab_pin.sym} 710 -410 0 0 {name=l558 sig_type=std_logic lab=thresh1}
-C {devices/lab_pin.sym} 710 -390 0 0 {name=l559 sig_type=std_logic lab=thresh2}
+C {devices/lab_pin.sym} 710 -390 0 0 {name=l558 sig_type=std_logic lab=thresh1}
+C {devices/lab_pin.sym} 710 -410 0 0 {name=l559 sig_type=std_logic lab=thresh2}
 C {mux/multiplier_differential.sym} 730 -550 0 0 {name=X67}
 C {devices/lab_pin.sym} 680 -590 0 0 {name=l562 sig_type=std_logic lab=inp_i}
 C {devices/lab_pin.sym} 680 -510 0 0 {name=l563 sig_type=std_logic lab=inm_i}
@@ -125,16 +125,16 @@ C {devices/lab_pin.sym} 330 -430 0 0 {name=l570 sig_type=std_logic lab=inp_q}
 C {devices/lab_pin.sym} 330 -350 0 0 {name=l571 sig_type=std_logic lab=inm_q}
 C {devices/lab_pin.sym} 300 -460 2 1 {name=l572 sig_type=std_logic lab=cos}
 C {devices/lab_pin.sym} 380 -330 2 0 {name=l573 sig_type=std_logic lab=cos}
-C {tryandtest/champa/filter.sym} 1200 -630 0 0 {name=X69}
+C {tryandtest/final/filter.sym} 1200 -630 0 0 {name=X69}
 C {devices/lab_pin.sym} 1210 -720 0 0 {name=l578 sig_type=std_logic lab=inp_q_mux}
 C {devices/lab_pin.sym} 1530 -720 0 1 {name=l579 sig_type=std_logic lab=inp_q_o}
 C {devices/lab_pin.sym} 1210 -700 0 0 {name=l580 sig_type=std_logic lab=thresh1}
 C {devices/lab_pin.sym} 1210 -680 0 0 {name=l581 sig_type=std_logic lab=thresh2}
-C {tryandtest/champa/filter.sym} 1200 -360 0 0 {name=X70}
+C {tryandtest/final/filter.sym} 1200 -360 0 0 {name=X70}
 C {devices/lab_pin.sym} 1210 -450 0 0 {name=l588 sig_type=std_logic lab=inm_q_mux}
 C {devices/lab_pin.sym} 1530 -450 0 1 {name=l589 sig_type=std_logic lab=inm_q_o}
-C {devices/lab_pin.sym} 1210 -430 0 0 {name=l590 sig_type=std_logic lab=thresh1}
-C {devices/lab_pin.sym} 1210 -410 0 0 {name=l591 sig_type=std_logic lab=thresh2}
+C {devices/lab_pin.sym} 1210 -410 0 0 {name=l590 sig_type=std_logic lab=thresh1}
+C {devices/lab_pin.sym} 1210 -430 0 0 {name=l591 sig_type=std_logic lab=thresh2}
 C {Sinusoid_generator/sinusoid_generator_updated.sym} 50 -540 0 0 {name=X71}
 C {devices/lab_pin.sym} 140 -610 2 0 {name=l597 sig_type=std_logic lab=sin}
 C {devices/lab_pin.sym} 140 -570 2 0 {name=l598 sig_type=std_logic lab=cos}
