@@ -13,19 +13,19 @@ node "out" 646 177.021 366 150 ndif 0 0 0 0 0 0 0 0 4536 276 4536 276 0 0 0 0 0 
 node "in" 898 310.083 204 350 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19524 1256 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
 node "VDD" 3330 660.425 182 444 nw 0 0 0 0 48576 904 0 0 4872 284 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 24616 1388 37632 964 0 0 0 0 0 0 0 0 0 0
 substrate "SUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "in" "GND" 7.2492
-cap "VDD" "out" 54.2102
-cap "VDD" "Vnb" 3.11667
+cap "int" "GND" 52.2695
+cap "Vnb" "VDD" 3.11667
+cap "Vnb" "in" 75.0863
 cap "Vnb" "out" 64.0588
-cap "VDD" "int" 4.25
-cap "out" "int" 40.3333
-cap "VDD" "GND" 1.75
-cap "GND" "out" 32.5123
+cap "VDD" "in" 15.5733
+cap "VDD" "out" 54.2102
+cap "out" "in" 14.52
 cap "Vnb" "GND" 5.4466
-cap "GND" "int" 52.2695
-cap "in" "VDD" 15.5733
-cap "in" "out" 14.52
-cap "in" "Vnb" 75.0863
+cap "VDD" "GND" 1.75
+cap "in" "GND" 7.2492
+cap "VDD" "int" 4.25
+cap "out" "GND" 32.5123
+cap "int" "out" 40.3333
 device msubckt sky130_fd_pr__nfet_01v8 336 150 337 151 l=30 w=84 "SUB" "Vnb" 60 0 "int" 84 0 "out" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 248 150 249 151 l=30 w=84 "SUB" "in" 60 0 "GND" 84 0 "int" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 336 480 337 481 l=30 w=84 "VDD" "in" 60 0 "VDD" 84 0 "out" 84 0

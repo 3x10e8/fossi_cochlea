@@ -5,6 +5,22 @@ V {}
 S {}
 E {}
 N 1030 -860 1030 -840 { lab=Clk}
+N 1140 -1220 1200 -1220 { lab=Q0}
+N 1140 -1200 1200 -1200 { lab=Q1}
+N 1140 -1180 1200 -1180 { lab=Q2}
+N 1140 -1160 1200 -1160 { lab=Q3}
+N 1140 -1140 1200 -1140 { lab=Q4}
+N 1140 -1120 1200 -1120 { lab=Q5}
+N 1140 -1100 1200 -1100 { lab=Q6}
+N 1140 -1080 1200 -1080 { lab=Q7}
+N 1140 -1060 1200 -1060 { lab=Q8}
+N 1140 -1040 1200 -1040 { lab=Q9}
+N 1140 -1020 1200 -1020 { lab=Q10}
+N 1140 -1000 1200 -1000 { lab=Q11}
+N 1140 -980 1200 -980 { lab=Q12}
+N 1140 -960 1200 -960 { lab=Q13}
+N 1140 -940 1200 -940 { lab=Q14}
+N 1140 -920 1200 -920 { lab=Q15}
 C {devices/gnd.sym} 1030 -780 0 0 {name=l4 lab=GND}
 C {devices/vsource.sym} 1030 -810 0 0 {name=V3 value="DC 0 PULSE(0 1.2 0 1n 1n \{duty_cycle*1/f\} \{1/f\})"}
 C {devices/vsource.sym} 760 -1100 0 0 {name=V1 value=1.2}
@@ -28,7 +44,6 @@ C {devices/netlist.sym} 1360 -1560 0 0 {name=SPICE value="
 .options abstol=1e-14 reltol=1e-4
 .param f=2560k
 .param duty_cycle=0.5
-.ic v(x1.Qb0)=0 
 .tran \{(1/100)*(1/f)\} \{40/f\}
 .save all
 "}
@@ -43,6 +58,7 @@ C {devices/lab_pin.sym} 1140 -940 2 0 {name=l21 sig_type=std_logic lab=Q14}
 C {devices/lab_pin.sym} 1140 -920 2 0 {name=l22 sig_type=std_logic lab=Q15}
 C {devices/lab_pin.sym} 910 -1220 0 0 {name=l23 sig_type=std_logic lab=EN}
 C {devices/lab_pin.sym} 910 -1180 0 0 {name=l24 sig_type=std_logic lab=RSTB}
-C {devices/vsource.sym} 755 -1010 0 0 {name=V4 value="PWL(0u 0 1u 0 1.01u 1.2)"}
+C {devices/vsource.sym} 755 -1010 0 0 {name=V4 value="DC 0 PWL(0u 0 1u 0 1.01u 1.2)"}
 C {devices/gnd.sym} 755 -980 0 0 {name=l25 lab=GND}
 C {devices/lab_pin.sym} 755 -1040 0 0 {name=l26 sig_type=std_logic lab=RSTB}
+C {devices/lab_pin.sym} 910 -1140 0 0 {name=l27 sig_type=std_logic lab=VDD}

@@ -1,0 +1,14 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1647918629
+use clk_tree  clk_tree_0 ~/cochlea_latest/fossi_cochlea/mag/clkgen
+timestamp 1647911393
+transform 1 0 -46000 0 1 -43110
+box 0 1400 18561 6162
+use filter_i_q  filter_i_q_0
+array 0 7 34404 0 0 45112
+timestamp 1647918629
+transform 1 0 -24226 0 1 -54240
+box 336 -7788 34034 37144
+<< end >>

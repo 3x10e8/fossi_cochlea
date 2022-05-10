@@ -28,4 +28,3 @@ C {Clock Synchronizer/synchronizer.sym} -1030 120 0 0 {name=X1}
 C {devices/lab_pin.sym} 1630 -1300 0 0 {name=l4 sig_type=std_logic lab=rst_ext}
 C {devices/lab_pin.sym} 1630 -1260 0 0 {name=l5 sig_type=std_logic lab=clk_ext}
 C {devices/lab_pin.sym} 1900 -1300 2 0 {name=l6 sig_type=std_logic lab=rstb}
-C {devices/lab_pin.sym} 1900 -1260 2 0 {name=l7 sig_type=std_logic lab=clk}

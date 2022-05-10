@@ -1,0 +1,211 @@
+timestamp 1648855501
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use comparator_final comparator_final_0 1 0 11870 0 1 -10038
+use fitler_cell fitler_cell_1 -1 0 22898 0 1 0
+use fitler_cell fitler_cell_0 1 0 4 0 1 0
+port "vssa1" 13 -5197 6012 -5197 6012 m3
+port "compout" 5 13477 -10551 13477 -10551 m2
+port "phi2" 8 11381 6398 11381 6398 m2
+port "phi1" 7 11312 6398 11312 6398 m2
+port "vbotm" 12 11662 6398 11662 6398 m2
+port "vbotp" 9 11451 6398 11451 6398 m2
+port "vdda1" 14 11241 6398 11241 6398 m2
+port "phi1b" 10 11521 6398 11521 6398 m2
+port "phi2b" 11 11592 6398 11592 6398 m2
+node "m4_11596_n10088#" 0 251.678 11596 -10088 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37388 1320 0 0 0 0
+node "m4_11126_n10172#" 1 295.329 11126 -10172 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 42896 1550 0 0 0 0
+node "m3_10991_n1407#" 0 455.276 10991 -1407 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247884 2362 0 0 0 0 0 0
+node "m3_11049_n308#" 0 455.276 11049 -308 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247884 2362 0 0 0 0 0 0
+node "m3_10976_820#" 0 455.276 10976 820 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247884 2362 0 0 0 0 0 0
+node "m3_11015_2017#" 0 455.276 11015 2017 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247884 2362 0 0 0 0 0 0
+node "m3_10991_3273#" 0 455.276 10991 3273 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 247884 2362 0 0 0 0 0 0
+node "m3_11139_4857#" 0 264.616 11139 4857 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104483 1608 0 0 0 0 0 0
+node "m3_11120_5512#" 0 264.616 11120 5512 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104483 1608 0 0 0 0 0 0
+node "vssa1" 0 220.265 -5197 6012 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 57716 990 0 0 0 0 0 0
+node "m1_19471_n10439#" 1 602.388 19471 -10439 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2808 212 5775 304 157248 2208 0 0 0 0 0 0
+node "compout" 1 264.203 13477 -10551 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4698 278 26390 1026 0 0 0 0 0 0 0 0
+node "phi2" 44 4126.51 11381 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16656 1184 300988 20076 0 0 0 0 0 0 0 0
+node "phi1" 69 6518.04 11312 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16704 1184 483843 32264 0 0 0 0 0 0 0 0
+node "vbotm" 40 3820.88 11662 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4336 304 289948 19340 0 0 0 0 0 0 0 0
+node "vbotp" 41 3904.81 11451 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9824 696 289948 19340 0 0 0 0 0 0 0 0
+node "vdda1" 73 7038.53 11241 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59912 3380 490604 32572 0 0 0 0 0 0 0 0
+node "phi1b" 69 6539.56 11521 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17272 1228 483748 32260 0 0 0 0 0 0 0 0
+node "phi2b" 40 3788.1 11592 6398 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16768 1192 270628 18052 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m3_10991_n1407#" "phi2b" 158.728
+cap "vbotm" "phi1" 1517.97
+cap "m3_10976_820#" "phi1" 158.728
+cap "phi2b" "phi1b" 11995.1
+cap "vbotp" "phi2" 12124.1
+cap "phi2" "m3_11049_n308#" 158.728
+cap "m3_11015_2017#" "phi1b" 158.728
+cap "m3_10991_3273#" "phi2" 158.728
+cap "vbotp" "m3_11139_4857#" 103.233
+cap "vbotp" "vdda1" 2749.28
+cap "vdda1" "m3_11049_n308#" 158.728
+cap "m3_10976_820#" "vbotm" 158.728
+cap "m3_10991_3273#" "vdda1" 158.728
+cap "vbotp" "m3_10991_n1407#" 158.728
+cap "phi2b" "m3_11015_2017#" 158.728
+cap "m3_11120_5512#" "phi2" 103.233
+cap "vbotp" "phi1b" 12127
+cap "m3_11049_n308#" "phi1b" 158.728
+cap "phi1" "phi2" 13259.8
+cap "m3_11120_5512#" "vdda1" 103.233
+cap "m3_10991_3273#" "phi1b" 158.728
+cap "m3_11139_4857#" "phi1" 103.233
+cap "vdda1" "phi1" 20207
+cap "vbotp" "phi2b" 4117.97
+cap "phi2b" "m3_11049_n308#" 158.728
+cap "m3_11120_5512#" "phi1b" 103.233
+cap "vbotp" "m3_11015_2017#" 158.728
+cap "vbotm" "phi2" 1936.6
+cap "m3_10991_3273#" "phi2b" 158.728
+cap "m3_10991_n1407#" "phi1" 158.728
+cap "m3_10976_820#" "phi2" 158.728
+cap "phi1" "phi1b" 4540.54
+cap "vbotm" "m3_11139_4857#" 103.233
+cap "vdda1" "vbotm" 1273.93
+cap "m3_11120_5512#" "phi2b" 103.233
+cap "m3_10976_820#" "vdda1" 158.728
+cap "m3_10991_n1407#" "vbotm" 158.728
+cap "vbotp" "m3_11049_n308#" 158.728
+cap "phi1" "phi2b" 1831.31
+cap "vbotm" "phi1b" 4414.26
+cap "m3_10991_3273#" "vbotp" 158.728
+cap "phi1" "m3_11015_2017#" 158.728
+cap "m3_10976_820#" "phi1b" 158.728
+cap "m3_11120_5512#" "vbotp" 103.233
+cap "vbotm" "phi2b" 11287.8
+cap "vbotm" "m3_11015_2017#" 158.728
+cap "m3_10976_820#" "phi2b" 158.728
+cap "m3_11139_4857#" "phi2" 103.233
+cap "vdda1" "phi2" 4615.66
+cap "vbotp" "phi1" 4460.22
+cap "phi1" "m3_11049_n308#" 158.728
+cap "m3_10991_3273#" "phi1" 158.728
+cap "m3_10991_n1407#" "phi2" 158.728
+cap "vdda1" "m3_11139_4857#" 103.233
+cap "phi2" "phi1b" 4621.87
+cap "vbotp" "vbotm" 2692.86
+cap "m3_10991_n1407#" "vdda1" 158.728
+cap "m3_11120_5512#" "phi1" 103.233
+cap "vbotm" "m3_11049_n308#" 158.728
+cap "m3_11139_4857#" "phi1b" 103.233
+cap "m3_10976_820#" "vbotp" 158.728
+cap "vdda1" "phi1b" 3724.54
+cap "m3_10991_3273#" "vbotm" 158.728
+cap "phi2b" "phi2" 2529.8
+cap "m3_10991_n1407#" "phi1b" 158.728
+cap "phi2" "m3_11015_2017#" 158.728
+cap "m3_11120_5512#" "vbotm" 103.233
+cap "m3_11139_4857#" "phi2b" 103.233
+cap "vdda1" "phi2b" 1630.74
+cap "vdda1" "m3_11015_2017#" 158.728
+cap "comparator_final_0/inp" "fitler_cell_0/C3" 12.9
+cap "comparator_final_0/phi1" "comparator_final_0/VDD" 209.687
+cap "comparator_final_0/phi1b" "comparator_final_0/VDD" 11.9882
+cap "comparator_final_0/phi1" "comparator_final_0/phi1b" -4.44444
+cap "comparator_final_0/inp" "comparator_final_0/inm" 0.45765
+cap "comparator_final_0/phi1" "comparator_final_0/inm" -9
+cap "comparator_final_0/inm" "comparator_final_0/FP" 26.795
+cap "comparator_final_0/inm" "comparator_final_0/VDD" 74.4792
+cap "comparator_final_0/phi1b" "comparator_final_0/inm" 27.9
+cap "comparator_final_0/inm" "comparator_final_0/FN" 39.5848
+cap "comparator_final_0/phi1b" "comparator_final_0/VDD" -37.7133
+cap "comparator_final_0/inm" "comparator_final_0/inp" 0.45765
+cap "comparator_final_0/inm" "fitler_cell_1/C3" 21.07
+cap "comparator_final_0/inm" "comparator_final_0/phi1" 36.4765
+cap "comparator_final_0/phi1b" "comparator_final_0/phi1" -2.10526
+cap "comparator_final_0/high_buffered" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_0/a_432_119#" 28.0662
+cap "comparator_final_0/high_buffered" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_0/CLK" 55.3504
+cap "comparator_final_0/high_buffered" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_0/a_110_62#" 2.8828
+cap "comparator_final_0/high_buffered" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_0/VPB" 0.215916
+cap "comparator_final_0/high_buffered" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_0/VNB" 167.947
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/a_1175_93#" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" 96.6887
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VPB" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" 46.8509
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/a_1163_379#" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" 18.0012
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VPWR" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" 155.689
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" "comparator_final_0/sky130_fd_sc_lp__xor2_1_0/A" 69.058
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/a_1004_379#" 166.408
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/a_1133_119#" 17.2452
+cap "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" "fitler_cell_1/c2" 59.64
+cap "comparator_final_0/sky130_fd_sc_lp__buf_1_0/a_70_237#" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VNB" -1.105
+cap "fitler_cell_1/phi2" "fitler_cell_0/C3" -0.127479
+cap "fitler_cell_1/phi2" "fitler_cell_1/phi1" -0.818182
+cap "fitler_cell_1/phi1" "fitler_cell_1/phi2" -4.90909
+cap "vbotm" "fitler_cell_1/phi2" -1.01983
+cap "fitler_cell_1/phi2" "fitler_cell_0/C3" 13.9241
+cap "fitler_cell_1/phi1" "fitler_cell_1/phi2" -2.5
+cap "vdda1" "fitler_cell_1/phi1b" -1.40625
+cap "fitler_cell_1/phi1" "fitler_cell_0/C3" 18
+cap "vbotm" "fitler_cell_0/C3" 7.32559
+cap "fitler_cell_1/phi2b" "fitler_cell_1/phi1b" -2.64706
+cap "vbotm" "fitler_cell_1/phi1b" 6.66667
+cap "fitler_cell_1/phi2b" "vdda1" -1.42857
+cap "fitler_cell_0/C3" "vdda1" 25.8824
+cap "fitler_cell_1/phi1" "fitler_cell_1/phi2" -15
+cap "fitler_cell_1/phi2b" "fitler_cell_1/phi1b" -60.7835
+cap "vbotm" "fitler_cell_1/phi2" -2.15569
+cap "fitler_cell_1/phi1" "vbotm" -2
+cap "fitler_cell_1/phi1" "fitler_cell_1/phi1b" -18.48
+cap "vbotp" "vbotm" 7.32559
+cap "fitler_cell_1/phi1b" "vdda1" -26.7187
+cap "fitler_cell_1/phi1b" "vbotm" 14.1935
+cap "fitler_cell_1/phi2b" "vdda1" -6.42857
+cap "fitler_cell_0/c1" "fitler_cell_0/a_1880_n3206#" -132.225
+cap "fitler_cell_1/c1" "fitler_cell_0/a_1880_n3206#" 96.915
+cap "m3_10991_n1407#" "fitler_cell_0/c1" 96.915
+cap "fitler_cell_1/c1" "m3_10991_n1407#" 96.915
+cap "fitler_cell_0/a_1880_n3206#" "phi1b" 1.42109e-14
+cap "fitler_cell_0/a_1880_n3206#" "fitler_cell_0/c1" 108.275
+cap "fitler_cell_0/a_1880_n3206#" "phi1b" -1.42109e-14
+cap "fitler_cell_0/a_1880_n3206#" "fitler_cell_1/c1" 108.275
+cap "phi1b" "fitler_cell_0/a_1880_n3206#" 7.10543e-15
+cap "fitler_cell_0/c1" "fitler_cell_0/a_1880_n3206#" 148.035
+cap "fitler_cell_1/c1" "fitler_cell_0/a_1880_n3206#" 148.035
+cap "phi1b" "fitler_cell_0/a_1880_n3206#" -1.42109e-14
+cap "fitler_cell_0/a_1880_n3206#" "fitler_cell_0/c1" 34.435
+cap "fitler_cell_1/c1" "fitler_cell_0/a_1880_n3206#" 34.435
+cap "fitler_cell_0/c1" "fitler_cell_0/a_1880_n3206#" 115.73
+cap "fitler_cell_0/a_1880_n3206#" "fitler_cell_1/c1" 115.73
+cap "fitler_cell_0/a_1880_n3206#" "phi1b" -10.15
+merge "fitler_cell_1/w_1682_n3010#" "fitler_cell_0/w_1682_n3010#" -5791.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42678 -7086 3588334 -31180 0 0 0 0 0 0 0 0
+merge "fitler_cell_0/w_1682_n3010#" "comparator_final_0/VDD"
+merge "comparator_final_0/VDD" "vdda1"
+merge "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VNB" "m3_11120_5512#" -5996.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2808 -212 0 0 -2153053 -24376 0 0 0 0 0 0
+merge "m3_11120_5512#" "vssa1"
+merge "vssa1" "m3_11139_4857#"
+merge "m3_11139_4857#" "m3_10991_3273#"
+merge "m3_10991_3273#" "m3_11015_2017#"
+merge "m3_11015_2017#" "m3_11049_n308#"
+merge "m3_11049_n308#" "m3_10976_820#"
+merge "m3_10976_820#" "m3_10991_n1407#"
+merge "m3_10991_n1407#" "comparator_final_0/sky130_fd_sc_lp__xor2_1_0/VGND"
+merge "comparator_final_0/sky130_fd_sc_lp__xor2_1_0/VGND" "fitler_cell_1/a_1880_n3206#"
+merge "fitler_cell_1/a_1880_n3206#" "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND"
+merge "comparator_final_0/sky130_fd_sc_lp__dfxtp_2_3/VGND" "m1_19471_n10439#"
+merge "m1_19471_n10439#" "comparator_final_0/GND"
+merge "comparator_final_0/GND" "fitler_cell_0/a_1880_n3206#"
+merge "fitler_cell_0/a_1880_n3206#" "VSUBS"
+merge "fitler_cell_0/phi1" "fitler_cell_1/phi1" -4098.73 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -64116 -144 2047040 -25678 0 0 0 0 0 0 0 0
+merge "fitler_cell_1/phi1" "comparator_final_0/phi1"
+merge "comparator_final_0/phi1" "phi1"
+merge "fitler_cell_0/phi2" "fitler_cell_1/phi2" -2948.71 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13776 -148 769410 -17128 0 0 0 0 0 0 0 0
+merge "fitler_cell_1/phi2" "phi2"
+merge "fitler_cell_1/c3" "comparator_final_0/inm" -200.642 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14128 -428 0 0 0 0
+merge "comparator_final_0/inm" "m4_11596_n10088#"
+merge "fitler_cell_0/phi2b" "fitler_cell_1/phi2b" -2779.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -179096 -156 214470 -14328 0 0 0 0 0 0 0 0
+merge "fitler_cell_1/phi2b" "phi2b"
+merge "fitler_cell_0/phi1b" "fitler_cell_1/phi1b" -5707.33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13160 -192 -430080 -28923 0 0 0 0 0 0 0 0
+merge "fitler_cell_1/phi1b" "comparator_final_0/phi1b"
+merge "comparator_final_0/phi1b" "phi1b"
+merge "fitler_cell_0/c3" "comparator_final_0/inp" -65.4864 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12968 -368 0 0 0 0
+merge "comparator_final_0/inp" "m4_11126_n10172#"
+merge "comparator_final_0/high_buffered" "compout" -196.668 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3933 -266 0 0 0 0 0 0 0 0 0 0
+merge "fitler_cell_1/C3" "vbotm" -5257.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -406798 -832 299424 -19652 -559045 -4327 -193632 -944 1808 -2560 0 0
+merge "fitler_cell_0/C3" "vbotp" -3720 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43948 -696 197082 -19340 0 0 0 0 0 0 0 0
