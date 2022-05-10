@@ -84,7 +84,6 @@ C {devices/ipin.sym} -80 -360 0 0 {name=p3 lab=phi1}
 C {devices/ipin.sym} -80 -340 0 0 {name=p4 lab=phi2}
 C {devices/ipin.sym} -80 -320 0 0 {name=p5 lab=phi1b}
 C {devices/ipin.sym} -80 -300 0 0 {name=p6 lab=phi2b}
-C {comparator/analogMux.sym} 280 570 0 0 {name=x7}
 C {devices/ipin.sym} -80 -280 0 0 {name=p7 lab=cclk}
 C {devices/ipin.sym} -80 -260 0 0 {name=p8 lab=cclkb}
 C {devices/lab_pin.sym} 320 470 0 0 {name=l22 sig_type=std_logic lab=cclk}
@@ -108,3 +107,4 @@ C {sky130_fd_pr/cap_mim_m3_1.sym} 1020 -100 0 0 {name=C1B1 model=cap_mim_m3_1 W=
 C {devices/gnd.sym} 1160 -190 0 0 {name=l21 lab=GND}
 C {devices/gnd.sym} 680 90 0 0 {name=l26 lab=GND}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 400 440 0 0 {name=C1 model=cap_mim_m3_1 W=WC3 L=LC3 MF=1 spiceprefix=X}
+C {mux/analogMux.sym} 280 570 0 0 {name=x7}
