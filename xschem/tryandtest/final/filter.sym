@@ -1,8 +1,8 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {type=subcircuit 
-format="@name @pinlist @symname" 
-template="name=X1"}
+format="@name @pinlist @symname WC1=@WC1 LC1=@LC1 WC1B=@WC1B LC1B=@LC1B WC2=@WC2 LC2=@LC2 WC3=@WC3 LC3=@LC3 WCS1=@WCS1 LCS1=@LCS1 WCS2=@WCS2 LCS2=@LCS2 WCS3=@WCS3 LCS3=@LCS3" 
+template="name=X1 WC1=20 LC1=30 WC1B=15 LC1B=20 WC2=30 LC2=25 WC3=25 LC3=30 WCS1=5 LCS1=4 WCS2=5 LCS2=2 WCS3=2.5 LCS3=2"}
 V {}
 S {}
 E {}
@@ -106,5 +106,14 @@ A 4 119.9895833333333 -36.13541666666667 3.453592382899622 356.7147235252615 360
 T {@name} 20 -120 0 0 0.4 0.4 {}
 T {Φ1} 155 -115 0 0 0.2 0.2 {}
 T {Φ2} 195 -115 0 0 0.2 0.2 {}
-T {3 pole filter} 281.25 -38.75 0 0 0.2 0.2 { layer=13}
+T {3-pole LPF} 261.25 -38.75 0 0 0.2 0.2 { layer=13}
 T {cclk} 115 -115 0 0 0.2 0.2 {}
+T {@WCS1 / @LCS1} 31.25 -88.75 0 0 0.2 0.2 { layer=13}
+T {@WCS2 / @LCS2} 111.25 -88.75 0 0 0.2 0.2 { layer=13}
+T {@WCS3 / @LCS3} 191.25 -88.75 0 0 0.2 0.2 { layer=13}
+T {8 * @WC1 / @LC1} 81.25 -68.75 0 0 0.2 0.2 { layer=13}
+T {4 * @WC2 / @LC2} 161.25 -68.75 0 0 0.2 0.2 { layer=13}
+T {@WC3 / @LC3} 241.25 -68.75 0 0 0.2 0.2 { layer=13}
+T {thresh1} 25 -75 0 0 0.2 0.2 {}
+T {thresh2} 25 -55 0 0 0.2 0.2 {}
+T {2 * @WC1B / @LC1B} 81.25 -58.75 0 0 0.2 0.2 { layer=13}
