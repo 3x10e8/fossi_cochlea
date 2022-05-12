@@ -29,25 +29,25 @@ lab=dat}
 N 300 250 300 280 {
 lab=clk}
 N 1460 -340 1520 -340 {
-lab=#net2}
+lab=ctrl1}
 N 1460 -220 1520 -220 {
-lab=#net3}
+lab=ctrl2}
 N 1460 -100 1520 -100 {
-lab=#net4}
+lab=ctrl3}
 N 1460 20 1520 20 {
-lab=#net5}
+lab=ctrl4}
 N 1460 140 1520 140 {
-lab=#net6}
+lab=ctrl5}
 N 1460 260 1520 260 {
-lab=#net7}
+lab=ctrl6}
 N 1460 380 1520 380 {
-lab=#net8}
+lab=ctrl7}
 N 1460 500 1520 500 {
-lab=#net9}
+lab=ctrl8}
 N 1460 620 1520 620 {
-lab=#net10}
+lab=ctrl9}
 N 1460 740 1520 740 {
-lab=#net11}
+lab=ctrl10}
 N 1680 -380 1680 700 {
 lab=muxed}
 N 1680 100 1720 100 {
@@ -100,7 +100,7 @@ C {devices/lab_pin.sym} 170 -60 0 0 {name=l21 sig_type=std_logic lab=reg16}
 C {devices/vsource.sym} 170 80 0 0 {name=VDD2 value="DC 0"}
 C {devices/gnd.sym} 170 110 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} 170 50 0 0 {name=l23 sig_type=std_logic lab=reg15_1}
-C {devices/vsource.sym} 720 -350 0 0 {name=V11 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp\},\{clk_tp\})}
+C {devices/vsource.sym} 720 -350 0 0 {name=V11 value=PULSE(0,1.2,\{clk_tp\},1n,1n,\{0.5*clk_tp\},\{clk_tp\})}
 C {devices/gnd.sym} 720 -320 0 0 {name=l47 lab=GND}
 C {devices/lab_pin.sym} 720 -380 0 0 {name=l48 sig_type=std_logic lab=clk}
 C {sky130_stdcells/mux2_1.sym} 590 260 0 0 {name=x27 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
@@ -205,3 +205,13 @@ C {sky130_stdcells/inv_1.sym} 1560 380 0 0 {name=x25 VGND=GND VNB=GND VPB=VDD VP
 C {sky130_stdcells/inv_1.sym} 1560 500 0 0 {name=x26 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 620 0 0 {name=x30 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 740 0 0 {name=x31 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 1490 -340 1 0 {name=l88 sig_type=std_logic lab=ctrl1}
+C {devices/lab_pin.sym} 1480 -220 1 0 {name=l89 sig_type=std_logic lab=ctrl2}
+C {devices/lab_pin.sym} 1490 -100 1 0 {name=l90 sig_type=std_logic lab=ctrl3}
+C {devices/lab_pin.sym} 1490 20 1 0 {name=l91 sig_type=std_logic lab=ctrl4}
+C {devices/lab_pin.sym} 1490 140 1 0 {name=l92 sig_type=std_logic lab=ctrl5}
+C {devices/lab_pin.sym} 1490 260 1 0 {name=l93 sig_type=std_logic lab=ctrl6}
+C {devices/lab_pin.sym} 1490 380 1 0 {name=l94 sig_type=std_logic lab=ctrl7}
+C {devices/lab_pin.sym} 1490 500 1 0 {name=l95 sig_type=std_logic lab=ctrl8}
+C {devices/lab_pin.sym} 1490 620 1 0 {name=l96 sig_type=std_logic lab=ctrl9}
+C {devices/lab_pin.sym} 1490 740 1 0 {name=l97 sig_type=std_logic lab=ctrl10}
