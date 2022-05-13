@@ -194,7 +194,7 @@ C {sky130_stdcells/ebufn_1.sym} 1640 580 0 0 {name=x16 VGND=GND VNB=GND VPB=VDD 
 C {devices/lab_pin.sym} 1600 580 0 0 {name=l85 sig_type=std_logic lab=reg15_1}
 C {sky130_stdcells/ebufn_1.sym} 1640 700 0 0 {name=x17 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 1600 700 0 0 {name=l86 sig_type=std_logic lab=reg15_1}
-C {devices/lab_pin.sym} 1880 100 2 0 {name=l87 sig_type=std_logic lab=muxed}
+C {devices/lab_pin.sym} 1800 100 2 0 {name=l87 sig_type=std_logic lab=muxed}
 C {sky130_stdcells/inv_1.sym} 1560 -340 0 0 {name=x18 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 -220 0 0 {name=x19 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 -100 0 0 {name=x20 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
@@ -208,8 +208,6 @@ C {sky130_stdcells/inv_1.sym} 1560 740 0 0 {name=x31 VGND=GND VNB=GND VPB=VDD VP
 C {devices/vsource.sym} 1010 -350 0 0 {name=V12 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp\},\{clk_tp\})}
 C {devices/gnd.sym} 1010 -320 0 0 {name=l88 lab=GND}
 C {devices/lab_pin.sym} 1010 -380 0 0 {name=l89 sig_type=std_logic lab=rst}
-C {sky130_stdcells/inv_1.sym} 1840 100 0 0 {name=x32 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/inv_1.sym} 1760 100 0 0 {name=x33 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 1490 -340 1 0 {name=l90 sig_type=std_logic lab=ctrl1}
 C {devices/lab_pin.sym} 1490 -220 1 0 {name=l91 sig_type=std_logic lab=ctrl2}
 C {devices/lab_pin.sym} 1490 -100 1 0 {name=l92 sig_type=std_logic lab=ctrl3}
@@ -220,3 +218,4 @@ C {devices/lab_pin.sym} 1490 380 1 0 {name=l96 sig_type=std_logic lab=ctrl7}
 C {devices/lab_pin.sym} 1490 500 1 0 {name=l97 sig_type=std_logic lab=ctrl8}
 C {devices/lab_pin.sym} 1490 620 1 0 {name=l98 sig_type=std_logic lab=ctrl9}
 C {devices/lab_pin.sym} 1490 740 1 0 {name=l99 sig_type=std_logic lab=ctrl10}
+C {sky130_stdcells/buf_1.sym} 1760 100 0 0 {name=x32 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
