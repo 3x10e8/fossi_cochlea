@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -24,8 +24,8 @@ N 60 -20 180 -20 { lab=C}
 N 30 -250 60 -250 { lab=C}
 N 470 -220 510 -220 { lab=Cbar}
 C {sky130_fd_pr/nfet3_01v8.sym} 180 -40 3 0 {name=M1
-L=1
-W=4
+L=0.15
+W=0.42
 body=GND
 nf=1
 mult=1
@@ -39,8 +39,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8.sym} 180 -200 1 0 {name=M2
-L=1
-W=8
+L=0.15
+W=0.42
 body=VDD
 nf=1
 mult=1
@@ -54,8 +54,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8.sym} 350 -40 3 0 {name=M3
-L=1
-W=4
+L=0.15
+W=0.42
 body=GND
 nf=1
 mult=1
@@ -69,8 +69,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8.sym} 350 -200 1 0 {name=M4
-L=1
-W=8
+L=0.15
+W=0.42
 body=VDD
 nf=1
 mult=1
