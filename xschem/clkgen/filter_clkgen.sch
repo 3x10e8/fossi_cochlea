@@ -5,10 +5,8 @@ V {}
 S {}
 E {}
 T {http://diychip.org/sky130/sky130_fd_sc_lp/cells/dfrbp/} -240 360 0 0 0.2 0.2 {}
-T {Divide by 2} -220 230 0 0 0.4 0.4 {}
-T {Generate 
-threshold
-swapping clk} 10 80 2 0 0.4 0.4 {}
+T {Divide by 2} -230 230 0 0 0.4 0.4 {}
+T {Generate threshold swapping clk} 410 60 2 0 0.4 0.4 {}
 T {Generate 
 non-overlapping 
 phi1/phi2 clks} 40 -260 2 0 0.4 0.4 {}
@@ -19,6 +17,8 @@ sampling clk} 370 -360 0 0 0.4 0.4 {}
 T {Last cap
 thresh clk} 460 -60 0 0 0.4 0.4 {}
 T {used with digital cells} -400 -330 0 0 0.4 0.4 {}
+T {match ff delay below} -280 50 0 0 0.4 0.4 {}
+T {2ns delay} -60 280 0 0 0.4 0.4 {}
 N 460 -230 490 -230 { lab=phi2b}
 N 330 -90 370 -90 { lab=phi1dd}
 N 460 -70 490 -70 { lab=phi1b}
@@ -35,22 +35,18 @@ N -280 290 -260 290 { lab=#net3}
 N -280 290 -280 350 { lab=#net3}
 N -280 350 -80 350 { lab=#net3}
 N -80 290 -80 350 { lab=#net3}
-N -340 -160 -340 270 { lab=clk}
-N -340 270 -260 270 { lab=clk}
-N -400 -160 -340 -160 { lab=clk}
-N -400 310 -260 310 { lab=rstb}
+N -510 -160 -510 270 { lab=clk}
+N -510 270 -260 270 { lab=clk}
+N -570 -160 -510 -160 { lab=clk}
+N -570 310 -260 310 { lab=rstb}
 N 430 150 460 150 { lab=cclkb}
 N 430 110 460 110 { lab=cclk}
 N -80 270 340 270 { lab=clkdiv2}
-N -50 130 90 130 { lab=#net4}
 N 190 130 210 130 { lab=div2d}
 N 310 130 340 130 { lab=div2dd}
-N -340 -160 -30 -160 { lab=clk}
-N -60 200 -60 270 { lab=clkdiv2}
-N -200 200 -60 200 { lab=clkdiv2}
-N -200 150 -200 200 { lab=clkdiv2}
-N -200 150 -170 150 { lab=clkdiv2}
-N -340 110 -170 110 { lab=clk}
+N -510 -160 -30 -160 { lab=clk}
+N -60 150 -60 270 { lab=clkdiv2}
+N -60 150 -30 150 { lab=clkdiv2}
 N 30 -180 50 -180 {
 lab=#net1}
 N 30 -140 50 -140 {
@@ -62,10 +58,10 @@ C {devices/lab_pin.sym} 210 -250 3 0 {name=l18 sig_type=std_logic lab=phi2d}
 C {devices/lab_pin.sym} 230 -270 0 0 {name=l19 sig_type=std_logic lab=vpb}
 C {devices/lab_pin.sym} 90 -230 0 0 {name=l20 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 350 -250 3 0 {name=l21 sig_type=std_logic lab=phi2dd}
-C {sky130_stdcells/dfrbp_1.sym} -170 290 0 0 {name=x11 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/dfrbp_1.sym} -170 290 0 0 {name=x11 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 200 130 1 0 {name=l26 sig_type=std_logic lab=div2d}
-C {devices/ipin.sym} -400 -160 0 0 {name=p1 lab=clk}
-C {devices/ipin.sym} -400 310 0 0 {name=p2 lab=rstb}
+C {devices/ipin.sym} -570 -160 0 0 {name=p1 lab=clk}
+C {devices/ipin.sym} -570 310 0 0 {name=p2 lab=rstb}
 C {devices/opin.sym} 490 -270 0 0 {name=p3 lab=phi2}
 C {devices/opin.sym} 490 -230 0 0 {name=p4 lab=phi2b}
 C {devices/opin.sym} 490 -110 0 0 {name=p5 lab=phi1}
@@ -80,7 +76,7 @@ C {clkgen/comp_clks.sym} 420 -90 0 0 {name=X7 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 L
 C {clkgen/comp_clks.sym} 390 130 0 0 {name=X10 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {devices/lab_pin.sym} 320 130 1 0 {name=l3 sig_type=std_logic lab=div2dd}
 C {clkgen/comp_clks_1stage.sym} 0 -160 0 0 {name=X1 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
-C {sky130_stdcells/and2_0.sym} -110 130 0 0 {name=x2 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/and2_0.sym} 30 130 0 0 {name=x2 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
 C {inv/inv_weak_pulldown.sym} 140 -250 0 0 {name=X2 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
 C {inv/inv_weak_pulldown.sym} 140 -90 0 0 {name=X5 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
 C {inv/inv_weak_pulldown.sym} 140 130 0 0 {name=X8 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
@@ -114,3 +110,9 @@ C {devices/lab_pin.sym} 390 170 0 0 {name=l29 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 390 90 2 0 {name=l30 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 420 -130 2 0 {name=l31 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 420 -290 2 0 {name=l32 sig_type=std_logic lab=vdda}
+C {sky130_stdcells/inv_1.sym} -470 110 0 0 {name=x1 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -390 110 0 0 {name=x3 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -310 110 0 0 {name=x4 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -230 110 0 0 {name=x5 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -150 110 0 0 {name=x6 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -70 110 0 0 {name=x7 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
