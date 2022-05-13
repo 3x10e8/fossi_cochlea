@@ -40,8 +40,8 @@ lab=phi2b}
 N 80 80 100 80 {
 lab=clkdiv2}
 C {devices/netlist.sym} -390 -380 0 0 {name=SPICE2 only_toplevel=false value="
-.lib sky130.lib.spice tt
-.include /usr/local/lib/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_lp/spice/sky130_fd_sc_lp.spice
+.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .options abstol=1e-14 reltol=1e-4
 .param fmax=\{256*10k\}
 .param Tmin=\{1/fmax\}
