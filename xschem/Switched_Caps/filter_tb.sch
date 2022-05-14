@@ -62,13 +62,34 @@ C {devices/lab_pin.sym} -40 210 1 0 {name=l32 sig_type=std_logic lab=cclk}
 C {devices/lab_pin.sym} -40 340 3 0 {name=l33 sig_type=std_logic lab=cclkb}
 C {devices/lab_pin.sym} -150 300 0 0 {name=l34 sig_type=std_logic lab=thresh1}
 C {devices/lab_pin.sym} -150 280 0 0 {name=l35 sig_type=std_logic lab=thresh2}
-C {devices/netlist.sym} -380 -280 0 0 {name=SPICE1 only_toplevel=false value="
+C {devices/netlist.sym} -400 -590 0 0 {name=SPICE1 only_toplevel=false value="
 .lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .options abstol=1e-14 reltol=1e-4
 .param fmax=\{256*10k\}
 .param Tmin=\{1/fmax\}
-.tran \{1/fmax/20\} \{50000*Tmin\}
+.csparam tstep=\{1/fmax/20\}
+.csparam tend=\{50000*Tmin\}
+.control
+  tran $&tstep $&tend
+  let vin=v(inp)-v(inm)
+  let vout=v(outp)-v(outm)
+
+  plot vin vout
+  set gnuplot_terminal=png/quit
+  gnuplot filter_t vin vout
+  + title 'Time domain filter output' 
+  + xlabel 'time' ylabel 'V'
+
+  linearize vin vout
+  fft vin vout
+  plot xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
+  wrdata fft vdb(vin) vdb(vout)
+
+  gnuplot filter_f xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
+  + title 'Freq domain filter input/output' 
+  + xlabel 'Frequency (Hz)' ylabel 'dB'
+.endc
 "}
 C {devices/lab_pin.sym} -560 -60 2 0 {name=l36 sig_type=std_logic lab=vdda1}
 C {devices/lab_pin.sym} -400 240 2 0 {name=l37 sig_type=std_logic lab=thresh1}
