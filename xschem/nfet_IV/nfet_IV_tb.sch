@@ -46,11 +46,17 @@ spiceprefix=X
 }
 C {devices/vdd.sym} -230 -120 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} -230 50 0 0 {name=l2 lab=GND}
-C {devices/netlist.sym} -240 -560 0 0 {name=SPICE only_toplevel=false value="
-*export NGSPICE_INPUT_DIR=/usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/
-.lib sky130.lib.spice tt
+C {devices/netlist.sym} -120 -460 0 0 {name=SPICE only_toplevel=false value="
+.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .options abstol=1e-14 reltol=1e-4
-.tran 100u 1
+.control
+  tran 100u 1
+  set gnuplot_terminal=png/quit
+  gnuplot nfet_IV ylog i(Vn) vs Vgs
+  + title 'Drain current versus gate voltage' 
+  + xlabel 'gate voltage / Vgs' ylabel 'drain current'
+  plot ylog i(Vn) vs Vgs
+.endc
 .save all
 "}
 C {devices/vsource.sym} -420 30 0 0 {name=V1 value="PWL (0 0 1 1.2)"}

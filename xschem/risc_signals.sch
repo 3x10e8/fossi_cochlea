@@ -23,7 +23,7 @@ lab=vpb}
 N -350 -940 80 -940 {
 lab=vnb}
 N 80 -920 80 -800 {
-lab=#net1}
+lab=gclk}
 N -480 -800 -230 -800 {
 lab=clk}
 N -540 -1040 80 -1040 {
@@ -34,7 +34,8 @@ N -540 -700 -230 -700 {
 lab=rstb}
 N -540 -1040 -540 -700 {
 lab=rstb}
-N -50 -800 80 -800 {}
+N -50 -800 80 -800 {
+lab=gclk}
 C {devices/vsource.sym} -540 -1170 0 0 {name=vdda1 value="DC \{p_vdda1\}"}
 C {devices/vsource.sym} -540 -250 0 0 {name=vthresh1 value="DC \{p_thresh1\}"}
 C {devices/vsource.sym} -340 -250 0 0 {name=vthresh2 value="DC \{p_thresh2\}"}
@@ -96,7 +97,7 @@ C {devices/vsource.sym} -540 -670 0 0 {name=Vrstb value="DC 0 PWL (
 + p_rstb_delay 0
 + \{p_rstb_delay + p_rstb_tr\} p_vccd1)"
 *reset goes high 5ns after 1.5 periods (before next rising edge of clk)}
-C {devices/opin.sym} 340 -920 0 0 {name=p11 lab=clk}
+C {devices/opin.sym} 340 -920 0 0 {name=p11 lab=gclk}
 C {devices/opin.sym} 340 -960 0 0 {name=p12 lab=rstb}
 C {devices/lab_pin.sym} 150 -1080 2 0 {name=l24 sig_type=std_logic lab=vdda1}
 C {devices/lab_pin.sym} 110 -1080 0 0 {name=l25 sig_type=std_logic lab=vccd1}
@@ -116,3 +117,4 @@ C {devices/lab_pin.sym} 180 -940 2 0 {name=l33 sig_type=std_logic lab=cclkb}
 C {devices/lab_pin.sym} 180 -920 2 0 {name=l34 sig_type=std_logic lab=clkdiv2}
 C {sky130_stdcells/dlclkp_1.sym} -140 -790 0 0 {name=x1 VGND=vssd1 VNB=vssd1 VPB=vccd1 VPWR=vccd1 prefix=sky130_fd_sc_hd__ }
 C {clkgen/filter_clkgen.sym} 130 -980 0 0 {name=x2}
+C {devices/lab_pin.sym} 80 -800 2 0 {name=l35 sig_type=std_logic lab=gclk}

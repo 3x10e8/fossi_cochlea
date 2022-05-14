@@ -35,22 +35,26 @@ N -280 290 -260 290 { lab=#net3}
 N -280 290 -280 350 { lab=#net3}
 N -280 350 -80 350 { lab=#net3}
 N -80 290 -80 350 { lab=#net3}
-N -510 -160 -510 270 { lab=clk}
-N -510 270 -260 270 { lab=clk}
-N -570 -160 -510 -160 { lab=clk}
-N -570 310 -260 310 { lab=rstb}
+N -340 -160 -340 270 { lab=clk}
+N -340 270 -260 270 { lab=clk}
+N -400 -160 -340 -160 { lab=clk}
+N -400 310 -260 310 { lab=rstb}
 N 430 150 460 150 { lab=cclkb}
 N 430 110 460 110 { lab=cclk}
 N -80 270 340 270 { lab=clkdiv2}
 N 190 130 210 130 { lab=div2d}
 N 310 130 340 130 { lab=div2dd}
-N -510 -160 -30 -160 { lab=clk}
+N -340 -160 -30 -160 { lab=clk}
 N -60 150 -60 270 { lab=clkdiv2}
 N -60 150 -30 150 { lab=clkdiv2}
 N 30 -180 50 -180 {
 lab=#net1}
 N 30 -140 50 -140 {
 lab=#net2}
+N -60 110 -30 110 {
+lab=#net4}
+N -340 110 -300 110 {
+lab=clk}
 C {devices/lab_pin.sym} 210 -90 3 0 {name=l8 sig_type=std_logic lab=phi1d}
 C {devices/lab_pin.sym} 90 -70 0 0 {name=l13 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 350 -90 3 0 {name=l14 sig_type=std_logic lab=phi1dd}
@@ -60,8 +64,8 @@ C {devices/lab_pin.sym} 90 -230 0 0 {name=l20 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 350 -250 3 0 {name=l21 sig_type=std_logic lab=phi2dd}
 C {sky130_stdcells/dfrbp_1.sym} -170 290 0 0 {name=x11 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 200 130 1 0 {name=l26 sig_type=std_logic lab=div2d}
-C {devices/ipin.sym} -570 -160 0 0 {name=p1 lab=clk}
-C {devices/ipin.sym} -570 310 0 0 {name=p2 lab=rstb}
+C {devices/ipin.sym} -400 -160 0 0 {name=p1 lab=clk}
+C {devices/ipin.sym} -400 310 0 0 {name=p2 lab=rstb}
 C {devices/opin.sym} 490 -270 0 0 {name=p3 lab=phi2}
 C {devices/opin.sym} 490 -230 0 0 {name=p4 lab=phi2b}
 C {devices/opin.sym} 490 -110 0 0 {name=p5 lab=phi1}
@@ -85,34 +89,31 @@ C {inv/inv_weak_pullup.sym} 280 -250 0 0 {name=X3 Wpmos=1.26 Lpmos=0.54 Wmin=0.4
 C {inv/inv_weak_pullup.sym} 280 -90 0 0 {name=X6 Wpmos=1.26 Lpmos=0.54 Wmin=0.42 Lmin=0.18}
 C {devices/ipin.sym} -400 -400 0 0 {name=p12 lab=vdda}
 C {devices/ipin.sym} -400 -370 0 0 {name=p13 lab=vssa}
-C {devices/lab_pin.sym} 140 -290 2 0 {name=l4 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 280 -290 2 0 {name=l5 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 140 -290 0 0 {name=l4 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 280 -290 0 0 {name=l5 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 140 -210 0 0 {name=l9 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 280 -210 0 0 {name=l10 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 140 -130 2 0 {name=l11 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 140 -130 0 0 {name=l11 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 140 -50 0 0 {name=l15 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 280 -130 2 0 {name=l6 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 280 -130 0 0 {name=l6 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 280 -50 0 0 {name=l7 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 140 90 2 0 {name=l16 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 140 90 0 0 {name=l16 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 140 170 0 0 {name=l17 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 260 90 2 0 {name=l22 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 260 90 0 0 {name=l22 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 260 170 0 0 {name=l23 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 230 -110 0 0 {name=l24 sig_type=std_logic lab=vpb}
 C {devices/lab_pin.sym} 90 150 0 0 {name=l1 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 210 150 0 0 {name=l2 sig_type=std_logic lab=vnb}
 C {devices/ipin.sym} -400 -330 0 0 {name=p14 lab=vccd}
 C {devices/ipin.sym} -400 -300 0 0 {name=p15 lab=vssd}
-C {devices/lab_pin.sym} 0 -200 2 0 {name=l12 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 0 -200 0 0 {name=l12 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 0 -120 0 0 {name=l25 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 420 -210 0 0 {name=l27 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 420 -50 0 0 {name=l28 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 390 170 0 0 {name=l29 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 390 90 2 0 {name=l30 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 420 -130 2 0 {name=l31 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 420 -290 2 0 {name=l32 sig_type=std_logic lab=vdda}
-C {sky130_stdcells/inv_1.sym} -470 110 0 0 {name=x1 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} -390 110 0 0 {name=x3 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} -310 110 0 0 {name=x4 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} -230 110 0 0 {name=x5 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} -150 110 0 0 {name=x6 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} -70 110 0 0 {name=x7 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 390 90 0 0 {name=l30 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 420 -130 0 0 {name=l31 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} 420 -290 0 0 {name=l32 sig_type=std_logic lab=vdda}
+C {sky130_stdcells/buf_1.sym} -260 110 0 0 {name=x1 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -180 110 0 0 {name=x3 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -100 110 0 0 {name=x4 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
