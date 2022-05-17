@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N 330 0 1150 0 { lab=stage1}
+N 330 0 1150 0 { lab=fb}
 N 150 0 230 0 { lab=#net1}
 N 70 60 1010 60 { lab=vssa}
 N 110 0 150 0 { lab=#net1}
@@ -13,7 +13,7 @@ N -30 0 0 0 { lab=in}
 N 580 230 710 230 { lab=#net2}
 N 540 230 580 230 { lab=#net2}
 N 530 230 540 230 { lab=#net2}
-N 400 230 430 230 { lab=stage1}
+N 400 230 430 230 { lab=fb}
 N 810 230 1150 230 { lab=stage2}
 N 500 290 1010 290 { lab=vssa}
 N 860 470 990 470 { lab=#net3}
@@ -48,6 +48,10 @@ N 780 530 1060 530 {
 lab=vssa}
 N 1060 510 1060 530 {
 lab=vssa}
+N 370 -100 370 0 {
+lab=fb}
+N -30 -100 370 -100 {
+lab=fb}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 390 -30 0 0 {name=C12 model=cap_mim_m3_2 W=WC1 L=LC1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 150 30 0 0 {name=CS1 model=cap_mim_m3_1 W=WCS1 L=LCS1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 390 30 0 0 {name=C11 model=cap_mim_m3_1 W=WC1 L=LC1 MF=1 spiceprefix=X}
@@ -56,13 +60,13 @@ C {devices/lab_pin.sym} 280 -40 0 0 {name=l3 sig_type=std_logic lab=phi2b}
 C {devices/lab_pin.sym} 280 40 0 0 {name=l4 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} 50 -40 0 0 {name=l5 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} 50 40 0 0 {name=l6 sig_type=std_logic lab=phi1}
-C {devices/lab_pin.sym} 1150 0 0 1 {name=l7 sig_type=std_logic lab=stage1}
+C {devices/lab_pin.sym} 1150 0 0 1 {name=l7 sig_type=std_logic lab=fb}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 580 260 0 0 {name=CS2 model=cap_mim_m3_1 W=WCS2 L=LCS2 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 760 190 0 0 {name=l9 sig_type=std_logic lab=phi2b}
 C {devices/lab_pin.sym} 760 270 0 0 {name=l10 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} 480 190 0 0 {name=l11 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} 480 270 0 0 {name=l12 sig_type=std_logic lab=phi1}
-C {devices/lab_pin.sym} 400 230 0 0 {name=l13 sig_type=std_logic lab=stage1}
+C {devices/lab_pin.sym} 400 230 0 0 {name=l13 sig_type=std_logic lab=fb}
 C {devices/lab_pin.sym} 1150 230 0 1 {name=l14 sig_type=std_logic lab=stage2}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 1150 440 0 0 {name=C3 model=cap_mim_m3_2 W=WC3 L=LC3 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 860 500 0 0 {name=CS3 model=cap_mim_m3_1 W=WCS3 L=LCS3 MF=1 spiceprefix=X}
@@ -120,3 +124,5 @@ C {transmission_gate/transmission_gate.sym} 760 470 0 0 {name=X5 Wpmos=0.42 Lpmo
 C {transmission_gate/transmission_gate.sym} 1040 470 0 0 {name=X6 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {devices/lab_pin.sym} 1050 670 0 0 {name=l33 sig_type=std_logic lab=vssa}
 C {devices/lab_pin.sym} 1050 570 0 0 {name=l34 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} -30 -100 0 0 {name=l35 sig_type=std_logic lab=fb}
+C {devices/ipin.sym} -90 60 0 0 {name=p13 lab=fb}
