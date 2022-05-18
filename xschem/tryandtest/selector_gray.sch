@@ -4,6 +4,8 @@ K {}
 V {}
 S {}
 E {}
+T {rst port to be connected to clk_ext.
+rst_global port to be connected to the chip reset signal} 500 -850 0 0 0.2 0.2 {}
 N 180 -1170 240 -1170 {
 lab=#net1}
 N 180 -1050 240 -1050 {
@@ -74,6 +76,8 @@ N 50 -940 80 -940 {
 lab=VDD}
 N 50 -1060 80 -1060 {
 lab=VDD}
+N 440 -730 490 -730 {
+lab=#net11}
 C {tryandtest/deff_rst.sym} 80 -1100 0 0 {name=X2}
 C {devices/lab_pin.sym} 130 -1100 0 0 {name=l34 sig_type=std_logic lab=clk1}
 C {devices/vdd.sym} 50 -1180 0 0 {name=l36 lab=VDD}
@@ -106,7 +110,7 @@ C {sky130_stdcells/ebufn_1.sym} 360 -490 0 0 {name=x14 VGND=GND VNB=GND VPB=VDD 
 C {sky130_stdcells/ebufn_1.sym} 360 -370 0 0 {name=x15 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/ebufn_1.sym} 360 -250 0 0 {name=x16 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/ebufn_1.sym} 360 -130 0 0 {name=x17 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {devices/lab_pin.sym} 520 -730 2 0 {name=l87 sig_type=std_logic lab=muxed}
+C {devices/lab_pin.sym} 670 -730 2 0 {name=l87 sig_type=std_logic lab=muxed}
 C {sky130_stdcells/inv_1.sym} 280 -1170 0 0 {name=x18 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 280 -1050 0 0 {name=x19 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 280 -930 0 0 {name=x20 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
@@ -149,4 +153,7 @@ C {devices/lab_pin.sym} 320 -370 0 0 {name=l8 sig_type=std_logic lab=data3}
 C {devices/lab_pin.sym} 320 -250 0 0 {name=l9 sig_type=std_logic lab=data2}
 C {devices/lab_pin.sym} 320 -130 0 0 {name=l10 sig_type=std_logic lab=data1}
 C {devices/opin.sym} 540 -500 0 0 {name=p2 lab=muxed}
-C {sky130_stdcells/buf_1.sym} 480 -730 0 0 {name=x7 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/dlrtp_1.sym} 580 -710 0 0 {name=x35 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/ipin.sym} -230 -1240 0 0 {name=p23 lab=rst_global}
+C {devices/lab_pin.sym} 490 -710 0 0 {name=l11 sig_type=std_logic lab=rst}
+C {devices/lab_pin.sym} 490 -690 0 0 {name=l12 sig_type=std_logic lab=rst_global}

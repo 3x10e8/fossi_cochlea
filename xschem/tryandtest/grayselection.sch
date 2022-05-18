@@ -56,6 +56,12 @@ N 1810 100 1890 100 {
 lab=muxed_raw}
 N 1720 100 1810 100 {
 lab=muxed_raw}
+N 1850 10 1850 100 {
+lab=muxed_raw}
+N 1850 10 1890 10 {
+lab=muxed_raw}
+N 2150 70 2150 100 {
+lab=muxed_ngate}
 C {devices/vsource.sym} 20 -240 0 0 {name=V1 value=PULSE(0,1.2,\{clk_tp\},1n,1n,\{2*clk_tp\},\{4*clk_tp\})}
 C {devices/vsource.sym} 20 -30 0 0 {name=VDD4 value="DC 1.2"}
 C {devices/gnd.sym} 20 0 0 0 {name=l57 lab=GND}
@@ -198,7 +204,7 @@ C {sky130_stdcells/ebufn_1.sym} 1640 580 0 0 {name=x16 VGND=GND VNB=GND VPB=VDD 
 C {devices/lab_pin.sym} 1600 580 0 0 {name=l85 sig_type=std_logic lab=reg15_1}
 C {sky130_stdcells/ebufn_1.sym} 1640 700 0 0 {name=x17 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} 1600 700 0 0 {name=l86 sig_type=std_logic lab=reg15_1}
-C {devices/lab_pin.sym} 2150 100 2 0 {name=l87 sig_type=std_logic lab=muxed}
+C {devices/lab_pin.sym} 2150 100 2 0 {name=l87 sig_type=std_logic lab=muxed_ngate}
 C {sky130_stdcells/inv_1.sym} 1560 -340 0 0 {name=x18 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 -220 0 0 {name=x19 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/inv_1.sym} 1560 -100 0 0 {name=x20 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
@@ -232,5 +238,12 @@ C {devices/lab_pin.sym} 1890 120 0 0 {name=l104 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1010 -380 0 0 {name=l105 sig_type=std_logic lab=rstb}
 C {devices/lab_pin.sym} 1890 140 0 0 {name=l106 sig_type=std_logic lab=rstb}
 C {devices/lab_pin.sym} 1830 100 1 0 {name=l107 sig_type=std_logic lab=muxed_raw}
-C {sky130_stdcells/dlrtp_1.sym} 1980 120 0 0 {name=x32 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/buf_1.sym} 2110 100 0 0 {name=x34 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/dlrtn_1.sym} 1980 120 0 0 {name=x32 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/dlrtp_1.sym} 1980 30 0 0 {name=x35 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 1890 30 0 0 {name=l108 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 1890 50 0 0 {name=l109 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 2150 10 2 0 {name=l110 sig_type=std_logic lab=muxed_gate}
+C {sky130_stdcells/buf_1.sym} 2110 10 0 0 {name=x36 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {sky130_stdcells/inv_1.sym} 2190 70 0 0 {name=x37 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 2230 70 2 0 {name=l111 sig_type=std_logic lab=inv_out}
