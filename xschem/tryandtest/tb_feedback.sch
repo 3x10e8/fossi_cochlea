@@ -48,7 +48,7 @@ C {devices/lab_pin.sym} -650 -1100 0 0 {name=l17 sig_type=std_logic lab=clk9}
 C {devices/vsource.sym} -650 -1160 0 0 {name=V10 value=PULSE(0,1.2,\{512*clk_tp\},1n,1n,\{1024*clk_tp\},\{2048*clk_tp\})}
 C {devices/gnd.sym} -650 -1130 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} -650 -1190 0 0 {name=l19 sig_type=std_logic lab=clk10}
-C {devices/vsource.sym} -1200 -1020 0 0 {name=VDD2 value="PULSE(0 1.2 \{1.5*clk_tp\} 1n 1n \{clk_tp\} \{2*clk_tp\})"}
+C {devices/vsource.sym} -1200 -1020 0 0 {name=VDD2 value="PULSE(1.2 0 \{1.5*clk_tp\} 1n 1n \{clk_tp\} \{2*clk_tp\})"}
 C {devices/gnd.sym} -1200 -990 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} -1200 -1050 0 0 {name=l23 sig_type=std_logic lab=comp_out}
 C {devices/vsource.sym} -650 -1450 0 0 {name=V11 value=PULSE(0,1.2,\{clk_tp\},1n,1n,\{0.5*clk_tp\},\{clk_tp\})}
