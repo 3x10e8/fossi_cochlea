@@ -73,9 +73,8 @@ C {devices/lab_pin.sym} 330 -1190 2 0 {name=l36 sig_type=std_logic lab=clk7}
 C {devices/lab_pin.sym} 330 -1180 2 0 {name=l37 sig_type=std_logic lab=clk8}
 C {devices/lab_pin.sym} 330 -1170 2 0 {name=l38 sig_type=std_logic lab=clk9}
 C {devices/lab_pin.sym} 330 -1160 2 0 {name=l39 sig_type=std_logic lab=clk10}
-C {devices/lab_pin.sym} 750 -1260 2 0 {name=l40 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 750 -1220 2 0 {name=l41 sig_type=std_logic lab=rstb_global}
-C {devices/lab_pin.sym} 750 -1180 2 0 {name=l42 sig_type=std_logic lab=comp_out}
+C {devices/lab_pin.sym} 750 -1180 2 0 {name=l42 sig_type=std_logic lab=comp_out_test}
 C {devices/lab_pin.sym} 520 -1260 0 0 {name=l43 sig_type=std_logic lab=q0}
 C {devices/lab_pin.sym} 520 -1240 0 0 {name=l44 sig_type=std_logic lab=q1}
 C {devices/lab_pin.sym} 520 -1220 0 0 {name=l45 sig_type=std_logic lab=q2}
@@ -106,3 +105,10 @@ C {devices/lab_pin.sym} 200 -1200 0 0 {name=l73 sig_type=std_logic lab=muxed_out
 C {sky130_stdcells/inv_1.sym} -60 -1190 2 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {devices/lab_pin.sym} -20 -1190 2 0 {name=l74 sig_type=std_logic lab=muxed_out}
 C {devices/lab_pin.sym} -100 -1190 0 0 {name=l75 sig_type=std_logic lab=ainv_out}
+C {devices/vsource.sym} -370 -1560 0 0 {name=V14 value="PWL(0 1.2 70u 1.2 70.001u 0)"}
+C {devices/gnd.sym} -370 -1530 0 0 {name=l20 lab=GND}
+C {devices/lab_pin.sym} -370 -1590 0 0 {name=l21 sig_type=std_logic lab=en_counter}
+C {devices/lab_pin.sym} 750 -1260 2 0 {name=l26 sig_type=std_logic lab=en_counter}
+C {devices/vsource.sym} -120 -1490 0 0 {name=V15 value="PWL(0 1.2 85u 1.2 85.001u 0)"}
+C {devices/gnd.sym} -120 -1460 0 0 {name=l27 lab=GND}
+C {devices/lab_pin.sym} -120 -1520 0 0 {name=l28 sig_type=std_logic lab=comp_out_test}
