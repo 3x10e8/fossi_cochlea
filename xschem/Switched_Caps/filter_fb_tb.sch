@@ -42,6 +42,24 @@ N -420 160 -400 160 {
 lab=phi2b}
 N -420 220 -400 220 {
 lab=clkdiv2}
+N -220 -120 -190 -120 {
+lab=fbp}
+N -190 -120 -190 -100 {
+lab=fbp}
+N -190 -40 -190 -20 {
+lab=#net1}
+N -190 -20 -150 -20 {
+lab=#net1}
+N -210 420 -180 420 {
+lab=fbm}
+N -180 400 -180 420 {
+lab=fbm}
+N -230 340 -180 340 {
+lab=#net2}
+N -230 240 -230 340 {
+lab=#net2}
+N -230 240 -150 240 {
+lab=#net2}
 C {devices/lab_pin.sym} 0 -50 1 0 {name=l1 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} 40 -50 3 1 {name=l2 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} 0 80 3 0 {name=l3 sig_type=std_logic lab=phi1b}
@@ -62,7 +80,7 @@ C {devices/lab_pin.sym} -40 210 1 0 {name=l32 sig_type=std_logic lab=cclk}
 C {devices/lab_pin.sym} -40 340 3 0 {name=l33 sig_type=std_logic lab=cclkb}
 C {devices/lab_pin.sym} -150 300 0 0 {name=l34 sig_type=std_logic lab=thresh1}
 C {devices/lab_pin.sym} -150 280 0 0 {name=l35 sig_type=std_logic lab=thresh2}
-C {devices/netlist.sym} -420 -750 0 0 {name=SPICE1 only_toplevel=false value="
+C {devices/netlist.sym} -500 -810 0 0 {name=SPICE1 only_toplevel=false value="
 .lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .options abstol=1e-14 reltol=1e-4
@@ -72,23 +90,25 @@ C {devices/netlist.sym} -420 -750 0 0 {name=SPICE1 only_toplevel=false value="
 .csparam tend=\{5*Tmin\}
 .control
   tran $&tstep $&tend
-  let vin=v(inp)-v(inm)
-  let vout=v(outp)-v(outm)
+  *let vin=v(inp)-v(inm)
+  *let vout=v(outp)-v(outm)
 
-  plot vin vout
-  set gnuplot_terminal=png/quit
-  gnuplot filter_t vin vout
-  + title 'Time domain filter output' 
-  + xlabel 'time' ylabel 'V'
+  plot inp outp phi1/10+0.6
+  plot inm outm phi1/10+0.6
+  plot i(V1) i(V2)
+  *set gnuplot_terminal=png/quit
+  *gnuplot filter_t vin vout
+  *+ title 'Time domain filter output' 
+  *+ xlabel 'time' ylabel 'V'
 
-  linearize vin vout
-  fft vin vout
-  plot xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
-  wrdata fft vdb(vin) vdb(vout)
+  *linearize vin vout
+  *fft vin vout
+  *plot xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
+  *wrdata fft vdb(vin) vdb(vout)
 
-  gnuplot filter_f xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
-  + title 'Freq domain filter input/output' 
-  + xlabel 'Frequency (Hz)' ylabel 'dB'
+  *gnuplot filter_f xlog xlimit 1 10e3 ylimit -100 0 vdb(vin) vdb(vout)
+  *+ title 'Freq domain filter input/output' 
+  *+ xlabel 'Frequency (Hz)' ylabel 'dB'
 .endc
 "}
 C {devices/lab_pin.sym} -560 -60 2 0 {name=l36 sig_type=std_logic lab=vdda1}
@@ -114,11 +134,11 @@ C {risc_signals.sym} -500 140 0 0 {name=x1
 + p_vnb=1.2
 + p_vcm=0.6
 + p_amp1=100m
-+ p_f1=100
++ p_f1=0
 + p_amp2=100m
 + p_f2=500
 + p_amp3=100m
-+ p_f3=1000}
++ p_f3=10k}
 C {devices/lab_pin.sym} -400 100 2 0 {name=l46 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} -400 120 2 0 {name=l47 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} -400 140 2 0 {name=l48 sig_type=std_logic lab=phi2}
@@ -132,19 +152,23 @@ C {devices/gnd.sym} -140 80 0 0 {name=l10 lab=GND}
 C {devices/gnd.sym} -140 340 0 0 {name=l11 lab=GND}
 C {Switched_Caps/filter.sym} -160 90 0 0 {name=X1 WC1=20 LC1=30 WC1B=15 LC1B=20 WC2=30 LC2=25 WC3=25 LC3=30 WCS1=5 LCS1=4 WCS2=5 LCS2=2 WCS3=2.5 LCS3=2}
 C {Switched_Caps/filter.sym} -160 350 0 0 {name=X2 WC1=20 LC1=30 WC1B=15 LC1B=20 WC2=30 LC2=25 WC3=25 LC3=30 WCS1=5 LCS1=4 WCS2=5 LCS2=2 WCS3=2.5 LCS3=2}
-C {devices/lab_pin.sym} -150 -20 0 0 {name=l12 sig_type=std_logic lab=fbp}
-C {devices/lab_pin.sym} -150 240 0 0 {name=l14 sig_type=std_logic lab=fbm}
 C {Switched_Caps/1switchcap.sym} -290 -120 0 0 {name=X3 Wcap1=0.42 Lcap1=0.15}
-C {devices/lab_pin.sym} -220 -120 2 0 {name=l15 sig_type=std_logic lab=fbp}
 C {devices/lab_pin.sym} -310 -180 1 0 {name=l16 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} -270 -180 3 1 {name=l17 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} -310 -40 3 0 {name=l20 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} -270 -40 1 1 {name=l21 sig_type=std_logic lab=phi2b}
 C {devices/gnd.sym} -360 -120 0 0 {name=l22 lab=GND}
-C {devices/lab_pin.sym} -210 420 2 0 {name=l23 sig_type=std_logic lab=fbm}
+C {devices/lab_pin.sym} -180 420 2 0 {name=l23 sig_type=std_logic lab=fbm}
 C {devices/lab_pin.sym} -300 360 1 0 {name=l24 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} -260 360 3 1 {name=l25 sig_type=std_logic lab=phi2}
 C {devices/lab_pin.sym} -300 500 3 0 {name=l53 sig_type=std_logic lab=phi1b}
 C {devices/lab_pin.sym} -260 500 1 1 {name=l54 sig_type=std_logic lab=phi2b}
 C {Switched_Caps/1switchcap.sym} -280 420 0 0 {name=X4 Wcap1=0.42 Lcap1=0.15}
 C {devices/gnd.sym} -350 420 0 0 {name=l55 lab=GND}
+C {devices/lab_pin.sym} -350 -180 1 0 {name=l56 sig_type=std_logic lab=vdda1}
+C {devices/gnd.sym} -350 -40 0 0 {name=l57 lab=GND}
+C {devices/lab_pin.sym} -340 360 1 0 {name=l58 sig_type=std_logic lab=vdda1}
+C {devices/gnd.sym} -340 500 0 0 {name=l59 lab=GND}
+C {devices/vsource.sym} -190 -70 0 0 {name=V1 value=0}
+C {devices/lab_pin.sym} -190 -120 2 0 {name=l12 sig_type=std_logic lab=fbp}
+C {devices/vsource.sym} -180 370 2 0 {name=V2 value=0}

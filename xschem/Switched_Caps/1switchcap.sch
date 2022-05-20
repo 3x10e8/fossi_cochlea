@@ -6,7 +6,7 @@ S {}
 E {}
 T {pmos and nmos are both
 - min W and min L to minimize cap.
-- matched for charge-injection (same W/L)} 130 -130 0 0 0.4 0.4 {}
+- matched for charge-injection (same W/L)} 180 -130 0 0 0.4 0.4 {}
 T {This approximates a resistor} -140 270 0 0 0.4 0.4 {}
 N -50 0 0 0 { lab=c1}
 N 0 0 0 60 { lab=c1}
@@ -27,6 +27,12 @@ C {devices/ipin.sym} -100 -120 1 0 {name=p4 lab=phi1_clk_p}
 C {devices/ipin.sym} 100 -120 1 0 {name=p5 lab=phi2_clk_p}
 C {devices/ipin.sym} 100 120 3 0 {name=p6 lab=phi2_clk_n}
 C {devices/lab_pin.sym} 0 0 1 0 {name=l1 sig_type=std_logic lab=c1}
-C {devices/netlist.sym} -90 -80 0 0 {name=s1 value=".ic v(c1)=0 v(out)=0"}
+C {devices/netlist.sym} -90 -110 0 0 {name=s1 value=".ic v(c1)=0 v(out)=0"}
 C {transmission_gate/transmission_gate.sym} -100 0 0 0 {name=X1 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 100 0 0 0 {name=X2 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
+C {devices/ipin.sym} -240 -40 0 0 {name=p7 lab=vdda}
+C {devices/ipin.sym} -240 -20 0 0 {name=p8 lab=vssa}
+C {devices/lab_pin.sym} -80 -40 1 0 {name=l3 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} -80 40 3 0 {name=l4 sig_type=std_logic lab=vssa}
+C {devices/lab_pin.sym} 120 40 3 0 {name=l5 sig_type=std_logic lab=vssa}
+C {devices/lab_pin.sym} 120 -40 1 0 {name=l6 sig_type=std_logic lab=vdda}
