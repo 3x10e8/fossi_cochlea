@@ -74,7 +74,7 @@ C {devices/lab_pin.sym} 330 -1180 2 0 {name=l37 sig_type=std_logic lab=clk8}
 C {devices/lab_pin.sym} 330 -1170 2 0 {name=l38 sig_type=std_logic lab=clk9}
 C {devices/lab_pin.sym} 330 -1160 2 0 {name=l39 sig_type=std_logic lab=clk10}
 C {devices/lab_pin.sym} 750 -1220 2 0 {name=l41 sig_type=std_logic lab=rstb_global}
-C {devices/lab_pin.sym} 750 -1180 2 0 {name=l42 sig_type=std_logic lab=comp_out_test}
+C {devices/lab_pin.sym} 750 -1180 2 0 {name=l42 sig_type=std_logic lab=comp_out}
 C {devices/lab_pin.sym} 520 -1260 0 0 {name=l43 sig_type=std_logic lab=q0}
 C {devices/lab_pin.sym} 520 -1240 0 0 {name=l44 sig_type=std_logic lab=q1}
 C {devices/lab_pin.sym} 520 -1220 0 0 {name=l45 sig_type=std_logic lab=q2}
