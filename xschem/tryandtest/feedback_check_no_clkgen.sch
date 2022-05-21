@@ -4,20 +4,40 @@ K {}
 V {}
 S {}
 E {}
-N 1170 -360 1320 -360 {
-lab=#net1}
-N 1420 -360 1490 -360 {
-lab=out}
-N 950 -360 1070 -360 {
-lab=o1}
-N 840 -290 920 -290 {
-lab=GND}
+N 330 -500 480 -500 {
+lab=out1}
+N 580 -500 650 -500 {
+lab=ox}
+N 110 -500 230 -500 {
+lab=clk_2}
+N 480 -260 660 -260 {
+lab=o2}
+N 760 -260 860 -260 {
+lab=ox}
+N 1020 -260 1200 -260 {
+lab=o4}
+N 1300 -260 1400 -260 {
+lab=o5}
+N 1560 -260 1740 -260 {
+lab=o6}
+N 1840 -260 1940 -260 {
+lab=o7}
+N 860 -260 920 -260 {
+lab=ox}
+N 1400 -260 1460 -260 {
+lab=o5}
+N 650 -500 850 -500 {
+lab=ox}
+N 850 -500 860 -500 {
+lab=ox}
+N 860 -500 860 -260 {
+lab=ox}
 C {devices/netlist.sym} 0 -720 0 0 {name=SPICE1 only_toplevel=false value="
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/lib/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_lp/spice/sky130_fd_sc_lp.spice
 .param clk_f=2.56e6
 .param clk_tp=\{1/clk_f\}
-.tran 100u 50u
+.tran 100u 5m
 .save all
 "}
 C {devices/vsource.sym} -1180 -740 0 0 {name=V1 value=PULSE(0,1.2,\{clk_tp\},1n,1n,\{2*clk_tp\},\{4*clk_tp\})}
@@ -68,16 +88,16 @@ C {devices/lab_pin.sym} -730 -880 0 0 {name=l25 sig_type=std_logic lab=thresh1}
 C {devices/vsource.sym} -860 -850 0 0 {name=VDD5 value="DC 0.55"}
 C {devices/gnd.sym} -860 -820 0 0 {name=l26 lab=GND}
 C {devices/lab_pin.sym} -860 -880 0 0 {name=l27 sig_type=std_logic lab=thresh2}
-C {devices/vsource.sym} -480 -370 0 0 {name=V12 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp-5n\},\{clk_tp\})}
+C {devices/vsource.sym} -480 -370 0 0 {name=V12 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp-10n\},\{clk_tp\})}
 C {devices/gnd.sym} -480 -340 0 0 {name=l28 lab=GND}
 C {devices/lab_pin.sym} -480 -400 0 0 {name=l29 sig_type=std_logic lab=phi1}
-C {devices/vsource.sym} -860 -370 0 0 {name=V13 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp-5n\},\{clk_tp\},180)}
+C {devices/vsource.sym} -860 -370 0 0 {name=V13 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp-10n\},\{clk_tp\},180)}
 C {devices/gnd.sym} -860 -340 0 0 {name=l30 lab=GND}
 C {devices/lab_pin.sym} -860 -400 0 0 {name=l31 sig_type=std_logic lab=phi2}
-C {devices/vsource.sym} -480 -270 0 0 {name=V14 value=PULSE(1.2,0,0,1n,1n,\{0.5*clk_tp-5n\},\{clk_tp\})}
+C {devices/vsource.sym} -480 -270 0 0 {name=V14 value=PULSE(1.2,0,0,1n,1n,\{0.5*clk_tp-10n\},\{clk_tp\})}
 C {devices/gnd.sym} -480 -240 0 0 {name=l32 lab=GND}
 C {devices/lab_pin.sym} -480 -300 0 0 {name=l33 sig_type=std_logic lab=phi1b}
-C {devices/vsource.sym} -860 -270 0 0 {name=V15 value=PULSE(1.2,0,0,1n,1n,\{0.5*clk_tp-5n\},\{clk_tp\},180)}
+C {devices/vsource.sym} -860 -270 0 0 {name=V15 value=PULSE(1.2,0,0,1n,1n,\{0.5*clk_tp-10n\},\{clk_tp\},180)}
 C {devices/gnd.sym} -860 -240 0 0 {name=l34 lab=GND}
 C {devices/lab_pin.sym} -860 -300 0 0 {name=l35 sig_type=std_logic lab=phi2b}
 C {devices/vsource.sym} -1180 -370 0 0 {name=V16 value=PULSE(0,1.2,0,1n,1n,\{0.5*clk_tp\},\{2*clk_tp\})}
@@ -86,33 +106,99 @@ C {devices/lab_pin.sym} -1180 -400 0 0 {name=l37 sig_type=std_logic lab=cclk}
 C {devices/vsource.sym} -1180 -270 0 0 {name=V17 value=PULSE(1.2,0,0,1n,1n,\{0.5*clk_tp\},\{2*clk_tp\})}
 C {devices/gnd.sym} -1180 -240 0 0 {name=l38 lab=GND}
 C {devices/lab_pin.sym} -1180 -300 0 0 {name=l39 sig_type=std_logic lab=cclkb}
-C {devices/vsource.sym} -480 -170 0 0 {name=VDD6 value="SIN(0.6,0.2,2000)"}
+C {devices/vsource.sym} -480 -170 0 0 {name=VDD6 value="SIN(0.5,0.2,1000)"}
 C {devices/gnd.sym} -480 -140 0 0 {name=l40 lab=GND}
 C {devices/lab_pin.sym} -480 -200 0 0 {name=l41 sig_type=std_logic lab=vinp}
 C {devices/vsource.sym} -480 -70 0 0 {name=VDD7 value="SIN(0.6,-0.2,2000)"}
 C {devices/gnd.sym} -480 -40 0 0 {name=l42 lab=GND}
 C {devices/lab_pin.sym} -480 -100 0 0 {name=l43 sig_type=std_logic lab=vinm}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1240 -330 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
-C {transmission_gate/transmission_gate.sym} 1370 -360 0 0 {name=X3 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
-C {transmission_gate/transmission_gate.sym} 1120 -360 0 0 {name=X4 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
-C {devices/gnd.sym} 1240 -300 0 0 {name=l67 lab=GND}
-C {devices/lab_pin.sym} 1120 -320 3 0 {name=l70 sig_type=std_logic lab=phi1}
-C {devices/lab_pin.sym} 1370 -320 3 0 {name=l71 sig_type=std_logic lab=phi2}
-C {devices/lab_pin.sym} 1120 -400 1 0 {name=l72 sig_type=std_logic lab=phi1b}
-C {devices/lab_pin.sym} 1370 -400 1 0 {name=l73 sig_type=std_logic lab=phi2b}
-C {tryandtest/selector_gray.sym} 800 -300 0 0 {name=X5}
-C {devices/lab_pin.sym} 1490 -360 2 0 {name=l74 sig_type=std_logic lab=out}
-C {devices/lab_pin.sym} 820 -400 0 0 {name=l75 sig_type=std_logic lab=clk1}
-C {devices/lab_pin.sym} 820 -390 0 0 {name=l76 sig_type=std_logic lab=clk2}
-C {devices/lab_pin.sym} 820 -380 0 0 {name=l77 sig_type=std_logic lab=clk3}
-C {devices/lab_pin.sym} 820 -370 0 0 {name=l78 sig_type=std_logic lab=clk4}
-C {devices/lab_pin.sym} 820 -360 0 0 {name=l79 sig_type=std_logic lab=clk5}
-C {devices/lab_pin.sym} 820 -350 0 0 {name=l80 sig_type=std_logic lab=clk6}
-C {devices/lab_pin.sym} 820 -340 0 0 {name=l81 sig_type=std_logic lab=clk7}
-C {devices/lab_pin.sym} 820 -330 0 0 {name=l82 sig_type=std_logic lab=clk8}
-C {devices/lab_pin.sym} 820 -320 0 0 {name=l83 sig_type=std_logic lab=clk9}
-C {devices/lab_pin.sym} 820 -310 0 0 {name=l84 sig_type=std_logic lab=clk10}
-C {devices/vdd.sym} 930 -290 2 0 {name=l85 lab=VDD}
-C {devices/gnd.sym} 840 -290 0 0 {name=l86 lab=GND}
-C {devices/lab_pin.sym} 870 -420 0 0 {name=l87 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1050 -360 3 0 {name=l44 sig_type=std_logic lab=o1}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 400 -470 0 0 {name=C1 model=cap_mim_m3_1 W=5 L=2 MF=1 spiceprefix=X}
+C {transmission_gate/transmission_gate.sym} 530 -500 0 0 {name=X3 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {transmission_gate/transmission_gate.sym} 280 -500 0 0 {name=X4 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/gnd.sym} 400 -440 0 0 {name=l67 lab=GND}
+C {devices/lab_pin.sym} 280 -460 3 0 {name=l70 sig_type=std_logic lab=phi1}
+C {devices/lab_pin.sym} 530 -460 3 0 {name=l71 sig_type=std_logic lab=phi2}
+C {devices/lab_pin.sym} 280 -540 1 0 {name=l72 sig_type=std_logic lab=phi1b}
+C {devices/lab_pin.sym} 530 -540 1 0 {name=l73 sig_type=std_logic lab=phi2b}
+C {devices/lab_pin.sym} 400 -500 1 0 {name=l46 sig_type=std_logic lab=out1}
+C {devices/capa.sym} 580 -230 0 0 {name=C2
+m=1
+value=40f
+footprint=1206
+device="ceramic capacitor"}
+C {transmission_gate/transmission_gate.sym} 430 -260 0 0 {name=X1 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 430 -220 3 0 {name=l49 sig_type=std_logic lab=phi1}
+C {devices/lab_pin.sym} 430 -300 1 0 {name=l50 sig_type=std_logic lab=phi1b}
+C {transmission_gate/transmission_gate.sym} 710 -260 0 0 {name=X2 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 710 -220 3 0 {name=l51 sig_type=std_logic lab=phi2}
+C {devices/lab_pin.sym} 710 -300 1 0 {name=l52 sig_type=std_logic lab=phi2b}
+C {devices/capa.sym} 860 -230 0 0 {name=C3
+m=1
+value=12p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 1120 -230 0 0 {name=C4
+m=1
+value=20f
+footprint=1206
+device="ceramic capacitor"}
+C {transmission_gate/transmission_gate.sym} 970 -260 0 0 {name=X6 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 970 -220 3 0 {name=l53 sig_type=std_logic lab=phi1}
+C {devices/lab_pin.sym} 970 -300 1 0 {name=l54 sig_type=std_logic lab=phi1b}
+C {transmission_gate/transmission_gate.sym} 1250 -260 0 0 {name=X7 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 1250 -220 3 0 {name=l55 sig_type=std_logic lab=phi2}
+C {devices/lab_pin.sym} 1250 -300 1 0 {name=l56 sig_type=std_logic lab=phi2b}
+C {devices/capa.sym} 1400 -230 0 0 {name=C5
+m=1
+value=6p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 1660 -230 0 0 {name=C6
+m=1
+value=10f
+footprint=1206
+device="ceramic capacitor"}
+C {transmission_gate/transmission_gate.sym} 1510 -260 0 0 {name=X8 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 1510 -220 3 0 {name=l59 sig_type=std_logic lab=phi1}
+C {devices/lab_pin.sym} 1510 -300 1 0 {name=l60 sig_type=std_logic lab=phi1b}
+C {transmission_gate/transmission_gate.sym} 1790 -260 0 0 {name=X9 Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15}
+C {devices/lab_pin.sym} 1790 -220 3 0 {name=l61 sig_type=std_logic lab=phi2}
+C {devices/lab_pin.sym} 1790 -300 1 0 {name=l62 sig_type=std_logic lab=phi2b}
+C {devices/capa.sym} 1940 -230 0 0 {name=C7
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 580 -200 0 0 {name=l63 lab=GND}
+C {devices/gnd.sym} 860 -200 0 0 {name=l64 lab=GND}
+C {devices/gnd.sym} 1120 -200 0 0 {name=l65 lab=GND}
+C {devices/gnd.sym} 1400 -200 0 0 {name=l66 lab=GND}
+C {devices/gnd.sym} 1660 -200 0 0 {name=l68 lab=GND}
+C {devices/gnd.sym} 1940 -200 0 0 {name=l69 lab=GND}
+C {devices/lab_pin.sym} 580 -260 1 0 {name=l87 sig_type=std_logic lab=o2}
+C {devices/lab_pin.sym} 1120 -260 1 0 {name=l89 sig_type=std_logic lab=o4}
+C {devices/lab_pin.sym} 1400 -260 1 0 {name=l90 sig_type=std_logic lab=o5}
+C {devices/lab_pin.sym} 1660 -260 1 0 {name=l91 sig_type=std_logic lab=o6}
+C {devices/lab_pin.sym} 1940 -260 1 0 {name=l92 sig_type=std_logic lab=o7}
+C {devices/lab_pin.sym} 380 -260 0 0 {name=l93 sig_type=std_logic lab=vinp}
+C {devices/lab_pin.sym} 860 -500 2 0 {name=l74 sig_type=std_logic lab=ox}
+C {devices/vdd.sym} 300 -540 0 0 {name=l94 lab=VDD}
+C {devices/vdd.sym} 550 -540 0 0 {name=l95 lab=VDD}
+C {devices/gnd.sym} 300 -460 0 0 {name=l96 lab=GND}
+C {devices/gnd.sym} 550 -460 0 0 {name=l97 lab=GND}
+C {devices/vsource.sym} -190 -850 0 0 {name=V18 value=PULSE(0,1.2,0,1n,1n,\{clk_tp\},\{2*clk_tp\})}
+C {devices/gnd.sym} -190 -820 0 0 {name=l75 lab=GND}
+C {devices/lab_pin.sym} -190 -880 0 0 {name=l76 sig_type=std_logic lab=clk_2}
+C {devices/lab_pin.sym} 110 -500 0 0 {name=l45 sig_type=std_logic lab=clk_2}
+C {devices/vdd.sym} 450 -300 0 0 {name=l77 lab=VDD}
+C {devices/gnd.sym} 450 -220 0 0 {name=l78 lab=GND}
+C {devices/vdd.sym} 730 -300 0 0 {name=l79 lab=VDD}
+C {devices/gnd.sym} 730 -220 0 0 {name=l80 lab=GND}
+C {devices/vdd.sym} 990 -300 0 0 {name=l81 lab=VDD}
+C {devices/gnd.sym} 990 -220 0 0 {name=l82 lab=GND}
+C {devices/vdd.sym} 1270 -300 0 0 {name=l83 lab=VDD}
+C {devices/gnd.sym} 1270 -220 0 0 {name=l84 lab=GND}
+C {devices/vdd.sym} 1530 -300 0 0 {name=l85 lab=VDD}
+C {devices/gnd.sym} 1530 -220 0 0 {name=l86 lab=GND}
+C {devices/vdd.sym} 1810 -300 0 0 {name=l88 lab=VDD}
+C {devices/gnd.sym} 1810 -220 0 0 {name=l98 lab=GND}
