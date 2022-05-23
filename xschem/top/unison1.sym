@@ -1,0 +1,20 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+E {}
+C {top/core4.sym} -560 0 0 0 {}
+C {top/core4.sym} -400 0 0 0 {}
+C {top/core4.sym} -240 0 0 0 {}
+C {top/core4.sym} -80 0 0 0 {}
+C {top/core4.sym} 80 0 0 0 {}
+C {top/core4.sym} 240 0 0 0 {}
+C {top/core4.sym} 400 0 0 0 {}
+C {top/core4.sym} 560 0 0 0 {}
