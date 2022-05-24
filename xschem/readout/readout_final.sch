@@ -20,24 +20,24 @@ N 4950 -550 4990 -550 { lab=out}
 N 4930 -550 4950 -550 { lab=out}
 N 4990 -550 4990 -70 { lab=out}
 N 4990 -550 5060 -550 { lab=out}
-N 4780 -550 4850 -550 { lab=#net1}
-N 4780 -470 4850 -470 { lab=#net2}
-N 4780 -390 4850 -390 { lab=#net3}
+N 4780 -550 4850 -550 { lab=comp_out0}
+N 4780 -470 4850 -470 { lab=comp_out1}
+N 4780 -390 4850 -390 { lab=comp_out2}
 N 4930 -230 4940 -230 { lab=out}
 N 4940 -230 4990 -230 { lab=out}
 N 4930 -150 4940 -150 { lab=out}
 N 4940 -150 4990 -150 { lab=out}
 N 4950 -310 4990 -310 { lab=out}
 N 4930 -310 4950 -310 { lab=out}
-N 4780 -310 4850 -310 { lab=#net4}
-N 4780 -230 4850 -230 { lab=#net5}
-N 4780 -150 4850 -150 { lab=#net6}
+N 4780 -310 4850 -310 { lab=comp_out3}
+N 4780 -230 4850 -230 { lab=comp_out4}
+N 4780 -150 4850 -150 { lab=comp_out5}
 N 4930 -70 4940 -70 { lab=out}
 N 4940 -70 4990 -70 { lab=out}
 N 4930 10 4940 10 { lab=out}
 N 4940 10 4990 10 { lab=out}
-N 4780 -70 4850 -70 { lab=#net7}
-N 4780 10 4850 10 { lab=#net8}
+N 4780 -70 4850 -70 { lab=comp_out6}
+N 4780 10 4850 10 { lab=comp_out7}
 N 4990 -70 4990 10 { lab=out}
 N 4080 -595 4165 -595 { lab=VDD}
 N 4080 -480 4165 -480 { lab=VDD}
@@ -56,26 +56,25 @@ N 4080 -725 4080 -720 { lab=VDD}
 N 4080 -825 4165 -825 { lab=VDD}
 N 4080 -825 4080 -725 { lab=VDD}
 N 4740 10 4780 10 {
-lab=#net8}
+lab=comp_out7}
 N 4740 -70 4780 -70 {
-lab=#net7}
+lab=comp_out6}
 N 4740 -150 4780 -150 {
-lab=#net6}
+lab=comp_out5}
 N 4740 -230 4780 -230 {
-lab=#net5}
+lab=comp_out4}
 N 4740 -310 4780 -310 {
-lab=#net4}
+lab=comp_out3}
 N 4740 -390 4775 -390 {
-lab=#net3}
+lab=comp_out2}
 N 4775 -390 4780 -390 {
-lab=#net3}
+lab=comp_out2}
 N 4740 -470 4780 -470 {
-lab=#net2}
+lab=comp_out1}
 N 4740 -550 4780 -550 {
-lab=#net1}
+lab=comp_out0}
 C {devices/vdd.sym} 3620 -950 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} 3670 -950 2 1 {name=l2 lab=GND}
-C {devices/lab_pin.sym} 5060 -550 2 0 {name=l7 sig_type=std_logic lab=out}
 C {sky130_stdcells/ebufn_1.sym} 4890 -470 0 0 {name=x4 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/ebufn_1.sym} 4890 -390 0 0 {name=x6 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
 C {sky130_stdcells/ebufn_1.sym} 4890 -550 0 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
@@ -226,19 +225,12 @@ C {devices/lab_pin.sym} 3630 -90 0 0 {name=l87 sig_type=std_logic lab=comp_out6}
 C {devices/vsource.sym} 3630 40 0 0 {name=V6 value="PULSE(1.2 0 \{64*clk_tp+5n\} 1n 1n \{128*clk_tp\} \{256*clk_tp\})"}
 C {devices/gnd.sym} 3630 70 0 0 {name=l92 lab=GND}
 C {devices/lab_pin.sym} 3630 10 0 0 {name=l93 sig_type=std_logic lab=comp_out7}
-C {devices/lab_pin.sym} 4660 -550 0 0 {name=l94 sig_type=std_logic lab=comp_out0}
-C {devices/lab_pin.sym} 4660 -470 0 0 {name=l95 sig_type=std_logic lab=comp_out1}
-C {devices/lab_pin.sym} 4660 -390 0 0 {name=l96 sig_type=std_logic lab=comp_out2}
-C {devices/lab_pin.sym} 4660 -310 0 0 {name=l97 sig_type=std_logic lab=comp_out3}
-C {devices/lab_pin.sym} 4660 -230 0 0 {name=l98 sig_type=std_logic lab=comp_out4}
-C {devices/lab_pin.sym} 4660 -150 0 0 {name=l99 sig_type=std_logic lab=comp_out5}
-C {devices/lab_pin.sym} 4660 -70 0 0 {name=l100 sig_type=std_logic lab=comp_out6}
-C {devices/lab_pin.sym} 4660 10 0 0 {name=l101 sig_type=std_logic lab=comp_out7}
-C {sky130_stdcells/buf_1.sym} 4700 -550 0 0 {name=x10 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -470 0 0 {name=x18 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -390 0 0 {name=x19 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -310 0 0 {name=x20 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -230 0 0 {name=x21 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -150 0 0 {name=x22 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 -70 0 0 {name=x23 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
-C {sky130_stdcells/buf_1.sym} 4700 10 0 0 {name=x24 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_lp__ }
+C {devices/lab_pin.sym} 4740 -550 0 0 {name=l94 sig_type=std_logic lab=comp_out0}
+C {devices/lab_pin.sym} 4740 -470 0 0 {name=l95 sig_type=std_logic lab=comp_out1}
+C {devices/lab_pin.sym} 4740 -390 0 0 {name=l96 sig_type=std_logic lab=comp_out2}
+C {devices/lab_pin.sym} 4740 -310 0 0 {name=l97 sig_type=std_logic lab=comp_out3}
+C {devices/lab_pin.sym} 4740 -230 0 0 {name=l98 sig_type=std_logic lab=comp_out4}
+C {devices/lab_pin.sym} 4740 -150 0 0 {name=l99 sig_type=std_logic lab=comp_out5}
+C {devices/lab_pin.sym} 4740 -70 0 0 {name=l100 sig_type=std_logic lab=comp_out6}
+C {devices/lab_pin.sym} 4740 10 0 0 {name=l101 sig_type=std_logic lab=comp_out7}
+C {devices/lab_pin.sym} 5060 -550 2 0 {name=l102 sig_type=std_logic lab=out}
