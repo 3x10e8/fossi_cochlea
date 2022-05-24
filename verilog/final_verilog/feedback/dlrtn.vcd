@@ -1,0 +1,55 @@
+$date
+	Mon May 16 19:31:55 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_dlrtn $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # d $end
+$var reg 1 $ rstb $end
+$var real 1 % clk_half_pd $end
+$scope module dl $end
+$var wire 1 # d $end
+$var wire 1 " gate $end
+$var wire 1 $ rstb $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+r1953.125 %
+0$
+1#
+0"
+0!
+$end
+#1953125
+1"
+#3906250
+0"
+#5859375
+1"
+#7812500
+0"
+#9765625
+1"
+#11718750
+0"
+#13671875
+1"
+#15625000
+0"
+#17578125
+1"
+#17678125
+1!
+1$
+#18278125
+0!
+0$

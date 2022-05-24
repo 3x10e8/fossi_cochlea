@@ -1,0 +1,45 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xcdf730 .scope module, "asyn_rstb_dff" "asyn_rstb_dff" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "d"
+    .port_info 2 /INPUT 1 "rstb"
+    .port_info 3 /OUTPUT 1 "q"
+o0x7fb51ef82018 .functor BUFZ 1, C4<z>; HiZ drive
+v0xcdf900_0 .net "clk", 0 0, o0x7fb51ef82018;  0 drivers
+o0x7fb51ef82048 .functor BUFZ 1, C4<z>; HiZ drive
+v0xcee500_0 .net "d", 0 0, o0x7fb51ef82048;  0 drivers
+v0xcee5c0_0 .var "q", 0 0;
+o0x7fb51ef820a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0xcee690_0 .net "rstb", 0 0, o0x7fb51ef820a8;  0 drivers
+E_0xcdfe60/0 .event negedge, v0xcee690_0;
+E_0xcdfe60/1 .event posedge, v0xcdf900_0;
+E_0xcdfe60 .event/or E_0xcdfe60/0, E_0xcdfe60/1;
+    .scope S_0xcdf730;
+T_0 ;
+    %wait E_0xcdfe60;
+    %load/vec4 v0xcee690_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xcee5c0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xcee500_0;
+    %assign/vec4 v0xcee5c0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "asyn_rstb_dff.v";
