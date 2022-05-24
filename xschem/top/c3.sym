@@ -1,0 +1,14 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 9 -7.5 -7.5 -7.5 7.5 {}
+L 9 -7.5 -7.5 7.5 -7.5 {}
+L 9 7.5 -7.5 7.5 7.5 {}
+L 9 -7.5 7.5 7.5 7.5 {}
+B 10 -2.5 -2.5 2.5 2.5 {}

@@ -1,0 +1,10 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {}
+V {}
+S {}
+E {}
+L 4 -9 1 9 1 {}
+L 4 5 5 9 1 {}
+L 4 -5 5 5 5 {}
+L 4 -9 1 -5 5 {}

@@ -1,0 +1,13 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -4 -3 0 3 {}
+L 4 -4 -3 4 -3 {}
+L 4 0 3 4 -3 {}
+A 4 -0.05000000000000004 4.05 1.051189802081432 87.27368900609375 360 {}
