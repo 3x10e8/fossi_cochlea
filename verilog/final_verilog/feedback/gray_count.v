@@ -1,9 +1,10 @@
+`timescale 1ns/1ps
 // Gray counter 16 bit
 
 module gray_count
 (
-	input clk, enable, reset,
-	output reg [16:0] gray_count
+	input clk,reset,
+	output reg [18:0] gray_count
 );
 
 // Implementation:
@@ -21,10 +22,10 @@ module gray_count
 // the counter would saturate at it's highest value, 1000...0.
 
 	// q is the counter, plus the imaginary bit
-	reg q [16:-1];
+	reg q [18:-1];
 	
 	// no_ones_below[x] = 1 iff there are no 1's in q below q[x]
-	reg no_ones_below [16:-1];
+	reg no_ones_below [18:-1];
 	
 	// q_msb is a modification to make the msb logic work
 	reg q_msb;
@@ -38,16 +39,16 @@ module gray_count
 		
 			// Resetting involves setting the imaginary bit to 1
 			q[-1] <= 1;
-			for (i = 0; i <= 16; i = i + 1)
+			for (i = 0; i <= 18; i = i + 1)
 				q[i] <= 0;
 				
 		end
-		else if (enable)
+		else 
 		begin
 			// Toggle the imaginary bit
 			q[-1] <= ~q[-1];
 			
-			for (i = 0; i < 16; i = i + 1)
+			for (i = 0; i < 18; i = i + 1)
 			begin
 				
 				// Flip q[i] if lower bits are a 1 followed by all 0's
@@ -55,7 +56,7 @@ module gray_count
 			
 			end
 			
-			q[16] <= q[16] ^ (q_msb & no_ones_below[15]);
+			q[18] <= q[18] ^ (q_msb & no_ones_below[17]);
 		end
 	end
 	
@@ -66,13 +67,13 @@ module gray_count
 		// There are never any 1's beneath the lowest bit
 		no_ones_below[-1] <= 1;
 		
-		for (j = 0; j < 16; j = j + 1)
+		for (j = 0; j < 18; j = j + 1)
 			no_ones_below[j] <= no_ones_below[j-1] & ~q[j-1];
 			
-		q_msb <= q[16] | q[15];
+		q_msb <= q[18] | q[17];
 		
 		// Copy over everything but the imaginary bit
-		for (k = 0; k < 17; k = k + 1)
+		for (k = 0; k < 19; k = k + 1)
 			gray_count[k] <= q[k];
 		end	
 		
@@ -80,30 +81,34 @@ endmodule
 
 /*
 //Testbench
+module tb_gray_count;
+	reg clk_ext,rstb;
+	wire [18:0]gray_count;
 
-module gray_tb;
-reg clk, enable, reset;
-wire [16:0]gray_count;
-gray_count g1(clk, enable, reset, gray_count);
+	gray_count gc(
+		.clk(clk_ext),
+		.reset(rstb),
+		.gray_count(gray_count[17:0]));
 
-initial begin
-clk=0;
-forever
-#5 clk=~clk;
-end
+	parameter FREQ=2560000;
+	real clk_half_pd=(1.0/(2*FREQ))*1e9;
+	initial begin
+	$dumpfile("gray_count.vcd");
+	$dumpvars;
+	end
 
-initial begin
-$dumpfile("gray_count.vcd");
-$dumpvars;
-end
+	initial begin
+		clk_ext=0;
+		forever
+			#(clk_half_pd) clk_ext=~clk_ext;
+	end
 
-initial begin
-reset=0;
-#2 reset=1;
-enable=1;
-repeat(33000) @(posedge clk);
-#100 $finish;
-end
+	initial begin				
+	rstb=0;
+	#5 rstb=1;
+	repeat(3300) @(posedge clk_ext);
+	$finish;
+	end
 endmodule
 */
 

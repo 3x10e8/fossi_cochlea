@@ -1,8 +1,9 @@
+`timescale 1ns/1ps
 // Gray counter 16 bit
 
 module gray_count
 (
-	input clk, enable, reset,
+	input clk,reset,
 	output reg [15:0] gray_count
 );
 
@@ -31,7 +32,7 @@ module gray_count
 	
 	integer i, j, k;
 	
-	always @ (negedge reset or posedge clk)
+	always @ (negedge reset or posedge clk or negedge clk)
 	begin
 		if (!reset)
 		begin
@@ -42,7 +43,7 @@ module gray_count
 				q[i] <= 0;
 				
 		end
-		else if (enable)
+		else 
 		begin
 			// Toggle the imaginary bit
 			q[-1] <= ~q[-1];
@@ -78,33 +79,37 @@ module gray_count
 		
 endmodule
 
-/*
+
 //Testbench
+module tb_gray_count;
+	reg clk_ext,rstb;
+	wire [15:0]gray_count;
 
-module gray_tb;
-reg clk, enable, reset;
-wire [15:0]gray_count;
-gray_count g1(clk, enable, reset, gray_count);
+	gray_count gc(
+		.clk(clk_ext),
+		.reset(rstb),
+		.gray_count(gray_count[15:0]));
 
-initial begin
-clk=0;
-forever
-#5 clk=~clk;
-end
+	parameter FREQ=2560000;
+	real clk_half_pd=(1.0/(2*FREQ))*1e9;
+	initial begin
+	$dumpfile("gray_count.vcd");
+	$dumpvars;
+	end
 
-initial begin
-$dumpfile("gray_count.vcd");
-$dumpvars;
-end
+	initial begin
+		clk_ext=0;
+		forever
+			#(clk_half_pd) clk_ext=~clk_ext;
+	end
 
-initial begin
-reset=0;
-#2 reset=1;
-enable=1;
-repeat(33000) @(posedge clk);
-#100 $finish;
-end
+	initial begin				
+	rstb=0;
+	#5 rstb=1;
+	repeat(33000) @(posedge clk_ext);
+	$finish;
+	end
 endmodule
-*/
+
 
 
