@@ -12,12 +12,12 @@ T {match ff delay below} -90 -140 0 0 0.4 0.4 {}
 T {2ns delay} 130 90 0 0 0.4 0.4 {}
 T {This is the divided-by-2 clk 
 as outputted by the previous of core} -550 -50 0 0 0.4 0.4 {}
+T {6 inverter test??} 80 -160 0 0 0.4 0.4 {}
 N -90 100 -70 100 { lab=#net1}
 N -90 100 -90 160 { lab=#net1}
 N -90 160 110 160 { lab=#net1}
 N 110 100 110 160 { lab=#net1}
 N -150 -80 -150 80 { lab=div2}
-N -150 80 -70 80 { lab=div2}
 N -210 -80 -150 -80 { lab=div2}
 N -210 120 -70 120 { lab=rstb}
 N 280 -60 370 -60 { lab=cclk}
@@ -39,3 +39,4 @@ C {devices/ipin.sym} -210 -170 0 0 {name=p15 lab=vssd}
 C {sky130_stdcells/buf_1.sym} -70 -80 0 0 {name=x1 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/buf_1.sym} 10 -80 0 0 {name=x3 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/buf_1.sym} 90 -80 0 0 {name=x4 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} -110 80 0 0 {name=x5 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }

@@ -4,8 +4,7 @@ K {}
 V {}
 S {}
 E {}
-T {can't use vssa itself, 
-spice needs a gnd node (0) defined} -230 230 0 0 0.4 0.4 {}
+T {can't use vssa itself, spice needs a gnd node (0) defined} -230 230 0 0 0.4 0.4 {}
 N 80 100 100 100 {
 lab=thresh1}
 N 80 120 100 120 {
@@ -26,36 +25,34 @@ N 80 -80 100 -80 {
 lab=clk_ext}
 N 80 -60 100 -60 {
 lab=rstb}
-N 80 40 260 40 {
-lab=cclk_dig}
+N 80 40 100 40 {
+lab=cclk[1:0]}
 N 80 60 100 60 {
-lab=cclkb}
+lab=cclkb[1:0]}
 N 80 -40 100 -40 {
-lab=phi1}
+lab=phi1[1:0]}
 N 80 -20 100 -20 {
-lab=phi1b}
+lab=phi1b[1:0]}
 N 80 0 100 0 {
-lab=phi2}
+lab=phi2[1:0]}
 N 80 20 100 20 {
-lab=phi2b}
+lab=phi2b[1:0]}
 N 80 80 100 80 {
-lab=div2out}
+lab=div2out[1:0]}
 N -60 200 60 200 {
 lab=GND}
 C {devices/netlist.sym} -360 -480 0 0 {name=SPICE2 only_toplevel=false value="
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-.include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
 .options abstol=1e-14 reltol=1e-4
-.param VDDA1=1.2
-.param VCCD1=0.8
 .param fmax=\{256*10k\}
 .param Tmin=\{1/fmax\}
 .csparam tstep=\{1/fmax/20\}
 .csparam tend=\{10*Tmin\}
+.csparam n=0
 .control
   tran $&tstep $&tend
-  plot rstb/2+3 clk_ext/2+3 cclk_dig cclk_ana
+  plot rstb/2 clk_ext/2 \\"div2out[$&n]\\"/2+1 \\"phi1[$&n]\\"/2+2 \\"phi2[$&n]\\"/2+3 \\"cclk[$&n]\\"/2+4
 .endc
 "}
 C {devices/lab_pin.sym} 60 -200 2 0 {name=l1 sig_type=std_logic lab=vdda1}
@@ -68,8 +65,8 @@ C {devices/lab_pin.sym} -60 -200 0 0 {name=l10 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} 100 -80 2 0 {name=l11 sig_type=std_logic lab=clk_ext}
 C {devices/lab_pin.sym} 100 -60 2 0 {name=l12 sig_type=std_logic lab=rstb}
 C {risc_signals.sym} 0 0 0 0 {name=x1
-+ p_vdda1=\{VDDA1\}
-+ p_vccd1=\{VCCD1\}
++ p_vdda1=1.2
++ p_vccd1=1.2
 + p_fclk=\{256*10k\}
 + p_duty_cycle=0.5
 + p_rstb_delay=\{1.5/p_fclk\}
@@ -85,12 +82,10 @@ C {risc_signals.sym} 0 0 0 0 {name=x1
 + p_f2=0
 + p_amp3=0
 + p_f3=0}
-C {devices/lab_pin.sym} 100 -40 2 0 {name=l7 sig_type=std_logic lab=phi1}
-C {devices/lab_pin.sym} 100 -20 2 0 {name=l8 sig_type=std_logic lab=phi1b}
-C {devices/lab_pin.sym} 100 0 2 0 {name=l13 sig_type=std_logic lab=phi2}
-C {devices/lab_pin.sym} 100 20 2 0 {name=l14 sig_type=std_logic lab=phi2b}
-C {devices/lab_pin.sym} 260 40 1 0 {name=l15 sig_type=std_logic lab=cclk_dig}
-C {devices/lab_pin.sym} 100 60 2 0 {name=l16 sig_type=std_logic lab=cclkb}
-C {devices/lab_pin.sym} 100 80 2 0 {name=l17 sig_type=std_logic lab=div2out}
-C {xschem_verilog_import/sky130_fd_sc_hvl__lsbuflv2hv_1.sym} 270 190 3 0 {name=x2 LVPWR=vccd1 VGND=GND VNB=GND VPB=vdda1 VPWR=vdda1 prefix=sky130_fd_pr__ }
-C {devices/lab_pin.sym} 280 40 1 0 {name=l4 sig_type=std_logic lab=cclk_ana}
+C {devices/lab_pin.sym} 100 -40 2 0 {name=l7 sig_type=std_logic lab=phi1[1:0]}
+C {devices/lab_pin.sym} 100 -20 2 0 {name=l8 sig_type=std_logic lab=phi1b[1:0]}
+C {devices/lab_pin.sym} 100 0 2 0 {name=l13 sig_type=std_logic lab=phi2[1:0]}
+C {devices/lab_pin.sym} 100 20 2 0 {name=l14 sig_type=std_logic lab=phi2b[1:0]}
+C {devices/lab_pin.sym} 100 40 2 0 {name=l15 sig_type=std_logic lab=cclk[1:0]}
+C {devices/lab_pin.sym} 100 60 2 0 {name=l16 sig_type=std_logic lab=cclkb[1:0]}
+C {devices/lab_pin.sym} 100 80 2 0 {name=l17 sig_type=std_logic lab=div2out[1:0]}
