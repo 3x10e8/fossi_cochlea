@@ -1,2 +1,10 @@
 precheck_results
 **/.DS_Store
+precheck_results
+*.hex*
+*.lst
+*.vcd
+*.gtkw
+caravel/*
+management_core_wrapper/*
+.DS_Store
