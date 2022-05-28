@@ -47,7 +47,7 @@ spiceprefix=X
 C {devices/vdd.sym} -230 -120 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} -230 50 0 0 {name=l2 lab=GND}
 C {devices/netlist.sym} -120 -460 0 0 {name=SPICE only_toplevel=false value="
-.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
+.lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .options abstol=1e-14 reltol=1e-4
 .control
   tran 100u 1
@@ -107,9 +107,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_03v3_nvt.sym} 200 0 0 0 {name=M4
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 200 0 0 0 {name=M4
 L=0.5
-W=0.42
+W=1
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -118,6 +118,6 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
+model=nfet_g5v0d10v5
 spiceprefix=X
 }

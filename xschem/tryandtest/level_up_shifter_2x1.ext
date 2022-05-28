@@ -1,0 +1,36 @@
+timestamp 1648161247
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use level_up_shifter level_up_shifter_0 1 0 -142 0 1 2698
+use level_up_shifter level_up_shifter_1 1 0 258 0 1 2698
+substrate "SUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "level_up_shifter_1/in" "level_up_shifter_0/vssd1" 8.25
+cap "level_up_shifter_0/vccd1" "level_up_shifter_0/vssd1" 1.7053e-13
+cap "level_up_shifter_1/in" "level_up_shifter_0/vccd1" 26.7
+cap "level_up_shifter_1/outb" "level_up_shifter_0/outb" 77.2021
+cap "level_up_shifter_0/outb" "level_up_shifter_1/a_0_n1540#" 156.118
+cap "level_up_shifter_0/outb" "level_up_shifter_1/in" 95.4453
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/in" 42.4577
+cap "level_up_shifter_0/a_0_n1540#" "level_up_shifter_1/a_0_n1540#" 322.142
+cap "level_up_shifter_0/in" "level_up_shifter_1/in" 396.36
+cap "level_up_shifter_0/a_0_n1540#" "level_up_shifter_1/in" 362.643
+cap "level_up_shifter_0/vdda1" "level_up_shifter_0/vssd1" 1.42109e-14
+cap "level_up_shifter_0/a_0_n1540#" "level_up_shifter_1/a_0_n1540#" 99.398
+cap "level_up_shifter_1/out" "level_up_shifter_0/out" 300.396
+cap "level_up_shifter_1/out" "level_up_shifter_0/vdda1" 46
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/outb" 119.444
+cap "level_up_shifter_0/out" "level_up_shifter_1/outb" 21
+cap "level_up_shifter_1/out" "level_up_shifter_0/outb" 219.884
+cap "level_up_shifter_0/vdda1" "level_up_shifter_1/outb" 77.9
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/in" 8
+cap "level_up_shifter_0/outb" "level_up_shifter_1/outb" 235.609
+cap "level_up_shifter_1/in" "level_up_shifter_0/outb" 11.7647
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/out" 45.1324
+cap "level_up_shifter_0/in" "level_up_shifter_1/in" 41.1801
+merge "level_up_shifter_1/vssd1" "level_up_shifter_0/vssd1" -73.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -360 0 0 0 0 0 0 0 0 0 0
+merge "level_up_shifter_0/vssd1" "SUB"
+merge "level_up_shifter_1/vdda1" "level_up_shifter_0/vdda1" -65.6 0 0 0 0 0 -1800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -320 0 0 0 0 0 0 0 0 0 0
+merge "level_up_shifter_1/vccd1" "level_up_shifter_0/vccd1" -24.6 0 0 0 0 0 -720 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -120 0 0 0 0 0 0 0 0 0 0

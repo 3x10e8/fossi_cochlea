@@ -1,0 +1,82 @@
+timestamp 1648196136
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use level_up_shifter level_up_shifter_1 1 0 2 0 1 5460
+use level_up_shifter level_up_shifter_0 1 0 2 0 1 2674
+node "B" 2 1163.79 2 2674 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7040 336 169040 5736 0 0 0 0 0 0
+node "Aupb" 1 453.744 2 4838 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21960 836 47880 1700 0 0 0 0 0 0
+node "Bupb" 4 1485.38 112 5410 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19872 888 210192 7092 0 0 0 0 0 0
+node "Bup" 3 1356.88 146 2200 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3844 248 6068 312 198548 6728 0 0 0 0 0 0
+node "Aup" 1 255.862 12 5188 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13760 696 16320 664 0 0 0 0 0 0 0 0
+node "w_12_5188#" 1077 12.24 12 5188 nw 0 0 0 0 4080 256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_272_5408#" 1096 9.36 272 5408 nw 0 0 0 0 3120 224 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "SUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Bupb" "Bup" 3058.96
+cap "Aupb" "Bup" 666.54
+cap "Aup" "w_12_5188#" 2.652
+cap "B" "Bupb" 232.271
+cap "Bupb" "Aup" 65.625
+cap "Aupb" "Aup" 138.1
+cap "Aupb" "Bupb" 281.495
+cap "w_272_5408#" "Bupb" 1.17
+cap "B" "Bup" 532.473
+cap "level_up_shifter_0/vdda1" "B" 34.775
+cap "level_up_shifter_0/in" "B" 1034.61
+cap "B" "level_up_shifter_0/vssd1" 82.855
+cap "level_up_shifter_0/vccd1" "B" 173.18
+cap "level_up_shifter_0/a_0_n1540#" "B" 224.024
+cap "level_up_shifter_0/out" "level_up_shifter_0/vdda1" 483.41
+cap "level_up_shifter_1/in" "level_up_shifter_0/vdda1" 397.412
+cap "level_up_shifter_1/in" "level_up_shifter_0/vssd1" 36.125
+cap "level_up_shifter_0/vdda1" "level_up_shifter_1/vssd1" 60.0847
+cap "level_up_shifter_1/in" "level_up_shifter_0/a_0_n1540#" 251.376
+cap "level_up_shifter_0/out" "level_up_shifter_0/outb" 178.707
+cap "level_up_shifter_1/in" "level_up_shifter_0/outb" 122.114
+cap "level_up_shifter_1/in" "level_up_shifter_0/vdda1" 36.125
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/vdda1" 7.89894
+cap "level_up_shifter_1/in" "level_up_shifter_0/in" 97.981
+cap "level_up_shifter_0/out" "level_up_shifter_1/in" 283.814
+cap "level_up_shifter_0/vdda1" "level_up_shifter_0/outb" 415.831
+cap "level_up_shifter_1/vccd1" "Bupb" 260.995
+cap "Bupb" "level_up_shifter_1/vdda1" 81.765
+cap "level_up_shifter_1/a_0_n1540#" "Bupb" 133.765
+cap "level_up_shifter_1/in" "Bupb" 120.047
+cap "level_up_shifter_1/vccd1" "Bup" 315.42
+cap "level_up_shifter_1/outb" "Bupb" 299.538
+cap "Bup" "level_up_shifter_1/vdda1" 114.965
+cap "Bupb" "level_up_shifter_1/vssd1" 297.807
+cap "level_up_shifter_1/a_0_n1540#" "level_up_shifter_0/vdda1" 7.89894
+cap "level_up_shifter_1/a_0_n1540#" "Bup" 941.805
+cap "level_up_shifter_1/in" "Bup" 398.007
+cap "Bup" "level_up_shifter_1/outb" 113.91
+cap "level_up_shifter_0/vdda1" "level_up_shifter_1/vssd1" 60.0847
+cap "Bup" "level_up_shifter_1/vssd1" 433.73
+cap "Bup" "level_up_shifter_1/a_0_n1540#" 77.375
+cap "level_up_shifter_1/outb" "Bup" 190.425
+cap "Bup" "level_up_shifter_1/out" 684.115
+cap "Bup" "level_up_shifter_1/in" 102.838
+cap "Bup" "level_up_shifter_1/vdda1" 114.437
+cap "Bup" "level_up_shifter_1/vdda1" 570.697
+cap "level_up_shifter_1/vssd1" "Bupb" 81.765
+cap "level_up_shifter_1/vssd1" "Bup" 114.437
+cap "Bupb" "level_up_shifter_1/a_0_n1540#" 58.925
+cap "Bupb" "level_up_shifter_1/out" 204.21
+cap "level_up_shifter_1/outb" "Bupb" 521.267
+cap "level_up_shifter_1/outb" "level_up_shifter_1/out" 476.232
+cap "Bupb" "level_up_shifter_1/vdda1" 81.765
+cap "Bupb" "level_up_shifter_1/in" 36.8375
+cap "level_up_shifter_1/vdda1" "level_up_shifter_1/out" 324.879
+cap "level_up_shifter_1/outb" "level_up_shifter_1/vdda1" 384.216
+cap "Bupb" "level_up_shifter_1/vdda1" 558.113
+merge "level_up_shifter_1/outb" "Aupb" -605.767 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4140 -258 -3600 -180 0 0 0 0 0 0
+merge "level_up_shifter_1/vdda1" "w_12_5188#" 46.8 0 0 0 0 15600 -480 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "w_12_5188#" "w_272_5408#"
+merge "level_up_shifter_0/outb" "Bupb" -1682.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32380 -888 -134400 -5564 0 0 0 0 0 0
+merge "level_up_shifter_1/vssd1" "level_up_shifter_0/vssd1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "level_up_shifter_0/vssd1" "SUB"
+merge "level_up_shifter_0/out" "Bup" -1757.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3844 -248 0 0 -159840 -5524 0 0 0 0 0 0
+merge "level_up_shifter_1/in" "B" -830.349 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 -84 0 0 0 0 0 0 0 0
+merge "level_up_shifter_1/out" "Aup" -274.86 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 69532 -222 44400 0 0 0 0 0 0 0 0 0

@@ -1,0 +1,12 @@
+magic
+tech sky130B
+timestamp 1648161247
+use level_up_shifter  level_up_shifter_0
+timestamp 1648161090
+transform 1 0 -71 0 1 1349
+box -5 -1350 195 0
+use level_up_shifter  level_up_shifter_1
+timestamp 1648161090
+transform 1 0 129 0 1 1349
+box -5 -1350 195 0
+<< end >>
