@@ -92,9 +92,9 @@ en=0;
 rstb=1;
 u_d=0;
 
-#5 en=1;
-#2 rstb=0;
-#10 rstb=1;
+en=1;
+rstb=0;
+#5 rstb=1;
 repeat(50) @(posedge clk); //testing with up up counting
 #2 u_d=1;
 repeat(50) @(posedge clk);//testing with down counting

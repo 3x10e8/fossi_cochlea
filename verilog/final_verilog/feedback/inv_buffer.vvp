@@ -1,0 +1,93 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x2361b90 .scope module, "tb_inv_buffer" "tb_inv_buffer" 2 24;
+ .timescale 0 0;
+v0x2387d10_0 .var "in", 0 0;
+v0x2387e00_0 .net "out", 0 0, L_0x23886a0;  1 drivers
+S_0x2361080 .scope module, "b1" "inv_buffer" 2 27, 2 9 0, S_0x2361b90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in"
+    .port_info 1 /OUTPUT 1 "out"
+v0x2387a90_0 .net "in", 0 0, v0x2387d10_0;  1 drivers
+v0x2387b30_0 .net "out", 0 0, L_0x23886a0;  alias, 1 drivers
+v0x2387c00_0 .net "w", 3 0, L_0x2388450;  1 drivers
+L_0x2387f80 .part L_0x2388450, 0, 1;
+L_0x2388140 .part L_0x2388450, 1, 1;
+L_0x23882f0 .part L_0x2388450, 2, 1;
+L_0x2388450 .concat8 [ 1 1 1 1], L_0x23883e0, L_0x2387f10, L_0x2388070, L_0x2388280;
+L_0x2388710 .part L_0x2388450, 3, 1;
+S_0x2362950 .scope generate, "buffer_loop[0]" "buffer_loop[0]" 2 15, 2 15 0, S_0x2361080;
+ .timescale 0 0;
+P_0x235ff90 .param/l "i" 0 2 15, +C4<00>;
+S_0x2360590 .scope module, "g2" "not_gate" 2 16, 2 3 0, S_0x2362950;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x2387f10 .functor NOT 1, L_0x2387f80, C4<0>, C4<0>, C4<0>;
+v0x23612c0_0 .net "a", 0 0, L_0x2387f80;  1 drivers
+v0x2386330_0 .net "out", 0 0, L_0x2387f10;  1 drivers
+S_0x2386450 .scope generate, "buffer_loop[1]" "buffer_loop[1]" 2 15, 2 15 0, S_0x2361080;
+ .timescale 0 0;
+P_0x2386640 .param/l "i" 0 2 15, +C4<01>;
+S_0x2386700 .scope module, "g2" "not_gate" 2 16, 2 3 0, S_0x2386450;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x2388070 .functor NOT 1, L_0x2388140, C4<0>, C4<0>, C4<0>;
+v0x2386930_0 .net "a", 0 0, L_0x2388140;  1 drivers
+v0x2386a10_0 .net "out", 0 0, L_0x2388070;  1 drivers
+S_0x2386b30 .scope generate, "buffer_loop[2]" "buffer_loop[2]" 2 15, 2 15 0, S_0x2361080;
+ .timescale 0 0;
+P_0x2386d50 .param/l "i" 0 2 15, +C4<010>;
+S_0x2386df0 .scope module, "g2" "not_gate" 2 16, 2 3 0, S_0x2386b30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x2388280 .functor NOT 1, L_0x23882f0, C4<0>, C4<0>, C4<0>;
+v0x2387020_0 .net "a", 0 0, L_0x23882f0;  1 drivers
+v0x2387100_0 .net "out", 0 0, L_0x2388280;  1 drivers
+S_0x2387220 .scope module, "g1" "not_gate" 2 14, 2 3 0, S_0x2361080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x23883e0 .functor NOT 1, v0x2387d10_0, C4<0>, C4<0>, C4<0>;
+v0x2387430_0 .net "a", 0 0, v0x2387d10_0;  alias, 1 drivers
+v0x2387510_0 .net "out", 0 0, L_0x23883e0;  1 drivers
+S_0x2387630 .scope module, "g3" "not_gate" 2 19, 2 3 0, S_0x2361080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x23886a0 .functor NOT 1, L_0x2388710, C4<0>, C4<0>, C4<0>;
+v0x2387890_0 .net "a", 0 0, L_0x2388710;  1 drivers
+v0x2387970_0 .net "out", 0 0, L_0x23886a0;  alias, 1 drivers
+    .scope S_0x2361b90;
+T_0 ;
+    %vpi_call 2 30 "$dumpfile", "inv_buffer.vcd" {0 0 0};
+    %vpi_call 2 31 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x2361b90;
+T_1 ;
+    %vpi_call 2 35 "$monitor", "in=%b | out=%b", v0x2387d10_0, v0x2387e00_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x2387d10_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x2387d10_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x2387d10_0, 0, 1;
+    %vpi_call 2 39 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "inv_buffer.v";

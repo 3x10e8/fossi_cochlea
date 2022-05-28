@@ -19,7 +19,7 @@ endmodule
 
 
 //first_readout_block fastest data out
-module ro_block_2(
+module ro_block_5x(
 	input pwr,gray,clk_ext,in, //pwr is the vdd input 
 	output wire out_mux);	   //gray is the gray clk bits
 	wire eff_out;			   // clk_ext is the single global external clock.
@@ -34,18 +34,41 @@ module ro_block_2(
 		.in(in),
 		.ctrl(eff_out),
 		.out(out_mux));
-
 endmodule
 
-/*
+module ro_block_5(
+	input pwr,gray,clk_ext,
+	input in_pol,in_pol_eve,
+	output wire out_mux_pol,out_mux_pol_eve);
+	
+	ro_block_5x ro_pol(
+		.pwr(pwr),
+		.gray(gray),
+		.clk_ext(clk_ext),
+		.in(in_pol),
+		.out_mux(out_mux_pol));
+
+	ro_block_5x ro_pol_eve(
+		.pwr(pwr),
+		.gray(gray),
+		.clk_ext(clk_ext),
+		.in(in_pol_eve),
+		.out_mux(out_mux_pol_eve));
+endmodule
+
+
+
+
+
+
 //Testbench
 //gc: Gray Counter
 //c: Counter
 //clk_ext_global: master clock
-module tb_ro_block_2;
-	reg pwr,clk_ext_global,comp_out,en_global,gc_rstb,clk_ext; 
+module tb_ro_block_5;
+	reg pwr,clk_ext_global,en_global,gc_rstb,clk_ext,comp_out;
 	wire [16:0]gc_clk;
-	wire muxed_out;
+	wire [1:0]muxed_out;
 	parameter FREQ=2560000;
 	parameter n=5; // n is the index of readout
 	real clk_half_pd_global=(1.0/(2*FREQ))*1e9;
@@ -57,12 +80,14 @@ module tb_ro_block_2;
 		.enable(en_global), 
 		.reset(gc_rstb), 
 		.gray_count(gc_clk[16:0]));
-	ro_block_2 ro1(
+	ro_block_5 rox5(
 		.pwr(pwr),
-		.gray(gc_clk[n-1]),
+		.gray(gc_clk[n-1]), //parameterize the testbench for all the readouts
 		.clk_ext(clk_ext),
-		.in(comp_out),
-		.out_mux(muxed_out));
+		.in_pol(comp_out),
+		.in_pol_eve(comp_out),
+		.out_mux_pol(muxed_out[0]),
+		.out_mux_pol_eve(muxed_out[1]));
 
 	initial begin
 	$dumpfile("ro_block_5.vcd");
@@ -102,5 +127,5 @@ module tb_ro_block_2;
 		$finish; 
 	end
 	endmodule
-*/
+
 
