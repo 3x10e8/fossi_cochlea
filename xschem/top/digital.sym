@@ -28,7 +28,7 @@ T {readoutQ
 } -120 10 0 0 0.2 0.2 {}
 T {fbI} -15 -55 0 0 0.4 0.4 {}
 T {fbQ} -20 30 0 0 0.4 0.4 {}
-T {clk_ext (global)} 255 -55 0 0 0.2 0.2 {}
+T {clk_master (global)} 255 -55 0 0 0.2 0.2 {}
 T {rstb (global)} 255 -20 0 0 0.2 0.2 {}
 T {ud_en (global)} 255 -5 0 0 0.2 0.2 {}
 T {gray_clk[10?:0]} 255 10 0 0 0.2 0.2 {}

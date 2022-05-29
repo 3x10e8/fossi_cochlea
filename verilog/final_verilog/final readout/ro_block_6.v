@@ -1,131 +1,148 @@
 `include "./../feedback/tbuf.v"
 `include "./../feedback/gray_count.v"
-`include "./../feedback/asyn_rstb_dff.v"
-`include "./../feedback/asyn_rstb_dff_n.v"
+`include "./../feedback/asyn_rst_dff.v"
+`include "./../feedback/asyn_rst_dff_n.v"
 `include "./../feedback/mux_2_1.v"
 `include "./../feedback/buffer.v"
 `timescale 1ns/1fs
 
-module edge_ff(
+
+module edge_ff_n(
 input d,rstb,clk,
 output wire out);
 wire [1:0]q;
 wire buff_out;
+//wire rstb_inv; //rstb_inv used after passing the reset signal(clk_ext) through an inverter.
+//assign rstb_inv=~rstb;
 buffer bf(.in(clk),.out(buff_out));
-asyn_rstb_dff dff(.clk(buff_out),.d(d),.rstb(rstb),.q(q[1]));
-asyn_rstb_dff_n dff_n(.clk(buff_out),.d(d),.rstb(rstb),.q(q[0]));
+asyn_rst_dff dff(.clk(buff_out),.d(d),.rstb(rstb),.q(q[1]));
+asyn_rst_dff_n dff_n(.clk(buff_out),.d(d),.rstb(rstb),.q(q[0]));
 mux_2_1 mux(.in_0(q[0]),.in_1(q[1]),.sel(clk),.out(out));
 endmodule
 
-
 //first_readout_block fastest data out
 module ro_block_6x(
-	input pwr,gray,clk_ext,in, //pwr is the vdd input 
-	output wire out_mux);	   //gray is the gray clk bits
-	wire eff_out;			   // clk_ext is the single global external clock.
+	input vpwr,
+	input gray,clk_master,in, //pwr is the vdd input 
+	output wire readout);	   //gray is the gray clk bits
+	wire eff_out;			   
 
-	edge_ff ef(
-		.d(pwr),
-		.rstb(clk_ext),
+	edge_ff_n eff(
+		.d(vpwr),		//readout is the output of the readout block.
+		.rstb(clk_master), //clkdiv2 is the max frequency of the core.
 		.clk(gray),
 		.out(eff_out));
 
 	tbuf tribuf(
 		.in(in),
 		.ctrl(eff_out),
-		.out(out_mux));
+		.out(readout));
 endmodule
 
 module ro_block_6(
-	input pwr,gray,clk_ext,
-	input in_pol,in_pol_eve,
-	output wire out_mux_pol,out_mux_pol_eve);
+	input vpwr,
+	input gray,clk_master,
+	input in_eve,in_pol_eve,
+	output wire out_mux_eve,out_mux_pol_eve);
 	
 	ro_block_6x ro_pol(
-		.pwr(pwr),
+		.vpwr(vpwr),
 		.gray(gray),
-		.clk_ext(clk_ext),
-		.in(in_pol),
-		.out_mux(out_mux_pol));
+		.clk_master(clk_master),
+		.in(in_eve),
+		.readout(out_mux_eve));
 
 	ro_block_6x ro_pol_eve(
-		.pwr(pwr),
+		.vpwr(vpwr),
 		.gray(gray),
-		.clk_ext(clk_ext),
+		.clk_master(clk_master),
 		.in(in_pol_eve),
-		.out_mux(out_mux_pol_eve));
+		.readout(out_mux_pol_eve));
 endmodule
 
 
 
 
 
-
+/*
 //Testbench
 //gc: Gray Counter
 //c: Counter
 //clk_ext_global: master clock
-module tb_ro_block_6;
-	reg pwr,clk_ext_global,en_global,gc_rstb,clk_ext,comp_out;
-	wire [16:0]gc_clk;
-	wire [1:0]muxed_out;
-	parameter FREQ=2560000;
-	parameter n=6; // n is the index of readout
-	real clk_half_pd_global=(1.0/(2*FREQ))*1e9;
-	real clk_half_pd=(1.0/(2*FREQ))*(2**(n-1))*1e9; // timeperiod of ext_clk depends on index of readout block
-	real comp_out_half_pd=(1.0/(2*FREQ))*1e9*(2**(n));
+module tb_ro_block_6;						   //gc_clk is the gray counter clock
+	reg vpwr,clk_master,clkdiv2,rstb,in_eve,in_pol_eve; //vpwr is the connection to d pin of eff
+	wire [18:0]gc_clk;						   //clk_master is the global external clock 
+	wire [1:0]read_out_iq;					   //clkdiv2 is the max core clock
+	parameter PERIOD_MASTER=400;			   //read_out_iq[1]: out_mux_pol_eve
+	real clk_master_half_pd=PERIOD_MASTER/2;   //read_out_iq[0]:out_mux_eve
+	parameter n=6; // n is core's index.
+	parameter PERIOD_CORE=400*(2**(n-1));
+	real clk_core_half_pd=(PERIOD_CORE)/2;
+	real comp_out_half_pd=PERIOD_CORE;//factor of 2 is multiplied here because the period of comput is double that of the core clock
+	
 	//module instantiation	
 	gray_count gc_clock(
-		.clk(clk_ext_global), 
-		.enable(en_global), 
-		.reset(gc_rstb), 
-		.gray_count(gc_clk[16:0]));
-	ro_block_6 rox6(
-		.pwr(pwr),
+		.clk(clk_master), 
+		.reset(rstb), 
+		.gray_count(gc_clk[18:0]));
+
+	ro_block_6 ro_block(
+		.vpwr(vpwr),
 		.gray(gc_clk[n-1]), //parameterize the testbench for all the readouts
-		.clk_ext(clk_ext),
-		.in_pol(comp_out),
-		.in_pol_eve(comp_out),
-		.out_mux_pol(muxed_out[0]),
-		.out_mux_pol_eve(muxed_out[1]));
+		.clk_master(clk_master),
+		.in_eve(in_eve),
+		.in_pol_eve(in_pol_eve),
+		.out_mux_eve(read_out_iq[0]),
+		.out_mux_pol_eve(read_out_iq[1]));
 
 	initial begin
 	$dumpfile("ro_block_6.vcd");
 	$dumpvars;
-	end 	
-//signal generation
+	end 
+
+	//signal generation
 	initial begin
-		clk_ext_global=0;
-		#1 clk_ext_global=1;
+		clk_master=0;
 		forever
-			#(clk_half_pd_global)clk_ext_global = ~clk_ext_global; //global ext_clk generation freq=2.56 MHz
+			#(clk_master_half_pd)clk_master = ~clk_master; //ext_clk generation freq=2.56 MHz
 	end
 
 	initial begin
-		clk_ext=0;
-		#1 clk_ext=1;
+		clkdiv2=0;
+		//#(clk_master_half_pd) clkdiv2=1;
 		forever
-			#(clk_half_pd)clk_ext = ~clk_ext; //  core ext_clk generation freq=1.28 MHz
+			#(clk_core_half_pd)clkdiv2 = ~clkdiv2; //ext_clk generation freq=2.56 MHz
 	end
 
-	initial begin 
-		comp_out=0;
-		#1 comp_out=1;
-		#(clk_half_pd+1) comp_out=0;
-		forever
-		#(comp_out_half_pd)comp_out = ~comp_out;
-	end
+	//modelling in_eve(or in_pol_eve) using comp_out as it follows the same edges for its data release. 	
+	always @(posedge rstb or negedge rstb or negedge clkdiv2) begin
+		//in_eve=0;
+			if(rstb&~clkdiv2) begin
+				#2 in_eve<=1;
+				#(comp_out_half_pd) in_eve=~in_eve;
+				end
+			else in_eve<=in_eve;
+	end 
+
+	//modelling in_eve(or in_pol_eve) using comp_out as it follows the same edges for its data release. 	
+	always @(posedge rstb or negedge rstb or negedge clkdiv2) begin
+		//in_pol_eve=0;
+			if(rstb&~clkdiv2) begin
+				#2 in_pol_eve<=1;
+				#(comp_out_half_pd) in_pol_eve=~in_pol_eve;
+				end
+			else in_pol_eve<=in_pol_eve;
+	end 
+
 
 	initial begin
-		pwr=1;
-		en_global=1;
-		gc_rstb=0;
-		#1 gc_rstb=1;
-		repeat(10) @(posedge clk_ext_global);
-		repeat (340) @(posedge clk_ext_global);
-      		#100;
+		rstb=0;
+		vpwr=1;
+		#5 rstb=1;
+		repeat(700) @(posedge clkdiv2);
+     	#100;
 		$finish; 
 	end
 	endmodule
-
+*/
 
