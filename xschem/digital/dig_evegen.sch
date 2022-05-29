@@ -32,7 +32,7 @@ N -460 0 -360 0 {
 lab=comp_high}
 N 600 -30 660 -30 {
 lab=polxevent}
-C {devices/ipin.sym} -460 80 0 0 {name=p2 lab=phi1b}
+C {devices/ipin.sym} -460 80 0 0 {name=p2 lab=phi1b_dig}
 C {devices/opin.sym} 660 60 0 0 {name=p7 lab=event}
 C {devices/ipin.sym} -480 -140 0 0 {name=p14 lab=vccd}
 C {devices/ipin.sym} -480 -110 0 0 {name=p15 lab=vssd}
