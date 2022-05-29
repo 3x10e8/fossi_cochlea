@@ -1,8 +1,8 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {type=subcircuit 
 format="@name @pinlist @symname Wplus=@Wplus Lplus=@Wplus Wminus=@Wminus Lminus=@Lminus" 
-template="name=X1 Wplus=0.42 Lplus=0.15 Wminus=0.42 Lminus=0.15"}
+template="name=x1 Wplus=0.42 Lplus=0.15 Wminus=0.42 Lminus=0.15"}
 V {}
 S {}
 E {}
@@ -24,6 +24,8 @@ L 4 80 -37.5 80 -10 {}
 L 4 80 -80 80 -77.5 {}
 L 4 93.75 -70 110 -70 {}
 L 4 93.75 -50 110 -50 {}
+L 4 40 -110 40 -100 {}
+L 4 40 -20 40 -10 {}
 B 5 17.5 -82.5 22.5 -77.5 {name=inp
 dir=in}
 B 5 17.5 -42.5 22.5 -37.5 {name=inm
@@ -36,5 +38,9 @@ B 5 77.5 -12.5 82.5 -7.5 {name=phi1b
 dir=in}
 B 5 107.5 -52.5 112.5 -47.5 {name=low
 dir=out}
+B 5 37.5 -112.5 42.5 -107.5 {name=vccd
+dir=in}
+B 5 37.5 -12.5 42.5 -7.5 {name=vssd
+dir=in}
 A 4 79.8046875 -40.078125 2.211434352299713 287.4747742562557 360 {}
 T {@name} 85 -40 0 0 0.2 0.2 {}
