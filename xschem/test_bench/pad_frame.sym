@@ -3,7 +3,10 @@ G {}
 K {type=subcircuit 
 format="@name @pinlist @symname
 + p_vdda1=@p_vdda1
++ p_vdda2=@p_vdda2
 + p_vccd1=@p_vccd1
++ p_vccd2=@p_vccd2
++ p_vccd_mgmt=@p_vccd_mgmt
 + p_fclk=@p_fclk
 + p_duty_cycle=@p_duty_cycle
 + p_rstb_delay=@p_rstb_delay
@@ -21,7 +24,10 @@ format="@name @pinlist @symname
 + p_f3=@p_f3" 
 template="name=x1
 + p_vdda1=1.2
-+ p_vccd1=1.2
++ p_vdda2=1.2
++ p_vccd1=1
++ p_vccd2=1.8
++ p_vccd_mgmt=1.8
 + p_fclk=\{256*10k\}
 + p_duty_cycle=0.5
 + p_rstb_delay=\{1.5/p_fclk\}
@@ -58,14 +64,20 @@ L 4 -60 -180 -60 -160 {}
 L 4 -60 160 -60 180 {}
 L 4 60 -40 80 -40 {}
 L 4 60 -20 80 -20 {}
+L 4 -80 120 -60 120 {}
+L 4 0 160 0 180 {}
+L 4 -80 -160 -60 -160 {}
+L 4 60 -160 80 -160 {}
+L 4 -80 160 -60 160 {}
+L 4 60 160 80 160 {}
 B 5 77.5 17.5 82.5 22.5 {name=thresh1
 dir=out}
 B 5 77.5 37.5 82.5 42.5 {name=thresh2
 dir=out}
 B 5 57.5 -182.5 62.5 -177.5 {name=vdda1
-dir=out}
+dir=inout}
 B 5 57.5 177.5 62.5 182.5 {name=vssa1
-dir=out}
+dir=inout}
 B 5 77.5 -142.5 82.5 -137.5 {name=inp
 dir=out}
 B 5 77.5 -122.5 82.5 -117.5 {name=inm
@@ -75,22 +87,34 @@ dir=out}
 B 5 -82.5 -142.5 -77.5 -137.5 {name=rstb
 dir=out}
 B 5 -62.5 -182.5 -57.5 -177.5 {name=vccd1
-dir=out}
+dir=inout}
 B 5 -62.5 177.5 -57.5 182.5 {name=vssd1
-dir=out}
+dir=inout}
 B 5 77.5 -42.5 82.5 -37.5 {name=vpb
 dir=out}
 B 5 77.5 -22.5 82.5 -17.5 {name=vnb
 dir=out}
+B 5 -82.5 117.5 -77.5 122.5 {name=vccd_mgmt
+dir=inout}
+B 5 -2.5 177.5 2.5 182.5 {name=vssd_mgmt
+dir=inout}
+B 5 -82.5 -162.5 -77.5 -157.5 {name=vccd2
+dir=inout}
+B 5 77.5 -162.5 82.5 -157.5 {name=vdda2
+dir=inout}
+B 5 -82.5 157.5 -77.5 162.5 {name=vssd2
+dir=inout}
+B 5 77.5 157.5 82.5 162.5 {name=vssa2
+dir=inout}
 T {@name} -10 90 0 0 0.4 0.4 {}
-T {@p_vdda1} 30.25 -179.75 0 0 0.3 0.3 { layer=13}
+T {@p_vdda1} 30.25 -199.75 0 0 0.3 0.3 { layer=13}
 T {inp} 20 -150 0 0 0.4 0.4 {}
 T {inm} 20 -130 0 0 0.4 0.4 {}
 T {thresh1} -20 10 0 0 0.4 0.4 {}
 T {thresh2} -20 30 0 0 0.4 0.4 {}
 T {@p_thresh1} -59.75 10.25 0 0 0.3 0.3 { layer=13}
-T {vssa1} 10 140 0 0 0.3 0.3 {}
-T {vdda1} 10 -190 0 0 0.3 0.3 {}
+T {vssa1} 30 160 0 0 0.2 0.2 {}
+T {vdda1} 25 -180 0 0 0.2 0.2 {}
 T {@p_vcm
 +@p_amp1 sin( @p_f1 )
 +@p_amp2 sin( @p_f2 )
@@ -100,10 +124,19 @@ T {@p_vpb} -59.75 -49.75 0 0 0.3 0.3 { layer=13}
 T {@p_vnb} -59.75 -29.75 0 0 0.3 0.3 { layer=13}
 T {clk_ext} -60 -130 0 0 0.4 0.4 {}
 T {rstb} -60 -150 0 0 0.4 0.4 {}
-T {@p_vccd1} -59.75 -179.75 0 0 0.3 0.3 { layer=13}
-T {vccd1} -50 -190 0 0 0.3 0.3 {}
-T {vssd1} -60 140 0 0 0.3 0.3 {}
+T {@p_vccd1} -59.75 -199.75 0 0 0.3 0.3 { layer=13}
+T {vccd1} -60 -180 0 0 0.2 0.2 {}
+T {vssd1} -60 160 0 0 0.2 0.2 {}
 T {@p_fclk} -59.75 -109.75 0 0 0.3 0.3 { layer=13}
 T {starving bias} -60 -60 0 0 0.2 0.2 {}
 T {vpb} 20 -50 0 0 0.4 0.4 {}
 T {vnb} 20 -30 0 0 0.4 0.4 {}
+T {@p_vccd_mgmt} -59.75 119.75 0 0 0.3 0.3 { layer=13}
+T {vccd_mgmt} -60 110 0 0 0.3 0.3 {}
+T {vssd_mgmt} -30 150 0 0 0.2 0.2 {}
+T {@p_vccd2} -89.75 -160.25 0 0 0.3 0.3 { layer=13}
+T {vccd2} -60 -160 0 0 0.2 0.2 {}
+T {vdda2} 25 -160 0 0 0.2 0.2 {}
+T {@p_vdda2} 60.25 -160.25 0 0 0.3 0.3 { layer=13}
+T {vssd2} -80 150 0 0 0.2 0.2 {}
+T {vssa2} 50 150 0 0 0.2 0.2 {}

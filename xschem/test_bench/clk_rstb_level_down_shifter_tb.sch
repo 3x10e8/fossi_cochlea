@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 T {can't use vssa itself, spice needs a gnd node (0) defined} -230 230 0 0 0.4 0.4 {}
+T {clk, rstb handoff from risc to digital} 250 -120 0 0 0.4 0.4 {}
 N 80 20 100 20 {
 lab=thresh1}
 N 80 40 100 40 {
@@ -52,7 +53,7 @@ C {devices/netlist.sym} -360 -480 0 0 {name=SPICE2 only_toplevel=false value="
 .csparam n=0
 .control
   tran $&tstep $&tend
-  plot la_rstb la_clk_ext inp inm
+  plot la_rstb rstb la_clk_ext+2 clk_ext+2
 .endc
 "}
 C {devices/lab_pin.sym} 60 -200 2 0 {name=l1 sig_type=std_logic lab=vdda1}
@@ -72,7 +73,7 @@ C {devices/lab_pin.sym} -80 120 0 0 {name=l14 sig_type=std_logic lab=vccd_mgmt}
 C {test_bench/pad_frame.sym} 0 0 0 0 {name=x1
 + p_vdda1=1.2
 + p_vdda2=1.2
-+ p_vccd1=1
++ p_vccd1=0.8
 + p_vccd2=1.8
 + p_vccd_mgmt=1.8
 + p_fclk=\{256*10k\}
@@ -90,3 +91,15 @@ C {test_bench/pad_frame.sym} 0 0 0 0 {name=x1
 + p_f2=0
 + p_amp3=0
 + p_f3=0}
+C {level_shifter/level_down_shifter.sym} 420 -20 0 0 {name=x3}
+C {devices/lab_pin.sym} 480 -60 2 0 {name=l28 sig_type=std_logic lab=vccd1}
+C {devices/gnd.sym} 420 20 0 0 {name=l33 lab=GND}
+C {devices/lab_pin.sym} 340 -30 0 0 {name=l21 sig_type=std_logic lab=la_clk_ext}
+C {level_shifter/level_down_shifter.sym} 420 110 0 0 {name=x5}
+C {devices/lab_pin.sym} 480 70 2 0 {name=l30 sig_type=std_logic lab=vccd1}
+C {devices/gnd.sym} 420 150 0 0 {name=l32 lab=GND}
+C {devices/lab_pin.sym} 340 100 0 0 {name=l34 sig_type=std_logic lab=la_rstb}
+C {devices/lab_pin.sym} 510 100 2 0 {name=l36 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 510 -30 2 0 {name=l39 sig_type=std_logic lab=clk_ext}
+C {devices/lab_pin.sym} 370 -60 0 0 {name=l40 sig_type=std_logic lab=vccd2}
+C {devices/lab_pin.sym} 370 70 0 0 {name=l23 sig_type=std_logic lab=vccd2}

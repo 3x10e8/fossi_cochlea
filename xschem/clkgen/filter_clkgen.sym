@@ -46,11 +46,11 @@ dir=in}
 B 5 -52.5 -42.5 -47.5 -37.5 {name=vnb
 dir=in}
 B 5 17.5 -102.5 22.5 -97.5 {name=vdda
-dir=in}
-B 5 -2.5 97.5 2.5 102.5 {name=vssa
-dir=in}
+dir=inout}
+B 5 -2.5 97.5 2.5 102.5 {name=vssd
+dir=inout}
 B 5 -22.5 -102.5 -17.5 -97.5 {name=vccd
-dir=in}
+dir=inout}
 B 5 -52.5 -12.5 -47.5 -7.5 {name=div2
 dir=in}
 T {@name} -5 50 0 0 0.2 0.2 {}
@@ -67,3 +67,4 @@ T {vdda} 30 -95 1 0 0.2 0.2 {}
 T {div2} -26 -17 0 0 0.2 0.2 {}
 T {cclk} -25 23 0 0 0.2 0.2 {}
 T {cclkb_ana} -20 35 0 0 0.2 0.2 {}
+T {vssd} 10 75 1 0 0.2 0.2 {}

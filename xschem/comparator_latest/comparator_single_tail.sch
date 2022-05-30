@@ -238,8 +238,6 @@ spiceprefix=X
 C {devices/lab_pin.sym} 660 -400 3 0 {name=l2 sig_type=std_logic lab=tail}
 C {devices/lab_pin.sym} 480 -470 2 0 {name=l3 sig_type=std_logic lab=pfete}
 C {devices/lab_pin.sym} 260 -470 2 1 {name=l4 sig_type=std_logic lab=pfetw}
-C {devices/ipin.sym} 130 -550 0 0 {name=p7 lab=vccd}
-C {devices/ipin.sym} 130 -530 0 0 {name=p8 lab=vssd}
 C {devices/lab_pin.sym} 260 -530 3 1 {name=l5 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} 480 -530 3 1 {name=l6 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} 660 -520 3 1 {name=l7 sig_type=std_logic lab=vccd}
@@ -247,3 +245,5 @@ C {devices/lab_pin.sym} 880 -520 3 1 {name=l8 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} 190 -280 1 1 {name=l9 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 560 -280 1 1 {name=l10 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 770 -340 1 1 {name=l11 sig_type=std_logic lab=vssd}
+C {devices/iopin.sym} 140 -580 2 0 {name=p19 lab=vccd}
+C {devices/iopin.sym} 140 -560 2 0 {name=p22 lab=vssd}

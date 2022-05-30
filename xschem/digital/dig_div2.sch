@@ -7,7 +7,7 @@ E {}
 T {http://diychip.org/sky130/sky130_fd_sc_hd/cells/dfrbp/} -70 90 0 0 0.2 0.2 {}
 T {Divide by 2} -60 -40 0 0 0.4 0.4 {}
 T {To next wavelet (unison)} 370 10 0 0 0.4 0.4 {}
-T {used with digital cells} -270 -280 0 0 0.4 0.4 {}
+T {used with digital cells} -240 -280 0 0 0.4 0.4 {}
 T {dont need buffers as clk is inverted below} -210 -190 0 0 0.4 0.4 {}
 T {2ns delay} 110 10 0 0 0.4 0.4 {}
 T {This is the divided-by-2 clk 
@@ -37,6 +37,6 @@ C {devices/ipin.sym} -270 40 0 0 {name=p2 lab=rstb}
 C {devices/opin.sym} 420 -140 0 0 {name=p7 lab=cclk}
 C {devices/opin.sym} 420 0 0 0 {name=p9 lab=div2out}
 C {sky130_stdcells/and2_0.sym} 310 -140 0 0 {name=x2 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {devices/ipin.sym} -270 -280 0 0 {name=p14 lab=vccd}
-C {devices/ipin.sym} -270 -250 0 0 {name=p15 lab=vssd}
 C {sky130_stdcells/inv_1.sym} -130 0 0 0 {name=x1 VGND=vssd VNB=vssd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {devices/iopin.sym} -270 -280 2 0 {name=p13 lab=vccd}
+C {devices/iopin.sym} -270 -240 2 0 {name=p11 lab=vssd}

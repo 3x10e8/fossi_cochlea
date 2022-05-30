@@ -25,15 +25,16 @@ dir=out}
 B 5 47.5 -22.5 52.5 -17.5 {name=div2out
 dir=out}
 B 5 -2.5 -62.5 2.5 -57.5 {name=vccd
-dir=in}
+dir=inout}
 B 5 -2.5 57.5 2.5 62.5 {name=vssd
-dir=in}
+dir=inout}
 B 5 -52.5 -22.5 -47.5 -17.5 {name=div2
 dir=in}
 T {@name} 15 -40 0 0 0.2 0.2 {}
 T {div2out} -10 -25 0 0 0.2 0.2 {}
 T {cclk} 10 15 0 0 0.2 0.2 {}
 T {@symname} 55 7 2 0 0.2 0.2 {}
-T {d} -10 -55 0 0 0.2 0.2 {}
+T {vccd} 0 -55 0 0 0.2 0.2 {}
 T {div2} -26 -37 0 0 0.2 0.2 {}
 T {rstb} -25 13 0 0 0.2 0.2 {}
+T {vssd} 0 45 0 0 0.2 0.2 {}
