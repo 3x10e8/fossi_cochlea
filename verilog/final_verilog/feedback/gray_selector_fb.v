@@ -20,12 +20,13 @@ module gray_selector_fb(
 input d,clk_ext,rstb_ext, //d has to be connected to vdd in our case
 input [9:0]in,clk, //ext gray clocks are to be connected to the clk
 output wire out_muxed); //rstb pin of eff has to be ext clk signal
-wire [9:0]eff_out; //ext_rst is the reset to the final latch.
+wire [9:0]eff_out,eff_outb; //ext_rst is the reset to the final latch.
 wire out_muxed_raw;
+assign eff_outb[9:0]=~eff_out[9:0];
 genvar i;
 generate for(i=0;i<=9;i=i+1) begin: fb_gray_selector_loop
 edge_ff_n eff(.d(d),.rstb(clk_ext),.clk(clk[i]),.out(eff_out[i]));
-tbuf t_buf(.in(in[i]),.ctrl(eff_out[i]),.out(out_muxed_raw));
+tbuf t_buf(.in(in[i]),.ctrlb(eff_outb[i]),.out(out_muxed_raw));
 dlrtn dl(.d(out_muxed_raw),.gate(clk_ext),.rstb(rstb_ext),.q(out_muxed));
 end
 endgenerate

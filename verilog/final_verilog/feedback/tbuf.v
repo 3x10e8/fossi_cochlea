@@ -1,33 +1,33 @@
 `timescale 1ns/1ps
-module tbuf(in,ctrl,out);
-input in,ctrl;
+module tbuf(in,ctrlb,out);
+input in,ctrlb;
 output out;
 reg out;
 always@(*)
 begin
-case(ctrl)
-1'b0:  out=1'bz;
-1'b1:  out=in;
+case(ctrlb)
+1'b0:  out=in;
+1'b1:  out=1'bz;
 endcase
 end
 endmodule
 /*
 //testbench
 module tb_tbuf;
-reg in,ctrl;
+reg in,ctrlb;
 wire out;
-tbuf tb(.in(in),.ctrl(ctrl),.out(out));
+tbuf tb(.in(in),.ctrlb(ctrlb),.out(out));
 initial begin
 $dumpfile("tbuf.vcd");
 $dumpvars(2,tb_tbuf);
 end
 initial begin
-$monitor("in=%b | ctrl=%b |out=%b",in,ctrl,out);
-in=1'b0; ctrl=1'b0;
-#2 in=1'b0; ctrl=1'b1;
-#2 in=1'b1; ctrl=1'b0;
-#2 in=1'b1; ctrl=1'b1;
-#2 in=1'b0; ctrl=1'b0;
+$monitor("in=%b | ctrlb=%b |out=%b",in,ctrlb,out);
+in=1'b0; ctrlb=1'b0;
+#2 in=1'b0; ctrlb=1'b1;
+#2 in=1'b1; ctrlb=1'b0;
+#2 in=1'b1; ctrlb=1'b1;
+#2 in=1'b0; ctrlb=1'b0;
 end
 endmodule
 */

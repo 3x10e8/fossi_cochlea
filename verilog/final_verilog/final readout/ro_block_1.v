@@ -26,7 +26,8 @@ module ro_block_1x(
 	input vpwr,
 	input gray,clk_master,in, //pwr is the vdd input 
 	output wire readout);	   //gray is the gray clk bits
-	wire eff_out;			   
+	wire eff_out,eff_outb;
+	assign eff_outb=~eff_out;			   
 
 	edge_ff eff(
 		.d(vpwr),		//readout is the output of the readout block.
@@ -36,7 +37,7 @@ module ro_block_1x(
 
 	tbuf tribuf(
 		.in(in),
-		.ctrl(eff_out),
+		.ctrlb(eff_outb),
 		.out(readout));
 endmodule
 
