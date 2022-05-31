@@ -38,7 +38,7 @@ module dig_evegen(
 	assign polxevent=eve&d[0];
 endmodule
 
-/*
+
 //testbench
 module and_gate(
 	input in1,
@@ -168,7 +168,7 @@ module tb_dig_evegen;
 		$finish;
 	end
 endmodule 
-*/
+
 
 
 

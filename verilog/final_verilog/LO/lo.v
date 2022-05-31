@@ -36,57 +36,69 @@ assign  out=~(in[0]|in[1]|in[2]|in[3]|in[4]|in[5]|in[6]|in[7]|in[8]|in[9]|in[10]
 endmodule
 
  //final_lo
-module lo(rstb,gray_clk,sin_out,cos_out);
-input rstb; //clk_ext is the external input clk
-input [7:0]gray_clk;//f_clk[0] is the fastest clk. f_clk is the output from clk_tree starting from clk/2;only div 2 clocks, not the input
-output wire sin_out,cos_out;
-//counter output bits
-wire [19:0]decoder_out; //decoder_output
-wire [1:0]rom_out;//out from rom 
-wire [1:0]out_xor; //out from xor
-gray_decoder gd(.out(decoder_out),.in(gray_clk[5:0]));
-rom r1(.out(rom_out[0]),.in({decoder_out[8:0],decoder_out[10],decoder_out[11]}));
-rom r2(.out(rom_out[1]),.in({decoder_out[8],decoder_out[9],decoder_out[11],decoder_out[19:12]}));
-assign  out_xor[0]=gray_clk[7]^rom_out[0];
-assign  out_xor[1]=gray_clk[6]^rom_out[1];
-assign  sin_out=rstb&&out_xor[0];
-assign  cos_out=rstb&&out_xor[1];
+module lo(
+	input [7:1]gray_clk, //gray_clk[1] starts from first second bit of gray clk with frequency f/4.
+	input gray_sine,
+	output wire sin_out,cos_out);
+
+	wire [19:0]decoder_out; //decoder_output
+	wire [1:0]rom_out;//out from rom 
+	gray_decoder gd(.out(decoder_out),.in(gray_clk[6:1]));
+	rom r1(.out(rom_out[0]),.in({decoder_out[8:0],decoder_out[10],decoder_out[11]}));
+	rom r2(.out(rom_out[1]),.in({decoder_out[8],decoder_out[9],decoder_out[11],decoder_out[19:12]}));
+	assign  sin_out=gray_sine^rom_out[0];
+	assign  cos_out=gray_clk[7]^rom_out[1];
 endmodule
 
-
+/*
 //testbench
 module tb_lo;
-reg rstb,clk_ext, global_en;//global_en and clk_ext is the master clock for the gray counter
-wire [16:0]gray_clk;
+reg rstb,clk_master,clkdiv2,gray_sine;//global_en and clk_ext is the master clock for the gray counter
+wire [18:0]gray_clk;
 wire sin_out,cos_out;
 
-lo bank1(.rstb(rstb),.gray_clk(gray_clk[8:1]),.sin_out(sin_out),.cos_out(cos_out));
-gray_count g1(.clk(clk_ext), .enable(global_en), .reset(rstb), .gray_count(gray_clk[16:0]));
+lo bank1(.gray_clk(gray_clk[n+6:n]),.gray_sine(gray_sine),.sin_out(sin_out),.cos_out(cos_out));
+gray_count g1(.clk(clk_master), .reset(rstb), .gray_count(gray_clk[18:0]));
 
-parameter FREQ=2560000;
-real clk_pd=(1.0/(2*FREQ))*1e9;
+parameter PERIOD_MASTER=400; //For modelling different pitch, change the period of master			  
+real clk_master_half_pd=PERIOD_MASTER/2;   
+parameter n=2; // n is core's index. For observing the behaviour of other cores within the same unison, change the value of n.
+parameter PERIOD_CORE=400*(2**(n-1));
+real clk_core_half_pd=(PERIOD_CORE)/2;
+real clk_gray_sine_half_pd=(PERIOD_CORE)*(2**7);
+
 initial begin
 $dumpfile("lo.vcd");
 $dumpvars(2,tb_lo);
 end
+
 //clock generation
 initial begin
-clk_ext=0;
-forever
-#(clk_pd)clk_ext=~clk_ext;
+	clk_master=0;
+	forever
+		#(clk_master_half_pd)clk_master = ~clk_master; //ext_clk generation freq=2.56 MHz
+end
+
+initial begin
+	clkdiv2=0;
+	forever
+		#(clk_core_half_pd)clkdiv2 = ~clkdiv2; //ext_clk generation freq=2.56 MHz
+end
+
+initial begin
+	gray_sine=0;
+	forever
+		#(clk_gray_sine_half_pd)gray_sine=~gray_sine;
 end
 
 //signal generation
 initial begin
-global_en=1;
 rstb=0;
-#450 rstb=1;
-repeat(1200) @(posedge clk_ext);
-global_en=0;
-rstb=0;
-repeat(5)@(posedge clk_ext);
-#200 $finish;
+#5 rstb=1;
+repeat(1200) @(posedge clkdiv2);
+#200;
+$finish;
 end
 endmodule
-
+*/
 
