@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 T {comparator is clocked on phi1} 140 -110 0 0 0.4 0.4 {}
-T {add buffers} 160 110 0 0 0.4 0.4 {}
+T {comparator can error at 0.8V supply} 160 110 0 0 0.4 0.4 {}
 N -190 100 -170 100 {
 lab=thresh1}
 N -190 120 -170 120 {
@@ -63,12 +63,12 @@ lab=GND}
 C {devices/netlist.sym} -100 -330 0 0 {name=SPICE2 only_toplevel=false value="
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-*.options abstol=1e-14 reltol=1e-4
+.options abstol=1e-14 reltol=1e-4
 
 .control
-  tran 10n 20u
+  tran 10n 40u
   plot high \\"phi1b[0]\\" comp_out+1 \\"cclk[0]\\"+2
-  plot inp-inm \\"phi1_dig[0]\\"/4 high \\"phi1b_dig[0]\\" comp_out+1 \\"cclk[0]\\"+1 x2.pol/2+2 event+2 polxevent+3
+  plot inp-inm \\"phi1_dig[0]\\"/4 high+1 \\"phi1b_dig[0]\\"/2+1 comp_out+2 \\"cclk[0]\\"/2+2 x2.pol/2+3 event+3 polxevent+4
 .endc
 .save all
 "}
@@ -123,7 +123,7 @@ C {devices/gnd.sym} 140 410 0 0 {name=l46 lab=GND}
 C {test_bench/risc_signals.sym} -270 0 0 0 {name=x3
 + p_vdda1=1.2
 + p_vdda2=1.2
-+ p_vccd1=1.1
++ p_vccd1=0.9
 + p_vccd2=1.8
 + p_vccd_mgmt=1.8
 + p_fclk=\{250*10k\}
@@ -136,7 +136,7 @@ C {test_bench/risc_signals.sym} -270 0 0 0 {name=x3
 + p_vnb=1.2
 + p_vcm=0.6
 + p_amp1=100m
-+ p_f1=\{50k\}
++ p_f1=\{20k\}
 + p_amp2=0
 + p_f2=0
 + p_amp3=0

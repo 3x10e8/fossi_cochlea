@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {type=subcircuit 
 format="@name @pinlist @symname Wcap1=@Wcap1 Lcap1=@Lcap1 Wcap2=@Wcap2 Lcap2=@Lcap2" 
@@ -48,16 +48,16 @@ L 4 56 40 70 40 {}
 L 4 48 44 48 50 {}
 L 4 60 -60 60 -40 {}
 B 5 -72.5 -2.5 -67.5 2.5 {name=in
-dir=inout}
+dir=in}
 B 5 67.5 -2.5 72.5 2.5 {name=out
-dir=inout}
-B 5 17.5 77.5 22.5 82.5 {name=phi2_clk_n
+dir=out}
+B 5 17.5 77.5 22.5 82.5 {name=phi2
 dir=in}
-B 5 -22.5 77.5 -17.5 82.5 {name=phi1_clk_n
+B 5 -22.5 77.5 -17.5 82.5 {name=phi1
 dir=in}
-B 5 -22.5 -62.5 -17.5 -57.5 {name=phi1_clk_p
+B 5 -22.5 -62.5 -17.5 -57.5 {name=phi1b
 dir=in}
-B 5 17.5 -62.5 22.5 -57.5 {name=phi2_clk_p
+B 5 17.5 -62.5 22.5 -57.5 {name=phi2b
 dir=in}
 B 5 67.5 37.5 72.5 42.5 {name=thresh2
 dir=in}

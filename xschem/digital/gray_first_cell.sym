@@ -1,0 +1,57 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"}
+V {}
+S {type=subcircuit
+format="@name @pinlist @symname"
+template="name=X1"}
+E {}
+L 4 80 -20 100 -20 {}
+L 4 80 40 80 60 {}
+L 4 -60 40 80 40 {}
+L 4 80 -40 80 40 {}
+L 4 -60 -40 80 -40 {}
+L 4 -60 -40 -60 40 {}
+L 4 80 -60 80 -40 {}
+L 4 -60 -60 -60 -40 {}
+L 4 -60 40 -60 60 {}
+L 4 -80 20 -60 20 {}
+L 4 80 20 100 20 {}
+L 4 -60 20 80 20 {}
+L 4 -50 -25 -50 10 {}
+L 4 -50 10 -20 10 {}
+L 4 -20 -25 -20 10 {}
+L 4 -50 -25 -20 -25 {}
+L 4 -60 -15 -50 -15 {}
+L 4 -40 10 -35 5 {}
+L 4 -35 5 -30 10 {}
+L 4 80 0 100 0 {}
+B 5 77.5 57.5 82.5 62.5 {name=clk_ext
+dir=in}
+B 5 97.5 -22.5 102.5 -17.5 {name=q_jm1
+dir=out}
+B 5 77.5 -62.5 82.5 -57.5 {name=rstb
+dir=in}
+B 5 -62.5 -62.5 -57.5 -57.5 {name=vccd1
+dir=inout}
+B 5 -62.5 57.5 -57.5 62.5 {name=vssd1
+dir=inout}
+B 5 -82.5 17.5 -77.5 22.5 {name=always1
+dir=in}
+B 5 97.5 17.5 102.5 22.5 {name=no_ones_below_jm1
+dir=out}
+B 5 97.5 -2.5 102.5 2.5 {name=q_j
+dir=out}
+T {@name} 0 -10 0 0 0.2 0.2 {}
+T {rstb} 80 -40 2 0 0.2 0.2 {}
+T {clk_ext} 40 40 0 0 0.2 0.2 {}
+T {q_j} 65 -5 0 0 0.2 0.2 {}
+T {vccd1} -60 -50 0 0 0.2 0.2 {}
+T {vssd1} -60 40 0 0 0.2 0.2 {}
+T {always1} -60 20 0 0 0.2 0.2 {}
+T {@symname} -60 -40 0 0 0.2 0.2 {}
+T {no_ones_below_jm1} 0 20 0 0 0.15 0.15 {}
+T {T} -45 -20 0 0 0.2 0.2 {}
+T {q_jm1} 45 -25 0 0 0.2 0.2 {}
