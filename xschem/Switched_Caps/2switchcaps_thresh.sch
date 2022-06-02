@@ -19,11 +19,11 @@ lab=c3b}
 N 160 0 340 0 {
 lab=out}
 N -150 40 -150 60 {
-lab=vssd}
+lab=vssd1}
 N -150 60 130 60 {
-lab=vssd}
+lab=vssd1}
 N 130 40 130 60 {
-lab=vssd}
+lab=vssd1}
 C {devices/ipin.sym} -410 -160 0 0 {name=p4 lab=phi1}
 C {devices/ipin.sym} -410 -140 0 0 {name=p5 lab=phi1b}
 C {devices/lab_pin.sym} -70 0 1 0 {name=l1 sig_type=std_logic lab=cs3}
@@ -48,18 +48,18 @@ C {devices/lab_pin.sym} 100 130 0 0 {name=l24 sig_type=std_logic lab=thresh1}
 C {devices/lab_pin.sym} 100 170 0 0 {name=l25 sig_type=std_logic lab=thresh2}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 220 30 0 0 {name=C4 model=cap_mim_m3_1 W=WC3 L=LC3 MF=1 spiceprefix=X}
 C {mux/analogMux.sym} 140 150 0 0 {name=x7}
-C {devices/lab_pin.sym} -150 -40 2 0 {name=l31 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 130 -40 2 0 {name=l32 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} -150 60 0 0 {name=l20 sig_type=std_logic lab=vssd}
+C {devices/lab_pin.sym} -150 -40 2 0 {name=l31 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -150 60 0 0 {name=l20 sig_type=std_logic lab=vssd1}
 C {transmission_gate/transmission_gate.sym} -170 0 0 0 {name=X5 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 110 0 0 0 {name=X6 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
-C {devices/lab_pin.sym} 120 100 0 0 {name=l34 sig_type=std_logic lab=vdda}
 C {devices/ipin.sym} -410 -110 0 0 {name=p12 lab=phi2}
 C {devices/ipin.sym} -410 -90 0 0 {name=p13 lab=phi2b}
 C {devices/ipin.sym} -410 -60 0 0 {name=p14 lab=cclk}
 C {devices/ipin.sym} -410 -40 0 0 {name=p15 lab=cclkb}
 C {devices/ipin.sym} -410 0 0 0 {name=p1 lab=in}
-C {devices/lab_pin.sym} 120 200 0 0 {name=l2 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} -250 0 0 0 {name=l4 sig_type=std_logic lab=in}
-C {devices/iopin.sym} -410 -220 2 0 {name=p6 lab=vdda}
-C {devices/iopin.sym} -410 -200 2 0 {name=p2 lab=vssd}
+C {devices/iopin.sym} -410 -220 2 0 {name=p6 lab=vdda1}
+C {devices/iopin.sym} -410 -200 2 0 {name=p2 lab=vssd1}
+C {devices/lab_pin.sym} 130 -40 2 0 {name=l5 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 120 100 0 0 {name=l6 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 120 200 0 0 {name=l2 sig_type=std_logic lab=vssd1}
