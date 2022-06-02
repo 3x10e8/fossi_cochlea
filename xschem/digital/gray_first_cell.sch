@@ -34,7 +34,6 @@ C {devices/opin.sym} 480 -80 0 0 {name=p5 lab=no_ones_below_jm1}
 C {devices/ipin.sym} -440 -180 0 0 {name=p8 lab=clk_ext}
 C {devices/ipin.sym} -440 -150 0 0 {name=p9 lab=rstb}
 C {devices/ipin.sym} -440 20 0 0 {name=p10 lab=always1}
-C {devices/lab_pin.sym} -100 -240 0 0 {name=l7 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} -60 -280 0 0 {name=l32 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} -100 -220 0 0 {name=l33 sig_type=std_logic lab=rstb}
 C {devices/lab_pin.sym} 10 -160 2 0 {name=l35 sig_type=std_logic lab=clk_ext}
@@ -44,3 +43,4 @@ C {devices/lab_pin.sym} -60 -160 0 0 {name=l1 sig_type=std_logic lab=vssd1}
 C {devices/opin.sym} 480 -200 0 0 {name=p1 lab=q_jm1}
 C {devices/lab_pin.sym} 240 0 0 0 {name=l5 sig_type=std_logic lab=clk_ext}
 C {sky130_stdcells/buf_1.sym} -320 -80 0 0 {name=x1 VGND=vssd1 VNB=vssd1 VPB=vccd1 VPWR=vccd1 prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} -100 -240 0 0 {name=l6 sig_type=std_logic lab=always1}

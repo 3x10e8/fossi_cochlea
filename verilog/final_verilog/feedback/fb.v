@@ -1,12 +1,12 @@
 `timescale 1ns/10ps
-`include "edge_ff_n.v"
-`include "tbuf.v"
-`include "u_d_bin_counter.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
 //To be included with testbenches
-`include "gray_count.v"
-`include "./../cclk/cclk_gen.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_count.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
 
-
+/*
 module dlrtn(//this is negative reset and active low enable latch.
 	input d,
 	input gate,
@@ -33,7 +33,7 @@ dlrtn dl(.d(out_muxed_raw),.gate(clk_ext),.rstb(rstb_ext),.q(out_muxed));
 end
 endgenerate
 endmodule
-
+*/
 module fb(
 	input vpwr,clkdiv2,comp_out,cclk,rstb,ud_en, //clkdiv2 is the max clk frequency of the core
 	input [9:0]gray_clk, //ud_en is the en port of the ud counter. extra control to the feedback.

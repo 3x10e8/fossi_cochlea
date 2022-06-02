@@ -1,10 +1,10 @@
 `timescale 1ns/1ps
-`include "edge_ff_n.v"
-`include "tbuf.v"
-`include "u_d_bin_counter.v"
-`include "gray_count.v"
-`include "./../cclk/cclk_gen.v"
-
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_count.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
+/*
 module dlrtn( // this latch is negative reset and active low enable
 	input d,
 	input gate,
@@ -15,7 +15,7 @@ module dlrtn( // this latch is negative reset and active low enable
 		else if(!gate) q<=d;
 	end
 endmodule
-
+*/
 module gray_selector_fb(
 input d,clk_ext,rstb_ext, //d has to be connected to vdd in our case
 input [9:0]in,clk, //ext gray clocks are to be connected to the clk

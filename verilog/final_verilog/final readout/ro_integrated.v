@@ -1,5 +1,7 @@
+/*
 `include "ro_block_1.v"
 `include "ro_block_2.v"
+*/
 `timescale 1ns/1ps
 
 //first_readout_block fastest data out

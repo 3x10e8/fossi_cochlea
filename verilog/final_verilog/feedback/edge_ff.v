@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
-//`include "asyn_rstb_dff.v"
-`include "asyn_rstb_dff_n.v"
-`include "mux_2_1.v"
-`include "buffer.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/buffer.v"
 
 module edge_ff(
 input d,rstb,clk,

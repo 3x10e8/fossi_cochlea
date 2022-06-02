@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 
 //asynchronous neg reset dff definition with positive edge clk trigger
+/*
 module asyn_rstb_dff_n(
 input clk,d,rstb,
 output reg q);
@@ -9,7 +10,7 @@ if(!rstb) q<=0;
 else q<=d;
 end
 endmodule
-
+*/
 
 module dig_div2(
 	input clkdiv2,rstb,
