@@ -1,0 +1,11 @@
+magic
+tech sky130A
+timestamp 1654156617
+use cap_10_10_x2  cap_10_10_x2_0
+array 0 7 1098 0 1 1098
+timestamp 1654156239
+transform 1 0 55 0 1 53
+box -57 -52 1041 1046
+<< labels >>
+flabel space -2 1 8782 2197 0 FreeSans 4000 0 0 0 6.4pF
+<< end >>
