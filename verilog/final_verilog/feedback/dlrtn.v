@@ -6,7 +6,7 @@ module dlrtn(
 	output reg q);
 	always@(rstb,d,gate)begin
 		if(!rstb) q<=0;
-		else if(gate) q<=d;
+		else if(!gate) q<=d;
 	end
 endmodule
 /*

@@ -1,0 +1,220 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x13f0db0 .scope module, "edge_ff_gray" "edge_ff_gray" 2 9;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "d"
+    .port_info 1 /INPUT 1 "rstb"
+    .port_info 2 /INPUT 1 "clk"
+    .port_info 3 /OUTPUT 1 "out"
+RS_0x7f0bc7de0288 .resolv tri, L_0x1420cb0, L_0x1421480;
+v0x141fdf0_0 .net8 "buff_int", 0 0, RS_0x7f0bc7de0288;  2 drivers
+o0x7f0bc7de09a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x141feb0_0 .net "buff_out", 0 0, o0x7f0bc7de09a8;  0 drivers
+o0x7f0bc7de0198 .functor BUFZ 1, C4<z>; HiZ drive
+v0x141ff70_0 .net "clk", 0 0, o0x7f0bc7de0198;  0 drivers
+o0x7f0bc7de06d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x14200d0_0 .net "d", 0 0, o0x7f0bc7de06d8;  0 drivers
+v0x1420170_0 .net "out", 0 0, v0x141fbe0_0;  1 drivers
+v0x1420260_0 .net "q", 1 0, L_0x1420430;  1 drivers
+o0x7f0bc7de0738 .functor BUFZ 1, C4<z>; HiZ drive
+v0x1420300_0 .net "rstb", 0 0, o0x7f0bc7de0738;  0 drivers
+L_0x1420430 .concat8 [ 1 1 0 0], v0x141f540_0, v0x141eec0_0;
+L_0x1420520 .part L_0x1420430, 0, 1;
+L_0x1420640 .part L_0x1420430, 1, 1;
+S_0x13f0340 .scope module, "bf0" "buffer" 2 18, 3 9 0, S_0x13f0db0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "in"
+    .port_info 1 /OUTPUT 1 "out"
+v0x141cc70_0 .net "in", 0 0, o0x7f0bc7de0198;  alias, 0 drivers
+v0x141cd40_0 .net8 "out", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+v0x141ce10_0 .net "w", 2 0, L_0x1420b20;  1 drivers
+L_0x14207b0 .part L_0x1420b20, 0, 1;
+L_0x1420970 .part L_0x1420b20, 1, 1;
+L_0x1420b20 .concat8 [ 1 1 1 0], L_0x1420ab0, L_0x14206e0, L_0x14208a0;
+L_0x1420d20 .part L_0x1420b20, 2, 1;
+S_0x13f5850 .scope generate, "buffer_loop[0]" "buffer_loop[0]" 3 15, 3 15 0, S_0x13f0340;
+ .timescale -9 -12;
+P_0x13f3fc0 .param/l "i" 0 3 15, +C4<00>;
+S_0x13f3410 .scope module, "g2" "not_gate" 3 16, 3 3 0, S_0x13f5850;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x14206e0 .functor NOT 1, L_0x14207b0, C4<0>, C4<0>, C4<0>;
+v0x13f5a70_0 .net "a", 0 0, L_0x14207b0;  1 drivers
+v0x141bc40_0 .net "out", 0 0, L_0x14206e0;  1 drivers
+S_0x141bd60 .scope generate, "buffer_loop[1]" "buffer_loop[1]" 3 15, 3 15 0, S_0x13f0340;
+ .timescale -9 -12;
+P_0x141bf50 .param/l "i" 0 3 15, +C4<01>;
+S_0x141c010 .scope module, "g2" "not_gate" 3 16, 3 3 0, S_0x141bd60;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x14208a0 .functor NOT 1, L_0x1420970, C4<0>, C4<0>, C4<0>;
+v0x141c240_0 .net "a", 0 0, L_0x1420970;  1 drivers
+v0x141c320_0 .net "out", 0 0, L_0x14208a0;  1 drivers
+S_0x141c440 .scope module, "g1" "not_gate" 3 14, 3 3 0, S_0x13f0340;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x1420ab0 .functor NOT 1, o0x7f0bc7de0198, C4<0>, C4<0>, C4<0>;
+v0x141c680_0 .net "a", 0 0, o0x7f0bc7de0198;  alias, 0 drivers
+v0x141c740_0 .net "out", 0 0, L_0x1420ab0;  1 drivers
+S_0x141c860 .scope module, "g3" "not_gate" 3 19, 3 3 0, S_0x13f0340;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x1420cb0 .functor NOT 1, L_0x1420d20, C4<0>, C4<0>, C4<0>;
+v0x141ca70_0 .net "a", 0 0, L_0x1420d20;  1 drivers
+v0x141cb50_0 .net8 "out", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+S_0x141cf20 .scope module, "bf1" "buffer" 2 19, 3 9 0, S_0x13f0db0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "in"
+    .port_info 1 /OUTPUT 1 "out"
+v0x141e770_0 .net8 "in", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+v0x141e8a0_0 .net8 "out", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+v0x141e960_0 .net "w", 2 0, L_0x1421340;  1 drivers
+L_0x1420f10 .part L_0x1421340, 0, 1;
+L_0x1421080 .part L_0x1421340, 1, 1;
+L_0x1421340 .concat8 [ 1 1 1 0], L_0x14211c0, L_0x1420ea0, L_0x1420fb0;
+L_0x14214f0 .part L_0x1421340, 2, 1;
+S_0x141d130 .scope generate, "buffer_loop[0]" "buffer_loop[0]" 3 15, 3 15 0, S_0x141cf20;
+ .timescale -9 -12;
+P_0x141d340 .param/l "i" 0 3 15, +C4<00>;
+S_0x141d420 .scope module, "g2" "not_gate" 3 16, 3 3 0, S_0x141d130;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x1420ea0 .functor NOT 1, L_0x1420f10, C4<0>, C4<0>, C4<0>;
+v0x141d650_0 .net "a", 0 0, L_0x1420f10;  1 drivers
+v0x141d730_0 .net "out", 0 0, L_0x1420ea0;  1 drivers
+S_0x141d850 .scope generate, "buffer_loop[1]" "buffer_loop[1]" 3 15, 3 15 0, S_0x141cf20;
+ .timescale -9 -12;
+P_0x141da40 .param/l "i" 0 3 15, +C4<01>;
+S_0x141db00 .scope module, "g2" "not_gate" 3 16, 3 3 0, S_0x141d850;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x1420fb0 .functor NOT 1, L_0x1421080, C4<0>, C4<0>, C4<0>;
+v0x141dd30_0 .net "a", 0 0, L_0x1421080;  1 drivers
+v0x141de10_0 .net "out", 0 0, L_0x1420fb0;  1 drivers
+S_0x141df30 .scope module, "g1" "not_gate" 3 14, 3 3 0, S_0x141cf20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x14211c0 .functor NOT 1, RS_0x7f0bc7de0288, C4<0>, C4<0>, C4<0>;
+v0x141e170_0 .net8 "a", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+v0x141e260_0 .net "out", 0 0, L_0x14211c0;  1 drivers
+S_0x141e380 .scope module, "g3" "not_gate" 3 19, 3 3 0, S_0x141cf20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "out"
+L_0x1421480 .functor NOT 1, L_0x14214f0, C4<0>, C4<0>, C4<0>;
+v0x141e590_0 .net "a", 0 0, L_0x14214f0;  1 drivers
+v0x141e670_0 .net8 "out", 0 0, RS_0x7f0bc7de0288;  alias, 2 drivers
+S_0x141ea60 .scope module, "dff" "asyn_rstb_dff" 2 15, 4 2 0, S_0x13f0db0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "d"
+    .port_info 2 /INPUT 1 "rstb"
+    .port_info 3 /OUTPUT 1 "q"
+v0x141ecf0_0 .net "clk", 0 0, o0x7f0bc7de0198;  alias, 0 drivers
+v0x141ee00_0 .net "d", 0 0, o0x7f0bc7de06d8;  alias, 0 drivers
+v0x141eec0_0 .var "q", 0 0;
+v0x141ef60_0 .net "rstb", 0 0, o0x7f0bc7de0738;  alias, 0 drivers
+E_0x141ecb0/0 .event negedge, v0x141ef60_0;
+E_0x141ecb0/1 .event posedge, v0x141c680_0;
+E_0x141ecb0 .event/or E_0x141ecb0/0, E_0x141ecb0/1;
+S_0x141f0d0 .scope module, "dff_n" "asyn_rstb_dff_n" 2 16, 5 2 0, S_0x13f0db0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "d"
+    .port_info 2 /INPUT 1 "rstb"
+    .port_info 3 /OUTPUT 1 "q"
+v0x141f390_0 .net "clk", 0 0, o0x7f0bc7de0198;  alias, 0 drivers
+v0x141f450_0 .net "d", 0 0, o0x7f0bc7de06d8;  alias, 0 drivers
+v0x141f540_0 .var "q", 0 0;
+v0x141f610_0 .net "rstb", 0 0, o0x7f0bc7de0738;  alias, 0 drivers
+E_0x141f310 .event negedge, v0x141ef60_0, v0x141c680_0;
+S_0x141f730 .scope module, "mux" "mux_2_1" 2 17, 6 2 0, S_0x13f0db0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "in_0"
+    .port_info 1 /INPUT 1 "in_1"
+    .port_info 2 /INPUT 1 "sel"
+    .port_info 3 /OUTPUT 1 "out"
+v0x141fa40_0 .net "in_0", 0 0, L_0x1420520;  1 drivers
+v0x141fb20_0 .net "in_1", 0 0, L_0x1420640;  1 drivers
+v0x141fbe0_0 .var "out", 0 0;
+v0x141fc80_0 .net "sel", 0 0, o0x7f0bc7de09a8;  alias, 0 drivers
+E_0x141f9c0 .event edge, v0x141fc80_0, v0x141fa40_0, v0x141fb20_0;
+    .scope S_0x141ea60;
+T_0 ;
+    %wait E_0x141ecb0;
+    %load/vec4 v0x141ef60_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x141eec0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x141ee00_0;
+    %assign/vec4 v0x141eec0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x141f0d0;
+T_1 ;
+    %wait E_0x141f310;
+    %load/vec4 v0x141f610_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x141f540_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x141f450_0;
+    %assign/vec4 v0x141f540_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x141f730;
+T_2 ;
+    %wait E_0x141f9c0;
+    %load/vec4 v0x141fc80_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 1;
+    %cmp/u;
+    %jmp/1 T_2.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 1;
+    %cmp/u;
+    %jmp/1 T_2.1, 6;
+    %jmp T_2.2;
+T_2.0 ;
+    %load/vec4 v0x141fa40_0;
+    %store/vec4 v0x141fbe0_0, 0, 1;
+    %jmp T_2.2;
+T_2.1 ;
+    %load/vec4 v0x141fb20_0;
+    %store/vec4 v0x141fbe0_0, 0, 1;
+    %jmp T_2.2;
+T_2.2 ;
+    %pop/vec4 1;
+    %jmp T_2;
+    .thread T_2, $push;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "edge_ff_gray.v";
+    "././../feedback/buffer.v";
+    "././../feedback/asyn_rstb_dff.v";
+    "././../feedback/asyn_rstb_dff_n.v";
+    "././../feedback/mux_2_1.v";

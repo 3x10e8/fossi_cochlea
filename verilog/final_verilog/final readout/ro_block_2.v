@@ -1,14 +1,15 @@
 //uncomment all include statements while running this test bench individually
-
-//`include "./../feedback/tbuf.v"
-//`include "./../feedback/gray_count.v"
-`include "./../feedback/asyn_rst_dff.v"
-`include "./../feedback/asyn_rst_dff_n.v"
-//`include "./../feedback/mux_2_1.v"
-//`include "./../feedback/buffer.v"
+/*
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_count.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/buffer.v"
+*/
 `timescale 1ns/1fs
 
-
+/*
 module edge_ff_n(
 input d,rstb,clk,
 output wire out);
@@ -21,7 +22,7 @@ asyn_rst_dff dff(.clk(buff_out),.d(d),.rstb(rstb),.q(q[1]));
 asyn_rst_dff_n dff_n(.clk(buff_out),.d(d),.rstb(rstb),.q(q[0]));
 mux_2_1 mux(.in_0(q[0]),.in_1(q[1]),.sel(clk),.out(out));
 endmodule
-
+*/
 //first_readout_block fastest data out
 module ro_block_2x(
 	input vpwr,

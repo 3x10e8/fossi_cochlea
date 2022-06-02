@@ -1,11 +1,11 @@
 //4 not gate buffer
-
+/*
 module not_gate(
 input a,
 output wire out);
 assign out=~a;
 endmodule
-
+*/
 module inv_buffer(
 	input in,
 	output wire out);

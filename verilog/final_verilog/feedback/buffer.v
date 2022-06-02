@@ -6,7 +6,7 @@ output wire out);
 assign out=~a;
 endmodule
 
-module buffer(
+module buffer( // this contains two buffers back to back
 	input in,
 	output wire out);
 	wire [2:0]w;
