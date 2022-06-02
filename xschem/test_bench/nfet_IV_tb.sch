@@ -30,6 +30,14 @@ N 220 0 250 0 { lab=GND}
 N 220 -60 220 -30 { lab=#net4}
 N 250 0 250 50 { lab=GND}
 N 220 50 250 50 { lab=GND}
+N 460 -60 460 -30 { lab=#net5}
+N 400 0 420 0 { lab=Vgs}
+N 460 0 510 0 {
+lab=GND}
+N 510 0 510 30 {
+lab=GND}
+N 460 30 510 30 {
+lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} -250 0 0 0 {name=M1
 L=0.15
 W=0.42
@@ -49,7 +57,6 @@ C {devices/gnd.sym} -230 50 0 0 {name=l2 lab=GND}
 C {devices/netlist.sym} -120 -460 0 0 {name=SPICE only_toplevel=false value="
 *.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
-.options abstol=1e-14 reltol=1e-4
 .control
   tran 100u 1
   set gnuplot_terminal=png/quit
@@ -120,5 +127,23 @@ ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/gnd.sym} 460 30 0 0 {name=l17 lab=GND}
+C {devices/vdd.sym} 460 -120 0 0 {name=l18 lab=VDD}
+C {devices/vsource.sym} 460 -90 0 0 {name=V3v3 value=0}
+C {devices/lab_pin.sym} 400 0 0 0 {name=l19 sig_type=std_logic lab=Vgs}
+C {sky130_fd_pr/nfet_03v3_nvt.sym} 440 0 0 0 {name=M5
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3_nvt
 spiceprefix=X
 }
