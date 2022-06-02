@@ -48,20 +48,17 @@ endmodule
 module u_d_bin_counter(
 input u_d,clk,rstb,en,
 output wire [15:0]q);
-wire [13:0] a_o,t_o,b_o;
-wire b_in,q_b14,and1,and2,t_o14;
+wire [14:0] a_o,t_o,b_o;
+wire b_in,q_b14,and1,and2,t_o14,and_t;
 assign b_in=~u_d;
 counter_cell_start cc1(.a(u_d),.t(en),.rstb(rstb),.clk(clk),.b(b_in),.q(q[0]),.a_o(a_o[0]),.b_o(b_o[0]),.t_o(t_o[0]));
 genvar i;
-generate for(i=0;i<=12;i=i+1) begin:bin_counter
+generate for(i=0;i<=13;i=i+1) begin:bin_counter
 counter_cell cc(.a(a_o[i]),.t(t_o[i]),.rstb(rstb),.clk(clk),.b(b_o[i]),.en(en),.q(q[i+1]),.a_o(a_o[i+1]),.b_o(b_o[i+1]),.t_o(t_o[i+1]));
 end
 endgenerate
-asyn_rstb_tff tff_second_last(.t(t_o[13]),.clk(clk),.rstb(rstb),.q(q[14]),.q_b(q_b14));
-assign and1=q[14]&a_o[13];
-assign and2=q_b14&b_o[13];
-assign t_o14=and1|and2;
-asyn_stb_tff_end tff_end(.t(t_o14),.clk(clk),.stb(rstb),.q(q[15]));
+assign and_t=t_o[14]&en;
+asyn_stb_tff_end tff_end(.t(and_t),.clk(clk),.stb(rstb),.q(q[15]));
 endmodule
 
 //----------------------------------------------------------------------------
