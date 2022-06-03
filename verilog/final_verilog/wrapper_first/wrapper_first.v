@@ -1,3 +1,4 @@
+/*
 `timescale 1ns/1ps
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
@@ -32,7 +33,7 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_sine_cell.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_tree_cell.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/peripheral_gray.v"
-
+*/
 module wrapper_first(
 	input vpwr,rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q, 
@@ -135,7 +136,7 @@ endmodule
 
 
 ////testbench
-
+/*
 
 module and_gate(
 	input in1,
@@ -264,15 +265,7 @@ initial begin
 		forever
 			#(clk_comp_high_half_pd)clkdiv4 = ~clkdiv4; //ext_clk generation freq=2.56 MHz
 end
-/*
-initial begin
-		clkdiv4=0;
-		#(clk_core_half_pd)clkdiv4=1;
-		//#(clk_master_half_pd) clkdiv2=1;
-		forever
-			#(clk_comp_high_half_pd)clkdiv4 = ~clkdiv4; //ext_clk generation freq=2.56 MHz
-end
-*/
+
 always @(posedge clkdiv4 or negedge clkdiv4) begin
 		if(clkdiv4) begin
 			#2 ref_I<=1;
@@ -357,7 +350,7 @@ initial begin
 end
 endmodule
 
-
+*/
 
 
 
