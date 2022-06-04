@@ -5,12 +5,14 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_sine_cell.v"
 */
 module peripheral_gray(
-	input always1,rstb,clk_master, //always1 is to be connected to vdd
+	input rstb,clk_master, //always1 is to be connected to vdd
 	output wire [10:0]gray_clk,
 	output wire q_sine,
 	output wire [2:0]no_ones_below_out);
 	wire q_m1;
 	wire [9:-1]no_ones_below;
+	reg always1;
+	initial always1<=1;
 
 	gray_first_cell first_gray(
 		.always1(always1),
@@ -57,12 +59,12 @@ endmodule
 /*
 //testbench
 module tb_peripheral_gray;
-	reg always1,rstb,clk_master;
+	reg rstb,clk_master;
 	wire [10:0]gray_clk;
 	wire q_sine;
 	wire [2:0]no_ones_below_out;
 	peripheral_gray gray_gen(
-		.always1(always1),
+		
 		.rstb(rstb),
 		.clk_master(clk_master),
 		.gray_clk(gray_clk[10:0]),
@@ -86,7 +88,6 @@ module tb_peripheral_gray;
 
 	initial begin
 		rstb=0;
-		always1=1;
 		#5 rstb=1;
 		repeat(3400) @(posedge clk_master);
 		#100;

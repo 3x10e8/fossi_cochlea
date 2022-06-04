@@ -6,13 +6,13 @@
 
 //first_readout_block fastest data out
 module ro_integrated(
-	input vpwr,clk_master,
+	input clk_master,
 	input [7:0]gray,in_eve,in_pol_eve, //pwr is the vdd input 
 	output wire out_mux_eve,out_mux_pol_eve);	   //gray is the gray clk bits
 								   // clk_ext is the single global external clock.
 
 	ro_block_1 rox1(							// ro_block_1 is separately modelled as its architecture is separate from other ro blocks.
-			.vpwr(vpwr),
+			
 			.gray(gray[0]), //parameterize the testbench for all the readouts
 			.clk_master(clk_master),
 			.in_eve(in_eve[0]),
@@ -24,7 +24,7 @@ module ro_integrated(
 	genvar i;
 	generate for(i=1; i<=7; i=i+1) begin: ro_loop //ro_block_2 is repeatedly modelled for the following ro blocks. 
 		ro_block_2 rox2(
-			.vpwr(vpwr),
+			
 			.gray(gray[i]), //parameterize the testbench for all the readouts
 			.clk_master(clk_master),
 			.in_eve(in_eve[i]),
@@ -41,7 +41,7 @@ endmodule
 //c: Counter
 //clk_ext_global: master clock for gray counter clk
 module tb_ro_integrated;
-	reg vpwr,clk_master,rstb;
+	reg clk_master,rstb;
 	reg [7:0]in_eve,clkdiv2; //comp_out is the connected to 'in' ports
 	wire [18:0]gc_clk;
 	wire [1:0]read_out_iq;
@@ -97,7 +97,7 @@ module tb_ro_integrated;
 		.reset(rstb), 
 		.gray_count(gc_clk[18:0]));
 	ro_integrated ro_x(
-		.vpwr(vpwr),
+		
 		.gray(gc_clk[7:0]), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(in_eve[7:0]),
@@ -232,7 +232,6 @@ module tb_ro_integrated;
 	initial begin
 		$display("PITCH FACTOR:%f",PITCH_FACTOR);
 		rstb=0;
-		vpwr=1;
 		#5 rstb=1;
 		repeat(4000) @(posedge clk_master);
       	#100;

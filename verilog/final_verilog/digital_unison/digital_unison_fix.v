@@ -39,7 +39,7 @@ module digital_unison(
 	input rstb,clk_master,ud_en,//phi1b_dig[0] is corresponding to the first wrapper
 	input [7:0]phi1b_dig, //more of these will be required for unison's testbench.	
 	input [7:0]comp_high_I,comp_high_Q,				
-	output wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk,
+	output wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,
 	output wire [1:0]read_out_I,read_out_Q,
 	output wire div2out_7,
 	output wire [2:0]no_ones_below_out_7,
@@ -74,7 +74,6 @@ wrapper_first w0(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[0]),
 	.ud_en_out(ud_en_out[0]),
-	.cclk(cclk[0]),
 	.clk_master_out(clk_master_out[0]));
 
 genvar j;
@@ -105,7 +104,6 @@ wrapper_cell w1(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[j+1]),
 	.ud_en_out(ud_en_out[j+1]),
-	.cclk(cclk[j+1]),
 	.clk_master_out(clk_master_out[j+1]));
 end
 endgenerate
@@ -136,7 +134,6 @@ wrapper_cell w_last(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out_7),
 	.ud_en_out(ud_en_out_7),
-	.cclk(cclk[7]),
 	.clk_master_out(clk_master_out_7));
 endmodule
 
@@ -161,7 +158,7 @@ endmodule
 module tb_digital_unison;
 	reg rstb,clk_master,ud_en;//phi1b_dig[0] is corresponding to the first wrapper
 	reg [7:0]phi1b_dig; //more of these will be required for unison's testbench.					
-    wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk;
+    wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I;
 	wire [1:0]read_out_I,read_out_Q;
 	wire div2out_7;
 	wire [10:1]gray_clk_out_7;
@@ -192,7 +189,6 @@ module tb_digital_unison;
 		.gray_clk_out_7(gray_clk_out_7[10:1]),
 		.rstb_out_7(rstb_out_7),
 		.ud_en_out_7(ud_en_out_7),
-		.cclk(cclk[7:0]),
 		.clk_master_out_7(clk_master_out_7));
 
 	genvar i;
@@ -256,7 +252,7 @@ module tb_digital_unison;
 	parameter n1=1; //n is always 1 in the first wrapper case
 	parameter PERIOD_CORE=400*(2**(n1-1));
 	real clk_core_half_pd=(PERIOD_CORE)/2;
-	parameter PERIOD_INPUT_SIGNAL=400*20*(2**(n1-1)); //can be changed
+	parameter PERIOD_INPUT_SIGNAL=40000;
 	parameter LEVEL_CROSSING_FACTOR=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd=PERIOD_INPUT_SIGNAL/2;
 	real clk_comp_high_half_pd=(PERIOD_CORE);
@@ -309,14 +305,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[0]=0;
-			//#(clk_core_half_pd) input_signal_I[0]=1; 
+			#(clk_core_half_pd) input_signal_I[0]=1; 
 			forever
 				#(clk_input_half_pd) input_signal_I[0]=~input_signal_I[0];
 	end
 
 	initial begin
 			input_signal_Q[0]=0;
-			//#(clk_core_half_pd) input_signal_Q[0]=1; 
+			#(clk_core_half_pd) input_signal_Q[0]=1; 
 			forever
 				#(clk_input_half_pd) input_signal_Q[0]=~input_signal_Q[0];
 	end
@@ -362,7 +358,7 @@ module tb_digital_unison;
 	parameter n2=2; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_2=400*(2**(n2-1));
 	real clk_core_half_pd_2=(PERIOD_CORE_2)/2;
-	parameter PERIOD_INPUT_SIGNAL_2=400*20*(2**(n2-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_2=80000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_2=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_2=PERIOD_INPUT_SIGNAL_2/2;
 	real clk_comp_high_half_pd_2=(PERIOD_CORE_2);
@@ -417,14 +413,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[1]=0;
-			//#(clk_core_half_pd_2) input_signal_I[1]=1; 
+			#(clk_core_half_pd_2) input_signal_I[1]=1; 
 			forever
 				#(clk_input_half_pd_2) input_signal_I[1]=~input_signal_I[1];
 	end
 
 	initial begin
 			input_signal_Q[1]=0;
-			//#(clk_core_half_pd_2) input_signal_Q[1]=1; 
+			#(clk_core_half_pd_2) input_signal_Q[1]=1; 
 			forever
 				#(clk_input_half_pd_2) input_signal_Q[1]=~input_signal_Q[1];
 	end
@@ -471,7 +467,7 @@ module tb_digital_unison;
 	parameter n3=3; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_3=400*(2**(n3-1));
 	real clk_core_half_pd_3=(PERIOD_CORE_3)/2;
-	parameter PERIOD_INPUT_SIGNAL_3=400*20*(2**(n3-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_3=120000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_3=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_3=PERIOD_INPUT_SIGNAL_3/2;
 	real clk_comp_high_half_pd_3=(PERIOD_CORE_3);
@@ -526,14 +522,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[2]=0;
-			//#(clk_core_half_pd_3) input_signal_I[2]=1; 
+			#(clk_core_half_pd_3) input_signal_I[2]=1; 
 			forever
 				#(clk_input_half_pd_3) input_signal_I[2]=~input_signal_I[2];
 	end
 
 	initial begin
 			input_signal_Q[2]=0;
-			//#(clk_core_half_pd_3) input_signal_Q[2]=1; 
+			#(clk_core_half_pd_3) input_signal_Q[2]=1; 
 			forever
 				#(clk_input_half_pd_3) input_signal_Q[2]=~input_signal_Q[2];
 	end
@@ -580,7 +576,7 @@ module tb_digital_unison;
 	parameter n4=4; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_4=400*(2**(n4-1));
 	real clk_core_half_pd_4=(PERIOD_CORE_4)/2;
-	parameter PERIOD_INPUT_SIGNAL_4=400*20*(2**(n4-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_4=160000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_4=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_4=PERIOD_INPUT_SIGNAL_4/2;
 	real clk_comp_high_half_pd_4=(PERIOD_CORE_4);
@@ -635,14 +631,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[3]=0;
-			//#(clk_core_half_pd_4) input_signal_I[3]=1; 
+			#(clk_core_half_pd_4) input_signal_I[3]=1; 
 			forever
 				#(clk_input_half_pd_4) input_signal_I[3]=~input_signal_I[3];
 	end
 
 	initial begin
 			input_signal_Q[3]=0;
-			//#(clk_core_half_pd_4) input_signal_Q[3]=1; 
+			#(clk_core_half_pd_4) input_signal_Q[3]=1; 
 			forever
 				#(clk_input_half_pd_4) input_signal_Q[3]=~input_signal_Q[3];
 	end
@@ -690,7 +686,7 @@ module tb_digital_unison;
 	parameter n5=5; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_5=400*(2**(n5-1));
 	real clk_core_half_pd_5=(PERIOD_CORE_5)/2;
-	parameter PERIOD_INPUT_SIGNAL_5=400*20*(2**(n5-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_5=200000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_5=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_5=PERIOD_INPUT_SIGNAL_5/2;
 	real clk_comp_high_half_pd_5=(PERIOD_CORE_5);
@@ -745,14 +741,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[4]=0;
-			//#(clk_core_half_pd_5) input_signal_I[4]=1; 
+			#(clk_core_half_pd_5) input_signal_I[4]=1; 
 			forever
 				#(clk_input_half_pd_5) input_signal_I[4]=~input_signal_I[4];
 	end
 
 	initial begin
 			input_signal_Q[4]=0;
-			//#(clk_core_half_pd_5) input_signal_Q[4]=1; 
+			#(clk_core_half_pd_5) input_signal_Q[4]=1; 
 			forever
 				#(clk_input_half_pd_5) input_signal_Q[4]=~input_signal_Q[4];
 	end
@@ -801,7 +797,7 @@ module tb_digital_unison;
 	parameter n6=6; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_6=400*(2**(n6-1));
 	real clk_core_half_pd_6=(PERIOD_CORE_6)/2;
-	parameter PERIOD_INPUT_SIGNAL_6=400*20*(2**(n6-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_6=240000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_6=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_6=PERIOD_INPUT_SIGNAL_6/2;
 	real clk_comp_high_half_pd_6=(PERIOD_CORE_6);
@@ -856,14 +852,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[5]=0;
-			//#(clk_core_half_pd_6) input_signal_I[5]=1; 
+			#(clk_core_half_pd_6) input_signal_I[5]=1; 
 			forever
 				#(clk_input_half_pd_6) input_signal_I[5]=~input_signal_I[5];
 	end
 
 	initial begin
 			input_signal_Q[5]=0;
-			//#(clk_core_half_pd_6) input_signal_Q[5]=1; 
+			#(clk_core_half_pd_6) input_signal_Q[5]=1; 
 			forever
 				#(clk_input_half_pd_6) input_signal_Q[5]=~input_signal_Q[5];
 	end
@@ -910,7 +906,7 @@ module tb_digital_unison;
 	parameter n7=7; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_7=400*(2**(n7-1));
 	real clk_core_half_pd_7=(PERIOD_CORE_7)/2;
-	parameter PERIOD_INPUT_SIGNAL_7=400*20*(2**(n7-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_7=280000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_7=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_7=PERIOD_INPUT_SIGNAL_7/2;
 	real clk_comp_high_half_pd_7=(PERIOD_CORE_7);
@@ -965,14 +961,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[6]=0;
-			//#(clk_core_half_pd_7) input_signal_I[6]=1; 
+			#(clk_core_half_pd_7) input_signal_I[6]=1; 
 			forever
 				#(clk_input_half_pd_7) input_signal_I[6]=~input_signal_I[6];
 	end
 
 	initial begin
 			input_signal_Q[6]=0;
-			//#(clk_core_half_pd_7) input_signal_Q[6]=1; 
+			#(clk_core_half_pd_7) input_signal_Q[6]=1; 
 			forever
 				#(clk_input_half_pd_7) input_signal_Q[6]=~input_signal_Q[6];
 	end
@@ -1018,7 +1014,7 @@ module tb_digital_unison;
 	parameter n8=8; //n is always 2 in the first wrapper case
 	parameter PERIOD_CORE_8=400*(2**(n8-1));
 	real clk_core_half_pd_8=(PERIOD_CORE_8)/2;
-	parameter PERIOD_INPUT_SIGNAL_8=400*20*(2**(n8-1));//input signal is common for all
+	parameter PERIOD_INPUT_SIGNAL_8=320000;//input signal is common for all
 	parameter LEVEL_CROSSING_FACTOR_8=0.3; //represents the factor after which we are modelling the level crossing.			   
 	real clk_input_half_pd_8=PERIOD_INPUT_SIGNAL_8/2;
 	real clk_comp_high_half_pd_8=(PERIOD_CORE_8);
@@ -1073,14 +1069,14 @@ module tb_digital_unison;
 
 	initial begin
 			input_signal_I[7]=0;
-			//#(clk_core_half_pd_8) input_signal_I[7]=1; 
+			#(clk_core_half_pd_8) input_signal_I[7]=1; 
 			forever
 				#(clk_input_half_pd_8) input_signal_I[7]=~input_signal_I[7];
 	end
 
 	initial begin
 			input_signal_Q[7]=0;
-			//#(clk_core_half_pd_8) input_signal_Q[7]=1; 
+			#(clk_core_half_pd_8) input_signal_Q[7]=1; 
 			forever
 				#(clk_input_half_pd_8) input_signal_Q[7]=~input_signal_Q[7];
 	end

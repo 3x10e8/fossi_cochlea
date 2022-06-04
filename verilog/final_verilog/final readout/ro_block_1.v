@@ -43,11 +43,11 @@ module ro_block_1x(
 endmodule
 
 module ro_block_1(
-	input vpwr,
 	input gray,clk_master,
 	input in_eve,in_pol_eve,
 	output wire out_mux_eve,out_mux_pol_eve);
-	
+	reg vpwr;
+	initial vpwr<=1;
 	ro_block_1x ro_pol(
 		.vpwr(vpwr),
 		.gray(gray),
@@ -73,7 +73,7 @@ endmodule
 //c: Counter
 //clk_ext_global: master clock
 module tb_ro_block_1;						   //gc_clk is the gray counter clock
-	reg vpwr,clk_master,clkdiv2,rstb,in_eve,in_pol_eve; //vpwr is the connection to d pin of eff
+	reg clk_master,clkdiv2,rstb,in_eve,in_pol_eve; //vpwr is the connection to d pin of eff
 	wire [18:0]gc_clk;						   //clk_master is the global external clock 
 	wire [1:0]read_out_iq;					   //clkdiv2 is the max core clock
 	parameter PERIOD_MASTER=400;			   //read_out_iq[1]: out_mux_pol_eve
@@ -90,7 +90,6 @@ module tb_ro_block_1;						   //gc_clk is the gray counter clock
 		.gray_count(gc_clk[18:0]));
 
 	ro_block_1 ro_block(
-		.vpwr(vpwr),
 		.gray(gc_clk[n-1]), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(in_eve),
@@ -140,7 +139,6 @@ module tb_ro_block_1;						   //gc_clk is the gray counter clock
 
 	initial begin
 		rstb=0;
-		vpwr=1;
 		#5 rstb=1;
 		repeat(700) @(posedge clkdiv2);
      	#100;

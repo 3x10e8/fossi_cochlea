@@ -36,17 +36,17 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/wrapper_first/wrapper_first.v"
 */
 module wrapper_cell(
-	input vpwr,rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
+	input rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q,clkdiv2, 
 	input [9:0]gray_clk_in,
 	input [2:0]no_ones_below_in,
 	output wire div2out,sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
 	output wire [2:0]no_ones_below_out,
 	output wire [10:1]gray_clk_out,
-	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,
+	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,cclk,
 	output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
-	output wire rstb_out,clk_master_out,ud_en_out,vpwr_out);
-	wire q_sine,cclk;								//read_out_I[0]=out_mux_eve
+	output wire rstb_out,clk_master_out,ud_en_out);
+	wire q_sine;								//read_out_I[0]=out_mux_eve
 	wire comp_out_I,comp_out_Q,eve_I,eve_Q,polxevent_I,polxevent_Q;
 	wire gray_clk_out_0;
 
@@ -87,7 +87,7 @@ module wrapper_cell(
 		.comp_out(comp_out_Q));
 
 	fb fb_block_I(
-		.vpwr(vpwr),
+		
 		.clkdiv2(clkdiv2),
 		.comp_out(comp_out_I),
 		.cclk(cclk),
@@ -97,7 +97,7 @@ module wrapper_cell(
 		.fb_out(fb1_I));
 
 	fb fb_block_Q(
-		.vpwr(vpwr),
+		
 		.clkdiv2(clkdiv2),
 		.comp_out(comp_out_Q),
 		.cclk(cclk),
@@ -107,7 +107,7 @@ module wrapper_cell(
 		.fb_out(fb1_Q));
 
 	ro_block_2 ro_block_I(
-		.vpwr(vpwr),
+		
 		.gray(gray_clk_out_0), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(eve_I),
@@ -116,7 +116,7 @@ module wrapper_cell(
 		.out_mux_pol_eve(read_out_I[1]));
 
 	ro_block_2 ro_block_Q(
-		.vpwr(vpwr),
+		
 		.gray(gray_clk_out_0), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(eve_Q),
@@ -132,14 +132,14 @@ module wrapper_cell(
 	assign ud_en_out=ud_en;
 	assign clk_master_out=clk_master;
 	assign rstb_out=rstb;
-	assign vpwr_out=vpwr;
+	
 endmodule
 
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/*
 
+/*
 ////testbench
 module and_gate(
 	input in1,
@@ -156,19 +156,19 @@ module or_gate(
 endmodule
 
 module tb_wrapper_cell;
-reg vpwr,rstb,clk_master,ud_en;
+reg rstb,clk_master,ud_en;
 reg [1:0]phi1b_dig; //more of these will be required for unison's testbench.
 					//phi1b_dig[0] is corresponding to the first wrapper
-wire [1:0]div2out,sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I;
+wire [1:0]div2out,sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk;
 wire [2:0]no_ones_below_out[0:1];
 wire [10:1]gray_clk_out[0:1];
 wire [1:0]read_out_I,read_out_Q; //these will be common among all as they need to be shorted.
-wire [1:0]rstb_out,ud_en_out,clk_master_out,vpwr_out;//[0] index corresponds to the output of first wrapper and [1] index to that of second wrapper.
+wire [1:0]rstb_out,ud_en_out,clk_master_out;//[0] index corresponds to the output of first wrapper and [1] index to that of second wrapper.
 reg [1:0]input_signal_I, input_signal_Q, ref_I, ref_Q, input_lc_I, input_lc_Q, ref_lc_I, ref_lc_Q, clkdiv4;
 wire [1:0]comp_high_int2_I, comp_high_int2_Q, comp_high_int_I, comp_high_int_Q, comp_high_I, comp_high_Q;
 
 wrapper_first w0(
-	.vpwr(vpwr),
+	
 	.rstb(rstb),
 	.clk_master(clk_master),
 	.phi1b_dig(phi1b_dig[0]),
@@ -190,11 +190,11 @@ wrapper_first w0(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[0]),
 	.ud_en_out(ud_en_out[0]),
-	.clk_master_out(clk_master_out[0]),
-	.vpwr_out(vpwr_out[0]));
+	.cclk(cclk[0]),
+	.clk_master_out(clk_master_out[0]));
 
 wrapper_cell w1(
-	.vpwr(vpwr_out[0]),
+	
 	.rstb(rstb_out[0]),
 	.clk_master(clk_master_out[0]),
 	.phi1b_dig(phi1b_dig[1]),
@@ -219,8 +219,9 @@ wrapper_cell w1(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[1]),
 	.ud_en_out(ud_en_out[1]),
-	.clk_master_out(clk_master_out[1]),
-	.vpwr_out(vpwr_out[1]));
+	.cclk(cclk[1]),
+	.clk_master_out(clk_master_out[1]));
+	
 
 genvar i;
 generate for(i=0; i<=1;i=i+1)begin:loop1
@@ -497,7 +498,7 @@ end
 
 //-----------------------------------------------------------
 initial begin
-	vpwr=1;
+	
 	rstb=0;
 	#5 rstb=1;
 	ud_en=1;

@@ -35,20 +35,20 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/peripheral_gray.v"
 */
 module wrapper_first(
-	input vpwr,rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
+	input rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q, 
 	output wire div2out,sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
 	output wire [2:0]no_ones_below_out,
 	output wire [10:1]gray_clk,
-	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,
+	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,cclk,
 	output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
-	output wire rstb_out,clk_master_out,ud_en_out,vpwr_out);
-	wire q_sine,cclk;								//read_out_I[0]=out_mux_eve
+	output wire rstb_out,clk_master_out,ud_en_out);
+	wire q_sine;								//read_out_I[0]=out_mux_eve
 	wire comp_out_I,comp_out_Q,eve_I,eve_Q,polxevent_I,polxevent_Q;
 	wire gray_clk_0;
 
 	peripheral_gray gray_gen(
-		.always1(vpwr),
+		
 		.rstb(rstb),
 		.clk_master(clk_master),
 		.gray_clk({gray_clk[10:1],gray_clk_0}),
@@ -82,7 +82,7 @@ module wrapper_first(
 		.comp_out(comp_out_Q));
 
 	fb fb_block_I(
-		.vpwr(vpwr),
+		
 		.clkdiv2(clk_master),
 		.comp_out(comp_out_I),
 		.cclk(cclk),
@@ -92,7 +92,7 @@ module wrapper_first(
 		.fb_out(fb1_I));
 
 	fb fb_block_Q(
-		.vpwr(vpwr),
+		
 		.clkdiv2(clk_master),
 		.comp_out(comp_out_Q),
 		.cclk(cclk),
@@ -102,7 +102,7 @@ module wrapper_first(
 		.fb_out(fb1_Q));
 
 	ro_block_1 ro_block_I(
-		.vpwr(vpwr),
+		
 		.gray(gray_clk_0), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(eve_I),
@@ -111,7 +111,7 @@ module wrapper_first(
 		.out_mux_pol_eve(read_out_I[1]));
 
 	ro_block_1 ro_block_Q(
-		.vpwr(vpwr),
+		
 		.gray(gray_clk_0), //parameterize the testbench for all the readouts
 		.clk_master(clk_master),
 		.in_eve(eve_Q),
@@ -127,7 +127,7 @@ module wrapper_first(
 	assign ud_en_out=ud_en;
 	assign clk_master_out=clk_master;
 	assign rstb_out=rstb;
-	assign vpwr_out=vpwr;
+	
 endmodule
 
 
@@ -136,8 +136,8 @@ endmodule
 
 
 ////testbench
-/*
 
+/*
 module and_gate(
 	input in1,
 	input in2,
@@ -153,17 +153,17 @@ module or_gate(
 endmodule
 
 module tb_wrapper_first;
-reg vpwr,rstb,clk_master,phi1b_dig,ud_en;
+reg rstb,clk_master,phi1b_dig,ud_en;
 wire div2out,sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I;
 wire [2:0]no_ones_below_out;
 wire [10:1]gray_clk;
 wire [1:0]read_out_I,read_out_Q;
-wire rstb_out,ud_en_out,clk_master_out,vpwr_out;
+wire rstb_out,ud_en_out,clk_master_out,cclk;
 reg input_signal_I, input_signal_Q, ref_I, ref_Q, input_lc_I, input_lc_Q, ref_lc_I, ref_lc_Q, clkdiv4;
 wire comp_high_int2_I, comp_high_int2_Q, comp_high_int_I, comp_high_int_Q, comp_high_I, comp_high_Q;
 
 wrapper_first w1(
-	.vpwr(vpwr),
+	
 	.rstb(rstb),
 	.clk_master(clk_master),
 	.phi1b_dig(phi1b_dig),
@@ -185,8 +185,9 @@ wrapper_first w1(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out),
 	.ud_en_out(ud_en_out),
-	.clk_master_out(clk_master_out),
-	.vpwr_out(vpwr_out));
+	.cclk(cclk),
+	.clk_master_out(clk_master_out));
+	
 
 
 and_gate ag1(
@@ -338,7 +339,7 @@ end
 
 //
 initial begin
-	vpwr=1;
+	
 	rstb=0;
 	#5 rstb=1;
 	ud_en=1;
