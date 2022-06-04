@@ -1,0 +1,5 @@
+README
+
+Port changes
+- remove sinb/cosb replicas from digital_core
+- reduce fb lines to one signal per I/Q

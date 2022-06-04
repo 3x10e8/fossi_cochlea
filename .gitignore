@@ -5,6 +5,6 @@ precheck_results
 *.lst
 *.vcd
 *.gtkw
-caravel/*
-management_core_wrapper/*
+caravel/
+management_core_wrapper/
 .DS_Store

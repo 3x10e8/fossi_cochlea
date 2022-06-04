@@ -14,6 +14,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `default_nettype none
+`define MPRJ_IO_PADS 38
+`define ANALOG_PADS 18
 /*
  *-------------------------------------------------------------
  *
