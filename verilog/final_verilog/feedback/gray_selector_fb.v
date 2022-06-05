@@ -29,7 +29,7 @@ initial d<=1;
 
 genvar i;
 generate for(i=0;i<=9;i=i+1) begin: fb_gray_selector_loop
-edge_ff_n eff(.d(d),.rstb(clk_ext),.clk(clk[i]),.out(eff_out[i]));
+edge_ff_n eff3(.d(d),.rstb(clk_ext),.clk(clk[i]),.out(eff_out[i]));
 tbuf t_buf(.in(in[i]),.ctrlb(eff_outb[i]),.out(out_muxed_raw));
 dlrtn dl(.d(out_muxed_raw),.gate(clk_ext),.rstb(rstb_ext),.q(out_muxed));
 end

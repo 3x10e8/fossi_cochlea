@@ -70,6 +70,7 @@ module wrapper_first(
 	dig_evegen POL_EVE_I(
 		.comp_high(comp_high_I),
 		.phi1b_dig(phi1b_dig),
+		.rstb(rstb),
 		.eve(eve_I),
 		.polxevent(polxevent_I),
 		.comp_out(comp_out_I));
@@ -78,6 +79,7 @@ module wrapper_first(
 		.comp_high(comp_high_Q),
 		.phi1b_dig(phi1b_dig),
 		.eve(eve_Q),
+		.rstb(rstb),
 		.polxevent(polxevent_Q),
 		.comp_out(comp_out_Q));
 

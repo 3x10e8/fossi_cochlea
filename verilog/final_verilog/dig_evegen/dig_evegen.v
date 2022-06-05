@@ -1,39 +1,38 @@
-`timescale 1ns/1ps
-//d flip flop with positive clock edge and no reset port
-module dfxtp( 
-	input d,clk,
-	output reg q);
-	
-	always @(posedge clk) begin
-		q<=d;
-	end
-endmodule
+//`timescale 1ns/1ps
+//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
+//d flip flop with positive clock edge and negative reset port
+
 
 
 module dig_evegen(
-	input comp_high,phi1b_dig,
+	input comp_high,phi1b_dig,rstb,
 	output wire eve, polxevent,comp_out);
 	wire [2:0]d; //d[2] is the output of the last flop.
 	
-	dfxtp dff0(
+	asyn_rstb_dff dff0(
 			.d(comp_high),
+			.rstb(rstb),
 			.clk(phi1b_dig),
 			.q(comp_out));
 		
-	dfxtp dff1(
+	asyn_rstb_dff dff1(
 			.d(comp_out),
+			.rstb(rstb),
 			.clk(phi1b_dig),
 			.q(d[0]));
 		
-	dfxtp dff2(
+	asyn_rstb_dff dff2(
 			.d(d[0]),
+			.rstb(rstb),
 			.clk(phi1b_dig),
 			.q(d[1]));
 		
-	dfxtp dff3(
+	asyn_rstb_dff dff3(
 			.d(d[1]),
+			.rstb(rstb),
 			.clk(phi1b_dig),
 			.q(d[2]));
+
 	assign eve=d[0]^d[2];
 	assign polxevent=eve&d[0];
 endmodule
@@ -55,7 +54,7 @@ module or_gate(
 endmodule
 
 module tb_dig_evegen;
-	reg phi1b_dig;
+	reg phi1b_dig,rstb;
 	wire eve,polxevent,comp_out,comp_high_int,comp_high_int2,comp_high;
 	reg clkdiv2,clkdiv4,input_signal,input_lc,ref,ref_lc;//input_lc refers to the waveform representing the region of level crossing overlap with the input signal.
 	and_gate ag1(
@@ -77,6 +76,7 @@ module tb_dig_evegen;
 		.comp_high(comp_high),
 		.phi1b_dig(phi1b_dig),
 		.eve(eve),
+		.rstb(rstb),
 		.polxevent(polxevent),
 		.comp_out(comp_out));
 
@@ -163,6 +163,8 @@ module tb_dig_evegen;
 	
 		
 	initial begin
+		rstb=0;
+		#5 rstb=1;
 		repeat(700) @(posedge phi1b_dig);
 		#100;
 		$finish;

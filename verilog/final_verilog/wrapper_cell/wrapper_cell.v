@@ -76,6 +76,7 @@ module wrapper_cell(
 		.comp_high(comp_high_I),
 		.phi1b_dig(phi1b_dig),
 		.eve(eve_I),
+		.rstb(rstb),
 		.polxevent(polxevent_I),
 		.comp_out(comp_out_I));
 
@@ -83,6 +84,7 @@ module wrapper_cell(
 		.comp_high(comp_high_Q),
 		.phi1b_dig(phi1b_dig),
 		.eve(eve_Q),
+		.rstb(rstb),
 		.polxevent(polxevent_Q),
 		.comp_out(comp_out_Q));
 

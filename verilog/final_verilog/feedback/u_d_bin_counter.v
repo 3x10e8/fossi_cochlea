@@ -1,4 +1,11 @@
 `timescale 1ns/1ps
+/*
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_tff.v"
+*/
 //`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_tff.v"
 //--------------------------------------------------------------------
 //asynchronous neg set dff definition
@@ -73,8 +80,8 @@ real clk_half_pd=(1.0/(2*FREQ))*1e9;
 u_d_bin_counter bincount(.u_d(u_d),.clk(clk),.rstb(rstb),.en(en),.q(q[15:0]));
 
 initial begin
-$dumpfile("u_d_bin_counter.vcd");
-$dumpvars;
+	$dumpfile("u_d_bin_counter.vcd");
+	$dumpvars;
 end
 
 initial begin
@@ -108,8 +115,8 @@ repeat (20) @(posedge clk);
 $finish;
 end
 endmodule
-*/
 
+*/
 
  
 

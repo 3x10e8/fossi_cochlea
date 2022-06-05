@@ -234,16 +234,19 @@ module tb_digital_unison;
 	//parameters(common)
 	parameter PERIOD_MASTER=400; //change the frequencu of the master clk to model a different pitch unison
 	real clk_master_hf_pd=PERIOD_MASTER/2;
-
+	real offset_master=PERIOD_MASTER/10000;
 
 
 	//master_clk
 	initial begin
+		
 		clk_master=0;
 			forever
 				#(clk_master_hf_pd)clk_master = ~clk_master; //ext_clk generation freq=2.56 MHz
 	end
 
+	initial input_lc_I<=0;//initialization of input 
+	initial input_lc_Q<=0;//initialization of input 
 	initial begin
 		$dumpfile("digital_unison.vcd");
 		$dumpvars;
@@ -1126,7 +1129,7 @@ module tb_digital_unison;
 		rstb=0;
 		#5 rstb=1;
 		ud_en=1;
-		repeat(100008) @(posedge clk_master);
+		repeat(1008) @(posedge clk_master);
 		#5 ud_en=0;
 		repeat(200) @(posedge clk_master);
 		#100;
