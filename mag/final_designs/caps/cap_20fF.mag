@@ -1,0 +1,47 @@
+magic
+tech sky130A
+timestamp 1654307754
+<< metal3 >>
+rect -14 -14 414 514
+<< mimcap >>
+rect 0 492 400 500
+rect 0 460 8 492
+rect 40 460 64 492
+rect 336 460 360 492
+rect 392 460 400 492
+rect 0 446 400 460
+rect 0 54 8 446
+rect 40 54 360 446
+rect 392 54 400 446
+rect 0 40 400 54
+rect 0 8 8 40
+rect 40 8 64 40
+rect 336 8 360 40
+rect 392 8 400 40
+rect 0 0 400 8
+<< mimcapcontact >>
+rect 8 460 40 492
+rect 64 460 336 492
+rect 360 460 392 492
+rect 8 54 40 446
+rect 360 54 392 446
+rect 8 8 40 40
+rect 64 8 336 40
+rect 360 8 392 40
+<< metal4 >>
+rect -14 492 414 514
+rect -14 460 8 492
+rect 40 460 64 492
+rect 336 460 360 492
+rect 392 460 414 492
+rect -14 446 414 460
+rect -14 54 8 446
+rect 40 54 360 446
+rect 392 54 414 446
+rect -14 40 414 54
+rect -14 8 8 40
+rect 40 8 64 40
+rect 336 8 360 40
+rect 392 8 414 40
+rect -14 -14 414 8
+<< end >>

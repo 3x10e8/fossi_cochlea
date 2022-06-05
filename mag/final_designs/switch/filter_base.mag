@@ -1,0 +1,49 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1654300736
+use cap_3pF_8x1  cap_3pF_8x1_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 11832 1 0 3532
+box -2794 0 23698 2104
+use cap_6pF_8x2  cap_6pF_8x2_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 8353 1 0 3532
+box -2794 0 23698 5588
+use cap_10fF  cap_10fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 10868 1 0 27968
+box -28 -28 708 628
+use cap_12pF  cap_12pF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 -1404 1 0 3558
+box -2820 -2794 23672 9762
+use cap_20fF  cap_20fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 5836 1 0 27920
+box -28 -28 828 1028
+use cap_40fF  cap_40fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+timestamp 1654300736
+transform 0 -1 -8732 1 0 27498
+box -28 -28 1368 1228
+use cmos_switch_tapped  cmos_switch_0
+timestamp 1654299066
+transform 1 0 -11112 0 1 27551
+box -106 -78 219 381
+use cmos_switch_tapped  cmos_switch_2
+timestamp 1654299066
+transform 1 0 4140 0 1 28086
+box -106 -78 219 381
+use cmos_switch_tapped  cmos_switch_3
+timestamp 1654299066
+transform 1 0 6216 0 1 28160
+box -106 -78 219 381
+use cmos_switch_tapped  cmos_switch_4
+timestamp 1654299066
+transform 1 0 9674 0 1 28070
+box -106 -78 219 381
+use cmos_switch_tapped  cmos_switch_5
+timestamp 1654299066
+transform 1 0 11212 0 1 28020
+box -106 -78 219 381
+<< end >>

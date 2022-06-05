@@ -1,0 +1,115 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1654299066
+<< nwell >>
+rect -94 162 219 330
+<< nmos >>
+rect 0 10 30 94
+<< pmos >>
+rect 0 199 30 283
+<< ndiff >>
+rect -58 70 0 94
+rect -58 36 -50 70
+rect -16 36 0 70
+rect -58 10 0 36
+rect 30 70 90 94
+rect 30 36 46 70
+rect 80 36 90 70
+rect 30 10 90 36
+<< pdiff >>
+rect -58 257 0 283
+rect -58 223 -50 257
+rect -16 223 0 257
+rect -58 199 0 223
+rect 30 257 92 283
+rect 30 223 46 257
+rect 80 223 92 257
+rect 30 199 92 223
+<< ndiffc >>
+rect -50 36 -16 70
+rect 46 36 80 70
+<< pdiffc >>
+rect -50 223 -16 257
+rect 46 223 80 257
+<< psubdiff >>
+rect 90 70 148 94
+rect 90 36 114 70
+rect 90 10 148 36
+<< nsubdiff >>
+rect 92 257 156 283
+rect 92 223 115 257
+rect 149 223 156 257
+rect 92 199 156 223
+<< psubdiffcont >>
+rect 114 36 148 70
+<< nsubdiffcont >>
+rect 115 223 149 257
+<< poly >>
+rect -2 375 32 381
+rect -12 365 42 375
+rect -12 331 -2 365
+rect 32 331 42 365
+rect -12 319 42 331
+rect -2 315 32 319
+rect 0 283 30 315
+rect 0 173 30 199
+rect 0 94 30 120
+rect 0 -12 30 10
+rect -2 -16 32 -12
+rect -12 -28 42 -16
+rect -12 -62 -2 -28
+rect 32 -62 42 -28
+rect -12 -72 42 -62
+rect -2 -78 32 -72
+<< polycont >>
+rect -2 331 32 365
+rect -2 -62 32 -28
+<< locali >>
+rect -2 365 32 381
+rect -2 315 32 330
+rect -50 257 -16 273
+rect -50 170 -16 223
+rect -60 136 -16 170
+rect -50 70 -16 136
+rect -50 20 -16 36
+rect 46 257 80 273
+rect 46 170 80 223
+rect 115 257 149 273
+rect 115 207 149 223
+rect 46 136 90 170
+rect 46 70 80 136
+rect 46 20 80 36
+rect 114 70 148 86
+rect 114 20 148 36
+rect -2 -28 32 -12
+rect -2 -78 32 -62
+<< viali >>
+rect -2 331 32 364
+rect -2 330 32 331
+rect -94 136 -60 170
+rect 90 136 124 170
+rect -2 -62 32 -28
+<< metal1 >>
+rect -16 364 46 378
+rect -16 330 -2 364
+rect 32 330 46 364
+rect -16 314 46 330
+rect -106 170 -46 184
+rect -106 136 -94 170
+rect -60 136 -46 170
+rect -106 122 -46 136
+rect 76 170 136 184
+rect 76 136 90 170
+rect 124 136 136 170
+rect 76 122 136 136
+rect -16 -28 46 -12
+rect -16 -62 -2 -28
+rect 32 -62 46 -28
+rect -16 -76 46 -62
+<< labels >>
+flabel metal1 -2 -62 32 -28 0 FreeSans 80 0 0 0 phi
+flabel metal1 -2 330 32 364 0 FreeSans 80 0 0 0 phib
+flabel viali -94 136 -60 170 0 FreeSans 80 0 0 0 in
+flabel viali 90 136 124 170 0 FreeSans 80 0 0 0 out
+<< end >>

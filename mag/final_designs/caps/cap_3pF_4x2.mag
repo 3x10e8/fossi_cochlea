@@ -1,0 +1,30 @@
+magic
+tech sky130A
+timestamp 1654236794
+use cap_10_10__side_x2  cap_10_10__side_x2_0
+array 0 0 1397 0 1 -1742
+timestamp 1654233531
+transform 0 -1 -171 1 0 1046
+box -34 -374 1363 1368
+use cap_10_10__side_x2  cap_10_10__side_x2_1
+array 0 0 1397 0 1 -1742
+timestamp 1654233531
+transform 0 1 577 -1 0 3772
+box -34 -374 1363 1368
+use cap_10_10_edge_x2  cap_10_10_edge_x2_0
+timestamp 1654233587
+transform 1 0 -2902 0 1 1041
+box -34 -29 1363 1368
+use cap_10_10_edge_x2  cap_10_10_edge_x2_1
+timestamp 1654233587
+transform 0 1 -2907 -1 0 3772
+box -34 -29 1363 1368
+use cap_10_10_edge_x2  cap_10_10_edge_x2_2
+timestamp 1654233587
+transform 0 -1 3313 1 0 1046
+box -34 -29 1363 1368
+use cap_10_10_edge_x2  cap_10_10_edge_x2_3
+timestamp 1654233587
+transform -1 0 3308 0 -1 3777
+box -34 -29 1363 1368
+<< end >>
