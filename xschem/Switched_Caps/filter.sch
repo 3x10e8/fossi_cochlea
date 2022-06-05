@@ -6,7 +6,7 @@ S {}
 E {}
 N 370 0 1030 0 { lab=fb}
 N 190 0 270 0 { lab=#net1}
-N 70 60 1030 60 { lab=vssa}
+N 70 60 1030 60 { lab=vssd1}
 N 110 0 190 0 { lab=#net1}
 N 100 0 110 0 { lab=#net1}
 N -30 0 0 0 { lab=in}
@@ -15,15 +15,15 @@ N 110 200 190 200 { lab=#net2}
 N 100 200 110 200 { lab=#net2}
 N -30 200 0 200 { lab=fb}
 N 370 200 750 200 { lab=stage2}
-N 70 260 630 260 { lab=vssa}
+N 70 260 630 260 { lab=vssd1}
 N 190 360 270 360 { lab=#net3}
 N 110 360 190 360 { lab=#net3}
 N 100 360 110 360 { lab=#net3}
 N -30 360 0 360 { lab=stage2}
 N 490 -60 1030 -60 {
-lab=vssa}
+lab=vssd1}
 N 490 140 750 140 {
-lab=vssa}
+lab=vssd1}
 N 380 510 490 510 {
 lab=#net4}
 N 490 420 490 510 {
@@ -35,19 +35,19 @@ lab=#net4}
 N 370 360 610 360 {
 lab=out}
 N 70 40 70 60 {
-lab=vssa}
+lab=vssd1}
 N 340 40 340 60 {
-lab=vssa}
+lab=vssd1}
 N 70 240 70 260 {
-lab=vssa}
+lab=vssd1}
 N 340 240 340 260 {
-lab=vssa}
+lab=vssd1}
 N 70 400 70 420 {
-lab=vssa}
+lab=vssd1}
 N 70 420 340 420 {
-lab=vssa}
+lab=vssd1}
 N 340 400 340 420 {
-lab=vssa}
+lab=vssd1}
 N 440 -60 440 0 {
 lab=fb}
 N -30 -60 440 -60 {
@@ -101,26 +101,26 @@ C {sky130_fd_pr/cap_mim_m3_2.sym} 630 170 0 0 {name=C24 model=cap_mim_m3_2 W=WC2
 C {sky130_fd_pr/cap_mim_m3_1.sym} 630 230 0 0 {name=C23 model=cap_mim_m3_1 W=WC2 L=LC2 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 490 390 0 0 {name=C1 model=cap_mim_m3_1 W=WC3 L=LC3 MF=1 spiceprefix=X}
 C {mux/analogMux.sym} 340 510 0 0 {name=x7}
-C {devices/ipin.sym} -100 -120 0 0 {name=p11 lab=vdda}
-C {devices/ipin.sym} -100 -100 0 0 {name=p12 lab=vssa}
-C {devices/lab_pin.sym} 70 -40 2 0 {name=l27 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 340 -40 2 0 {name=l28 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 70 160 2 0 {name=l29 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 340 160 2 0 {name=l30 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 70 320 2 0 {name=l31 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 340 320 2 0 {name=l32 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 70 60 0 0 {name=l1 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 70 260 0 0 {name=l8 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 70 420 0 0 {name=l20 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 1030 -60 2 0 {name=l21 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 750 140 2 0 {name=l26 sig_type=std_logic lab=vssa}
+C {devices/lab_pin.sym} 340 -40 2 0 {name=l28 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 70 60 0 0 {name=l1 sig_type=std_logic lab=vssd1}
 C {transmission_gate/transmission_gate.sym} 50 0 0 0 {name=X1 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 320 0 0 0 {name=X2 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 50 200 0 0 {name=X3 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 320 200 0 0 {name=X4 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 50 360 0 0 {name=X5 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/transmission_gate.sym} 320 360 0 0 {name=X6 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
-C {devices/lab_pin.sym} 320 560 0 0 {name=l33 sig_type=std_logic lab=vssa}
-C {devices/lab_pin.sym} 320 460 0 0 {name=l34 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} -30 -60 0 0 {name=l35 sig_type=std_logic lab=fb}
 C {devices/ipin.sym} -100 -60 0 0 {name=p13 lab=fb}
+C {devices/iopin.sym} -100 -140 2 0 {name=p14 lab=vdda1}
+C {devices/iopin.sym} -100 -120 2 0 {name=p15 lab=vssd1}
+C {devices/lab_pin.sym} 70 -40 2 0 {name=l27 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 70 160 2 0 {name=l29 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 70 320 2 0 {name=l30 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 340 320 2 0 {name=l31 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 340 160 2 0 {name=l32 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 320 460 0 0 {name=l34 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} 70 260 0 0 {name=l8 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 70 420 0 0 {name=l20 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 750 140 2 0 {name=l21 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 1030 -60 2 0 {name=l26 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 320 560 0 0 {name=l33 sig_type=std_logic lab=vssd1}

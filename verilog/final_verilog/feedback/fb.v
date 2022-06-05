@@ -1,12 +1,13 @@
-`timescale 1ns/10ps
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
-//To be included with testbenches
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_count.v"
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
-
 /*
+`timescale 1ns/10ps
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
+//To be included with testbenches
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_count.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
+
+
 module dlrtn(//this is negative reset and active low enable latch.
 	input d,
 	input gate,
@@ -17,14 +18,18 @@ module dlrtn(//this is negative reset and active low enable latch.
 		else if(!gate) q<=d;
 	end
 endmodule
-
-module gray_selector_fb( //clk_ext is the core's clock
-input d,clk_ext,rstb_ext, //d has to be connected to vdd in our case
+/*
+module gray_selector_fb(
+input clk_ext,rstb_ext, //d has to be connected to vdd in our case
 input [9:0]in,clk, //ext gray clocks are to be connected to the clk
 output wire out_muxed); //rstb pin of eff has to be ext clk signal
-wire [9:0]eff_out,eff_outb; //rstb_ext to be connected to rstb(global)
+wire [9:0]eff_out,eff_outb; //ext_rst is the reset to the final latch.
 wire out_muxed_raw;
 assign eff_outb[9:0]=~eff_out[9:0];
+
+reg d;
+initial d<=1;
+
 genvar i;
 generate for(i=0;i<=9;i=i+1) begin: fb_gray_selector_loop
 edge_ff_n eff(.d(d),.rstb(clk_ext),.clk(clk[i]),.out(eff_out[i]));
@@ -35,13 +40,13 @@ endgenerate
 endmodule
 */
 module fb(
-	input vpwr,clkdiv2,comp_out,cclk,rstb,ud_en, //clkdiv2 is the max clk frequency of the core
+	input clkdiv2,comp_out,cclk,rstb,ud_en, //clkdiv2 is the max clk frequency of the core
 	input [9:0]gray_clk, //ud_en is the en port of the ud counter. extra control to the feedback.
 	output wire fb_out);
 	wire [15:0]c_count; //c_count is the bin counter's output
 
 	u_d_bin_counter ud_c(.u_d(comp_out),.clk(cclk),.rstb(rstb),.en(ud_en),.q(c_count[15:0]));
-	gray_selector_fb gs_f(.d(vpwr),.clk_ext(clkdiv2),.rstb_ext(rstb),.in({c_count[6],c_count[7],c_count[8],c_count[9],c_count[10],c_count[11],c_count[12],c_count[13],c_count[14],c_count[15]}),.clk(gray_clk[9:0]),.out_muxed(fb_out));
+	gray_selector_fb gs_f(.clk_ext(clkdiv2),.rstb_ext(rstb),.in({c_count[6],c_count[7],c_count[8],c_count[9],c_count[10],c_count[11],c_count[12],c_count[13],c_count[14],c_count[15]}),.clk(gray_clk[9:0]),.out_muxed(fb_out));
 
 endmodule
 
@@ -52,7 +57,7 @@ endmodule
 //c: Counter
 //clk_ext: external clock of the core
 module tb_fb;
-	reg vpwr,clkdiv2,comp_out,rstb,ud_en;
+	reg clkdiv2,comp_out,rstb,ud_en;
 	wire fb_out,cclk;
 	reg clk_master; //clk_master is the master clk of the whole chip 
 	wire [18:0]gc_clk;
@@ -69,7 +74,6 @@ module tb_fb;
 		.gray_count(gc_clk[18:0]));
 
 	fb fb_block(
-		.vpwr(vpwr),
 		.clkdiv2(clkdiv2),
 		.comp_out(comp_out),
 		.cclk(cclk),
@@ -114,7 +118,6 @@ module tb_fb;
 		//comp_out=1;
 		rstb=0;
 		ud_en=1;
-		vpwr=1;
 		#5 rstb=1;
 		#6476802 ud_en=0;
 		repeat(2048) @(posedge clkdiv2);

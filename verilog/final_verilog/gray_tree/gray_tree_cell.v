@@ -70,7 +70,7 @@ module tb_gray_tree_cell;
 
 	gray_tree_cell gray_tree(
 		.gray_clk_in(gray_clk_int[10:1]),   //dropping the first bit off and passing the rest.
-		.no_ones_below_in(no_ones_below_in),
+		.no_ones_below_in(no_ones_below_in[2:0]),
 		.gray_clk_out(gray_clk_out[10:0]),
 		.no_ones_below_out(no_ones_below_out),
 		.q_sine(q_sine_out[1]),
