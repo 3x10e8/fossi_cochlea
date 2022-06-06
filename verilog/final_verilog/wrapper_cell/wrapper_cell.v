@@ -36,8 +36,9 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/wrapper_first/wrapper_first.v"
 */
 module wrapper_cell(
-	input rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
+	input rstb,clk_master,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q,clkdiv2, 
+	input phi1b_dig_I, phi1b_dig_Q, 
 	input [9:0]gray_clk_in,
 	input [2:0]no_ones_below_in,
 	output wire div2out,sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
@@ -74,7 +75,7 @@ module wrapper_cell(
 
 	dig_evegen POL_EVE_I(
 		.comp_high(comp_high_I),
-		.phi1b_dig(phi1b_dig),
+		.phi1b_dig(phi1b_dig_I),
 		.eve(eve_I),
 		.rstb(rstb),
 		.polxevent(polxevent_I),
@@ -82,7 +83,7 @@ module wrapper_cell(
 
 	dig_evegen POL_EVE_Q(
 		.comp_high(comp_high_Q),
-		.phi1b_dig(phi1b_dig),
+		.phi1b_dig(phi1b_dig_Q),
 		.eve(eve_Q),
 		.rstb(rstb),
 		.polxevent(polxevent_Q),

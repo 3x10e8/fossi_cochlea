@@ -1,5 +1,4 @@
 /*
-`timescale 1ns/1ps
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
@@ -34,6 +33,10 @@
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_tree_cell.v"
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/peripheral_gray.v"
 */
+
+//`define RUN_DV 
+//`include "/Volumes/export/isn/abhinav/fossi_cochlea/verilog/final_verilog/final_verilog_dv_includes.v"
+
 module wrapper_first(
 	input rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q, 
@@ -48,7 +51,6 @@ module wrapper_first(
 	wire gray_clk_0;
 
 	peripheral_gray gray_gen(
-		
 		.rstb(rstb),
 		.clk_master(clk_master),
 		.gray_clk({gray_clk[10:1],gray_clk_0}),
@@ -132,14 +134,9 @@ module wrapper_first(
 	
 endmodule
 
-
-
-
-
-
-////testbench
-
 /*
+////testbench
+`timescale 1ns/1ps
 module and_gate(
 	input in1,
 	input in2,
@@ -352,11 +349,4 @@ initial begin
 	$finish;
 end
 endmodule
-
 */
-
-
-
-
-
-

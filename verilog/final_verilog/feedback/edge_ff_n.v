@@ -12,9 +12,16 @@ wire [1:0]q;
 wire buff_out;
 //wire rstb_inv; //rstb_inv used after passing the reset signal(clk_ext) through an inverter.
 //assign rstb_inv=~rstb;
+
+// if keeping buffer:
 buffer bf(.in(clk),.out(buff_out));
 asyn_rst_dff dff(.clk(buff_out),.d(d),.rstb(rstb),.q(q[1]));
 asyn_rst_dff_n dff_n(.clk(buff_out),.d(d),.rstb(rstb),.q(q[0]));
+
+// if removing buffer:
+//asyn_rst_dff dff(.clk(clk),.d(d),.rstb(rstb),.q(q[1]));
+//asyn_rst_dff_n dff_n(.clk(clk),.d(d),.rstb(rstb),.q(q[0]));
+
 mux_2_1 mux(.in_0(q[0]),.in_1(q[1]),.sel(clk),.out(out));
 endmodule
 /*

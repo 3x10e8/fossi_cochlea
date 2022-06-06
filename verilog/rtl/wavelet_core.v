@@ -55,7 +55,7 @@ analog_core I(
 	.vnb(vnb), 
 	.thresh1(thresh1), 
 	.thresh2(thresh2), 
-	.div2(clkdiv2), 
+	.clkdiv2(clkdiv2), 
 	.cclk(cclk), 
 	.phi1b_dig(phi1b_dig),
 	// unshared signals betweem I and Q
@@ -78,14 +78,14 @@ analog_core Q(
 	.vnb(vnb), 
 	.thresh1(thresh1), 
 	.thresh2(thresh2), 
-	.div2(clkdiv2), 
+	.clkdiv2(clkdiv2), 
 	.cclk(cclk), 
 	.phi1b_dig(phi1b_dig),
 	// unshared signals betweem I and Q
-	.lo(cos), 
+	.lo(sin), 
 	.fb(fb_Q), 
 	//.fbm(fb2_Q), 
-	.comp_high(comp_high_I)
+	.comp_high(comp_high_Q)
 );
 
 wrapper_cell dig(

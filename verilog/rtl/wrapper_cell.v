@@ -22,7 +22,7 @@ module wrapper_cell(
 	fb1_I,fb1_Q,
 	//fb2_I,fb2_Q,
 	
-	read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 	
+	read_out_I,read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 	
 );
 	`ifdef USE_POWER_PINS
 	inout vccd1, vssd1; 

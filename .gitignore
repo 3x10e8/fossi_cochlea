@@ -3,8 +3,9 @@ precheck_results
 precheck_results
 *.hex*
 *.lst
-*.vcd
+**.vcd
+**.vvp
 *.gtkw
 caravel/
-management_core_wrapper/
+mgmt_core_wrapper/
 .DS_Store

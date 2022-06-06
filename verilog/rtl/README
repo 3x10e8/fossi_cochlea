@@ -3,3 +3,10 @@ README
 Port changes
 - remove sinb/cosb replicas from digital_core
 - reduce fb lines to one signal per I/Q
+- wrapper cell: separated I/Q ports for phi1b_dig
+
+asyn_rstb_tff: declared d as wire
+u_d_bin_counter/asyn_stb_tff_end: declared d as wire
+dlrtn.v: updated to use sky130_fd_sc_hd__dlrtn
+edge_ff_gray.v: removed buffers bf0 and bf1 (hold violation on readout rstb vs. clk)
+Buffers removed from edge_ff.v and edge_ff_n.v

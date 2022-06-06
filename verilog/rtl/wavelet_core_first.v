@@ -2,7 +2,7 @@
 `include "analog_core.v"
 `include "wrapper_first.v"
 
-module wavelet_core(
+module wavelet_core_first(
 	`ifdef USE_POWER_PINS
 	    inout vdda1, // 1.2V analog supply
 	    inout vdda2, // tunable analog mux supply
@@ -29,8 +29,8 @@ module wavelet_core(
 	output div2out,
 
 	//input [9:0]gray_clk_in,
-	output [10:1]gray_clk,
-	input [2:0]no_ones_below_in,
+	output [10:1]gray_clk_out,
+	//input [2:0]no_ones_below_in,
 	output [2:0]no_ones_below_out,
 
 	output [1:0]read_out_I,read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
@@ -55,7 +55,7 @@ analog_core I(
 	.vnb(vnb), 
 	.thresh1(thresh1), 
 	.thresh2(thresh2), 
-	.div2(clkdiv2), 
+	.clkdiv2(clkdiv2), 
 	.cclk(cclk), 
 	.phi1b_dig(phi1b_dig),
 	// unshared signals betweem I and Q
@@ -78,14 +78,14 @@ analog_core Q(
 	.vnb(vnb), 
 	.thresh1(thresh1), 
 	.thresh2(thresh2), 
-	.div2(clkdiv2), 
+	.clkdiv2(clkdiv2), 
 	.cclk(cclk), 
 	.phi1b_dig(phi1b_dig),
 	// unshared signals betweem I and Q
-	.lo(cos), 
+	.lo(sin), 
 	.fb(fb_Q), 
 	//.fbm(fb2_Q), 
-	.comp_high(comp_high_I)
+	.comp_high(comp_high_Q)
 );
 
 wrapper_first dig(
@@ -104,8 +104,8 @@ wrapper_first dig(
 	.div2out(div2out),
 
 	//.gray_clk_in(gray_clk_in),
-	.gray_clk_out(gray_clk_out),
-	.no_ones_below_in(no_ones_below_in),
+	.gray_clk(gray_clk_out),
+	//.no_ones_below_in(no_ones_below_in),
 	.no_ones_below_out(no_ones_below_out),
 
 	.sin_out(sin),

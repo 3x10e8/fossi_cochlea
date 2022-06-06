@@ -4,10 +4,19 @@ module dlrtn(
 	input gate,
 	input rstb,
 	output reg q);
-	always@(rstb,d,gate)begin
-		if(!rstb) q<=0;
-		else if(!gate) q<=d;
-	end
+
+	`ifdef RUN_DV
+		always@(rstb,d,gate)begin
+			if(!rstb) q<=0;
+			else if(!gate) q<=d;
+		end
+	`else
+		sky130_fd_sc_hd__dlrtn_1 dlrtn(
+			.Q(q),
+			.RESET_B(rstb),
+			.D(d),
+			.GATE_N(gate));
+	`endif
 endmodule
 /*
 module tb_dlrtn;

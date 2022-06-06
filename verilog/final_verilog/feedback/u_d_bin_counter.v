@@ -23,6 +23,7 @@ endmodule
 module asyn_stb_tff_end(
 input t,clk,stb,
 output wire q);
+wire d;
 asyn_stb_dff dfstp_1(.clk(clk), .d(d), .stb(stb), .q(q));
 assign d=q^t;
 endmodule

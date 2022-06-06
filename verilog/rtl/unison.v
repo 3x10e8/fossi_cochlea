@@ -1,64 +1,79 @@
 `default_nettype none
+`include "wavelet_core_first.v"
+//`include "wavelet_core.v"
+
+`define NUM_OCTAVES 8 
+/*
+number of notes in a unison:
+A0 = A7
+A6 = A7/2
+A5 = A6/2
+A4 = A5/2
+A3 = A4/2
+A2 = A5/2
+A1 = A2/2
+A0 = A1/2 
+*/
 
 module unison(
-	// Digital Inputs
-    input vpwr,rstb,clk_master,phi1b_dig,ud_en, //ud_en is common for all the cores and unisons.
-    input comp_high_I,comp_high_Q, 
-    output wire div2out,
-    
-    // For analog mux
-    output wire sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
-    
-    // Next gray tree
-    output wire [2:0]no_ones_below_out,
-    output wire [10:1]gray_clk,
+	/*---------------------*/
+	/* Analog core signals */
+	/*---------------------*/
 
-    // To feedback filter +ve
-    output wire fb1_I,fb1_Q
-    // To feedback filter -ve
-    output wire fb2_I,fb2_Q
+	inout inp, inm, // (gpio_analog is inout) audio inputs
+	inout vpb, vnb, // (gpio_analog is inout) to current starving inverters in phi clkgen
+	inout thresh1, thresh2, // (gpio_analog is inout) thresholds for last cap
 
-    // Readout out bus for both eve and polxeve
-    output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
+	/*----------------------*/
+	/* Digital core signals */
+	/*----------------------*/
 
-    
-    output wire rstb_out,clk_master_out,ud_en_out,vpwr_out);
+	input rstb,clk_master,ud_en, //ud_en is common for all the cores and unisons.
+	output [1:0]read_out_I,read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
+);
 
-	wrapper_first u0(
-		// Digital inputs from top
-	    .vpwr(),
-	    .rstb(),
-	    .clk_master(),
-	    .phi1b_dig(),
-	    .ud_en(), //ud_en is common for all the cores and unisons.
-	    
-	    // inputs from u0_analog
-	    .comp_high_I(),
-	    .comp_high_Q(),
+	wavelet_core_first sa7( // highest octave
+		`ifdef USE_POWER_PINS
+		    .vdda1(vdda1), // 1.2V analog supply
+		    .vdda2(vdda2), // tunable analog mux supply
+		    .vccd1(vccd1), // comparator supply and to level shifters
+		    .vssd1(vssd1), // all gnds shorted to vssd1
+		`endif
 
-	    // outputs to next 
-	    .div2out(),
-	    
-	    // For analog mux
-	    .sin_out(),
-	    .cos_out(),
-	    .sin_outb(),
-	    .cos_outb(), //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
-	    
-	    // Next gray tree
-	    .no_ones_below_out(), // [2:0]
-	    .gray_clk, // [10:1]
+		/*---------------------*/
+		/* Analog core signals */
+		/*---------------------*/
+		// these signals are global inputs provided to all octaves in the unison
+		.inp(inp), 
+		.inm(inm), // (gpio_analog is inout) audio inputs
+		.vpb(vpb), 
+		.vnb(vnb), // (gpio_analog is inout) to current starving inverters in phi clkgen
+		.thresh1(thresh1), 
+		.thresh2(thresh2), // (gpio_analog is inout) thresholds for last cap
 
-	    // To feedback filter +ve
-	    output wire fb1_I,fb1_Q
-	    // To feedback filter -ve
-	    output wire fb2_I,fb2_Q
+		/*----------------------*/
+		/* Digital core signals */
+		/*----------------------*/
+		// these signals are shorted from core to core
+		.rstb(rstb),
+		.rstb_out(rstb_out),
+		.clk_master(clk_master),
+		.clk_master_out(clk_master_out),
+		.ud_en(ud_en), //ud_en is common for all the cores and unisons.
+		.ud_en_out(ud_en_out),
 
-	    // Readout out bus for both eve and polxeve
-	    output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
+		// these signals are modified inside the core and then shunted
+		.div2out(),
 
-	    
-	    output wire rstb_out,clk_master_out,ud_en_out,vpwr_out);
+		//input [9:0]gray_clk_in,
+		.gray_clk_out(),
+		//input [2:0]no_ones_below_in,
+		.no_ones_below_out(),
+
+		// these are global outputs driven by each core
+		.read_out_I(read_out_I),
+		.read_out_Q(read_out_Q)
+	);
 
 endmodule
 
