@@ -38,14 +38,14 @@ set ::env(FILL_INSERTION) 1
 # for using standard cells
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 400 150"
+set ::env(DIE_AREA) "0 0 400 250"
 #set ::env(DIE_AREA) "0 0 250 350"
 #set ::env(FP_ASPECT_RATIO) 0.5 
 #[WARNING RSZ-0064] Unable to repair all hold checks within margin.
 #set ::env(FP_ASPECT_RATIO) 2 
 #[WARNING RSZ-0064] Unable to repair all hold checks within margin.
 
-set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
+#set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
 set ::env(PL_BASIC_PLACEMENT) 1
 set ::env(PL_TARGET_DENSITY) 0.3

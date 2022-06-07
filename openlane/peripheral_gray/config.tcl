@@ -33,7 +33,8 @@ set ::env(CLOCK_NET) "clk_master"
 set ::env(CLOCK_PERIOD) "400"
 
 set ::env(SYNTH_READ_BLACKBOX_LIB) "1" 
-set ::env(FILL_INSERTION) 1
+#set ::env(FILL_INSERTION) 0
+#set ::env(TAP_DECAP_INSERTION) 0
 
 # for using standard cells
 

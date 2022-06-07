@@ -1,8 +1,16 @@
 `timescale 1ns/1ps
-// https://mpedram.com/Papers/det-ff.pdf
+//`define USE_MUX
+`define USE_XNOR
 
-//`define RUN_DV
-//`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
+/*
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
+*/
+
+/*
+`define RUN_DV
+`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
+*/
 
 /*
 `include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
@@ -16,31 +24,60 @@ module edge_ff_gray(
 input d,clk,
 input rstb,
 output wire out);
-wire [1:0]q; //q[0] goes to 0th input port of mux
-wire and_mux1,and_mux2;
-wire mux1_fb, mux2_fb;
-wire mux_out;
 
-assign and_mux1=rstb&mux1_fb;
-assign and_mux2=rstb&mux2_fb;
-assign out=rstb&mux_out;
 
-mux_2_1 mux1(
-	.in_0(mux1_fb),
-	.in_1(d),
-	.sel(clk),
-	.out(mux1_fb));
-mux_2_1 mux2(
-	.in_0(d),
-	.in_1(mux2_fb),
-	.sel(clk),
-	.out(mux2_fb));
+`ifdef USE_XNOR
+	// Stefan Schippers posted on slack
+	wire d1, d2, q1, q2, q1n, q2n;
 
-mux_2_1 mux3(
-	.in_0(and_mux1),
-	.in_1(and_mux2),
-	.sel(clk),
-	.out(mux_out));
+	assign q1n = ~q1;
+	assign q2n = ~q2;
+	assign d1=~(d ^ q2n);
+	assign d2=~(d ^ q1n);
+	assign out=~(q1 ^ q2n);
+
+	asyn_rstb_dff dff(
+		.clk(clk),
+		.d(d1),
+		.rstb(rstb),
+		.q(q1)
+		);
+	asyn_rstb_dff_n dff_n(
+		.clk(clk),
+		.d(d2),
+		.rstb(rstb),
+		.q(q2)
+		);
+
+`elsif USE_MUX
+	// https://mpedram.com/Papers/det-ff.pdf
+	wire [1:0]q; //q[0] goes to 0th input port of mux
+	wire and_mux1,and_mux2;
+	wire mux1_fb, mux2_fb;
+	wire mux_out;
+
+	assign and_mux1=rstb&mux1_fb;
+	assign and_mux2=rstb&mux2_fb;
+	assign out=rstb&mux_out;
+
+	mux_2_1 mux1(
+		.in_0(mux1_fb),
+		.in_1(d),
+		.sel(clk),
+		.out(mux1_fb));
+	mux_2_1 mux2(
+		.in_0(d),
+		.in_1(mux2_fb),
+		.sel(clk),
+		.out(mux2_fb));
+
+	mux_2_1 mux3(
+		.in_0(and_mux1),
+		.in_1(and_mux2),
+		.sel(clk),
+		.out(mux_out));
+`endif
+
 /*
 wire buff_out,buff_int;// buff_int is the intermediate output of 2 buffers.
 mux_2_1 mux(.in_0(q[0]),.in_1(q[1]),.sel(clk),.out(out));
@@ -71,42 +108,43 @@ asyn_rstb_dff_n dff_n(.clk(buff_out_clk),.d(buff_out_d),.rstb(rstb),.q(q[0]));
 endmodule
 
 /*
-module edge_ff_gray_tb;
-reg d, clk,rstb;
-wire out;
-reg out_init;
+	module edge_ff_gray_tb;
+	reg d, clk,rstb;
+	wire out;
+	//reg out_init;
 
-edge_ff_gray detff(
-	.d(d),
-	.clk(clk),
-	.out(out)
-);
+	edge_ff_gray detff(
+		.d(d),
+		.clk(clk),
+		.out(out),
+		.rstb(rstb)
+	);
 
-initial begin 
-	$dumpfile("edge_ff_gray.vcd");
-	$dumpvars;
-end
+	initial begin 
+		$dumpfile("edge_ff_gray.vcd");
+		$dumpvars;
+	end
 
-initial begin
-	clk=0;
-	forever 
-		#(200) clk = ~clk; //ext_clk generation freq=2.56 MHz
-end
+	initial begin
+		clk=0;
+		forever 
+			#(200) clk = ~clk; //ext_clk generation freq=2.56 MHz
+	end
 
-initial begin 
-	d=0;
-	forever
-		#(156) d = ~d;
-end
+	initial begin 
+		d=0;
+		forever
+			#(156) d = ~d;
+	end
 
-initial out_init=0;
-assign out<=out_init;
+	//initial out_init=0;
+	//assign out<=out_init;
 
-initial begin 
-	rstb=0;
-	#5 rstb=1;
-	repeat(1000) @(posedge clk);
-	$finish;
-end
-endmodule
+	initial begin 
+		rstb=0;
+		#5 rstb=1;
+		repeat(1000) @(posedge clk);
+		$finish;
+	end
+	endmodule
 */
