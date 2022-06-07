@@ -30,5 +30,5 @@
 `include "./gray_tree/gray_first_cell.v"
 `include "./gray_tree/gray_sine_cell.v"
 `include "./gray_tree/gray_tree_cell.v"
-//`include "./gray_tree/peripheral_gray.v"
+`include "./gray_tree/peripheral_gray.v"
 //`include "./wrapper_first/wrapper_first.v"
