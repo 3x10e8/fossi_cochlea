@@ -39,6 +39,10 @@ end
 endgenerate
 endmodule
 */
+
+//`define RUN_DV
+//`include "gray_count.v"
+//`include "../final_verilog_dv_includes.v"
 module fb(
 	input clkdiv2,comp_out,cclk,rstb,ud_en, //clkdiv2 is the max clk frequency of the core
 	input [9:0]gray_clk, //ud_en is the en port of the ud counter. extra control to the feedback.
@@ -63,7 +67,9 @@ module tb_fb;
 	wire [18:0]gc_clk;
 	parameter PERIOD_MASTER=400;
 	real clk_master_half_pd=PERIOD_MASTER/2;
-	parameter n=1;
+
+	parameter n=8;//change this
+
 	parameter PERIOD_CORE=400*(2**(n-1));
 	real clk_core_half_pd=(PERIOD_CORE)/2;
 	real comp_out_half_pd=PERIOD_CORE;//factor of 2 is multiplied here because the period of comput is double that of the core clock
@@ -122,7 +128,7 @@ module tb_fb;
 		#6476802 ud_en=0;
 		repeat(2048) @(posedge clkdiv2);
 		#2 ud_en=1;
-		repeat(34000) @(negedge clkdiv2);
+		repeat(3400) @(negedge clkdiv2);
 		rstb=0;
 		repeat(10) @(negedge clkdiv2);
 		#5 rstb=1;
@@ -131,5 +137,3 @@ module tb_fb;
 	end
 endmodule
 */
-
-	

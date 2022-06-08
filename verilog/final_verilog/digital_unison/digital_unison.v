@@ -1,14 +1,14 @@
 `timescale 1ns/1ps
 //`include "../final_verilog_dv_includes.v"
 
+/*
 `define RUN_DV // if running dv locally
 `ifdef RUN_DV
 	`include "../final_verilog_dv_includes.v"
 `endif
+*/
 
-
-
-module digital_unison #(parameter NUM_CORES=8)
+module digital_unison #(parameter NUM_CORES=2)
 (
 	// global inputs from RISC (must level shift vccd2->vccd1)
 	input rstb, ud_en,//phi1b_dig[0] is corresponding to the first wrapper
@@ -160,6 +160,7 @@ wrapper_cell w_last(
 */
 endmodule
 
+/*
 //
 //testbench
 
@@ -1168,3 +1169,4 @@ module tb_digital_unison;
 		$finish;
 	end
 endmodule
+*/

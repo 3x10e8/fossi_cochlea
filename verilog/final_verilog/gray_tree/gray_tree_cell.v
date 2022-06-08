@@ -7,6 +7,13 @@
 //no_ones_below_in[1] goes through buffer for next block
 //no_ones_below_in[2] goes for both gray generation and passes through buffer for next blocks
 
+/*
+`define RUN_DV // if running dv locally
+`ifdef RUN_DV
+	`include "../final_verilog_dv_includes.v"
+`endif
+*/
+
 module gray_tree_cell(
 	input [9:0]gray_clk_in, //dont forget to drop one output from previous block.
 	input [2:0]no_ones_below_in,
@@ -15,6 +22,17 @@ module gray_tree_cell(
 	output wire [2:0]no_ones_below_out,
 	output wire q_sine);
 	wire [2:0]no_ones_below_buff;
+
+	genvar i;
+	for(i=0;i<=9;i=i+1) begin
+		assign gray_clk_out[i] = gray_clk_in[i];
+	end
+	for(i=0;i<=2;i=i+1) begin
+		assign no_ones_below_buff[i] = no_ones_below_in[i];
+	end
+
+	// Let openlane buffer as needed:
+	/*
 	//buffering of gray in signals
 	genvar i;
 	generate for(i=0;i<=9;i=i+1)begin: buffer_loop
@@ -23,6 +41,7 @@ module gray_tree_cell(
 		.out(gray_clk_out[i]));
 	end
 	endgenerate
+
 	//buffering of no_ones_below_in signals
 	genvar j;
 	generate for(j=0;j<=2;j=j+1)begin: buffer_loop2
@@ -31,7 +50,8 @@ module gray_tree_cell(
 		.out(no_ones_below_buff[j]));
 	end
 	endgenerate
-	
+	*/
+
 	gray_cell gray(
 		.no_ones_below_jm2(no_ones_below_buff[2]),
 		.q_jm2(gray_clk_out[8]),
@@ -52,16 +72,18 @@ module gray_tree_cell(
 	assign no_ones_below_out[0]=no_ones_below_buff[1];
 	assign no_ones_below_out[1]=no_ones_below_buff[2];
 endmodule
+
 /*
 //testbench
 module tb_gray_tree_cell;
-	reg always1,rstb,clk_master;
+	//reg always1; // removed from peripheral gray 
+	reg rstb,clk_master;
 	wire [2:0]no_ones_below_in,no_ones_below_out;
 	wire [10:0]gray_clk_int,gray_clk_out; //gray_clk_int is the intermediate set of gray clocks between the junction of two blocks.
 	wire [1:0]q_sine_out;
 	
 	peripheral_gray gray_gen(
-		.always1(always1),
+		//.always1(always1),
 		.rstb(rstb),
 		.clk_master(clk_master),
 		.gray_clk(gray_clk_int[10:0]),
@@ -94,7 +116,7 @@ module tb_gray_tree_cell;
 
 	initial begin
 		rstb=0;
-		always1=1;
+		//always1=1;
 		#5 rstb=1;
 		repeat(3400) @(posedge clk_master);
 		#100;
@@ -102,7 +124,6 @@ module tb_gray_tree_cell;
 	end
 endmodule
 */
-
 
 
 

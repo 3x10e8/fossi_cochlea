@@ -32,3 +32,4 @@
 `include "./gray_tree/gray_tree_cell.v"
 `include "./gray_tree/peripheral_gray.v"
 `include "./wrapper_first/wrapper_first.v"
+`include "./wrapper_cell/wrapper_cell.v"
