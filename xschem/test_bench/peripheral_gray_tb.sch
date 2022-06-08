@@ -22,7 +22,7 @@ lab=GND}
 N 60 -200 60 -180 {
 lab=vdda1}
 N -100 -120 -80 -120 {
-lab=clk_master}
+lab=clk_ext}
 N -100 -140 -80 -140 {
 lab=rstb}
 N -100 -80 -80 -80 {
@@ -53,15 +53,21 @@ N 80 160 80 200 {
 lab=GND}
 N 60 200 80 200 {
 lab=GND}
+N 440 -80 460 -80 {
+lab=gray_clk[10:0]}
+N 440 -60 460 -60 {
+lab=no_ones_below[2:0]}
+N 440 -40 460 -40 {
+lab=q_sine}
 C {devices/netlist.sym} -460 -640 0 0 {name=SPICE2 only_toplevel=false value="
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
-.include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 .include /isn/abhinav/peripheral_gray.spice
+.include /usr/local/share/pdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
-x2 clk_master gray_clk\\[0\\] gray_clk\\[10\\] gray_clk\\[1\\] gray_clk\\[2\\]
-+ gray_clk\\[3\\] gray_clk\\[4\\] gray_clk\\[5\\] gray_clk\\[6\\] gray_clk\\[7\\] gray_clk\\[8\\] gray_clk\\[9\\]
-+ no_ones_below_out\\[0\\] no_ones_below_out\\[1\\] no_ones_below_out\\[2\\] q_sine rstb vccd1
-+ GND peripheral_gray
+*x2 clk_master gray_clk\\[0\\] gray_clk\\[10\\] gray_clk\\[1\\] gray_clk\\[2\\]
+*+ gray_clk\\[3\\] gray_clk\\[4\\] gray_clk\\[5\\] gray_clk\\[6\\] gray_clk\\[7\\] gray_clk\\[8\\] gray_clk\\[9\\]
+*+ no_ones_below_out\\[0\\] no_ones_below_out\\[1\\] no_ones_below_out\\[2\\] q_sine rstb vccd1
+*+ GND peripheral_gray
 
 .options abstol=1e-14 reltol=1e-4
 .param fmax=\{256*10k\}
@@ -81,7 +87,7 @@ C {devices/lab_pin.sym} 100 -140 2 0 {name=l5 sig_type=std_logic lab=inp}
 C {devices/lab_pin.sym} 100 -120 2 0 {name=l6 sig_type=std_logic lab=inm}
 C {devices/gnd.sym} 0 200 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -60 -200 0 0 {name=l10 sig_type=std_logic lab=vccd1}
-C {devices/lab_pin.sym} -100 -120 0 0 {name=l11 sig_type=std_logic lab=clk_master}
+C {devices/lab_pin.sym} -100 -120 0 0 {name=l11 sig_type=std_logic lab=clk_ext}
 C {devices/lab_pin.sym} -100 -140 0 0 {name=l12 sig_type=std_logic lab=rstb}
 C {devices/lab_pin.sym} 100 -40 2 0 {name=l7 sig_type=std_logic lab=phi1[1:0]}
 C {devices/lab_pin.sym} 100 -20 2 0 {name=l8 sig_type=std_logic lab=phi1b[1:0]}
@@ -114,3 +120,11 @@ C {test_bench/risc_signals.sym} 0 0 0 0 {name=x1
 + p_f3=0}
 C {devices/lab_pin.sym} 80 -160 2 0 {name=l18 sig_type=std_logic lab=vdda2}
 C {devices/lab_pin.sym} -80 -160 0 0 {name=l19 sig_type=std_logic lab=vccd2}
+C {digital/peripheral_gray.sym} 390 -60 0 0 {name=x2}
+C {devices/lab_pin.sym} 390 -110 0 0 {name=l20 sig_type=std_logic lab=vccd1}
+C {devices/gnd.sym} 390 -10 0 0 {name=l21 lab=GND}
+C {devices/lab_pin.sym} 340 -60 0 0 {name=l23 sig_type=std_logic lab=clk_ext}
+C {devices/lab_pin.sym} 340 -80 0 0 {name=l22 sig_type=std_logic lab=rstb}
+C {devices/lab_pin.sym} 460 -80 2 0 {name=l25 sig_type=std_logic lab=gray_clk[10:0]}
+C {devices/lab_pin.sym} 460 -60 2 0 {name=l24 sig_type=std_logic lab=no_ones_below[2:0]}
+C {devices/lab_pin.sym} 460 -40 2 0 {name=l26 sig_type=std_logic lab=q_sine}
