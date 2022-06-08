@@ -39,12 +39,12 @@ set ::env(FILL_INSERTION) 1
 
 set ::env(FP_SIZING) absolute
 #set ::env(DIE_AREA) "0 0 600 200"
-set ::env(DIE_AREA) "0 0 300 300"
+set ::env(DIE_AREA) "0 0 300 150"
 #set ::env(FP_ASPECT_RATIO) 0.25 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
 set ::env(PL_BASIC_PLACEMENT) 1
-set ::env(PL_TARGET_DENSITY) 1
+set ::env(PL_TARGET_DENSITY) 0.55
 
 # Maximum layer used for routing is metal 4.
 # This is because this macro will be inserted in a top level (user_project_wrapper) 

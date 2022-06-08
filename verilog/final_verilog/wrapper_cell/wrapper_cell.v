@@ -1,40 +1,7 @@
-/*
+
 `timescale 1ns/1ps
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_tff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/buffer.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/dlrtn.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/fb.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_selector_fb.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/inv_buffer.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_1.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_2.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_3.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_4.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_5.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_6.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_7.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_8.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/LO/lo.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/dig_div2/dig_div2.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/dig_evegen/dig_evegen.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/edge_ff_gray.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_first_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_sine_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_tree_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/peripheral_gray.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/wrapper_first/wrapper_first.v"
-*/
+//`include "../final_verilog_dv_includes.v"
+
 module wrapper_cell(
 	input rstb,clk_master,ud_en, //ud_en is common for all the cores and unisons.
 	input comp_high_I,comp_high_Q,clkdiv2, 
@@ -44,7 +11,7 @@ module wrapper_cell(
 	output wire div2out,sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
 	output wire [2:0]no_ones_below_out,
 	output wire [10:1]gray_clk_out,
-	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,cclk,
+	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,cclk_I,cclk_Q,
 	output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
 	output wire rstb_out,clk_master_out,ud_en_out);
 	wire q_sine;								//read_out_I[0]=out_mux_eve
@@ -71,7 +38,7 @@ module wrapper_cell(
 		.clkdiv2(clkdiv2),
 		.rstb(rstb),
 		.div2out(div2out),
-		.cclk(cclk));
+		.cclk(cclk_I));
 
 	dig_evegen POL_EVE_I(
 		.comp_high(comp_high_I),
@@ -93,7 +60,7 @@ module wrapper_cell(
 		
 		.clkdiv2(clkdiv2),
 		.comp_out(comp_out_I),
-		.cclk(cclk),
+		.cclk(cclk_I),
 		.rstb(rstb),
 		.ud_en(ud_en),
 		.gray_clk(gray_clk_out[10:1]),
@@ -103,7 +70,7 @@ module wrapper_cell(
 		
 		.clkdiv2(clkdiv2),
 		.comp_out(comp_out_Q),
-		.cclk(cclk),
+		.cclk(cclk_Q),
 		.rstb(rstb),
 		.ud_en(ud_en),
 		.gray_clk(gray_clk_out[10:1]),
@@ -135,7 +102,7 @@ module wrapper_cell(
 	assign ud_en_out=ud_en;
 	assign clk_master_out=clk_master;
 	assign rstb_out=rstb;
-	
+	assign cclk_Q=cclk_I;
 endmodule
 
 
@@ -144,6 +111,7 @@ endmodule
 
 /*
 ////testbench
+
 module and_gate(
 	input in1,
 	input in2,
@@ -162,7 +130,7 @@ module tb_wrapper_cell;
 reg rstb,clk_master,ud_en;
 reg [1:0]phi1b_dig; //more of these will be required for unison's testbench.
 					//phi1b_dig[0] is corresponding to the first wrapper
-wire [1:0]div2out,sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk;
+wire [1:0]div2out,sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk_I,cclk_Q;
 wire [2:0]no_ones_below_out[0:1];
 wire [10:1]gray_clk_out[0:1];
 wire [1:0]read_out_I,read_out_Q; //these will be common among all as they need to be shorted.
@@ -174,7 +142,8 @@ wrapper_first w0(
 	
 	.rstb(rstb),
 	.clk_master(clk_master),
-	.phi1b_dig(phi1b_dig[0]),
+	.phi1b_dig_I(phi1b_dig[0]),
+	.phi1b_dig_Q(phi1b_dig[0]),
 	.ud_en(ud_en),
 	.comp_high_I(comp_high_I[0]),
 	.comp_high_Q(comp_high_Q[0]),
@@ -193,14 +162,16 @@ wrapper_first w0(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[0]),
 	.ud_en_out(ud_en_out[0]),
-	.cclk(cclk[0]),
+	.cclk_I(cclk_I[0]),
+	.cclk_Q(cclk_Q[0]),
 	.clk_master_out(clk_master_out[0]));
 
 wrapper_cell w1(
 	
 	.rstb(rstb_out[0]),
 	.clk_master(clk_master_out[0]),
-	.phi1b_dig(phi1b_dig[1]),
+	.phi1b_dig_I(phi1b_dig[1]),
+	.phi1b_dig_Q(phi1b_dig[1]),
 	.ud_en(ud_en_out[0]),
 	.comp_high_I(comp_high_I[1]),
 	.comp_high_Q(comp_high_Q[1]),
@@ -222,7 +193,8 @@ wrapper_cell w1(
 	.read_out_Q(read_out_Q[1:0]),
 	.rstb_out(rstb_out[1]),
 	.ud_en_out(ud_en_out[1]),
-	.cclk(cclk[1]),
+	.cclk_I(cclk_I[1]),
+	.cclk_Q(cclk_Q[1]),
 	.clk_master_out(clk_master_out[1]));
 	
 
