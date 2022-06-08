@@ -37,9 +37,29 @@ set ::env(FILL_INSERTION) 1
 
 # for using standard cells
 set ::env(SYNTH_NO_FLAT) 0
+#set ::env(SYNTH_STRATEGY) "DELAY 0"
+set ::env(SYNTH_STRATEGY) "AREA 1"
+#set ::env(ROUTING_CORES) 8
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 500 250"
+
+set ::env(DIE_AREA) "0 0 300 250"
+# pass
+
+#set ::env(DIE_AREA) "0 0 300 200"
+# fail: congestion too high
+
 #set ::env(DIE_AREA) "0 0 250 350"
+# pass
+
+#set ::env(DIE_AREA) "0 0 250 300" 
+# fails AREA0/1/2: congestion too high
+
+#set ::env(DIE_AREA) "0 0 250 250" 
+# fails AREA0/1/2
+
+#set ::env(DIE_AREA) "0 0 200 400"
+# fail: groute.tcl exited
+
 #set ::env(FP_ASPECT_RATIO) 0.5 
 #[WARNING RSZ-0064] Unable to repair all hold checks within margin.
 #set ::env(FP_ASPECT_RATIO) 2 
