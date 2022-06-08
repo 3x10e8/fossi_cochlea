@@ -1,0 +1,108 @@
+timestamp 1654661395
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use cap_10_10_edge_x2 cap_10_10_edge_x2_3 -1 0 19046 0 -1 2737
+use cap_10_10_edge_x2 cap_10_10_edge_x2_2 0 -1 19056 1 0 -1961
+use cap_10_10_edge_x2 cap_10_10_edge_x2_1 0 1 -1972 -1 0 2727
+use cap_10_10_edge_x2 cap_10_10_edge_x2_0 1 0 -1962 0 1 -1971
+use cap_10_10__side_x2 cap_10_10__side_x2_1[0:0:-3056][0:5:2720] 0 -1 16336 1 0 -1961
+use cap_10_10__side_x2 cap_10_10__side_x2_0[0:0:-3056][0:5:2720] 0 1 748 -1 0 2727
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "cap_10_10__side_x2_1[5]/m3_n712_n366#" "cap_10_10__side_x2_1[5]/c1_n16_n6#" 1.13687e-13
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/c1_n16_n6#" -1.13687e-13
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/c1_n16_n6#" -215.94
+cap "cap_10_10_edge_x2_0/c1_n16_n6#" "cap_10_10_edge_x2_0/m3_n712_n702#" -8.52651e-14
+cap "cap_10_10_edge_x2_0/m3_n712_n702#" "cap_10_10_edge_x2_0/c1_n16_n6#" 6.25278e-13
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/m3_n712_n702#" 6.39488e-14
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/c1_n16_n6#" -5.68434e-14
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/c1_n16_n6#" -1.98952e-12
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/c1_n16_n6#" -460.2
+cap "cap_10_10_edge_x2_2/c1_n16_n6#" "cap_10_10_edge_x2_2/m3_n712_n702#" -302.67
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/m3_n712_n702#" -362.85
+cap "cap_10_10_edge_x2_1/m3_n712_n702#" "cap_10_10_edge_x2_1/c1_n16_n6#" -6.82121e-13
+cap "cap_10_10_edge_x2_1/m3_n712_n702#" "cap_10_10_edge_x2_1/m3_n712_n702#" -1.13687e-13
+cap "cap_10_10_edge_x2_1/m3_n712_n702#" "cap_10_10_edge_x2_1/c1_n16_n6#" 9.09495e-13
+cap "cap_10_10_edge_x2_1/c1_n16_n6#" "cap_10_10_edge_x2_1/m3_n712_n702#" -5.68434e-14
+cap "cap_10_10_edge_x2_1/c1_n16_n6#" "cap_10_10_edge_x2_1/m3_n712_n702#" -4.26326e-14
+cap "cap_10_10__side_x2_1[4]/m3_n712_n366#" "cap_10_10__side_x2_1[5]/c1_n16_n6#" 2.27374e-13
+cap "cap_10_10__side_x2_1[4]/m3_n712_n366#" "cap_10_10__side_x2_1[4]/m3_n712_n366#" -7.10543e-15
+cap "cap_10_10__side_x2_1[4]/m3_n712_n366#" "cap_10_10__side_x2_1[4]/c1_n16_n6#" 8.52651e-14
+cap "cap_10_10__side_x2_1[3]/m3_n712_n366#" "cap_10_10__side_x2_1[3]/m3_n712_n366#" 9.84
+cap "cap_10_10__side_x2_1[3]/m3_n712_n366#" "cap_10_10__side_x2_1[3]/c1_n16_n6#" 31.96
+cap "cap_10_10__side_x2_1[3]/c1_n16_n6#" "cap_10_10__side_x2_1[3]/m3_n712_n366#" 48.28
+cap "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_1[2]/m3_n712_n366#" 42.64
+cap "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_1[3]/c1_n16_n6#" 48.8
+cap "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_1[3]/c1_n16_n6#" 30.88
+cap "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_1[2]/c1_n16_n6#" 13.16
+cap "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_1[2]/c1_n16_n6#" 19.88
+cap "cap_10_10__side_x2_1[2]/c1_n16_n6#" "cap_10_10__side_x2_1[1]/m3_n712_n366#" 76.48
+cap "cap_10_10__side_x2_1[1]/m3_n712_n366#" "cap_10_10__side_x2_1[1]/m3_n712_n366#" 75.44
+cap "cap_10_10__side_x2_1[2]/c1_n16_n6#" "cap_10_10__side_x2_1[1]/m3_n712_n366#" 100.8
+cap "cap_10_10__side_x2_1[1]/m3_n712_n366#" "cap_10_10__side_x2_1[1]/m3_n712_n366#" -7.10543e-15
+cap "cap_10_10__side_x2_1[0]/m3_n712_n366#" "cap_10_10__side_x2_1[0]/m3_n712_n366#" 108.24
+cap "cap_10_10__side_x2_1[0]/m3_n712_n366#" "cap_10_10__side_x2_1[1]/c1_n16_n6#" -2.84217e-14
+cap "cap_10_10__side_x2_1[0]/c1_n16_n6#" "cap_10_10__side_x2_1[0]/m3_n712_n366#" 2.27374e-13
+cap "cap_10_10__side_x2_1[0]/c1_n16_n6#" "cap_10_10__side_x2_1[0]/m3_n712_n366#" 2.27374e-13
+cap "cap_10_10__side_x2_1[0]/m3_n712_n366#" "cap_10_10__side_x2_1[0]/m3_n712_n366#" -7.10543e-15
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_3/c1_n16_n6#" 1.98952e-13
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_3/c1_n16_n6#" 2.27374e-13
+cap "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10_edge_x2_2/m3_n712_n702#" -1.10134e-13
+cap "cap_10_10_edge_x2_3/c1_n16_n6#" "cap_10_10_edge_x2_3/m3_n712_n702#" -201.78
+cap "cap_10_10_edge_x2_3/m3_n712_n702#" "cap_10_10_edge_x2_3/m3_n712_n702#" -145.14
+cap "cap_10_10_edge_x2_3/c1_n16_n6#" "cap_10_10_edge_x2_3/m3_n712_n702#" -345.15
+cap "cap_10_10_edge_x2_3/c1_n16_n6#" "cap_10_10_edge_x2_3/m3_n712_n702#" 3.41061e-13
+cap "cap_10_10_edge_x2_1/m3_n712_n702#" "cap_10_10_edge_x2_1/c1_n16_n6#" 2.27374e-13
+cap "cap_10_10__side_x2_0[5]/m3_n712_n366#" "cap_10_10__side_x2_0[5]/c1_n16_n6#" -2.27374e-13
+cap "cap_10_10__side_x2_0[5]/c1_n16_n6#" "cap_10_10__side_x2_0[5]/m3_n712_n366#" -431.88
+merge "cap_10_10_edge_x2_3/VSUBS" "cap_10_10__side_x2_0[5]/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_0[5]/VSUBS" "cap_10_10__side_x2_0[4]/VSUBS"
+merge "cap_10_10__side_x2_0[4]/VSUBS" "cap_10_10__side_x2_0[3]/VSUBS"
+merge "cap_10_10__side_x2_0[3]/VSUBS" "cap_10_10__side_x2_0[2]/VSUBS"
+merge "cap_10_10__side_x2_0[2]/VSUBS" "cap_10_10__side_x2_0[1]/VSUBS"
+merge "cap_10_10__side_x2_0[1]/VSUBS" "cap_10_10__side_x2_0[0]/VSUBS"
+merge "cap_10_10__side_x2_0[0]/VSUBS" "cap_10_10_edge_x2_1/VSUBS"
+merge "cap_10_10_edge_x2_1/VSUBS" "cap_10_10_edge_x2_2/VSUBS"
+merge "cap_10_10_edge_x2_2/VSUBS" "cap_10_10__side_x2_1[5]/VSUBS"
+merge "cap_10_10__side_x2_1[5]/VSUBS" "cap_10_10__side_x2_1[4]/VSUBS"
+merge "cap_10_10__side_x2_1[4]/VSUBS" "cap_10_10__side_x2_1[3]/VSUBS"
+merge "cap_10_10__side_x2_1[3]/VSUBS" "cap_10_10__side_x2_1[2]/VSUBS"
+merge "cap_10_10__side_x2_1[2]/VSUBS" "cap_10_10__side_x2_1[1]/VSUBS"
+merge "cap_10_10__side_x2_1[1]/VSUBS" "cap_10_10__side_x2_1[0]/VSUBS"
+merge "cap_10_10__side_x2_1[0]/VSUBS" "cap_10_10_edge_x2_0/VSUBS"
+merge "cap_10_10_edge_x2_0/VSUBS" "VSUBS"
+merge "cap_10_10__side_x2_0[5]/m3_n712_n366#" "cap_10_10_edge_x2_3/m3_n712_n702#" -4405.85 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1108608 -12820 0 0 1107584 -12800 0 0
+merge "cap_10_10_edge_x2_3/m3_n712_n702#" "cap_10_10__side_x2_1[0]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[0]/m3_n712_n366#" "cap_10_10_edge_x2_2/m3_n712_n702#"
+merge "cap_10_10_edge_x2_2/m3_n712_n702#" "cap_10_10__side_x2_0[4]/m3_n712_n366#"
+merge "cap_10_10__side_x2_0[4]/m3_n712_n366#" "cap_10_10__side_x2_1[1]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[1]/m3_n712_n366#" "cap_10_10__side_x2_0[3]/m3_n712_n366#"
+merge "cap_10_10__side_x2_0[3]/m3_n712_n366#" "cap_10_10__side_x2_1[2]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[2]/m3_n712_n366#" "cap_10_10__side_x2_0[2]/m3_n712_n366#"
+merge "cap_10_10__side_x2_0[2]/m3_n712_n366#" "cap_10_10__side_x2_1[3]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[3]/m3_n712_n366#" "cap_10_10__side_x2_0[1]/m3_n712_n366#"
+merge "cap_10_10__side_x2_0[1]/m3_n712_n366#" "cap_10_10__side_x2_1[4]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[4]/m3_n712_n366#" "cap_10_10__side_x2_0[0]/m3_n712_n366#"
+merge "cap_10_10__side_x2_0[0]/m3_n712_n366#" "cap_10_10__side_x2_1[5]/m3_n712_n366#"
+merge "cap_10_10__side_x2_1[5]/m3_n712_n366#" "cap_10_10_edge_x2_1/m3_n712_n702#"
+merge "cap_10_10_edge_x2_1/m3_n712_n702#" "cap_10_10_edge_x2_0/m3_n712_n702#"
+merge "cap_10_10__side_x2_0[0]/c1_n16_n6#" "cap_10_10__side_x2_1[5]/c1_n16_n6#" -571.315 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 103424 -3200 0 0 0 0
+merge "cap_10_10__side_x2_1[5]/c1_n16_n6#" "cap_10_10_edge_x2_1/c1_n16_n6#"
+merge "cap_10_10_edge_x2_1/c1_n16_n6#" "cap_10_10_edge_x2_0/c1_n16_n6#"
+merge "cap_10_10__side_x2_0[1]/c1_n16_n6#" "cap_10_10__side_x2_1[4]/c1_n16_n6#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_0[3]/c1_n16_n6#" "cap_10_10__side_x2_1[2]/c1_n16_n6#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_0[2]/c1_n16_n6#" "cap_10_10__side_x2_1[3]/c1_n16_n6#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_0[4]/c1_n16_n6#" "cap_10_10__side_x2_1[1]/c1_n16_n6#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_0[5]/c1_n16_n6#" "cap_10_10_edge_x2_3/c1_n16_n6#" -379.991 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77696 -3200 0 0 0 0
+merge "cap_10_10_edge_x2_3/c1_n16_n6#" "cap_10_10__side_x2_1[0]/c1_n16_n6#"
+merge "cap_10_10__side_x2_1[0]/c1_n16_n6#" "cap_10_10_edge_x2_2/c1_n16_n6#"
+cap "cap_10_10__side_x2_1[1:5]/c1_n16_n6#" "cap_10_10__side_x2_1[1:5]/m3_n712_n366#" 5.45697e-12
+cap "cap_10_10__side_x2_0[0:4]/m3_n712_n366#" "cap_10_10__side_x2_0[0:4]/c1_n16_n6#" 5.45697e-12
+merge "cap_10_10__side_x2_0[1]/VSUBS" "cap_10_10__side_x2_1[4]/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cap_10_10__side_x2_1[4]/VSUBS" "VSUBS"
+merge "cap_10_10__side_x2_1[0:4]/c1_n16_n6#" "cap_10_10__side_x2_1[1:5]/c1_n16_n6#" -938.32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -602448 -12484 0 0 0 0
+merge "cap_10_10__side_x2_0[1:5]/c1_n16_n6#" "cap_10_10__side_x2_0[0:4]/c1_n16_n6#" -938.32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -602448 -12484 0 0 0 0
+merge "cap_10_10__side_x2_1[0:4]/m3_n712_n366#" "cap_10_10__side_x2_1[1:5]/m3_n712_n366#" -1024.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2564 0 0 0 -2560 0 0
+merge "cap_10_10__side_x2_0[1:5]/m3_n712_n366#" "cap_10_10__side_x2_0[0:4]/m3_n712_n366#" -1024.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2564 0 0 0 -2560 0 0

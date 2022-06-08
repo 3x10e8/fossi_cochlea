@@ -1,0 +1,23 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1654582199
+<< nwell >>
+rect 1197 875 1382 1089
+<< metal1 >>
+rect 1149 809 1415 857
+rect 928 252 962 387
+rect 524 218 962 252
+use comp_clks  comp_clks_0
+timestamp 1654582199
+transform 1 0 1288 0 1 544
+box 0 -544 1196 640
+use inv_weak_pulldown_corrected  inv_weak_pulldown_corrected_0
+timestamp 1654576306
+transform 1 0 276 0 1 128
+box -276 -128 368 1056
+use inv_weak_pullup_corrected  inv_weak_pullup_corrected_0
+timestamp 1654576546
+transform 1 0 697 0 1 279
+box -53 -279 591 905
+<< end >>
