@@ -1,4 +1,4 @@
-`define FLAT_UNISON // skip outputting clk_master, rstb, and ud_en ports
+//`define FLAT_UNISON // skip outputting clk_master, rstb, and ud_en ports
 
 /*
 `define RUN_DV // if running dv locally
@@ -34,9 +34,8 @@ module wrapper_first(
 	// unison outputs
 	output wire [1:0]read_out_I, read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
 
-	`ifndef FLAT_UNISON // make more ports for manual switching
-		, output wire rstb_out, clk_master_out, ud_en_out 
-	`endif
+	//output wire rstb_out, clk_master_out, ud_en_out, 
+	//output wire [1:0]read_out_I_out, read_out_Q_out
 	);
 
 	wire q_sine;								//read_out_I[0]=out_mux_eve
@@ -124,11 +123,11 @@ module wrapper_first(
 	assign clkdiv2_I=clk_master;
 	assign clkdiv2_Q=clk_master;
 
-	`ifndef FLAT_UNISON
-		assign ud_en_out=ud_en;
-		assign clk_master_out=clk_master;
-		assign rstb_out=rstb;
-	`endif
+	//assign ud_en_out=ud_en;
+	//assign clk_master_out=clk_master;
+	//assign rstb_out=rstb;
+	//assign read_out_I_out=read_out_I;
+	//assign read_out_Q_out=read_out_Q;
 
 endmodule
 /*

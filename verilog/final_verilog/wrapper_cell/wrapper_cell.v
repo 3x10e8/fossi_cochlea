@@ -1,4 +1,4 @@
-`define FLAT_UNISON // skip outputting clk_master, rstb, and ud_en ports
+//`define FLAT_UNISON // skip outputting clk_master, rstb, and ud_en ports
 `timescale 1ns/1ps
 
 /*
@@ -40,15 +40,14 @@ module wrapper_cell(
 	// unison outputs
 	output wire [1:0]read_out_I, read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
 
-	`ifndef FLAT_UNISON // make more ports for manual switching
-		, output wire rstb_out,clk_master_out,ud_en_out
-	`endif
+	//output wire rstb_out,clk_master_out,ud_en_out,
+	//output wire [1:0]read_out_I_out, read_out_Q_out
+
 	);
 
 	wire q_sine;								//read_out_I[0]=out_mux_eve
 	wire comp_out_I,comp_out_Q,eve_I,eve_Q,polxevent_I,polxevent_Q;
 	wire gray_clk_out_0;
-
 
 	gray_tree_cell gray_tree(
 		.gray_clk_in(gray_clk_in[9:0]),   //dropping the first bit off and passing the rest.
@@ -133,11 +132,11 @@ module wrapper_cell(
 	assign clkdiv2_I=clkdiv2;
 	assign clkdiv2_Q=clkdiv2;
 	
-	`ifndef FLAT_UNISON
-		assign ud_en_out=ud_en;
-		assign clk_master_out=clk_master;
-		assign rstb_out=rstb;
-	`endif
+	//assign ud_en_out=ud_en;
+	//assign clk_master_out=clk_master;
+	//assign rstb_out=rstb;
+	//assign read_out_I_out=read_out_I;
+	//assign read_out_Q_out=read_out_Q;
 
 endmodule
 
