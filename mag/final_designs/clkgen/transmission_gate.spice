@@ -1,0 +1,17 @@
+** sch_path:
+*+ /Volumes/export/isn/ankur/Documents/fossi_cochlea/xschem/transmission_gate/transmission_gate.sch
+**.subckt transmission_gate in out ctrl_ ctrl vdda vssa
+*.iopin in
+*.iopin out
+*.ipin ctrl_
+*.ipin ctrl
+*.ipin vdda
+*.ipin vssa
+XM1 out vdda in vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out vssa in vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+**.ends
+.end

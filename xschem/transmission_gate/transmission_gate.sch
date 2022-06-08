@@ -6,18 +6,26 @@ S {}
 E {}
 T {ctrl_ is the inverse of ctrl} -360 -100 0 0 0.4 0.4 {}
 N -140 40 0 40 { lab=ctrl}
-N -80 -80 -30 -80 { lab=in}
 N -80 -80 -80 80 { lab=in}
 N -80 80 -30 80 { lab=in}
-N 30 -80 80 -80 { lab=out}
 N 80 -80 80 80 { lab=out}
 N 30 80 80 80 { lab=out}
 N -140 -40 0 -40 { lab=ctrl_}
 N -140 0 -80 0 { lab=in}
 N 80 0 140 0 { lab=out}
-N -0 -130 0 -80 { lab=vdda}
 N 0 80 0 130 {
 lab=vssa}
+N -80 -80 -30 -80 {
+lab=in}
+N 30 -80 80 -80 {
+lab=out}
+N 0 -140 0 -80 {
+lab=vdda}
+N 0 -250 0 -140 {}
+N -30 -250 -30 -80 {}
+N 30 -250 30 -80 {}
+N -120 -290 -0 -290 {}
+N -120 -290 -120 -40 {}
 C {devices/iopin.sym} -140 0 2 0 {name=p1 lab=in}
 C {devices/iopin.sym} 140 0 0 0 {name=p2 lab=out}
 C {devices/ipin.sym} -140 -40 0 0 {name=p3 lab=ctrl_}
@@ -39,9 +47,8 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8.sym} 0 -60 3 0 {name=M2
 L=Lpmos
 W=Wpmos
->>>>>>> e82309aa2b1d17d2bdbb6dccc1c31ec6c77d2342
 nf=1
-mult=1
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -51,5 +58,19 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 0 -130 1 0 {name=p5 lab=vdda}
+C {devices/ipin.sym} 0 -140 2 0 {name=p5 lab=vdda}
 C {devices/ipin.sym} 0 130 3 0 {name=p6 lab=vssa}
+C {sky130_fd_pr/pfet_01v8.sym} 0 -270 1 0 {name=M3
+L=Lpmos
+W=Wpmos
+nf=1
+mult=2
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}

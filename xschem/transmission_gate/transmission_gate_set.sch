@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -23,7 +23,7 @@ C {devices/ipin.sym} -140 -40 0 0 {name=p3 lab=ctrl_}
 C {devices/ipin.sym} -140 40 0 0 {name=p4 lab=ctrl}
 C {sky130_fd_pr/nfet_01v8.sym} 0 60 3 1 {name=M1
 L=0.15
-W=1
+W=0.42
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -39,8 +39,7 @@ C {devices/gnd.sym} 0 100 0 0 {name=l10 lab=GND}
 C {devices/vdd.sym} 0 -130 0 0 {name=l11 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} 0 -60 3 0 {name=M2
 L=0.15
-W=3
->>>>>>> e82309aa2b1d17d2bdbb6dccc1c31ec6c77d2342
+W=0.42
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

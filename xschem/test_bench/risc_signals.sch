@@ -66,7 +66,6 @@ C {devices/lab_pin.sym} 400 -720 2 0 {name=l31 sig_type=std_logic lab=phi2b[0]}
 C {devices/lab_pin.sym} 400 -700 2 0 {name=l32 sig_type=std_logic lab=cclk_ana[0]}
 C {devices/lab_pin.sym} 400 -680 2 0 {name=l33 sig_type=std_logic lab=cclkb_ana[0]}
 C {devices/lab_pin.sym} 450 -530 1 0 {name=l34 sig_type=std_logic lab=div2out[0]}
-C {clkgen/filter_clkgen.sym} 350 -720 0 0 {name=x2}
 C {devices/lab_pin.sym} -480 -720 0 0 {name=l35 sig_type=std_logic lab=la_clk_ext}
 C {devices/lab_pin.sym} 350 -570 0 0 {name=l36 sig_type=std_logic lab=vccd1}
 C {devices/opin.sym} 880 -360 0 0 {name=p17 lab=clk_ext}
@@ -146,3 +145,4 @@ C {devices/lab_pin.sym} 80 -480 2 0 {name=l58 sig_type=std_logic lab=vssd1}
 C {devices/lab_pin.sym} 0 -530 0 0 {name=l60 sig_type=std_logic lab=la_clk_ext}
 C {devices/lab_pin.sym} -400 -400 2 0 {name=l16 sig_type=std_logic lab=vssd_mgmt}
 C {devices/iopin.sym} 880 -1000 0 0 {name=p23 lab=vssd_mgmt}
+C {clkgen/filter_clkgen_balanced_clks.sym} 350 -720 0 0 {name=x2}

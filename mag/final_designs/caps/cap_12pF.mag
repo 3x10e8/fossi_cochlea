@@ -1,51 +1,51 @@
 magic
 tech sky130A
-timestamp 1654307754
+timestamp 1654661395
 use cap_10_10__side_x2  cap_10_10__side_x2_0
-timestamp 1654307754
-transform -1 0 11802 0 -1 1368
-box -34 -374 1363 1368
+array 0 0 1528 0 5 -1360
+timestamp 1654661395
+transform 0 1 7174 -1 0 4083
+box -356 -183 1172 1177
 use cap_10_10__side_x2  cap_10_10__side_x2_1
-array 0 0 1397 0 5 -1742
-timestamp 1654307754
-transform 0 -1 1355 1 0 -1363
-box -34 -374 1363 1368
+array 0 0 1528 0 5 -1360
+timestamp 1654661395
+transform 0 -1 1368 1 0 -981
+box -356 -183 1172 1177
 use cap_10_10__side_x2  cap_10_10__side_x2_2
-timestamp 1654307754
-transform 1 0 -1376 0 1 374
-box -34 -374 1363 1368
+timestamp 1654661395
+transform 1 0 -981 0 1 374
+box -356 -183 1172 1177
 use cap_10_10__side_x2  cap_10_10__side_x2_3
-timestamp 1654307754
-transform -1 0 11802 0 -1 3110
-box -34 -374 1363 1368
+timestamp 1654661395
+transform -1 0 9523 0 -1 2728
+box -356 -183 1172 1177
 use cap_10_10__side_x2  cap_10_10__side_x2_4
-array 0 0 1397 0 5 -1742
-timestamp 1654307754
-transform 0 1 9071 -1 0 4847
-box -34 -374 1363 1368
+timestamp 1654661395
+transform -1 0 9523 0 -1 1368
+box -356 -183 1172 1177
 use cap_10_10__side_x2  cap_10_10__side_x2_5
-timestamp 1654307754
-transform 1 0 -1376 0 1 2116
-box -34 -374 1363 1368
+timestamp 1654661395
+transform 1 0 -981 0 1 1734
+box -356 -183 1172 1177
 use cap_10_10_edge_x2  cap_10_10_edge_x2_0
-timestamp 1654307754
-transform 0 -1 11807 1 0 -1363
-box -34 -29 1363 1368
+timestamp 1654657804
+transform 1 0 -981 0 1 -986
+box -356 -351 1172 1177
 use cap_10_10_edge_x2  cap_10_10_edge_x2_1
-timestamp 1654307754
-transform 1 0 -1376 0 1 -1368
-box -34 -29 1363 1368
+timestamp 1654657804
+transform 0 -1 9528 1 0 -981
+box -356 -351 1172 1177
 use cap_10_10_edge_x2  cap_10_10_edge_x2_2
-timestamp 1654307754
-transform -1 0 11802 0 -1 4852
-box -34 -29 1363 1368
+timestamp 1654657804
+transform -1 0 9523 0 -1 4088
+box -356 -351 1172 1177
 use cap_10_10_edge_x2  cap_10_10_edge_x2_3
-timestamp 1654307754
-transform 0 1 -1381 -1 0 4847
-box -34 -29 1363 1368
+timestamp 1654657804
+transform 0 1 -986 -1 0 4083
+box -356 -351 1172 1177
 use cap_10_10_x2  cap_10_10_x2_0
-array 0 5 1742 0 1 1742
-timestamp 1654307754
-transform 1 0 366 0 1 374
-box -379 -374 1363 1368
+array 0 5 1360 0 1 1360
+timestamp 1654656429
+transform 1 0 379 0 1 374
+box -188 -183 1172 1177
 << end >>
