@@ -40,18 +40,20 @@ set ::env(FILL_INSERTION) 1
 # for using standard cells
 set ::env(SYNTH_NO_FLAT) 0
 #set ::env(SYNTH_STRATEGY) "DELAY 0"
-set ::env(SYNTH_STRATEGY) "AREA 1"
+set ::env(SYNTH_STRATEGY) "AREA 0"
 #set ::env(ROUTING_CORES) 8
-set ::env(FP_SIZING) absolute
 
+set ::env(FP_SIZING) absolute
+set ::env(DIE_AREA) "0 0 400 300"
 #set ::env(DIE_AREA) "0 0 300 250"
 # congestion
-#set ::env(DIE_AREA) "0 0 400 250"
+#set ::env(DIE_AREA) "0 0 400 350"
 # pass without pin config
 #set ::env(DIE_AREA) "0 0 400 300"
 # congestion
 
-set ::env(DIE_AREA) "0 0 500 500"
+#set ::env(DIE_AREA) "0 0 500 500"
+#fails
 
 #set ::env(DIE_AREA) "0 0 300 200"
 # fail: congestion too high
