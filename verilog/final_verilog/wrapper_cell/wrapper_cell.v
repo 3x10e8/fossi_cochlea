@@ -1,19 +1,50 @@
-
+`define FLAT_UNISON // skip outputting clk_master, rstb, and ud_en ports
 `timescale 1ns/1ps
-//`include "../final_verilog_dv_includes.v"
+
+/*
+`define RUN_DV // if running dv locally
+`ifdef RUN_DV
+	`include "../final_verilog_dv_includes.v"
+`endif
+*/
 
 module wrapper_cell(
-	input rstb,clk_master,ud_en, //ud_en is common for all the cores and unisons.
-	input comp_high_I,comp_high_Q,clkdiv2, 
-	input phi1b_dig_I, phi1b_dig_Q, 
+	// global inputs
+	input rstb,ud_en, //ud_en is common for all the cores and unisons.
+
+	// unison inputs
+	input clk_master,
+
+	// inputs from previous digital core
+	input clkdiv2, // this is just div2out_I of previous core (div2out_I=div2out_Q)
 	input [9:0]gray_clk_in,
 	input [2:0]no_ones_below_in,
-	output wire div2out,sin_out,cos_out,sin_outb,cos_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
-	output wire [2:0]no_ones_below_out,
+
+	// inputs from analog
+	input comp_high_I, comp_high_Q, 
+	input phi1b_dig_I, phi1b_dig_Q, 
+
+	//outputs to analog
+	output wire cos_out, sin_out,
+	output wire cos_outb, sin_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
+	output wire fb1_I, fb1_Q,
+	output wire fb2_I, fb2_Q,
+	output wire clkdiv2_I, clkdiv2_Q, // shorted to input clkdiv2 (hasn't been divided yet)
+	output wire cclk_I, cclk_Q,
+
+	// outputs to next digital core
+	output wire div2out,
 	output wire [10:1]gray_clk_out,
-	output wire fb2_I,fb2_Q,fb1_Q,fb1_I,cclk_I,cclk_Q,
-	output wire [1:0]read_out_I,read_out_Q, //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
-	output wire rstb_out,clk_master_out,ud_en_out);
+	output wire [2:0]no_ones_below_out,
+
+	// unison outputs
+	output wire [1:0]read_out_I, read_out_Q //fb1_I:fb_I+ve, fb2_I=fb_I-ve 
+
+	`ifndef FLAT_UNISON // make more ports for manual switching
+		, output wire rstb_out,clk_master_out,ud_en_out
+	`endif
+	);
+
 	wire q_sine;								//read_out_I[0]=out_mux_eve
 	wire comp_out_I,comp_out_Q,eve_I,eve_Q,polxevent_I,polxevent_Q;
 	wire gray_clk_out_0;
@@ -98,11 +129,16 @@ module wrapper_cell(
 	assign fb2_Q=fb1_Q; //fb2_I is the inverted feedback for the -ve part of the loop.
 	assign sin_outb=sin_out; //fb1_I is the actual feedback for the +ve part of the loop
 	assign cos_outb=cos_out;
-
-	assign ud_en_out=ud_en;
-	assign clk_master_out=clk_master;
-	assign rstb_out=rstb;
 	assign cclk_Q=cclk_I;
+	assign clkdiv2_I=clkdiv2;
+	assign clkdiv2_Q=clkdiv2;
+	
+	`ifndef FLAT_UNISON
+		assign ud_en_out=ud_en;
+		assign clk_master_out=clk_master;
+		assign rstb_out=rstb;
+	`endif
+
 endmodule
 
 

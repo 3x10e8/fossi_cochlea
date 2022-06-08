@@ -1,117 +1,136 @@
 `timescale 1ns/1ps
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rst_dff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_dff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/asyn_rstb_tff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/buffer.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/dlrtn.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff_n.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/edge_ff.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/fb.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/gray_selector_fb.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/inv_buffer.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/mux_2_1.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/tbuf.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/feedback/u_d_bin_counter.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_1.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_2.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_3.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_4.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_5.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_6.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_7.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/final readout/ro_block_8.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/LO/lo.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/cclk/cclk_gen.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/dig_div2/dig_div2.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/dig_evegen/dig_evegen.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/edge_ff_gray.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_first_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_sine_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/gray_tree_cell.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/gray_tree/peripheral_gray.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/wrapper_first/wrapper_first.v"
-`include "/Volumes/export/isn/ishan/verilog/final_verilog/wrapper_cell/wrapper_cell.v"
+//`include "../final_verilog_dv_includes.v"
 
-module digital_unison(
-	input rstb,clk_master,ud_en,//phi1b_dig[0] is corresponding to the first wrapper
-	input [7:0]phi1b_dig, //more of these will be required for unison's testbench.	
-	input [7:0]comp_high_I,comp_high_Q,				
-	output wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk,
-	output wire [1:0]read_out_I,read_out_Q,
-	output wire div2out_7,
-	output wire [2:0]no_ones_below_out_7,
-	output wire [10:1]gray_clk_out_7,
-	output wire rstb_out_7,ud_en_out_7,clk_master_out_7);
-	wire [6:0]div2out;
-	wire [2:0]no_ones_below_out[0:6];
-	wire [10:1]gray_clk_out[0:6]; //these will be common among all as they need to be shorted.
-	wire [6:0]rstb_out,ud_en_out,clk_master_out;//[0] index corresponds to the output of first wrapper and [1] index to that of second wrapper.
+`define RUN_DV // if running dv locally
+`ifdef RUN_DV
+	`include "../final_verilog_dv_includes.v"
+`endif
+
+
+
+module digital_unison #(parameter NUM_CORES=8)
+(
+	// global inputs from RISC (must level shift vccd2->vccd1)
+	input rstb, ud_en,//phi1b_dig[0] is corresponding to the first wrapper
+
+	// unison specific inputs from RISC
+	input clk_master,
+
+	// inputs from analog, one per I/Q wavelet core in unison
+	input [NUM_CORES-1:0] comp_high_I, comp_high_Q,	
+	input [NUM_CORES-1:0] phi1b_dig_I, phi1b_dig_Q, //more of these will be required for unison's testbench.	
 	
+	// outputs to analog
+	output wire [NUM_CORES-1:0] clkdiv2_I, clkdiv2_Q,
+	output wire [NUM_CORES-1:0] cclk_I, cclk_Q,
+	output wire [NUM_CORES-1:0] fb1_I, fb1_Q,
+	output wire [NUM_CORES-1:0] fb2_I, fb2_Q, // feedback to -ve side must be inverted in analog
+	output wire [NUM_CORES-1:0] cos_out, sin_out,
+	output wire [NUM_CORES-1:0] cos_outb, sin_outb, // must be inverted in analog
 
+	// unison outputs
+	output wire [1:0] read_out_I, read_out_Q
+);
+
+wire [NUM_CORES-1:0]div2out;
+wire [2:0]no_ones_below_out[0:NUM_CORES-1];
+wire [10:1]gray_clk_out[0:NUM_CORES-1]; //these will be common among all as they need to be shorted.
+//wire [6:0]rstb_out,ud_en_out,clk_master_out;//[0] index corresponds to the output of first wrapper and [1] index to that of second wrapper.
+	
 wrapper_first w0(
-	
 	.rstb(rstb),
-	.clk_master(clk_master),
-	.phi1b_dig(phi1b_dig[0]),
 	.ud_en(ud_en),
+	.clk_master(clk_master),
+
+	// to LO mux
+	.cos_out(cos_out[0]),
+	.cos_outb(cos_outb[0]),
+	.sin_out(sin_out[0]),
+	.sin_outb(sin_outb[0]),
+
+ 	// to phi clk gen
+	.clkdiv2_I(clkdiv2_I[0]),
+	.clkdiv2_Q(clkdiv2_Q[0]),
+	.cclk_I(cclk_I[0]),
+	.cclk_Q(cclk_Q[0]),
+
+	// from comparator
 	.comp_high_I(comp_high_I[0]),
 	.comp_high_Q(comp_high_Q[0]),
-	.div2out(div2out[0]),
-	.sin_out(sin_out[0]),
-	.cos_out(cos_out[0]),
-	.sin_outb(sin_outb[0]),
-	.cos_outb(cos_outb[0]),
-	.fb2_I(fb2_I[0]),
-	.fb2_Q(fb2_Q[0]),
+	.phi1b_dig_I(phi1b_dig_I[0]),
+	.phi1b_dig_Q(phi1b_dig_Q[0]),
+
+	// to feedback cap
 	.fb1_I(fb1_I[0]),
+	.fb2_I(fb2_I[0]),
 	.fb1_Q(fb1_Q[0]),
-	.no_ones_below_out(no_ones_below_out[0]),//
+	.fb2_Q(fb2_Q[0]),
+
+	// to next digital core
+	.div2out(div2out[0]),
 	.gray_clk(gray_clk_out[0]),
+	.no_ones_below_out(no_ones_below_out[0]),//
+
+	// shared unison output
 	.read_out_I(read_out_I[1:0]),
-	.read_out_Q(read_out_Q[1:0]),
-	.rstb_out(rstb_out[0]),
-	.ud_en_out(ud_en_out[0]),
-	.cclk(cclk[0]),
-	.clk_master_out(clk_master_out[0]));
+	.read_out_Q(read_out_Q[1:0])
+	
+	//.rstb_out(rstb_out[0]),
+	//.ud_en_out(ud_en_out[0]),
+	//.clk_master_out(clk_master_out[0])
+);
 
 genvar j;
-generate for(j=0;j<=5;j=j+1)begin:wrapper_cell_loop
+generate for(j=0; j<=NUM_CORES-2; j=j+1)begin:wrapper_cell_loop
 wrapper_cell w1(
 	
-	.rstb(rstb_out[j]),
-	.clk_master(clk_master_out[j]),
-	.phi1b_dig(phi1b_dig[j+1]),
-	.ud_en(ud_en_out[j]),
-	.comp_high_I(comp_high_I[j+1]),
-	.comp_high_Q(comp_high_Q[j+1]),
-	.clkdiv2(div2out[j]),
+	//.rstb(rstb_out[j]),
+	//.ud_en(ud_en_out[j]),
+	.rstb(rstb),
+	.ud_en(ud_en),
+	//.clk_master(clk_master_out[j]),
+	.clk_master(clk_master),
+
+	.clkdiv2(div2out[j]), // this is from previous core
 	.gray_clk_in(gray_clk_out[j]), ////gray clk from wrapper_first
 	.no_ones_below_in(no_ones_below_out[j]),//
-	.div2out(div2out[j+1]),
+	
 	.sin_out(sin_out[j+1]),
 	.cos_out(cos_out[j+1]),
 	.sin_outb(sin_outb[j+1]),
 	.cos_outb(cos_outb[j+1]),
-	.fb2_I(fb2_I[j+1]),
-	.fb2_Q(fb2_Q[j+1]),
+
+	.clkdiv2_I(clkdiv2_I[j+1]), // this is clkdiv2 as inputted from previous core, outputting to analog
+	.clkdiv2_Q(clkdiv2_Q[j+1]),
+	.cclk_I(cclk_I[j+1]),
+	.cclk_Q(cclk_Q[j+1]),
+
+	.comp_high_I(comp_high_I[j+1]),
+	.comp_high_Q(comp_high_Q[j+1]),
+	.phi1b_dig_I(phi1b_dig_I[j+1]),
+	.phi1b_dig_Q(phi1b_dig_Q[j+1]),
+	
 	.fb1_I(fb1_I[j+1]),
+	.fb2_I(fb2_I[j+1]),
 	.fb1_Q(fb1_Q[j+1]),
-	.no_ones_below_out(no_ones_below_out[j+1]),//
+	.fb2_Q(fb2_Q[j+1]),
+
+	.div2out(div2out[j+1]),
 	.gray_clk_out(gray_clk_out[j+1]),//
+	.no_ones_below_out(no_ones_below_out[j+1]),//
+
 	.read_out_I(read_out_I[1:0]),
-	.read_out_Q(read_out_Q[1:0]),
-	.rstb_out(rstb_out[j+1]),
-	.ud_en_out(ud_en_out[j+1]),
-	.cclk(cclk[j+1]),
-	.clk_master_out(clk_master_out[j+1]));
+	.read_out_Q(read_out_Q[1:0])
+
+	//.rstb_out(rstb_out[j+1]),
+	//.ud_en_out(ud_en_out[j+1]),
+	//.clk_master_out(clk_master_out[j+1])
+);
 end
 endgenerate
 
+/*
 wrapper_cell w_last(
-
 	.rstb(rstb_out[6]),
 	.clk_master(clk_master_out[6]),
 	.phi1b_dig(phi1b_dig[7]),
@@ -138,6 +157,7 @@ wrapper_cell w_last(
 	.ud_en_out(ud_en_out_7),
 	.cclk(cclk[7]),
 	.clk_master_out(clk_master_out_7));
+*/
 endmodule
 
 //
@@ -163,37 +183,49 @@ module tb_digital_unison;
 	reg [7:0]phi1b_dig; //more of these will be required for unison's testbench.					
     wire [7:0]sin_out,cos_out,sin_outb,cos_outb,fb2_I,fb2_Q,fb1_Q,fb1_I,cclk;
 	wire [1:0]read_out_I,read_out_Q;
-	wire div2out_7;
-	wire [10:1]gray_clk_out_7;
-	wire [2:0]no_ones_below_out_7;
-	wire rstb_out_7,ud_en_out_7,clk_master_out_7;
+	//wire div2out_7;
+	//wire [10:1]gray_clk_out_7;
+	//wire [2:0]no_ones_below_out_7;
+	//wire rstb_out_7,ud_en_out_7,clk_master_out_7;
 	reg [7:0]input_signal_I, input_signal_Q, ref_I, ref_Q, input_lc_I, input_lc_Q, ref_lc_I, ref_lc_Q, clkdiv4;
 	wire [7:0]comp_high_int2_I, comp_high_int2_Q, comp_high_int_I, comp_high_int_Q, comp_high_I, comp_high_Q;
+	wire [7:0]clkdiv2_I, clkdiv2_Q;
 
 	digital_unison bank(
 		.rstb(rstb),
-		.clk_master(clk_master),
 		.ud_en(ud_en),
-		.phi1b_dig(phi1b_dig[7:0]),
-		.comp_high_I(comp_high_I[7:0]),
-		.comp_high_Q(comp_high_Q[7:0]),
+		.clk_master(clk_master),
+
 		.sin_out(sin_out[7:0]),
 		.cos_out(cos_out[7:0]),
 		.sin_outb(sin_outb[7:0]),
 		.cos_outb(cos_outb[7:0]),
+
+		.clkdiv2_I(clkdiv2_I[7:0]),
+		.clkdiv2_Q(clkdiv2_Q[7:0]),
+		.cclk_I(cclk[7:0]),
+		.cclk_Q(cclk[7:0]),
+		
+		.phi1b_dig_I(phi1b_dig[7:0]),
+		.phi1b_dig_Q(phi1b_dig[7:0]),
+		.comp_high_I(comp_high_I[7:0]),
+		.comp_high_Q(comp_high_Q[7:0]),
+		
 		.fb1_I(fb1_I[7:0]),
 		.fb1_Q(fb1_Q[7:0]),
 		.fb2_I(fb2_I[7:0]),
 		.fb2_Q(fb2_Q[7:0]),
+		
 		.read_out_I(read_out_I[1:0]),
-		.read_out_Q(read_out_Q[1:0]),
-		.div2out_7(div2out_7),
-		.no_ones_below_out_7(no_ones_below_out_7[2:0]),
-		.gray_clk_out_7(gray_clk_out_7[10:1]),
-		.rstb_out_7(rstb_out_7),
-		.ud_en_out_7(ud_en_out_7),
-		.cclk(cclk[7:0]),
-		.clk_master_out_7(clk_master_out_7));
+		.read_out_Q(read_out_Q[1:0])
+		
+		//.div2out_7(div2out_7),
+		//.no_ones_below_out_7(no_ones_below_out_7[2:0]),
+		//.gray_clk_out_7(gray_clk_out_7[10:1]),
+		//.rstb_out_7(rstb_out_7),
+		//.ud_en_out_7(ud_en_out_7),
+		//.clk_master_out_7(clk_master_out_7)
+	);
 
 	genvar i;
 	generate for(i=0; i<=7;i=i+1)begin:loop1
