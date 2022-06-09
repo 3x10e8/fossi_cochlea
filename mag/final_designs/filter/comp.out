@@ -4,7 +4,6 @@ Equate elements:  no current cell.
 Equate elements:  no current cell.
 Equate elements:  no current cell.
 Equate elements:  no current cell.
-Equate elements:  no current cell.
 Flattening unmatched subcell filter_clkgen_balanced_clks in circuit for_lvs.spice (1)(1 instance)
 Flattening unmatched subcell comp_clks in circuit for_lvs.spice (1)(3 instances)
 Flattening unmatched subcell transmission_gate in circuit for_lvs.spice (1)(3 instances)
@@ -30,890 +29,211 @@ sky130_fd_pr__cap_mim_m3_1 (120->14)       |sky130_fd_pr__cap_mim_m3_1 (120->14)
 sky130_fd_pr__cap_mim_m3_2 (112->6)        |sky130_fd_pr__cap_mim_m3_2 (112->6)        
 sky130_fd_pr__nfet_01v8_lvt (5)            |sky130_fd_pr__nfet_01v8_lvt (5)            
 sky130_fd_pr__nfet_03v3_nvt (2)            |sky130_fd_pr__nfet_03v3_nvt (2)            
-c (57)                                     |(no matching element)                      
-sky130_fd_sc_hd__buf_1 (4)                 |sky130_fd_sc_hd__buf_1 (4)                 
-**FLOATING (26)                            |(no matching element)                      
-Number of devices: 238 **Mismatch**        |Number of devices: 155 **Mismatch**        
-Number of nets: 84                         |Number of nets: 84                         
+Number of devices: 151                     |Number of devices: 151                     
+Number of nets: 76                         |Number of nets: 76                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: filter_p_m.spice                |Circuit 2: for_lvs.spice                   
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/cclkgen_0/inv_weak_pu |Net: filter_clkgen_balanced_clks:1/div2d   
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
-  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-Net: filter_clkgen_0/cclkgen_0/comp_clks_0 |Net: filter_clkgen_balanced_clks:1/comp_cl 
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
-  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-Net: filter_clkgen_0/cclkgen_0/comp_clks_0 |Net: filter_clkgen_balanced_clks:1/comp_cl 
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
-  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-Net: filter_clkgen_0/phigen_0/inv_weak_pul |Net: sin                                   
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
-                                           |                                           
-Net: filter_clkgen_0/phigen_1/inv_weak_pul |Net: sinb                                  
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
-                                           |                                           
-Net: filter_clkgen_0/VCCD                  |Net: cos                                   
-  sky130_fd_pr__pfet_01v8/(1|3) = 19       |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/4 = 52           |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/2 = 3            |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 4        |                                           
-  c/top = 8                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: VSUBS                                 |Net: cosb                                  
-  sky130_fd_pr__nfet_01v8/(1|3) = 21       |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/4 = 62           |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/2 = 5            |                                           
-  sky130_fd_pr__cap_mim_m3_1/2 = 12        |                                           
-  sky130_fd_pr__cap_mim_m3_2/1 = 4         |                                           
-  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 5    |                                           
-  sky130_fd_pr__nfet_01v8_lvt/4 = 5        |                                           
-  sky130_fd_pr__nfet_03v3_nvt/4 = 2        |                                           
-  c/bottom = 8                             |                                           
-  c/top = 7                                |                                           
-  sky130_fd_sc_hd__buf_1/2 = 4             |                                           
-                                           |                                           
-Net: filter_0/cmos_switch_1/out            |Net: VPWR                                  
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_sc_hd__buf_1/5 = 4             
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
-  c/top = 1                                |                                           
-                                           |                                           
-Net: filter_1/cmos_switch_1/out            |Net: vccd                                  
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |  sky130_fd_pr__pfet_01v8/4 = 4            
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
-  c/bottom = 1                             |                                           
-                                           |                                           
-Net: comparator_0/inp                      |Net: phi1b_ana                             
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_2/2 = 1         |                                           
-  sky130_fd_pr__nfet_03v3_nvt/2 = 1        |                                           
-  c/bottom = 1                             |                                           
-                                           |                                           
-Net: filter_1/cmos_switch_5/in             |Net: filter_clkgen_balanced_clks:1/net5    
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 1            
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__cap_mim_m3_2/2 = 1         |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
-  sky130_fd_pr__nfet_03v3_nvt/2 = 1        |                                           
-  c/top = 1                                |                                           
-                                           |                                           
-Net: filter_1/cclk                         |Net: comparator_single_tail:3/VDD          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 4        
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/4 = 6            
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  c/top = 5                                |                                           
-  c/bottom = 2                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/cclkb                        |Net: phi1_ana                              
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  c/bottom = 8                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/phi2                         |Net: vdda                                  
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 3            
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/4 = 52           
-  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__pfet_01v8/(1|3) = 19       
-  c/top = 6                                |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
-  c/bottom = 1                             |  sky130_fd_sc_hd__buf_1/4 = 4             
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_clkgen_0/phigen_1/inv_weak_pul |Net: GND                                   
-  sky130_fd_pr__pfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/4 = 62           
-  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 5            
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 21       
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__cap_mim_m3_1/2 = 12        
-  **FLOATING/top = 1                       |  sky130_fd_pr__cap_mim_m3_2/1 = 4         
-                                           |  sky130_fd_pr__nfet_03v3_nvt/4 = 2        
-                                           |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 5    
-                                           |  sky130_fd_pr__nfet_01v8_lvt/4 = 5        
-                                           |  sky130_fd_sc_hd__buf_1/2 = 4             
-                                           |  sky130_fd_sc_hd__buf_1/3 = 4             
-                                           |                                           
-Net: filter_1/phi1                         |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/2 = 8            |                                           
-  c/bottom = 3                             |                                           
-  c/top = 2                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_0/cmos_switch_7/in             |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 3        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 3        |                                           
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_2/2 = 1         |                                           
-  c/top = 1                                |                                           
-                                           |                                           
-Net: filter_1/analog_mux_0/vref2           |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |                                           
-  c/top = 3                                |                                           
-  c/bottom = 1                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_0/m1_20709_30449#              |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__cap_mim_m3_1/2 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_2/1 = 1         |                                           
-  c/top = 2                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_0/ctrlb                        |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  c/top = 4                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/cmos_switch_7/in             |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 3        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 3        |                                           
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_2/2 = 1         |                                           
-  c/bottom = 1                             |                                           
-                                           |                                           
-Net: filter_1/m1_20709_30449#              |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__cap_mim_m3_1/2 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_2/1 = 1         |                                           
-  c/bottom = 2                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/ctrlb                        |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  c/top = 3                                |                                           
-  c/bottom = 1                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/analog_mux_0/vref1           |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  c/bottom = 3                             |                                           
-  c/top = 3                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: m4_23124_2842#                        |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/(1|3) = 4        |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 4        |                                           
-  c/top = 1                                |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: m4_23124_3483#                        |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/(1|3) = 4        |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 4        |                                           
-  c/bottom = 1                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: m3_23090_28904#                       |(no matching net)                          
-  sky130_fd_pr__nfet_01v8_lvt/2 = 1        |                                           
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-                                           |                                           
-Net: comparator_0/phi1b                    |(no matching net)                          
-  sky130_fd_pr__nfet_01v8_lvt/2 = 2        |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: m1_23919_27997#                       |(no matching net)                          
-  **FLOATING/top = 1                       |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: filter_clkgen_balanced_clks:1/net6    
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
-                                           |                                           
-(no matching net)                          |Net: filter_clkgen_balanced_clks:1/net4    
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: filter_clkgen_balanced_clks:1/net7    
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
-                                           |                                           
-(no matching net)                          |Net: filter_clkgen_balanced_clks:1/net3    
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: div2                                  
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 1            
-                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-(no matching net)                          |Net: cc                                    
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 1            
-                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: comparator_0/tail                     |Net: comparator_single_tail:3/tail         
-  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
-  sky130_fd_pr__nfet_03v3_nvt/3 = 2        |  sky130_fd_pr__nfet_03v3_nvt/3 = 2        
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: phi1                                  
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 8            
-                                           |                                           
-(no matching net)                          |Net: phi2                                  
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 8            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: phi1b                                 
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
-                                           |                                           
-(no matching net)                          |Net: phi2b                                 
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/level_up_shifter_d_a_ |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_clkgen_0/level_up_shifter_d_a_ |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  **FLOATING/top = 1                       |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/level_up_shifter_d_a_ |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_clkgen_0/level_up_shifter_d_a_ |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  **FLOATING/top = 1                       |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/phigen_1/inv_weak_pul |Net: vpb                                   
-  sky130_fd_pr__pfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/phigen_0/inv_weak_pul |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  c/bottom = 1                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_clkgen_0/cclkgen_0/inv_weak_pu |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  c/bottom = 1                             |                                           
-  **FLOATING/top = 1                       |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/level_up_shifter_d_a_ |Net: filter_clkgen_balanced_clks:1/outb_al 
-  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
-  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_clkgen_0/phigen_1/inv_weak_pul |Net: vnb                                   
-  sky130_fd_pr__nfet_01v8/2 = 4            |  sky130_fd_pr__nfet_01v8/2 = 4            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: 0                                     |(no matching net)                          
-  **FLOATING/bottom = 26                   |                                           
-  c/bottom = 2                             |                                           
-                                           |                                           
-Net: filter_clkgen_0/VDD1                  |(no matching net)                          
-  sky130_fd_pr__pfet_01v8/4 = 10           |                                           
-  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 6        |                                           
-  c/top = 4                                |                                           
-  c/bottom = 2                             |                                           
-  sky130_fd_sc_hd__buf_1/3 = 4             |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: filter_1/phi1b                        |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
-  c/bottom = 6                             |                                           
-  **FLOATING/top = 1                       |                                           
-                                           |                                           
-Net: filter_1/phi2b                        |(no matching net)                          
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
-  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
-  c/top = 2                                |                                           
-  c/bottom = 4                             |                                           
-  **FLOATING/top = 1                       |                                           
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: filter_p_m.spice                |Circuit 2: for_lvs.spice                   
-
----------------------------------------------------------------------------------------
-Instance: c:0                              |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 16                              |                                           
-                                           |                                           
-Instance: c:1                              |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 6                               |                                           
-                                           |                                           
-Instance: c:3                              |(no matching instance)                     
-  top = 10                                 |                                           
-  bottom = 135                             |                                           
-                                           |                                           
-Instance: c:4                              |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 11                              |                                           
-                                           |                                           
-Instance: c:7                              |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 135                             |                                           
-                                           |                                           
-Instance: c:10                             |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 18                              |                                           
-                                           |                                           
-Instance: c:11                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:12                             |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:13                             |(no matching instance)                     
-  top = 135                                |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:14                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 135                             |                                           
-                                           |                                           
-Instance: c:16                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:17                             |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 14                              |                                           
-                                           |                                           
-Instance: c:22                             |(no matching instance)                     
-  top = 135                                |                                           
-  bottom = 6                               |                                           
-                                           |                                           
-Instance: c:23                             |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 16                              |                                           
-                                           |                                           
-Instance: c:26                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 11                              |                                           
-                                           |                                           
-Instance: c:27                             |(no matching instance)                     
-  top = 6                                  |                                           
-  bottom = 135                             |                                           
-                                           |                                           
-Instance: c:29                             |(no matching instance)                     
-  top = 11                                 |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:31                             |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 135                             |                                           
-                                           |                                           
-Instance: c:37                             |(no matching instance)                     
-  top = 6                                  |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:40                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 11                              |                                           
-                                           |                                           
-Instance: c:45                             |(no matching instance)                     
-  top = 135                                |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:46                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 14                              |                                           
-                                           |                                           
-Instance: c:47                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:48                             |(no matching instance)                     
-  top = 135                                |                                           
-  bottom = 10                              |                                           
-                                           |                                           
-Instance: c:52                             |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:53                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:2                              |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:20                             |(no matching instance)                     
-  top = 11                                 |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:21                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:36                             |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:39                             |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:41                             |(no matching instance)                     
-  top = 11                                 |                                           
-  bottom = 9                               |                                           
-                                           |                                           
-Instance: c:5                              |(no matching instance)                     
-  top = 17                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:6                              |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:8                              |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:15                             |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:19                             |(no matching instance)                     
-  top = 16                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:30                             |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:34                             |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:44                             |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:50                             |(no matching instance)                     
-  top = 16                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:24                             |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: c:51                             |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: c:66                             |(no matching instance)                     
-  top = 135                                |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: c:38                             |(no matching instance)                     
-  top = 17                                 |                                           
-  bottom = 15                              |                                           
-                                           |                                           
-Instance: c:49                             |(no matching instance)                     
-  top = 28                                 |                                           
-  bottom = 17                              |                                           
-                                           |                                           
-Instance: c:57                             |(no matching instance)                     
-  top = 28                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:55                    |(no matching instance)                     
-  top = 1                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:56                    |(no matching instance)                     
-  top = 3                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:59                    |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:60                    |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:61                    |(no matching instance)                     
-  top = 10                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:62                    |(no matching instance)                     
-  top = 10                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:64                    |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:65                    |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:67                    |(no matching instance)                     
-  top = 9                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:68                    |(no matching instance)                     
-  top = 11                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:69                    |(no matching instance)                     
-  top = 14                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:70                    |(no matching instance)                     
-  top = 15                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:71                    |(no matching instance)                     
-  top = 18                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:73                    |(no matching instance)                     
-  top = 16                                 |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:78                    |(no matching instance)                     
-  top = 7                                  |                                           
-  bottom = 28                              |                                           
-                                           |                                           
-Instance: **FLOATING:82                    |(no matching instance)                     
-  top = 87                                 |                                           
-  bottom = 28                              |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__cap_mim_m3_2:152   |(no matching instance)                     
-  1 = 135                                  |                                           
-  2 = 9                                    |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_2:223   |(no matching instance)                     
-  1 = 9                                    |                                           
-  2 = 6                                    |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_2:296   |(no matching instance)                     
-  1 = 135                                  |                                           
-  2 = 9                                    |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_2:367   |(no matching instance)                     
-  1 = 9                                    |                                           
-  2 = 6                                    |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__cap_mim_m3_1:151   |(no matching instance)                     
-  1 = 9                                    |                                           
-  2 = 135                                  |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_1:221   |(no matching instance)                     
-  1 = 6                                    |                                           
-  2 = 135                                  |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_1:222   |(no matching instance)                     
-  1 = 6                                    |                                           
-  2 = 9                                    |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_1:295   |(no matching instance)                     
-  1 = 9                                    |                                           
-  2 = 135                                  |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_1:365   |(no matching instance)                     
-  1 = 6                                    |                                           
-  2 = 135                                  |                                           
-                                           |                                           
-Instance: sky130_fd_pr__cap_mim_m3_1:366   |(no matching instance)                     
-  1 = 6                                    |                                           
-  2 = 9                                    |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__nfet_01v8:291      |Instance: analogMux:8/sky130_fd_pr__nfet_0 
-  (1,3) = (11,9)                           |  (1,3) = (8,6)                            
-  2 = 14                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:289      |Instance: analogMux:8/sky130_fd_pr__nfet_0 
-  (1,3) = (9,9)                            |  (1,3) = (8,6)                            
-  2 = 15                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:280      |Instance: analogMux:5/sky130_fd_pr__nfet_0 
-  (1,3) = (9,6)                            |  (1,3) = (8,6)                            
-  2 = 18                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:147      |Instance: analogMux:5/sky130_fd_pr__nfet_0 
-  (1,3) = (11,9)                           |  (1,3) = (8,6)                            
-  2 = 14                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:145      |Instance: analogMux:7/sky130_fd_pr__nfet_0 
-  (1,3) = (9,9)                            |  (1,3) = (8,4)                            
-  2 = 15                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:136      |Instance: analogMux:7/sky130_fd_pr__nfet_0 
-  (1,3) = (9,6)                            |  (1,3) = (8,4)                            
-  2 = 18                                   |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:15       |Instance: analogMux:6/sky130_fd_pr__nfet_0 
-  (1,3) = (135,15)                         |  (1,3) = (8,4)                            
-  2 = 4                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:12       |Instance: analogMux:6/sky130_fd_pr__nfet_0 
-  (1,3) = (135,14)                         |  (1,3) = (8,4)                            
-  2 = 4                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:388      |Instance: analogMux:4/sky130_fd_pr__nfet_0 
-  (1,3) = (10,6)                           |  (1,3) = (6,4)                            
-  2 = 9                                    |  2 = 6                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:278      |Instance: analogMux:4/sky130_fd_pr__nfet_0 
-  (1,3) = (6,6)                            |  (1,3) = (6,4)                            
-  2 = 16                                   |  2 = 6                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:242      |Instance: analogMux:2/sky130_fd_pr__nfet_0 
-  (1,3) = (10,6)                           |  (1,3) = (6,4)                            
-  2 = 9                                    |  2 = 6                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:134      |Instance: analogMux:2/sky130_fd_pr__nfet_0 
-  (1,3) = (6,6)                            |  (1,3) = (6,4)                            
-  2 = 16                                   |  2 = 6                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:102      |Instance: filter_clkgen_balanced_clks:1/le 
-  (1,3) = (87,4)                           |  (1,3) = (82,6)                           
-  2 = 5                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:101      |Instance: filter_clkgen_balanced_clks:1/le 
-  (1,3) = (135,4)                          |  (1,3) = (124,6)                          
-  2 = 5                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:62       |Instance: filter_clkgen_balanced_clks:1/le 
-  (1,3) = (87,7)                           |  (1,3) = (124,6)                          
-  2 = 5                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-Instance: sky130_fd_pr__nfet_01v8:61       |Instance: filter_clkgen_balanced_clks:1/le 
-  (1,3) = (135,7)                          |  (1,3) = (82,6)                           
-  2 = 5                                    |  2 = 4                                    
-  4 = 135                                  |  4 = 124                                  
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (124,4)                          
-                                           |  2 = 4                                    
-                                           |  4 = 124                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 8                                    
-                                           |  4 = 124                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (124,4)                          
-                                           |  2 = 4                                    
-                                           |  4 = 124                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 8                                    
-                                           |  4 = 124                                  
-                                           |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__pfet_01v8:292      |Instance: analogMux:8/sky130_fd_pr__pfet_0 
-  (1,3) = (9,9)                            |  (1,3) = (8,6)                            
-  2 = 14                                   |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:290      |Instance: analogMux:8/sky130_fd_pr__pfet_0 
-  (1,3) = (11,9)                           |  (1,3) = (8,6)                            
-  2 = 15                                   |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:148      |Instance: analogMux:5/sky130_fd_pr__pfet_0 
-  (1,3) = (9,9)                            |  (1,3) = (8,6)                            
-  2 = 14                                   |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:146      |Instance: analogMux:5/sky130_fd_pr__pfet_0 
-  (1,3) = (11,9)                           |  (1,3) = (8,6)                            
-  2 = 15                                   |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:36       |Instance: analogMux:7/sky130_fd_pr__pfet_0 
-  (1,3) = (87,4)                           |  (1,3) = (8,4)                            
-  2 = 7                                    |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:16       |Instance: analogMux:7/sky130_fd_pr__pfet_0 
-  (1,3) = (87,15)                          |  (1,3) = (8,4)                            
-  2 = 4                                    |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:13       |Instance: analogMux:6/sky130_fd_pr__pfet_0 
-  (1,3) = (87,14)                          |  (1,3) = (8,4)                            
-  2 = 4                                    |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:124      |Instance: analogMux:6/sky130_fd_pr__pfet_0 
-  (1,3) = (87,4)                           |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:114      |Instance: analogMux:4/sky130_fd_pr__pfet_0 
-  (1,3) = (87,8)                           |  (1,3) = (6,4)                            
-  2 = 4                                    |  2 = 6                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:84       |Instance: analogMux:4/sky130_fd_pr__pfet_0 
-  (1,3) = (87,7)                           |  (1,3) = (6,4)                            
-  2 = 8                                    |  2 = 6                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:18       |Instance: analogMux:2/sky130_fd_pr__pfet_0 
-  (1,3) = (87,4)                           |  (1,3) = (6,4)                            
-  2 = 8                                    |  2 = 6                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:0        |Instance: analogMux:2/sky130_fd_pr__pfet_0 
-  (1,3) = (87,4)                           |  (1,3) = (6,4)                            
-  2 = 8                                    |  2 = 6                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-Instance: sky130_fd_pr__pfet_01v8:74       |Instance: filter_clkgen_balanced_clks:1/le 
-  (1,3) = (87,8)                           |  (1,3) = (82,6)                           
-  2 = 7                                    |  2 = 4                                    
-  4 = 87                                   |  4 = 82                                   
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/le 
-                                           |  (1,3) = (82,4)                           
-                                           |  2 = 6                                    
-                                           |  4 = 82                                   
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (8,4)                            
-                                           |  2 = 4                                    
-                                           |  4 = 8                                    
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 124                                  
-                                           |  4 = 8                                    
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/in 
-                                           |  (1,3) = (82,4)                           
-                                           |  2 = 6                                    
-                                           |  4 = 82                                   
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (8,4)                            
-                                           |  2 = 4                                    
-                                           |  4 = 8                                    
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: filter_clkgen_balanced_clks:1/co 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 124                                  
-                                           |  4 = 8                                    
-                                           |                                           
----------------------------------------------------------------------------------------
-Netlists do not match.
-Netlists do not match.
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match with 57 symmetries.
+Circuits match correctly.
+There were property errors.
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+ ps circuit1: "0"   (unresolved expression)  (property type mismatch)
+ as circuit1: "0"   (unresolved expression)  (property type mismatch)
+ pd circuit1: "0"   (unresolved expression)  (property type mismatch)
+ ad circuit1: "0"   (unresolved expression)  (property type mismatch)
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property mult in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property sd in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property sb in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property sa in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property nrs in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property nrd in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:428 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M12:
+Property nf in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+ ps circuit1: "0"   (unresolved expression)  (property type mismatch)
+ as circuit1: "0"   (unresolved expression)  (property type mismatch)
+ pd circuit1: "0"   (unresolved expression)  (property type mismatch)
+ ad circuit1: "0"   (unresolved expression)  (property type mismatch)
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property mult in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property sd in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property sb in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property sa in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property nrs in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property nrd in circuit2 has no matching property in circuit1
+sky130_fd_pr__nfet_03v3_nvt:432 vs. comparator_single_tail:3/sky130_fd_pr__nfet_03v3_nvt:M13:
+Property nf in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:152 vs. sky130_fd_pr__cap_mim_m3_2:C2:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:296 vs. sky130_fd_pr__cap_mim_m3_2:C12:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:247 vs. sky130_fd_pr__cap_mim_m3_2:C4:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:391 vs. sky130_fd_pr__cap_mim_m3_2:C14:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:223 vs. sky130_fd_pr__cap_mim_m3_2:C6:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_2:367 vs. sky130_fd_pr__cap_mim_m3_2:C16:
+Property VM in circuit2 has no matching property in circuit1
+sky130_fd_pr__cap_mim_m3_1:365 vs. sky130_fd_pr__cap_mim_m3_1:C17:
+ w circuit1: 6.7   circuit2: 6   (delta=11%, cutoff=1%)
+ l circuit1: 6   circuit2: 6.7   (delta=11%, cutoff=1%)
+sky130_fd_pr__cap_mim_m3_1:221 vs. sky130_fd_pr__cap_mim_m3_1:C7:
+ w circuit1: 6.7   circuit2: 6   (delta=11%, cutoff=1%)
+ l circuit1: 6   circuit2: 6.7   (delta=11%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:51 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:4/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:48 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:2/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:33 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:4/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:30 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:2/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:27 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:1/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:45 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:1/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:9 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:1/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:97 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:11/inv:1/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:57 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:1/inv:1/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:15 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:4/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:12 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:2/sky130_fd_pr__nfet_01v8:M1:
+ w circuit1: 0.42   circuit2: 1   (delta=81.7%, cutoff=7%)
+sky130_fd_pr__nfet_01v8:149 vs. tg:20/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:293 vs. tg:21/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:287 vs. tg:22/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:143 vs. tg:19/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:141 vs. tg:18/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:285 vs. tg:23/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:278 vs. tg:26/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:134 vs. tg:15/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:359 vs. tg:27/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:215 vs. tg:13/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:217 vs. tg:14/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:361 vs. tg:28/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:282 vs. tg:24/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:138 vs. tg:17/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:136 vs. tg:16/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:280 vs. tg:25/sky130_fd_pr__nfet_01v8:M1:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:52 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:4/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:49 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:2/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:34 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:4/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:31 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:2/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:24 vs. filter_clkgen_balanced_clks:1/comp_clks:4/transmission_gate:3/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 1.26   circuit2: 1.68   (delta=28.6%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:42 vs. filter_clkgen_balanced_clks:1/comp_clks:7/transmission_gate:3/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 1.26   circuit2: 1.68   (delta=28.6%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:6 vs. filter_clkgen_balanced_clks:1/comp_clks:10/transmission_gate:3/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 1.26   circuit2: 1.68   (delta=28.6%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:39 vs. filter_clkgen_balanced_clks:1/inv_weak_pullup:6/sky130_fd_pr__pfet_01v8:M3:
+ l circuit1: 0.54   circuit2: 0.18   (delta=100%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:21 vs. filter_clkgen_balanced_clks:1/inv_weak_pullup:3/sky130_fd_pr__pfet_01v8:M3:
+ l circuit1: 0.54   circuit2: 0.18   (delta=100%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:94 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:11/transmission_gate:3/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 1.26   circuit2: 1.68   (delta=28.6%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:54 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:1/transmission_gate:3/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 1.26   circuit2: 1.68   (delta=28.6%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:98 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:11/inv:1/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:58 vs. filter_clkgen_balanced_clks:1/comp_clks_1stage:1/inv:1/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:28 vs. filter_clkgen_balanced_clks:1/comp_clks:4/inv:1/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:46 vs. filter_clkgen_balanced_clks:1/comp_clks:7/inv:1/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:10 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:1/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:16 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:4/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:13 vs. filter_clkgen_balanced_clks:1/comp_clks:10/inv:2/sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.63   circuit2: 3   (delta=131%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:150 vs. tg:20/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:294 vs. tg:21/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:288 vs. tg:22/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:144 vs. tg:19/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:142 vs. tg:18/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:286 vs. tg:23/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:279 vs. tg:26/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:135 vs. tg:15/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:360 vs. tg:27/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:216 vs. tg:13/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:218 vs. tg:14/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:362 vs. tg:28/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:283 vs. tg:24/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:139 vs. tg:17/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:137 vs. tg:16/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+sky130_fd_pr__pfet_01v8:281 vs. tg:25/sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.15   circuit2: 0.18   (delta=18.2%, cutoff=1%)
+ w circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=7%)
+Cells have no pins;  pin matching not needed.
+Device classes filter_p_m.spice and for_lvs.spice are equivalent.
+Circuits match uniquely.
+Property errors were found.
+The following cells had property errors:
+ filter_p_m.spice

@@ -73,8 +73,6 @@ N 420 270 600 270 {
 lab=#net2}
 N 1070 400 1110 400 {
 lab=low_buff}
-N 1060 310 1100 310 {
-lab=#net6}
 C {devices/netlist.sym} 40 -430 0 0 {name=SPICE2 only_toplevel=false value="
 .lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
@@ -117,7 +115,7 @@ C {devices/lab_pin.sym} 600 60 2 0 {name=l22 sig_type=std_logic lab=pfete}
 C {devices/lab_pin.sym} 380 60 2 1 {name=l23 sig_type=std_logic lab=pfetw}
 C {devices/lab_pin.sym} 380 -60 3 1 {name=l24 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} 1080 -180 3 1 {name=l26 sig_type=std_logic lab=vccd}
-C {devices/lab_pin.sym} 130 -230 3 1 {name=l1 sig_type=std_logic lab=vccd}
+C {devices/lab_pin.sym} 130 -230 0 1 {name=l1 sig_type=std_logic lab=vccd}
 C {devices/gnd.sym} 290 330 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 680 330 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 1180 170 0 0 {name=l6 lab=GND}
@@ -132,9 +130,6 @@ C {devices/vsource.sym} 1080 -150 0 0 {name=Vmain value=0}
 C {devices/vsource.sym} 380 -30 0 0 {name=Vlatch value=0}
 C {devices/vsource.sym} 380 220 0 0 {name=Vhigh value=0}
 C {devices/vsource.sym} 600 220 0 0 {name=Vlow value=0}
-C {sky130_stdcells/dfxtp_1.sym} 1190 300 0 0 {name=x1 VGND=GND VNB=GND VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1100 290 2 1 {name=l25 sig_type=std_logic lab=phi1b}
-C {devices/lab_pin.sym} 1280 290 0 1 {name=l27 sig_type=std_logic lab=latch_high}
 C {sky130_fd_pr/pfet_01v8.sym} 360 90 0 0 {name=M6
 L=0.15
 W=1
@@ -219,8 +214,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_stdcells/buf_1.sym} 940 310 0 0 {name=x6 VGND=gnd VNB=gnd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_1.sym} 950 400 0 0 {name=x3 VGND=gnd VNB=gnd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 940 310 0 0 {name=x6 VGND=gnd VNB=gnd VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 900 310 0 0 {name=l30 sig_type=std_logic lab=high}
 C {devices/lab_pin.sym} 910 400 0 0 {name=l4 sig_type=std_logic lab=low}
 C {devices/lab_pin.sym} 1110 400 0 1 {name=l31 sig_type=std_logic lab=low_buff}
@@ -327,5 +321,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_stdcells/buf_1.sym} 1020 310 0 0 {name=x2 VGND=gnd VNB=gnd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_1.sym} 1030 400 0 0 {name=x4 VGND=gnd VNB=gnd VPB=vccd VPWR=vccd prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 1060 310 0 1 {name=l25 sig_type=std_logic lab=high_buff}
+C {sky130_stdcells/buf_1.sym} 1020 310 0 0 {name=x1 VGND=gnd VNB=gnd VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 950 400 0 0 {name=x2 VGND=gnd VNB=gnd VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 1030 400 0 0 {name=x3 VGND=gnd VNB=gnd VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }

@@ -135,13 +135,9 @@ lab=inm}
 N -450 -150 -360 -150 {
 lab=inm}
 N 2080 -70 2310 -70 {
-lab=#net19}
-N 2310 -180 2310 -70 {
-lab=#net19}
+lab=high}
 N 2080 -50 2310 -50 {
-lab=#net20}
-N 2310 -50 2310 -20 {
-lab=#net20}
+lab=low}
 C {clkgen/filter_clkgen_balanced_clks.sym} 50 -570 0 0 {name=x1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 540 -50 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=32 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 710 -50 2 0 {name=C2 model=cap_mim_m3_2 W=10 L=10 MF=32 spiceprefix=X}
@@ -243,24 +239,15 @@ C {devices/lab_pin.sym} -320 -270 2 0 {name=l70 sig_type=std_logic lab=sin}
 C {devices/lab_pin.sym} -320 -120 2 0 {name=l71 sig_type=std_logic lab=sin}
 C {devices/lab_pin.sym} -320 -170 2 0 {name=l72 sig_type=std_logic lab=sinb}
 C {devices/lab_pin.sym} -320 -20 2 0 {name=l73 sig_type=std_logic lab=sinb}
-C {devices/lab_pin.sym} -320 110 2 0 {name=l74 sig_type=std_logic lab=cos}
-C {devices/lab_pin.sym} -320 260 2 0 {name=l75 sig_type=std_logic lab=cos}
-C {devices/lab_pin.sym} -320 360 2 0 {name=l76 sig_type=std_logic lab=cosb}
-C {devices/lab_pin.sym} -320 210 2 0 {name=l77 sig_type=std_logic lab=cosb}
 C {devices/lab_pin.sym} 70 -670 2 0 {name=l78 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 30 -670 0 0 {name=l79 sig_type=std_logic lab=vccd}
-C {sky130_stdcells/buf_1.sym} 2350 -180 0 0 {name=x9 VGND=GND VNB=GND VPB=vdda vdda=vdda prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 2470 -180 0 1 {name=l80 sig_type=std_logic lab=high}
-C {devices/lab_pin.sym} 2470 -20 0 1 {name=l81 sig_type=std_logic lab=low}
-C {sky130_stdcells/buf_1.sym} 2430 -180 0 0 {name=x10 VGND=GND VNB=GND VPB=vdda vdda=vdda prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_1.sym} 2350 -20 0 0 {name=x11 VGND=GND VNB=GND VPB=vdda vdda=vdda prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_1.sym} 2430 -20 0 0 {name=x12 VGND=GND VNB=GND VPB=vdda vdda=vdda prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 2310 -70 0 1 {name=l80 sig_type=std_logic lab=high}
+C {devices/lab_pin.sym} 2310 -50 0 1 {name=l81 sig_type=std_logic lab=low}
 C {devices/lab_pin.sym} 2050 -10 1 1 {name=l82 sig_type=std_logic lab=phi1b_ana}
 C {devices/lab_pin.sym} 2050 -110 0 1 {name=l83 sig_type=std_logic lab=phi1_ana}
 C {devices/gnd.sym} 2010 -10 0 0 {name=l84 lab=GND}
-C {devices/lab_pin.sym} 2010 -110 0 0 {name=l85 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} 260 -290 0 0 {name=l86 sig_type=std_logic lab=fb}
-C {devices/lab_pin.sym} 270 180 0 0 {name=l87 sig_type=std_logic lab=fb_inv}
+C {devices/lab_pin.sym} 270 180 0 0 {name=l86 sig_type=std_logic lab=fb}
+C {devices/lab_pin.sym} 260 -290 0 0 {name=l87 sig_type=std_logic lab=fb_inv}
 C {devices/lab_pin.sym} -400 -190 0 0 {name=l88 sig_type=std_logic lab=inp}
 C {devices/lab_pin.sym} -450 -50 0 0 {name=l89 sig_type=std_logic lab=inm}
 C {devices/lab_pin.sym} 1600 50 0 0 {name=l90 sig_type=std_logic lab=vdda}
@@ -319,3 +306,8 @@ C {transmission_gate/tg.sym} 420 390 0 0 {name=x25 Wpmos=0.42 Lpmos=0.18 Wnmos=0
 C {transmission_gate/tg.sym} 240 390 0 0 {name=x26 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/tg.sym} 320 180 0 0 {name=x27 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {transmission_gate/tg.sym} 530 180 0 0 {name=x28 Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
+C {devices/lab_pin.sym} -320 110 2 0 {name=l74 sig_type=std_logic lab=sin}
+C {devices/lab_pin.sym} -320 210 2 0 {name=l77 sig_type=std_logic lab=sinb}
+C {devices/lab_pin.sym} -320 260 2 0 {name=l75 sig_type=std_logic lab=sin}
+C {devices/lab_pin.sym} -320 360 2 0 {name=l76 sig_type=std_logic lab=sinb}
+C {devices/lab_pin.sym} 2010 -110 0 0 {name=l85 sig_type=std_logic lab=vccd}

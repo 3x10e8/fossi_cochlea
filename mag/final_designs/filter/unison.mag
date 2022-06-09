@@ -1,0 +1,13 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1654748254
+use unison_side_1  unison_side_1_0
+timestamp 1654748254
+transform 1 0 -22 0 1 -14
+box 0 0 443111 35463
+use unison_side_1  unison_side_1_1
+timestamp 1654748254
+transform 1 0 -22 0 -1 152912
+box 0 0 443111 35463
+<< end >>

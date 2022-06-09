@@ -1,4 +1,4 @@
-timestamp 1654684153
+timestamp 1654685434
 version 8.3
 tech sky130A
 style ngspice()
@@ -13,12 +13,12 @@ node "phib" 356 106.199 -12 319 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "w_n94_162#" 1852 1585.85 -94 162 nw 0 0 0 0 46872 894 0 0 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7922 534 6656 464 112464 6620 0 0 0 0 0 0 0 0
 substrate "a_92_10#" 0 0 92 10 ppd 0 0 0 0 0 0 0 0 0 0 4872 284 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5610 398 3712 244 3328 232 0 0 0 0 0 0 0 0
 cap "phi" "phib" 173.339
-cap "out" "w_n94_162#" 240.073
+cap "w_n94_162#" "in" 36.8526
 cap "phi" "w_n94_162#" 102.446
-cap "out" "phi" 183.528
-cap "in" "w_n94_162#" 36.8526
 cap "out" "in" 288.222
-cap "phi" "in" 248.543
+cap "out" "phi" 183.528
 cap "phib" "w_n94_162#" 155.347
+cap "phi" "in" 248.543
+cap "out" "w_n94_162#" 240.073
 device msubckt sky130_fd_pr__nfet_01v8 0 10 1 11 l=30 w=84 "a_92_10#" "phi" 60 0 "in" 84 0 "out" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 0 199 1 200 l=30 w=84 "w_n94_162#" "phib" 60 0 "in" 84 0 "out" 84 0

@@ -1,0 +1,38 @@
+timestamp 1654734827
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inv_weak_pulldown_corrected inv_weak_pulldown_corrected_1 1 0 920 0 1 128
+use inv_weak_pulldown_corrected inv_weak_pulldown_corrected_0 1 0 276 0 1 128
+use comp_clks comp_clks_0 1 0 1288 0 1 544
+node "m2_515_458#" 1 128.135 515 458 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10906 650 0 0 0 0 0 0 0 0
+node "m1_1022_922#" 2 233.015 1022 922 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17238 1082 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "inv_weak_pulldown_corrected_1/a_n177_50#" "inv_weak_pulldown_corrected_1/in" 13.4442
+cap "inv_weak_pulldown_corrected_1/a_30_590#" "comp_clks_0/tg_0/out" 11.1851
+cap "inv_weak_pulldown_corrected_1/li_n276_n97#" "inv_weak_pulldown_corrected_1/a_30_590#" 18.5198
+cap "inv_weak_pulldown_corrected_1/a_30_590#" "inv_weak_pulldown_corrected_1/w_n204_554#" -2.44446
+cap "inv_weak_pulldown_corrected_1/li_n276_n97#" "inv_weak_pulldown_corrected_1/in" 1.77636e-14
+cap "inv_weak_pulldown_corrected_1/w_n204_554#" "inv_weak_pulldown_corrected_1/in" 20.3472
+cap "inv_weak_pulldown_corrected_1/a_30_590#" "comp_clks_0/inverter_0/out" 0.665025
+cap "inv_weak_pulldown_corrected_0/in" "inv_weak_pulldown_corrected_1/in" -1.77636e-15
+cap "inv_weak_pulldown_corrected_1/a_n177_50#" "inv_weak_pulldown_corrected_1/a_30_590#" 61.4675
+cap "comp_clks_0/tg_0/out" "comp_clks_0/tg_0/inp" 11.1851
+cap "comp_clks_0/inverter_0/out" "comp_clks_0/tg_0/inp" 20.6507
+cap "inv_weak_pulldown_corrected_1/a_n177_50#" "comp_clks_0/tg_0/inp" 5.29725
+cap "inv_weak_pulldown_corrected_1/li_n276_n97#" "comp_clks_0/tg_0/inp" 4.37986
+cap "inv_weak_pulldown_corrected_1/w_n204_554#" "comp_clks_0/tg_0/inp" -80.6911
+merge "comp_clks_0/VSUBS" "comp_clks_0/tg_0/clk_" -96.0888 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3808 -136 10752 -384 0 0 0 0 0 0 0 0 0 0
+merge "comp_clks_0/tg_0/clk_" "inv_weak_pulldown_corrected_0/a_n177_50#"
+merge "inv_weak_pulldown_corrected_0/a_n177_50#" "inv_weak_pulldown_corrected_1/a_n177_50#"
+merge "inv_weak_pulldown_corrected_1/a_n177_50#" "VSUBS"
+merge "comp_clks_0/tg_0/inp" "inv_weak_pulldown_corrected_1/a_30_590#" 205.752 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12527 -164 0 0 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_corrected_1/a_30_590#" "m1_1022_922#"
+merge "comp_clks_0/inverter_0/w_n204_204#" "inv_weak_pulldown_corrected_0/w_n204_554#" -36.8438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3808 -136 10752 -384 0 0 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_corrected_0/w_n204_554#" "inv_weak_pulldown_corrected_1/w_n204_554#"
+merge "inv_weak_pulldown_corrected_0/a_30_590#" "inv_weak_pulldown_corrected_1/in" -39.0727 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1596 -236 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_corrected_1/in" "m2_515_458#"
+merge "comp_clks_0/tg_0/clk" "inv_weak_pulldown_corrected_0/li_n276_n97#" 51.7162 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3808 -136 10752 -384 0 0 0 0 0 0 0 0 0 0
+merge "inv_weak_pulldown_corrected_0/li_n276_n97#" "inv_weak_pulldown_corrected_1/li_n276_n97#"

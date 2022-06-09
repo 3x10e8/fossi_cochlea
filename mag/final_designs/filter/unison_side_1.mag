@@ -1,0 +1,37 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1654748254
+<< metal3 >>
+rect 438134 30886 438234 35463
+rect 439797 30786 439897 32863
+rect 438126 30686 439897 30786
+rect 438044 30486 442644 30586
+rect 438095 29549 443111 29650
+rect 438067 29358 439671 29458
+rect 439571 27758 439671 29358
+<< metal4 >>
+rect 439684 1161 439882 4979
+rect 438126 963 439882 1161
+rect 438125 320 442937 518
+use filter_p_m  filter_p_m_0
+array 0 8 48682 0 0 34550
+timestamp 1654748254
+transform 1 0 303 0 1 0
+box -303 0 48379 34550
+<< labels >>
+flabel metal4 440224 320 442937 518 0 FreeSans 1600 0 0 0 audio_in_m
+port 3 nsew
+flabel metal4 439684 1161 439882 4979 0 FreeSans 1600 0 0 0 audio_in_p
+port 5 nsew
+flabel metal3 439571 27758 439671 29358 0 FreeSans 1600 0 0 0 vdda
+port 6 nsew
+flabel metal3 439735 29549 443111 29650 0 FreeSans 1600 0 0 0 vssa
+port 8 nsew
+flabel metal3 438171 30486 442644 30586 0 FreeSans 1600 0 0 0 thresh1
+port 10 nsew
+flabel metal3 439797 30786 439897 32863 0 FreeSans 1600 0 0 0 thresh2
+port 11 nsew
+flabel metal3 438134 30987 438234 35463 0 FreeSans 1600 0 0 0 vccd
+port 12 nsew
+<< end >>
