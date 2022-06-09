@@ -2,7 +2,7 @@
 `timescale 1ns/1ps
 //`include "../.final_verilog_dv_includes.v"
 
-`define RUN_DV // if running dv locally
+//`define RUN_DV // if running dv locally
 `ifdef RUN_DV
 	`include "/Volumes/export/isn/ishan/fossi_cochlea/verilog/final_verilog/final_verilog_dv_includes.v"
 `endif
