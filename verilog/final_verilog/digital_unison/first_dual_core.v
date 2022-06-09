@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
-//`include "../final_verilog_dv_includes.v"
+//`include "../.final_verilog_dv_includes.v"
 
-//`define RUN_DV // if running dv locally
+`define RUN_DV // if running dv locally
 `ifdef RUN_DV
-	`include "../final_verilog_dv_includes.v"
+	//`include "/Volumes/export/isn/ishan/fossi_cochlea/verilog/final_verilog/final_verilog_dv_includes.v"
 `endif
 
 module first_dual_core (
@@ -129,7 +129,7 @@ assign read_out_I_top=read_out_I;
 assign read_out_Q_top=read_out_Q;
 
 endmodule
-
+/*
 `ifdef RUN_DV
 	////testbench
 	module and_gate(
@@ -485,3 +485,4 @@ endmodule
 	end
 	endmodule
 `endif
+*/

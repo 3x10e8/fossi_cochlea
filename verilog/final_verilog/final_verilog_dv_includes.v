@@ -34,3 +34,4 @@
 `include "../gray_tree/peripheral_gray.v"
 `include "../wrapper_first/wrapper_first.v"
 `include "../wrapper_cell/wrapper_cell.v"
+`include "../digital_unison/first_dual_core.v"
