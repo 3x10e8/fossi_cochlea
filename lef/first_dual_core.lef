@@ -6,13 +6,13 @@ MACRO first_dual_core
   CLASS BLOCK ;
   FOREIGN first_dual_core ;
   ORIGIN 0.000 0.000 ;
-  SIZE 400.000 BY 300.000 ;
+  SIZE 400.000 BY 280.000 ;
   PIN cclk_I[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 102.040 4.000 102.640 ;
+        RECT 0.000 90.480 4.000 91.080 ;
     END
   END cclk_I[0]
   PIN cclk_I[1]
@@ -20,7 +20,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 233.280 4.000 233.880 ;
+        RECT 0.000 205.400 4.000 206.000 ;
     END
   END cclk_I[1]
   PIN cclk_Q[0]
@@ -36,7 +36,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 148.960 400.000 149.560 ;
+        RECT 396.000 148.280 400.000 148.880 ;
     END
   END cclk_Q[1]
   PIN clk_master
@@ -44,7 +44,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 155.570 0.000 155.850 4.000 ;
+        RECT 174.890 0.000 175.170 4.000 ;
     END
   END clk_master
   PIN clk_master_out
@@ -52,7 +52,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 33.210 296.000 33.490 300.000 ;
+        RECT 30.910 276.000 31.190 280.000 ;
     END
   END clk_master_out
   PIN clkdiv2_I[0]
@@ -60,7 +60,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 83.680 4.000 84.280 ;
+        RECT 0.000 73.480 4.000 74.080 ;
     END
   END clkdiv2_I[0]
   PIN clkdiv2_I[1]
@@ -68,7 +68,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 214.920 4.000 215.520 ;
+        RECT 0.000 189.080 4.000 189.680 ;
     END
   END clkdiv2_I[1]
   PIN clkdiv2_Q[0]
@@ -84,7 +84,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 166.640 400.000 167.240 ;
+        RECT 396.000 165.280 400.000 165.880 ;
     END
   END clkdiv2_Q[1]
   PIN comp_high_I[0]
@@ -92,7 +92,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 64.640 4.000 65.240 ;
+        RECT 0.000 57.160 4.000 57.760 ;
     END
   END comp_high_I[0]
   PIN comp_high_I[1]
@@ -100,7 +100,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 195.880 4.000 196.480 ;
+        RECT 0.000 172.760 4.000 173.360 ;
     END
   END comp_high_I[1]
   PIN comp_high_Q[0]
@@ -116,7 +116,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 184.320 400.000 184.920 ;
+        RECT 396.000 182.960 400.000 183.560 ;
     END
   END comp_high_Q[1]
   PIN cos_out[0]
@@ -124,7 +124,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 121.080 4.000 121.680 ;
+        RECT 0.000 106.800 4.000 107.400 ;
     END
   END cos_out[0]
   PIN cos_out[1]
@@ -132,7 +132,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 252.320 4.000 252.920 ;
+        RECT 0.000 222.400 4.000 223.000 ;
     END
   END cos_out[1]
   PIN cos_outb[0]
@@ -140,7 +140,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 8.880 4.000 9.480 ;
+        RECT 0.000 8.200 4.000 8.800 ;
     END
   END cos_outb[0]
   PIN cos_outb[1]
@@ -148,7 +148,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 139.440 4.000 140.040 ;
+        RECT 0.000 123.120 4.000 123.720 ;
     END
   END cos_outb[1]
   PIN div2out
@@ -156,7 +156,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 77.830 296.000 78.110 300.000 ;
+        RECT 73.230 276.000 73.510 280.000 ;
     END
   END div2out
   PIN fb1_I[0]
@@ -164,7 +164,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 27.240 4.000 27.840 ;
+        RECT 0.000 24.520 4.000 25.120 ;
     END
   END fb1_I[0]
   PIN fb1_I[1]
@@ -172,7 +172,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 158.480 4.000 159.080 ;
+        RECT 0.000 139.440 4.000 140.040 ;
     END
   END fb1_I[1]
   PIN fb1_Q[0]
@@ -180,7 +180,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 95.920 400.000 96.520 ;
+        RECT 396.000 95.240 400.000 95.840 ;
     END
   END fb1_Q[0]
   PIN fb1_Q[1]
@@ -188,15 +188,15 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 219.680 400.000 220.280 ;
+        RECT 396.000 218.320 400.000 218.920 ;
     END
   END fb1_Q[1]
   PIN fb2_I[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met3 ;
-        RECT 396.000 290.400 400.000 291.000 ;
+      LAYER met2 ;
+        RECT 368.090 276.000 368.370 280.000 ;
     END
   END fb2_I[0]
   PIN fb2_I[1]
@@ -204,7 +204,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 333.130 0.000 333.410 4.000 ;
+        RECT 389.250 276.000 389.530 280.000 ;
     END
   END fb2_I[1]
   PIN fb2_Q[0]
@@ -212,15 +212,15 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 388.790 296.000 389.070 300.000 ;
+        RECT 374.990 0.000 375.270 4.000 ;
     END
   END fb2_Q[0]
   PIN fb2_Q[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met2 ;
-        RECT 377.750 0.000 378.030 4.000 ;
+      LAYER met3 ;
+        RECT 0.000 271.360 4.000 271.960 ;
     END
   END fb2_Q[1]
   PIN gray_clk_out[10]
@@ -228,7 +228,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 300.010 296.000 300.290 300.000 ;
+        RECT 283.910 276.000 284.190 280.000 ;
     END
   END gray_clk_out[10]
   PIN gray_clk_out[1]
@@ -236,7 +236,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 99.910 296.000 100.190 300.000 ;
+        RECT 94.390 276.000 94.670 280.000 ;
     END
   END gray_clk_out[1]
   PIN gray_clk_out[2]
@@ -244,7 +244,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 121.990 296.000 122.270 300.000 ;
+        RECT 115.090 276.000 115.370 280.000 ;
     END
   END gray_clk_out[2]
   PIN gray_clk_out[3]
@@ -252,7 +252,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 144.530 296.000 144.810 300.000 ;
+        RECT 136.250 276.000 136.530 280.000 ;
     END
   END gray_clk_out[3]
   PIN gray_clk_out[4]
@@ -260,7 +260,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 166.610 296.000 166.890 300.000 ;
+        RECT 157.410 276.000 157.690 280.000 ;
     END
   END gray_clk_out[4]
   PIN gray_clk_out[5]
@@ -268,7 +268,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 188.690 296.000 188.970 300.000 ;
+        RECT 178.570 276.000 178.850 280.000 ;
     END
   END gray_clk_out[5]
   PIN gray_clk_out[6]
@@ -276,7 +276,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 211.230 296.000 211.510 300.000 ;
+        RECT 199.730 276.000 200.010 280.000 ;
     END
   END gray_clk_out[6]
   PIN gray_clk_out[7]
@@ -284,7 +284,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 233.310 296.000 233.590 300.000 ;
+        RECT 220.430 276.000 220.710 280.000 ;
     END
   END gray_clk_out[7]
   PIN gray_clk_out[8]
@@ -292,7 +292,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 255.390 296.000 255.670 300.000 ;
+        RECT 241.590 276.000 241.870 280.000 ;
     END
   END gray_clk_out[8]
   PIN gray_clk_out[9]
@@ -300,7 +300,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 277.930 296.000 278.210 300.000 ;
+        RECT 262.750 276.000 263.030 280.000 ;
     END
   END gray_clk_out[9]
   PIN no_ones_below_out[0]
@@ -308,7 +308,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 322.090 296.000 322.370 300.000 ;
+        RECT 305.070 276.000 305.350 280.000 ;
     END
   END no_ones_below_out[0]
   PIN no_ones_below_out[1]
@@ -316,7 +316,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 344.630 296.000 344.910 300.000 ;
+        RECT 325.770 276.000 326.050 280.000 ;
     END
   END no_ones_below_out[1]
   PIN no_ones_below_out[2]
@@ -324,7 +324,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 366.710 296.000 366.990 300.000 ;
+        RECT 346.930 276.000 347.210 280.000 ;
     END
   END no_ones_below_out[2]
   PIN phi1b_dig_I[0]
@@ -332,7 +332,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 46.280 4.000 46.880 ;
+        RECT 0.000 40.840 4.000 41.440 ;
     END
   END phi1b_dig_I[0]
   PIN phi1b_dig_I[1]
@@ -340,7 +340,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 177.520 4.000 178.120 ;
+        RECT 0.000 156.440 4.000 157.040 ;
     END
   END phi1b_dig_I[1]
   PIN phi1b_dig_Q[0]
@@ -356,7 +356,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 202.000 400.000 202.600 ;
+        RECT 396.000 200.640 400.000 201.240 ;
     END
   END phi1b_dig_Q[1]
   PIN read_out_I[0]
@@ -364,7 +364,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 22.170 0.000 22.450 4.000 ;
+        RECT 24.930 0.000 25.210 4.000 ;
     END
   END read_out_I[0]
   PIN read_out_I[1]
@@ -372,7 +372,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 66.330 0.000 66.610 4.000 ;
+        RECT 74.610 0.000 74.890 4.000 ;
     END
   END read_out_I[1]
   PIN read_out_I_top[0]
@@ -380,7 +380,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 270.680 4.000 271.280 ;
+        RECT 0.000 238.720 4.000 239.320 ;
     END
   END read_out_I_top[0]
   PIN read_out_I_top[1]
@@ -388,7 +388,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 289.720 4.000 290.320 ;
+        RECT 0.000 255.040 4.000 255.640 ;
     END
   END read_out_I_top[1]
   PIN read_out_Q[0]
@@ -396,7 +396,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 288.970 0.000 289.250 4.000 ;
+        RECT 324.850 0.000 325.130 4.000 ;
     END
   END read_out_Q[0]
   PIN read_out_Q[1]
@@ -404,7 +404,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 244.350 0.000 244.630 4.000 ;
+        RECT 274.710 0.000 274.990 4.000 ;
     END
   END read_out_Q[1]
   PIN read_out_Q_top[0]
@@ -412,7 +412,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 255.040 400.000 255.640 ;
+        RECT 396.000 253.000 400.000 253.600 ;
     END
   END read_out_Q_top[0]
   PIN read_out_Q_top[1]
@@ -420,7 +420,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 272.720 400.000 273.320 ;
+        RECT 396.000 270.680 400.000 271.280 ;
     END
   END read_out_Q_top[1]
   PIN rstb
@@ -428,7 +428,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 110.950 0.000 111.230 4.000 ;
+        RECT 124.750 0.000 125.030 4.000 ;
     END
   END rstb
   PIN rstb_out
@@ -436,7 +436,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 11.130 296.000 11.410 300.000 ;
+        RECT 10.210 276.000 10.490 280.000 ;
     END
   END rstb_out
   PIN sin_out[0]
@@ -452,7 +452,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 131.280 400.000 131.880 ;
+        RECT 396.000 130.600 400.000 131.200 ;
     END
   END sin_out[1]
   PIN sin_outb[0]
@@ -460,7 +460,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 113.600 400.000 114.200 ;
+        RECT 396.000 112.920 400.000 113.520 ;
     END
   END sin_outb[0]
   PIN sin_outb[1]
@@ -468,7 +468,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 396.000 237.360 400.000 237.960 ;
+        RECT 396.000 235.320 400.000 235.920 ;
     END
   END sin_outb[1]
   PIN ud_en
@@ -476,7 +476,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 199.730 0.000 200.010 4.000 ;
+        RECT 225.030 0.000 225.310 4.000 ;
     END
   END ud_en
   PIN ud_en_out
@@ -484,7 +484,7 @@ MACRO first_dual_core
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 55.290 296.000 55.570 300.000 ;
+        RECT 52.070 276.000 52.350 280.000 ;
     END
   END ud_en_out
   PIN vccd1
@@ -492,15 +492,15 @@ MACRO first_dual_core
     USE POWER ;
     PORT
       LAYER met4 ;
-        RECT 21.040 10.640 22.640 288.560 ;
+        RECT 21.040 10.640 22.640 266.800 ;
     END
     PORT
       LAYER met4 ;
-        RECT 174.640 10.640 176.240 288.560 ;
+        RECT 174.640 10.640 176.240 266.800 ;
     END
     PORT
       LAYER met4 ;
-        RECT 328.240 10.640 329.840 288.560 ;
+        RECT 328.240 10.640 329.840 266.800 ;
     END
   END vccd1
   PIN vssd1
@@ -508,124 +508,123 @@ MACRO first_dual_core
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 97.840 10.640 99.440 288.560 ;
+        RECT 97.840 10.640 99.440 266.800 ;
     END
     PORT
       LAYER met4 ;
-        RECT 251.440 10.640 253.040 288.560 ;
+        RECT 251.440 10.640 253.040 266.800 ;
     END
   END vssd1
   OBS
       LAYER li1 ;
-        RECT 5.520 10.795 394.220 288.405 ;
+        RECT 5.520 10.795 394.220 266.645 ;
       LAYER met1 ;
-        RECT 5.520 10.640 396.910 296.440 ;
+        RECT 5.520 6.160 395.070 278.420 ;
       LAYER met2 ;
-        RECT 6.990 295.720 10.850 299.045 ;
-        RECT 11.690 295.720 32.930 299.045 ;
-        RECT 33.770 295.720 55.010 299.045 ;
-        RECT 55.850 295.720 77.550 299.045 ;
-        RECT 78.390 295.720 99.630 299.045 ;
-        RECT 100.470 295.720 121.710 299.045 ;
-        RECT 122.550 295.720 144.250 299.045 ;
-        RECT 145.090 295.720 166.330 299.045 ;
-        RECT 167.170 295.720 188.410 299.045 ;
-        RECT 189.250 295.720 210.950 299.045 ;
-        RECT 211.790 295.720 233.030 299.045 ;
-        RECT 233.870 295.720 255.110 299.045 ;
-        RECT 255.950 295.720 277.650 299.045 ;
-        RECT 278.490 295.720 299.730 299.045 ;
-        RECT 300.570 295.720 321.810 299.045 ;
-        RECT 322.650 295.720 344.350 299.045 ;
-        RECT 345.190 295.720 366.430 299.045 ;
-        RECT 367.270 295.720 388.510 299.045 ;
-        RECT 389.350 295.720 396.880 299.045 ;
-        RECT 6.990 4.280 396.880 295.720 ;
-        RECT 6.990 4.000 21.890 4.280 ;
-        RECT 22.730 4.000 66.050 4.280 ;
-        RECT 66.890 4.000 110.670 4.280 ;
-        RECT 111.510 4.000 155.290 4.280 ;
-        RECT 156.130 4.000 199.450 4.280 ;
-        RECT 200.290 4.000 244.070 4.280 ;
-        RECT 244.910 4.000 288.690 4.280 ;
-        RECT 289.530 4.000 332.850 4.280 ;
-        RECT 333.690 4.000 377.470 4.280 ;
-        RECT 378.310 4.000 396.880 4.280 ;
+        RECT 6.990 275.720 9.930 279.325 ;
+        RECT 10.770 275.720 30.630 279.325 ;
+        RECT 31.470 275.720 51.790 279.325 ;
+        RECT 52.630 275.720 72.950 279.325 ;
+        RECT 73.790 275.720 94.110 279.325 ;
+        RECT 94.950 275.720 114.810 279.325 ;
+        RECT 115.650 275.720 135.970 279.325 ;
+        RECT 136.810 275.720 157.130 279.325 ;
+        RECT 157.970 275.720 178.290 279.325 ;
+        RECT 179.130 275.720 199.450 279.325 ;
+        RECT 200.290 275.720 220.150 279.325 ;
+        RECT 220.990 275.720 241.310 279.325 ;
+        RECT 242.150 275.720 262.470 279.325 ;
+        RECT 263.310 275.720 283.630 279.325 ;
+        RECT 284.470 275.720 304.790 279.325 ;
+        RECT 305.630 275.720 325.490 279.325 ;
+        RECT 326.330 275.720 346.650 279.325 ;
+        RECT 347.490 275.720 367.810 279.325 ;
+        RECT 368.650 275.720 388.970 279.325 ;
+        RECT 389.810 275.720 395.510 279.325 ;
+        RECT 6.990 4.280 395.510 275.720 ;
+        RECT 6.990 3.670 24.650 4.280 ;
+        RECT 25.490 3.670 74.330 4.280 ;
+        RECT 75.170 3.670 124.470 4.280 ;
+        RECT 125.310 3.670 174.610 4.280 ;
+        RECT 175.450 3.670 224.750 4.280 ;
+        RECT 225.590 3.670 274.430 4.280 ;
+        RECT 275.270 3.670 324.570 4.280 ;
+        RECT 325.410 3.670 374.710 4.280 ;
+        RECT 375.550 3.670 395.510 4.280 ;
       LAYER met3 ;
-        RECT 4.000 291.400 396.000 299.700 ;
-        RECT 4.000 290.720 395.600 291.400 ;
-        RECT 4.400 290.000 395.600 290.720 ;
-        RECT 4.400 289.320 396.000 290.000 ;
-        RECT 4.000 273.720 396.000 289.320 ;
-        RECT 4.000 272.320 395.600 273.720 ;
-        RECT 4.000 271.680 396.000 272.320 ;
-        RECT 4.400 270.280 396.000 271.680 ;
+        RECT 4.000 272.360 396.000 279.980 ;
+        RECT 4.400 271.680 396.000 272.360 ;
+        RECT 4.400 270.960 395.600 271.680 ;
+        RECT 4.000 270.280 395.600 270.960 ;
         RECT 4.000 256.040 396.000 270.280 ;
-        RECT 4.000 254.640 395.600 256.040 ;
-        RECT 4.000 253.320 396.000 254.640 ;
-        RECT 4.400 251.920 396.000 253.320 ;
-        RECT 4.000 238.360 396.000 251.920 ;
-        RECT 4.000 236.960 395.600 238.360 ;
-        RECT 4.000 234.280 396.000 236.960 ;
-        RECT 4.400 232.880 396.000 234.280 ;
-        RECT 4.000 220.680 396.000 232.880 ;
-        RECT 4.000 219.280 395.600 220.680 ;
-        RECT 4.000 215.920 396.000 219.280 ;
-        RECT 4.400 214.520 396.000 215.920 ;
-        RECT 4.000 203.000 396.000 214.520 ;
-        RECT 4.000 201.600 395.600 203.000 ;
-        RECT 4.000 196.880 396.000 201.600 ;
-        RECT 4.400 195.480 396.000 196.880 ;
-        RECT 4.000 185.320 396.000 195.480 ;
-        RECT 4.000 183.920 395.600 185.320 ;
-        RECT 4.000 178.520 396.000 183.920 ;
-        RECT 4.400 177.120 396.000 178.520 ;
-        RECT 4.000 167.640 396.000 177.120 ;
-        RECT 4.000 166.240 395.600 167.640 ;
-        RECT 4.000 159.480 396.000 166.240 ;
-        RECT 4.400 158.080 396.000 159.480 ;
-        RECT 4.000 149.960 396.000 158.080 ;
-        RECT 4.000 148.560 395.600 149.960 ;
-        RECT 4.000 140.440 396.000 148.560 ;
+        RECT 4.400 254.640 396.000 256.040 ;
+        RECT 4.000 254.000 396.000 254.640 ;
+        RECT 4.000 252.600 395.600 254.000 ;
+        RECT 4.000 239.720 396.000 252.600 ;
+        RECT 4.400 238.320 396.000 239.720 ;
+        RECT 4.000 236.320 396.000 238.320 ;
+        RECT 4.000 234.920 395.600 236.320 ;
+        RECT 4.000 223.400 396.000 234.920 ;
+        RECT 4.400 222.000 396.000 223.400 ;
+        RECT 4.000 219.320 396.000 222.000 ;
+        RECT 4.000 217.920 395.600 219.320 ;
+        RECT 4.000 206.400 396.000 217.920 ;
+        RECT 4.400 205.000 396.000 206.400 ;
+        RECT 4.000 201.640 396.000 205.000 ;
+        RECT 4.000 200.240 395.600 201.640 ;
+        RECT 4.000 190.080 396.000 200.240 ;
+        RECT 4.400 188.680 396.000 190.080 ;
+        RECT 4.000 183.960 396.000 188.680 ;
+        RECT 4.000 182.560 395.600 183.960 ;
+        RECT 4.000 173.760 396.000 182.560 ;
+        RECT 4.400 172.360 396.000 173.760 ;
+        RECT 4.000 166.280 396.000 172.360 ;
+        RECT 4.000 164.880 395.600 166.280 ;
+        RECT 4.000 157.440 396.000 164.880 ;
+        RECT 4.400 156.040 396.000 157.440 ;
+        RECT 4.000 149.280 396.000 156.040 ;
+        RECT 4.000 147.880 395.600 149.280 ;
+        RECT 4.000 140.440 396.000 147.880 ;
         RECT 4.400 139.040 396.000 140.440 ;
-        RECT 4.000 132.280 396.000 139.040 ;
-        RECT 4.000 130.880 395.600 132.280 ;
-        RECT 4.000 122.080 396.000 130.880 ;
-        RECT 4.400 120.680 396.000 122.080 ;
-        RECT 4.000 114.600 396.000 120.680 ;
-        RECT 4.000 113.200 395.600 114.600 ;
-        RECT 4.000 103.040 396.000 113.200 ;
-        RECT 4.400 101.640 396.000 103.040 ;
-        RECT 4.000 96.920 396.000 101.640 ;
-        RECT 4.000 95.520 395.600 96.920 ;
-        RECT 4.000 84.680 396.000 95.520 ;
-        RECT 4.400 83.280 396.000 84.680 ;
-        RECT 4.000 79.240 396.000 83.280 ;
+        RECT 4.000 131.600 396.000 139.040 ;
+        RECT 4.000 130.200 395.600 131.600 ;
+        RECT 4.000 124.120 396.000 130.200 ;
+        RECT 4.400 122.720 396.000 124.120 ;
+        RECT 4.000 113.920 396.000 122.720 ;
+        RECT 4.000 112.520 395.600 113.920 ;
+        RECT 4.000 107.800 396.000 112.520 ;
+        RECT 4.400 106.400 396.000 107.800 ;
+        RECT 4.000 96.240 396.000 106.400 ;
+        RECT 4.000 94.840 395.600 96.240 ;
+        RECT 4.000 91.480 396.000 94.840 ;
+        RECT 4.400 90.080 396.000 91.480 ;
+        RECT 4.000 79.240 396.000 90.080 ;
         RECT 4.000 77.840 395.600 79.240 ;
-        RECT 4.000 65.640 396.000 77.840 ;
-        RECT 4.400 64.240 396.000 65.640 ;
-        RECT 4.000 61.560 396.000 64.240 ;
+        RECT 4.000 74.480 396.000 77.840 ;
+        RECT 4.400 73.080 396.000 74.480 ;
+        RECT 4.000 61.560 396.000 73.080 ;
         RECT 4.000 60.160 395.600 61.560 ;
-        RECT 4.000 47.280 396.000 60.160 ;
-        RECT 4.400 45.880 396.000 47.280 ;
-        RECT 4.000 43.880 396.000 45.880 ;
+        RECT 4.000 58.160 396.000 60.160 ;
+        RECT 4.400 56.760 396.000 58.160 ;
+        RECT 4.000 43.880 396.000 56.760 ;
         RECT 4.000 42.480 395.600 43.880 ;
-        RECT 4.000 28.240 396.000 42.480 ;
-        RECT 4.400 26.840 396.000 28.240 ;
-        RECT 4.000 26.200 396.000 26.840 ;
-        RECT 4.000 24.800 395.600 26.200 ;
-        RECT 4.000 9.880 396.000 24.800 ;
-        RECT 4.400 9.200 396.000 9.880 ;
-        RECT 4.400 8.480 395.600 9.200 ;
-        RECT 4.000 8.335 395.600 8.480 ;
+        RECT 4.000 41.840 396.000 42.480 ;
+        RECT 4.400 40.440 396.000 41.840 ;
+        RECT 4.000 26.200 396.000 40.440 ;
+        RECT 4.000 25.520 395.600 26.200 ;
+        RECT 4.400 24.800 395.600 25.520 ;
+        RECT 4.400 24.120 396.000 24.800 ;
+        RECT 4.000 9.200 396.000 24.120 ;
+        RECT 4.400 7.800 395.600 9.200 ;
+        RECT 4.000 7.660 396.000 7.800 ;
       LAYER met4 ;
-        RECT 40.775 288.960 382.425 299.705 ;
-        RECT 40.775 10.240 97.440 288.960 ;
-        RECT 99.840 10.240 174.240 288.960 ;
-        RECT 176.640 10.240 251.040 288.960 ;
-        RECT 253.440 10.240 327.840 288.960 ;
-        RECT 330.240 10.240 382.425 288.960 ;
-        RECT 40.775 9.695 382.425 10.240 ;
+        RECT 40.775 267.200 382.425 279.985 ;
+        RECT 40.775 10.240 97.440 267.200 ;
+        RECT 99.840 10.240 174.240 267.200 ;
+        RECT 176.640 10.240 251.040 267.200 ;
+        RECT 253.440 10.240 327.840 267.200 ;
+        RECT 330.240 10.240 382.425 267.200 ;
+        RECT 40.775 7.655 382.425 10.240 ;
   END
 END first_dual_core
 END LIBRARY

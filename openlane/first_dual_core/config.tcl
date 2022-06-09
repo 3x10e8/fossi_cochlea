@@ -44,7 +44,10 @@ set ::env(SYNTH_STRATEGY) "AREA 0"
 #set ::env(ROUTING_CORES) 8
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 400 300"
+set ::env(DIE_AREA) "0 0 400 280"
+#set ::env(DIE_AREA) "0 0 400 300"
+# pass
+
 #set ::env(DIE_AREA) "0 0 300 250"
 # congestion
 #set ::env(DIE_AREA) "0 0 400 350"
