@@ -1,11 +1,8 @@
-precheck_results
-**/.DS_Store
-precheck_results
+/.idea/
+/precheck_results/
+*/tmp
+*/*/tmp
 *.hex*
 *.lst
-**.vcd
-**.vvp
+*.vcd
 *.gtkw
-caravel/
-mgmt_core_wrapper/
-.DS_Store
