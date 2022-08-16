@@ -3,9 +3,9 @@
 //`include "../.final_verilog_dv_includes.v"
 
 //`define RUN_DV // if running dv locally
-`ifdef RUN_DV
-	`include "/Volumes/export/isn/ishan/fossi_cochlea/verilog/final_verilog/final_verilog_dv_includes.v"
-`endif
+//`ifdef RUN_DV
+//	`include "/Volumes/export/isn/ishan/fossi_cochlea/verilog/final_verilog/final_verilog_dv_includes.v"
+//`endif
 
 module scalable_dual_core (
 	// global inputs from RISC (must level shift vccd2->vccd1)
@@ -172,6 +172,7 @@ assign read_out_Q_top=read_out_Q;
 
 endmodule
 
+/*
 `ifdef RUN_DV
 	////testbench
 	module and_gate(
@@ -833,3 +834,4 @@ endmodule
 	end
 	endmodule
 `endif
+*/
