@@ -12,15 +12,15 @@ rect 351 268 677 311
 << metal2 >>
 rect 182 273 400 305
 rect 367 -47 400 273
-use inverter  inverter_0 ../inverter
+use inverter  inverter_0 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 276 0 1 128
 box -276 -128 368 512
-use inverter  inverter_1 ../inverter
+use inverter  inverter_1 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 828 0 1 128
 box -276 -128 368 512
-use inverter  inverter_2 ../inverter
+use inverter  inverter_2 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 828 0 -1 -32
 box -276 -128 368 512

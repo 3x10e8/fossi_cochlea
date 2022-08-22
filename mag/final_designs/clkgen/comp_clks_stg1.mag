@@ -5,7 +5,7 @@ timestamp 1654754240
 << metal2 >>
 rect 135 -52 169 274
 rect 135 -86 337 -52
-use inverter  inverter_0 ../inverter
+use inverter  inverter_0 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 276 0 1 128
 box -276 -128 368 512
