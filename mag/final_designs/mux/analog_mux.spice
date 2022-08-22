@@ -1,6 +1,0 @@
-* SPICE3 file created from analog_mux.ext - technology: sky130A
-
-X0 vref2 cclkb a_30_n10# a_256_n8# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X1 a_30_n10# cclkb vref1 w_n125_328# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X2 a_30_n10# cclk vref1 a_256_n8# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
-X3 vref2 cclk a_30_n10# w_n125_328# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u

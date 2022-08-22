@@ -1,5 +1,5 @@
 magic
-tech sky130A
+tech sky130B
 magscale 1 2
 timestamp 1654756920
 << nwell >>
@@ -748,7 +748,7 @@ rect 538 -247 4606 -237
 rect 538 -325 554 -247
 rect 754 -325 4606 -247
 rect 538 -337 4606 -325
-use inv_LV  inv_LV_0 ~/Documents/fossi_cochlea/mag/final_designs/comparator
+use inv_LV  inv_LV_0
 timestamp 1654748317
 transform -1 0 2252 0 1 34
 box 987 32 1294 652

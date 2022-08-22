@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -56,7 +56,7 @@ C {devices/vdd.sym} -230 -120 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} -230 50 0 0 {name=l2 lab=GND}
 C {devices/netlist.sym} -120 -460 0 0 {name=SPICE only_toplevel=false value="
 *.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt
-.lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
+*.lib /usr/local/lib/open_pdks/sky130/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .control
   tran 100u 1
   set gnuplot_terminal=png/quit
@@ -147,3 +147,10 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
+C {devices/code.sym} 380 -340 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

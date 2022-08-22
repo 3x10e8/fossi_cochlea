@@ -1,5 +1,5 @@
 magic
-tech sky130A
+tech sky130B
 magscale 1 2
 timestamp 1654754240
 << nwell >>
@@ -790,7 +790,7 @@ rect 1607 572 1681 574
 rect 1607 520 1618 572
 rect 1670 520 1681 572
 rect 1607 518 1681 520
-use comp_clks_stg1  comp_clks_stg1_0 ~/Documents/fossi_cochlea/mag/final_designs/clkgen
+use comp_clks_stg1  comp_clks_stg1_0 /local_disk/fossi_cochlea/mag/final_designs/clkgen
 timestamp 1654754240
 transform 1 0 402 0 -1 1138
 box 0 -544 644 640

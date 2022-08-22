@@ -1,0 +1,437 @@
+* SPICE3 file created from filter_p_m.ext - technology: sky130A
+
+X0 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/in filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X1 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50# filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X2 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/in filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/vnb filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=540000u
+X3 filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X4 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50# filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X5 filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/vnb filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=540000u
+X6 filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out VSUBS filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X7 filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp VSUBS filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X8 filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X9 filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X10 filter_clkgen_0/VCCD filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X11 filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/inp filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X12 filter_1/analog_mux_0/cclk filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X13 filter_clkgen_0/VCCD filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in filter_1/analog_mux_0/cclk filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X14 filter_1/analog_mux_0/cclk filter_clkgen_0/cclkgen_0/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X15 filter_1/analog_mux_0/cclkb filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X16 filter_clkgen_0/VCCD filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out filter_1/analog_mux_0/cclkb filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X17 filter_1/analog_mux_0/cclkb filter_clkgen_0/cclkgen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X18 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/inp filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X19 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/a_30_50# filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X20 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/inp filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/vnb filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/a_30_50# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=540000u
+X21 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/vpb filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/a_234_496# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=540000u
+X22 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/a_234_496# filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/inp filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X23 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/inp VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X24 filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out VSUBS filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X25 filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out VSUBS filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X26 filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X27 filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X28 filter_clkgen_0/VCCD filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X29 filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in filter_clkgen_0/phigen_0/inv_weak_pullup_corrected_0/out filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X30 filter_1/phi2 filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X31 filter_clkgen_0/VCCD filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in filter_1/phi2 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X32 filter_1/phi2 filter_clkgen_0/phigen_0/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X33 filter_1/phi2b filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X34 filter_clkgen_0/VCCD filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out filter_1/phi2b filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X35 filter_1/phi2b filter_clkgen_0/phigen_0/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X36 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/inp filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X37 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/a_30_50# filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X38 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/inp filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/vnb filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/a_30_50# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=540000u
+X39 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/vpb filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/a_234_496# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=540000u
+X40 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/a_234_496# filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/inp filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1.26e+06u l=180000u
+X41 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/inp VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X42 filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out VSUBS filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X43 filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out VSUBS filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X44 filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X45 filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X46 filter_clkgen_0/VCCD filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X47 filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in filter_clkgen_0/phigen_1/inv_weak_pullup_corrected_0/out filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X48 filter_1/phi1 filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X49 filter_clkgen_0/VCCD filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in filter_1/phi1 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X50 filter_1/phi1 filter_clkgen_0/phigen_1/comp_clks_0/inverter_1/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X51 filter_1/phi1b filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X52 filter_clkgen_0/VCCD filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out filter_1/phi1b filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=630000u l=180000u
+X53 filter_1/phi1b filter_clkgen_0/phigen_1/comp_clks_0/tg_0/out filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=630000u l=180000u
+X54 filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out VSUBS filter_clkgen_0/div2 filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X55 filter_clkgen_0/div2 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X56 filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VDD1 filter_clkgen_0/div2 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X57 filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/div2 VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X58 filter_clkgen_0/VDD1 filter_clkgen_0/div2 filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X59 filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/div2 filter_clkgen_0/VDD1 filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X60 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X61 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X62 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X63 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X64 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X65 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X66 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X67 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X68 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X69 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X70 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X71 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X72 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X73 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X74 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=420000u l=150000u
+X75 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X76 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X77 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X78 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X79 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X80 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X81 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X82 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X83 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X84 filter_clkgen_0/VCCD filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=420000u l=150000u
+X85 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X86 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X87 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X88 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X89 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X90 VSUBS filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X91 filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X92 filter_clkgen_0/phigen_1/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X93 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/phigen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X94 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X95 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X96 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VDD1 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X97 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
+X98 filter_clkgen_0/VDD1 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X99 filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp filter_clkgen_0/VDD1 filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X100 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X101 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X102 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X103 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X104 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X105 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X106 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X107 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X108 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X109 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X110 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X111 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X112 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X113 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X114 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/VCCD filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=420000u l=150000u
+X115 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X116 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X117 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X118 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X119 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X120 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X121 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X122 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X123 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X124 filter_clkgen_0/VCCD filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=420000u l=150000u
+X125 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X126 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X127 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X128 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X129 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X130 VSUBS filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X131 filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out VSUBS VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X132 filter_clkgen_0/level_up_shifter_d_a_1/a_1260_620# filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out filter_clkgen_0/VCCD VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=600000u l=150000u
+X133 filter_clkgen_0/VCCD filter_clkgen_0/level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out filter_clkgen_0/cclkgen_0/inv_weak_pulldown_corrected_0/in VSUBS sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=0p ps=0u w=600000u l=150000u
+X134 filter_0/cmos_switch_1/out filter_1/phi1 filter_0/mux_0/out1 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X135 filter_0/cmos_switch_1/out filter_1/phi1b filter_0/mux_0/out1 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X136 filter_0/cmos_switch_1/out filter_1/phi2 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X137 filter_0/cmos_switch_1/out filter_1/phi2b filter_0/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X138 filter_0/cmos_switch_3/out filter_1/phi1 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X139 filter_0/cmos_switch_3/out filter_1/phi1b filter_0/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X140 filter_0/cmos_switch_3/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=4e+06u
+X141 filter_0/cmos_switch_3/out filter_1/phi2 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X142 filter_0/cmos_switch_3/out filter_1/phi2b filter_0/cmos_switch_4/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X143 filter_0/cmos_switch_5/out filter_1/phi1 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X144 filter_0/cmos_switch_5/out filter_1/phi1b filter_0/cmos_switch_4/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X145 filter_1/analog_mux_0/vref1 filter_1/analog_mux_0/cclkb filter_0/m1_20634_30273# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X146 filter_0/m1_20634_30273# filter_1/analog_mux_0/cclkb filter_1/analog_mux_0/vref2 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X147 filter_0/m1_20634_30273# filter_1/analog_mux_0/cclk filter_1/analog_mux_0/vref2 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X148 filter_1/analog_mux_0/vref1 filter_1/analog_mux_0/cclk filter_0/m1_20634_30273# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X149 filter_0/cmos_switch_5/out filter_1/phi2 comparator_0/inp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X150 filter_0/cmos_switch_5/out filter_1/phi2b comparator_0/inp filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X151 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X152 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X153 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X154 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X155 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X156 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X157 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X158 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X159 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X160 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X161 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X162 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X163 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X164 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X165 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X166 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X167 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X168 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X169 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X170 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X171 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X172 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X173 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X174 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X175 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X176 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X177 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X178 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X179 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X180 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X181 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X182 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X183 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X184 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X185 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X186 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X187 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X188 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X189 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X190 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X191 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X192 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X193 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X194 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X195 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X196 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X197 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X198 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X199 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X200 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X201 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X202 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X203 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X204 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X205 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X206 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X207 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X208 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X209 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X210 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X211 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X212 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X213 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X214 VSUBS filter_0/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X215 filter_0/cmos_switch_7/out filter_1/phi1 filter_0/cmos_switch_6/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X216 filter_0/cmos_switch_7/out filter_1/phi1b filter_0/cmos_switch_6/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X217 filter_0/cmos_switch_7/out filter_1/phi2 filter_0/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X218 filter_0/cmos_switch_7/out filter_1/phi2b filter_0/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X219 filter_0/cmos_switch_5/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=3e+06u w=3.4e+06u
+X220 filter_0/cmos_switch_7/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=3e+06u w=3.4e+06u
+X221 filter_0/cmos_switch_1/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=6e+06u w=6.7e+06u
+X222 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X223 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X224 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X225 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X226 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X227 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X228 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X229 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X230 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X231 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X232 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X233 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X234 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X235 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X236 comparator_0/inp filter_0/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X237 filter_0/m1_20634_30273# comparator_0/inp sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X238 filter_1/m2_n649_28654# filter_1/ctrl filter_0/mux_0/out1 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X239 filter_1/m2_n261_28387# filter_1/ctrl filter_0/mux_0/out2 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X240 filter_0/mux_0/out2 filter_1/ctrl filter_1/m2_n649_28654# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X241 filter_0/mux_0/out1 filter_1/ctrl filter_1/m2_n261_28387# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X242 filter_1/m2_n649_28654# filter_1/ctrlb filter_0/mux_0/out1 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X243 filter_0/mux_0/out2 filter_1/ctrlb filter_1/m2_n649_28654# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X244 filter_1/m2_n261_28387# filter_1/ctrlb filter_0/mux_0/out2 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X245 filter_0/mux_0/out1 filter_1/ctrlb filter_1/m2_n261_28387# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X246 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X247 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X248 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X249 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X250 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X251 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X252 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X253 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X254 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X255 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X256 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X257 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X258 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X259 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X260 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X261 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X262 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X263 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X264 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X265 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X266 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X267 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X268 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X269 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X270 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X271 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X272 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X273 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X274 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X275 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X276 filter_0/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X277 VSUBS filter_0/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X278 filter_1/cmos_switch_1/out filter_1/phi1 filter_1/mux_0/out2 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X279 filter_1/cmos_switch_1/out filter_1/phi1b filter_1/mux_0/out2 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X280 filter_1/cmos_switch_1/out filter_1/phi2 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X281 filter_1/cmos_switch_1/out filter_1/phi2b filter_1/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X282 filter_1/cmos_switch_3/out filter_1/phi1 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X283 filter_1/cmos_switch_3/out filter_1/phi1b filter_1/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X284 filter_1/cmos_switch_3/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=4e+06u
+X285 filter_1/cmos_switch_3/out filter_1/phi2 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X286 filter_1/cmos_switch_3/out filter_1/phi2b filter_1/cmos_switch_4/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X287 filter_1/cmos_switch_5/out filter_1/phi1 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X288 filter_1/cmos_switch_5/out filter_1/phi1b filter_1/cmos_switch_4/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X289 filter_1/analog_mux_0/vref2 filter_1/analog_mux_0/cclkb filter_1/m1_20634_30273# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X290 filter_1/m1_20634_30273# filter_1/analog_mux_0/cclkb filter_1/analog_mux_0/vref1 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X291 filter_1/m1_20634_30273# filter_1/analog_mux_0/cclk filter_1/analog_mux_0/vref1 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X292 filter_1/analog_mux_0/vref2 filter_1/analog_mux_0/cclk filter_1/m1_20634_30273# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X293 filter_1/cmos_switch_5/out filter_1/phi2 filter_1/cmos_switch_5/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X294 filter_1/cmos_switch_5/out filter_1/phi2b filter_1/cmos_switch_5/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X295 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X296 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X297 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X298 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X299 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X300 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X301 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X302 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X303 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X304 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X305 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X306 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X307 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X308 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X309 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X310 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X311 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X312 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X313 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X314 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X315 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X316 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X317 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X318 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X319 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X320 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X321 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X322 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X323 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X324 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X325 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X326 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X327 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X328 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X329 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X330 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X331 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X332 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X333 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X334 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X335 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X336 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X337 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X338 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X339 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X340 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X341 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X342 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X343 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X344 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X345 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X346 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X347 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X348 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X349 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X350 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X351 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X352 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X353 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X354 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X355 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X356 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X357 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X358 VSUBS filter_1/cmos_switch_7/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X359 filter_1/cmos_switch_7/out filter_1/phi1 filter_1/cmos_switch_6/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X360 filter_1/cmos_switch_7/out filter_1/phi1b filter_1/cmos_switch_6/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X361 filter_1/cmos_switch_7/out filter_1/phi2 filter_1/cmos_switch_7/in VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X362 filter_1/cmos_switch_7/out filter_1/phi2b filter_1/cmos_switch_7/in filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X363 filter_1/cmos_switch_5/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=3e+06u w=3.4e+06u
+X364 filter_1/cmos_switch_7/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=3e+06u w=3.4e+06u
+X365 filter_1/cmos_switch_1/out VSUBS sky130_fd_pr__cap_mim_m3_1 l=6e+06u w=6.7e+06u
+X366 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X367 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X368 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X369 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X370 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X371 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X372 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X373 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X374 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X375 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X376 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X377 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X378 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X379 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X380 filter_1/cmos_switch_5/in filter_1/m1_20634_30273# sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X381 filter_1/m1_20634_30273# filter_1/cmos_switch_5/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X382 filter_1/m2_n649_28654# filter_1/ctrl filter_1/mux_0/out1 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X383 filter_1/m2_n261_28387# filter_1/ctrl filter_1/mux_0/out2 filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X384 filter_1/mux_0/out2 filter_1/ctrl filter_1/m2_n649_28654# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X385 filter_1/mux_0/out1 filter_1/ctrl filter_1/m2_n261_28387# VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X386 filter_1/m2_n649_28654# filter_1/ctrlb filter_1/mux_0/out1 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X387 filter_1/mux_0/out2 filter_1/ctrlb filter_1/m2_n649_28654# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X388 filter_1/m2_n261_28387# filter_1/ctrlb filter_1/mux_0/out2 VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X389 filter_1/mux_0/out1 filter_1/ctrlb filter_1/m2_n261_28387# filter_clkgen_0/VCCD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X390 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X391 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X392 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X393 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X394 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X395 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X396 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X397 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X398 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X399 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X400 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X401 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X402 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X403 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X404 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X405 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X406 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X407 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X408 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X409 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X410 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X411 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X412 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X413 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X414 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X415 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X416 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X417 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X418 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X419 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X420 filter_1/cmos_switch_4/in VSUBS sky130_fd_pr__cap_mim_m3_1 l=1e+07u w=1e+07u
+X421 VSUBS filter_1/cmos_switch_4/in sky130_fd_pr__cap_mim_m3_2 l=1e+07u w=1e+07u
+X422 comparator_0/tail comparator_0/a_10_n824# VSUBS VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u
+X423 VSUBS comparator_0/phi1b comparator_0/low VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u
+X424 comparator_0/high comparator_0/FP comparator_0/pfetw filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X425 VSUBS comparator_0/phi1b comparator_0/high VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u
+X426 comparator_0/pfetw comparator_0/low filter_clkgen_0/VDD1 filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X427 comparator_0/FN comparator_0/a_10_n824# filter_clkgen_0/VDD1 filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X428 comparator_0/FP comparator_0/inp comparator_0/tail VSUBS sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X429 comparator_0/pfete comparator_0/FN comparator_0/low filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X430 filter_clkgen_0/VDD1 comparator_0/high comparator_0/pfete filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X431 comparator_0/low comparator_0/high VSUBS VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u
+X432 comparator_0/FN filter_1/cmos_switch_5/in comparator_0/tail VSUBS sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X433 comparator_0/high comparator_0/low VSUBS VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=420000u l=2e+06u
+X434 filter_clkgen_0/VDD1 comparator_0/a_10_n824# comparator_0/FP filter_clkgen_0/VDD1 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u

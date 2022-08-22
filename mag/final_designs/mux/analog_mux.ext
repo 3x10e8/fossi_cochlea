@@ -13,21 +13,21 @@ node "cclk" 972 430.024 -30 112 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "cclkb" 1158 499.161 -30 284 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21578 1414 0 0 9894 718 3808 248 3328 232 0 0 0 0 0 0 0 0
 node "w_n125_328#" 2909 247.053 -125 328 nw 0 0 0 0 81458 1302 0 0 4731 280 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "a_256_n8#" 0 0 256 -8 ppd 0 0 0 0 0 0 0 0 0 0 4018 262 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2244 200 0 0 0 0 0 0 0 0 0 0 0 0
-cap "a_30_n10#" "cclkb" 15.0616
-cap "w_n125_328#" "cclkb" 70.9211
-cap "vref1" "cclkb" 53.3518
-cap "cclk" "cclkb" 381.503
-cap "a_30_n10#" "w_n125_328#" 37.0648
-cap "a_30_n10#" "vref1" 407.371
-cap "a_30_n10#" "cclk" 73.7184
-cap "w_n125_328#" "vref1" 62.917
+cap "cclk" "vref2" 134.428
+cap "vref1" "cclk" 56.2506
 cap "cclk" "w_n125_328#" 96.7363
-cap "vref2" "cclkb" 138.321
-cap "cclk" "vref1" 56.2506
-cap "a_30_n10#" "vref2" 436.641
+cap "a_30_n10#" "cclk" 73.7184
+cap "cclkb" "vref2" 138.321
+cap "vref1" "cclkb" 53.3518
+cap "cclkb" "w_n125_328#" 70.9211
+cap "a_30_n10#" "cclkb" 15.0616
+cap "vref1" "vref2" 150.736
 cap "vref2" "w_n125_328#" 98.3774
-cap "vref2" "vref1" 150.736
-cap "vref2" "cclk" 134.428
+cap "vref1" "w_n125_328#" 62.917
+cap "cclk" "cclkb" 381.503
+cap "a_30_n10#" "vref2" 436.641
+cap "vref1" "a_30_n10#" 407.371
+cap "a_30_n10#" "w_n125_328#" 37.0648
 device msubckt sky130_fd_pr__nfet_01v8 96 -10 97 -9 l=30 w=84 "a_256_n8#" "cclkb" 60 0 "a_30_n10#" 84 0 "vref2" 84 0
 device msubckt sky130_fd_pr__nfet_01v8 0 -10 1 -9 l=30 w=84 "a_256_n8#" "cclk" 60 0 "vref1" 84 0 "a_30_n10#" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 96 365 97 366 l=30 w=84 "w_n125_328#" "cclk" 60 0 "a_30_n10#" 84 0 "vref2" 84 0

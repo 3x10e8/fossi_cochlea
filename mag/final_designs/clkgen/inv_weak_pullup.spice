@@ -1,5 +1,0 @@
-* SPICE3 file created from inv_weak_pullup.ext - technology: sky130A
-
-X0 a_30_590# in VDDA VDDA sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.26e+06u l=180000u
-X1 a_30_50# in a_n177_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u
-X2 a_30_590# vnb a_30_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=540000u

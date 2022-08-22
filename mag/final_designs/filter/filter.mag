@@ -1,7 +1,7 @@
 magic
-tech sky130A
+tech sky130B
 magscale 1 2
-timestamp 1654753126
+timestamp 1661199331
 << locali >>
 rect -341 29074 -307 29090
 << viali >>
@@ -9,17 +9,17 @@ rect -521 29090 -487 29124
 rect -341 29090 -307 29124
 << metal1 >>
 rect -348 32881 -296 32887
-rect -531 32832 -348 32872
+rect -1257 32832 -348 32872
 rect -296 32832 12524 32872
 rect 20912 32832 22766 32872
 rect -348 32823 -296 32829
 rect -530 32756 -478 32762
-rect -531 32712 -530 32752
+rect -1257 32712 -530 32752
 rect -478 32712 12524 32752
 rect 21058 32712 22766 32752
 rect -530 32698 -478 32704
 rect 2575 32635 2627 32641
-rect -531 32592 2575 32632
+rect -1257 32592 2575 32632
 rect 6151 32632 6203 32638
 rect 13884 32637 13936 32643
 rect 2627 32592 6151 32632
@@ -33,7 +33,7 @@ rect 20085 32592 22766 32632
 rect 20033 32582 20085 32588
 rect 13806 32523 13858 32529
 rect 2488 32515 2540 32521
-rect -531 32472 2488 32512
+rect -1257 32472 2488 32512
 rect 6073 32516 6125 32522
 rect 2540 32472 6073 32512
 rect 2488 32457 2540 32463
@@ -46,7 +46,7 @@ rect 6073 32458 6125 32464
 rect 20019 32472 22766 32510
 rect 19967 32452 20019 32458
 rect 546 32399 598 32405
-rect -531 32352 546 32392
+rect -1257 32352 546 32392
 rect 4807 32399 4859 32405
 rect 598 32352 4807 32392
 rect 546 32341 598 32347
@@ -59,7 +59,7 @@ rect 12299 32336 12351 32342
 rect 18560 32352 22766 32392
 rect 18508 32334 18560 32340
 rect 632 32283 684 32289
-rect -531 32232 632 32272
+rect -1257 32232 632 32272
 rect 12385 32282 12437 32288
 rect 4891 32276 4943 32282
 rect 684 32232 4891 32272
@@ -80,11 +80,7 @@ rect 20932 31942 20993 31954
 rect 20716 31907 20993 31942
 rect 20716 31899 20725 31907
 rect 20932 31897 20993 31907
-rect 20607 30971 20660 30977
-rect 20815 30975 20869 30981
-rect 20607 30912 20660 30919
 rect 20716 30585 20758 30925
-rect 20815 30912 20869 30918
 rect 20634 30560 20953 30585
 rect 20634 30290 20647 30560
 rect 20937 30290 20953 30560
@@ -121,8 +117,6 @@ rect 18595 32229 18647 32281
 rect 18684 31910 18736 31962
 rect 19858 31910 19910 31962
 rect 20660 31899 20716 31955
-rect 20607 30919 20660 30971
-rect 20815 30918 20869 30975
 rect 20647 30290 20937 30560
 rect -778 29086 -726 29138
 rect -530 29124 -478 29136
@@ -224,10 +218,6 @@ rect 22116 32154 22172 32163
 rect 22116 32089 22172 32098
 rect 20651 31899 20660 31955
 rect 20716 31899 20725 31955
-rect 20607 30971 20660 30977
-rect 20607 30912 20660 30919
-rect 20815 30975 20869 30981
-rect 20815 30912 20869 30918
 rect 22118 30917 22170 32089
 rect 20634 30560 20953 30585
 rect 20634 30290 20647 30560
@@ -286,20 +276,20 @@ rect 13764 28307 13821 28364
 rect 18616 28306 18677 28365
 rect 19917 28307 19974 28363
 << metal3 >>
-rect -1575 33408 22766 33508
-rect -1575 33208 22766 33308
-rect -1575 33008 22766 33108
-rect -1575 32156 22766 32171
-rect -1575 32100 -86 32156
+rect -1255 33408 22766 33508
+rect -1255 33208 22766 33308
+rect -1255 33008 22766 33108
+rect -1278 32156 22766 32171
+rect -1278 32100 -86 32156
 rect -30 32154 22766 32156
 rect -30 32100 22116 32154
-rect -1575 32098 22116 32100
+rect -1278 32098 22116 32100
 rect 22172 32098 22766 32154
-rect -1575 32071 22766 32098
-rect -1575 31966 22766 31980
-rect -1575 31964 19855 31966
-rect -1575 31959 722 31964
-rect -1575 31903 -780 31959
+rect -1278 32071 22766 32098
+rect -1298 31966 22766 31980
+rect -1298 31964 19855 31966
+rect -1298 31959 722 31964
+rect -1298 31903 -780 31959
 rect -724 31908 722 31959
 rect 778 31908 2396 31964
 rect 2452 31908 4982 31964
@@ -314,9 +304,9 @@ rect 12528 31907 19855 31908
 rect 19913 31955 22766 31966
 rect 19913 31907 20660 31955
 rect -724 31903 20660 31907
-rect -1575 31899 20660 31903
+rect -1298 31899 20660 31903
 rect 20716 31899 22766 31955
-rect -1575 31880 22766 31899
+rect -1298 31880 22766 31899
 rect 20634 30560 20954 30585
 rect 20634 30290 20647 30560
 rect 20937 30290 20954 30560
@@ -827,8 +817,6 @@ rect 12267 4811 12669 5131
 rect -845 4621 -636 4627
 rect -845 4432 -839 4621
 rect -642 4432 -636 4621
-rect -1575 3422 -905 3742
-rect -1575 2782 -905 3102
 rect -845 3035 -636 4432
 rect -204 4621 5 4627
 rect -204 4432 -198 4621
@@ -1559,14 +1547,14 @@ rect 12267 4811 12669 5131
 rect -199 4432 -198 4621
 rect -1 4432 0 4621
 rect -199 4431 0 4432
-rect -1575 3676 22766 3682
-rect -1575 3487 -198 3676
+rect -900 3676 22766 3682
+rect -900 3487 -198 3676
 rect -1 3487 22766 3676
-rect -1575 3483 22766 3487
-rect -1575 3035 22766 3041
-rect -1575 2846 -839 3035
+rect -900 3483 22766 3487
+rect -900 3035 22766 3041
+rect -900 2846 -839 3035
 rect -642 2846 22766 3035
-rect -1575 2842 22766 2846
+rect -900 2842 22766 2846
 << via4 >>
 rect 20659 30300 20895 30537
 rect -1136 27929 -900 27930
@@ -3178,7 +3166,7 @@ rect 21400 3742 21442 3978
 rect 21762 3978 22082 4002
 rect 21762 3742 21804 3978
 rect 22040 3742 22082 3978
-rect -1575 3422 22766 3742
+rect -900 3422 22766 3742
 rect -900 3102 -580 3422
 rect 322 3102 364 3422
 rect 600 3102 642 3422
@@ -3250,7 +3238,7 @@ rect 21442 3102 21484 3422
 rect 21720 3102 21762 3422
 rect 22082 3102 22124 3422
 rect 22360 3102 22402 3422
-rect -1575 2782 22766 3102
+rect -900 2782 22766 3102
 rect 642 2546 684 2782
 rect 920 2546 962 2782
 rect 642 2522 962 2546
@@ -3353,72 +3341,79 @@ rect 21122 2522 21442 2546
 rect 21762 2546 21804 2782
 rect 22040 2546 22082 2782
 rect 21762 2522 22082 2546
-use analog_mux  analog_mux_0
+use analog_mux  analog_mux_0 /local_disk/fossi_cochlea/mag/final_designs/mux
 timestamp 1654748254
 transform 1 0 20673 0 1 30912
 box -231 -36 446 2107
-use cap_3pF  cap_3pF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_3pF  cap_3pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 0 1 16965 -1 0 20343
 box -6669 2096 15759 5484
-use cap_6pF  cap_6pF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_6pF  cap_6pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 0 1 15305 -1 0 24342
 box -2674 -2673 19758 3439
-use cap_10fF  cap_10fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_10fF  cap_10fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 1 0 18937 0 1 28644
 box -28 -28 708 628
-use cap_10fF  cap_10fF_1
+use cap_10fF  cap_10fF_1 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 1 0 5164 0 1 28662
 box -28 -28 708 628
-use cap_12pF  cap_12pF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_12pF  cap_12pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 0 1 3438 -1 0 24342
 box -2674 -2674 19758 8878
-use cap_20fF  cap_20fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_20fF  cap_20fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 1 0 12735 0 1 28665
 box -28 -28 828 1028
-use cap_40fF  cap_40fF_0 ~/Documents/fossi_cochlea/mag/final_designs/caps
+use cap_40fF  cap_40fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
 timestamp 1654741520
 transform 1 0 901 0 1 28672
 box -28 -28 1368 1228
-use cmos_switch  cmos_switch_0 ~/Documents/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_0 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform 1 0 557 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_1
+use cmos_switch  cmos_switch_1 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform -1 0 2617 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_2
+use cmos_switch  cmos_switch_2 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform 1 0 12307 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_3
+use cmos_switch  cmos_switch_3 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform -1 0 13925 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_4
+use cmos_switch  cmos_switch_4 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform 1 0 18517 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_5
+use cmos_switch  cmos_switch_5 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform -1 0 20077 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_6
+use cmos_switch  cmos_switch_6 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform 1 0 4817 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_7
+use cmos_switch  cmos_switch_7 /local_disk/fossi_cochlea/mag/final_designs/switch
 timestamp 1654741520
 transform -1 0 6187 0 1 28398
 box -175 -95 235 3570
-use mux  mux_0 ~/Documents/fossi_cochlea/mag/final_designs/mux
+use mux  mux_0 /local_disk/fossi_cochlea/mag/final_designs/mux
 timestamp 1654741520
 transform 0 -1 -104 1 0 28489
 box -224 -79 685 681
+<< labels >>
+rlabel metal1 -1257 32252 -1257 32252 7 phi1
+rlabel metal1 -1257 32375 -1257 32375 7 phi1b
+rlabel metal1 -1257 32494 -1257 32494 7 phi2
+rlabel metal1 -1257 32612 -1257 32612 7 phi2b
+rlabel metal1 -1257 32733 -1257 32733 7 ctrl
+rlabel metal1 -1257 32852 -1257 32852 7 ctrlb
 << end >>
