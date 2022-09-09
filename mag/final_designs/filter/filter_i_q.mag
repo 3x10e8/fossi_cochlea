@@ -550,7 +550,7 @@ array 0 1 -48682 0 0 34550
 timestamp 1661198472
 transform -1 0 -927 0 -1 159808
 box -26 0 48102 37136
-use first_dual_core  first_dual_core_0 ./mag/final_designs/digital/
+use first_dual_core  first_dual_core_0 /local_disk/fossi_cochlea/mag/final_designs/digital/
 timestamp 1661193354
 transform 0 -1 48362 1 0 42794
 box 0 0 80000 98000

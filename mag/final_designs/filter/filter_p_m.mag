@@ -503,15 +503,15 @@ rect 24004 26083 24081 26089
 rect 24004 26019 24010 26083
 rect 24074 26019 24081 26083
 rect 24004 26013 24081 26019
-use comp_for_tapeout  comparator_0 /local_disk/fossi_cochlea/mag/final_designs/comparator
+use comparator  comparator_0 /local_disk/fossi_cochlea/mag/final_designs/comparator
 timestamp 1654756920
 transform 1 0 23898 0 1 26079
 box -3794 -2465 4606 4342
-use filter  filter_0
+use filter  filter_0 /local_disk/fossi_cochlea/mag/final_designs/filter
 timestamp 1661195607
 transform 1 0 1272 0 1 -2522
 box -1298 2522 22766 33508
-use filter  filter_1
+use filter  filter_1 /local_disk/fossi_cochlea/mag/final_designs/filter
 timestamp 1661195607
 transform -1 0 46804 0 1 -2522
 box -1298 2522 22766 33508
