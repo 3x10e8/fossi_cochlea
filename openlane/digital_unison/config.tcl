@@ -22,8 +22,8 @@ set ::env(DESIGN_NAME) digital_unison
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/final_verilog/final_verilog_includes.v \
-	$script_dir/../../verilog/final_verilog/$::env(DESIGN_NAME)/$::env(DESIGN_NAME).v"
+	$script_dir/../../../../verilog/final_verilog/final_verilog_includes.v \
+	$script_dir/../../../../verilog/final_verilog/$::env(DESIGN_NAME)/$::env(DESIGN_NAME).v"
 
 set ::env(DESIGN_IS_CORE) 0
 
@@ -69,11 +69,78 @@ set ::env(FP_SIZING) absolute
 #set ::env(DIE_AREA) "0 0 300 150"
 # 5 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
 
-set ::env(DIE_AREA) "0 0 300 180"
+#set ::env(DIE_AREA) "0 0 300 180"
 # pass with warnings: (note: pin_config needs updating)
 #[WARNING]: Current core area is too small for a power grid. The power grid will be minimized.
 #[WARNING]: This PDK does not support cvc, skipping...
 #[WARNING]: There are max fanout violations in the design at the typical corner. Please refer to '../local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_09_18_26/reports/signoff/30-rcx_sta.slew.rpt'.
+
+# pass with redundant pins and updated pincfg? No commit.
+
+#set ::env(DIE_AREA) "0 0 480 180"
+# Reduced redundant pins, updated pin_cfg
+# 8 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 140"
+# 6 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 110"
+# 2 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 100"
+# 2 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+# updated pin_cfg: 4 DRC errors
+
+#set ::env(DIE_AREA) "0 0 480 80"
+# [ERROR DPL-0036] Detailed placement failed.
+
+#set ::env(DIE_AREA) "0 0 480 120"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 150"
+# 2 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 500 150"
+# 6 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 450 150"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 450 120"
+# 5 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 120"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 450 100"
+# 8 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 160"
+# 6 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 460 150"
+# 6 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 400 150"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 140"
+# 4 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 110"
+# 6 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 145"
+# 7 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 480 150"
+# updated openlane image to 2022.09.07, passes except:
+# [WARNING]: There are max fanout violations in the design at the typical corner.
+
+#set ::env(DIE_AREA) "0 0 480 120"
+# [WARNING]: There are max fanout violations in the design at the typical corner.
+
+set ::env(DIE_AREA) "0 0 480 100"
 
 #set ::env(DIE_AREA) "0 0 250 300" 
 # fails AREA0/1/2: congestion too high
@@ -89,7 +156,7 @@ set ::env(DIE_AREA) "0 0 300 180"
 #set ::env(FP_ASPECT_RATIO) 2 
 #[WARNING RSZ-0064] Unable to repair all hold checks within margin.
 
-#set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
+set ::env(FP_PIN_ORDER_CFG) $script_dir/../../pin_order.cfg
 
 # set ::env(PL_BASIC_PLACEMENT) 1 
 # resolving [ERROR GRT-0118] Routing congestion too high with PL_BASIC_PLACEMENT 0

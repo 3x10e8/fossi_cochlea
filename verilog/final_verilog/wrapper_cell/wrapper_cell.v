@@ -26,9 +26,9 @@ module wrapper_cell(
 
 	//outputs to analog
 	output wire cos_out, sin_out,
-	output wire cos_outb, sin_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
+	//output wire cos_outb, sin_outb, //sin_outb will be same as sin_out as the inverter and buffer will be added near the mux switch.
 	output wire fb1_I, fb1_Q,
-	output wire fb2_I, fb2_Q,
+	//output wire fb2_I, fb2_Q,
 	output wire clkdiv2_I, clkdiv2_Q, // shorted to input clkdiv2 (hasn't been divided yet)
 	output wire cclk_I, cclk_Q,
 
@@ -124,10 +124,10 @@ module wrapper_cell(
 		.out_mux_eve(read_out_Q[0]),
 		.out_mux_pol_eve(read_out_Q[1]));
 
-	assign fb2_I=fb1_I; //All these ports ahve been shorted as the inversion or buffering is done later on.
-	assign fb2_Q=fb1_Q; //fb2_I is the inverted feedback for the -ve part of the loop.
-	assign sin_outb=sin_out; //fb1_I is the actual feedback for the +ve part of the loop
-	assign cos_outb=cos_out;
+	//assign fb2_I=fb1_I; //All these ports ahve been shorted as the inversion or buffering is done later on.
+	//assign fb2_Q=fb1_Q; //fb2_I is the inverted feedback for the -ve part of the loop.
+	//assign sin_outb=sin_out; //fb1_I is the actual feedback for the +ve part of the loop
+	//assign cos_outb=cos_out;
 	assign cclk_Q=cclk_I;
 	assign clkdiv2_I=clkdiv2;
 	assign clkdiv2_Q=clkdiv2;

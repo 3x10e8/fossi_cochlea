@@ -1,216 +1,184 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662773277
+timestamp 1662788825
 << obsli1 >>
-rect 1104 2159 58880 33745
+rect 1104 2159 94852 17425
 << obsm1 >>
-rect 14 2128 58880 33776
+rect 1104 2128 95206 17536
 << metal2 >>
-rect 4526 35200 4582 36000
-rect 9034 35200 9090 36000
-rect 14186 35200 14242 36000
-rect 18694 35200 18750 36000
-rect 23846 35200 23902 36000
-rect 28354 35200 28410 36000
-rect 33506 35200 33562 36000
-rect 38658 35200 38714 36000
-rect 43166 35200 43222 36000
-rect 48318 35200 48374 36000
-rect 52826 35200 52882 36000
-rect 57978 35200 58034 36000
-rect 18 0 74 800
-rect 4526 0 4582 800
-rect 9678 0 9734 800
-rect 14186 0 14242 800
-rect 19338 0 19394 800
-rect 23846 0 23902 800
-rect 28998 0 29054 800
-rect 33506 0 33562 800
-rect 38658 0 38714 800
-rect 43166 0 43222 800
-rect 48318 0 48374 800
-rect 52826 0 52882 800
-rect 57978 0 58034 800
+rect 4434 19200 4490 20000
+rect 12346 19200 12402 20000
+rect 20258 19200 20314 20000
+rect 28170 19200 28226 20000
+rect 36082 19200 36138 20000
+rect 43994 19200 44050 20000
+rect 51906 19200 51962 20000
+rect 59818 19200 59874 20000
+rect 67730 19200 67786 20000
+rect 75642 19200 75698 20000
+rect 83554 19200 83610 20000
+rect 91466 19200 91522 20000
+rect 4434 0 4490 800
+rect 12346 0 12402 800
+rect 20258 0 20314 800
+rect 28170 0 28226 800
+rect 36082 0 36138 800
+rect 43994 0 44050 800
+rect 51906 0 51962 800
+rect 59818 0 59874 800
+rect 67730 0 67786 800
+rect 75642 0 75698 800
+rect 83554 0 83610 800
+rect 91466 0 91522 800
 << obsm2 >>
-rect 20 35144 4470 35465
-rect 4638 35144 8978 35465
-rect 9146 35144 14130 35465
-rect 14298 35144 18638 35465
-rect 18806 35144 23790 35465
-rect 23958 35144 28298 35465
-rect 28466 35144 33450 35465
-rect 33618 35144 38602 35465
-rect 38770 35144 43110 35465
-rect 43278 35144 48262 35465
-rect 48430 35144 52770 35465
-rect 52938 35144 57922 35465
-rect 58090 35144 58126 35465
-rect 20 856 58126 35144
-rect 130 800 4470 856
-rect 4638 800 9622 856
-rect 9790 800 14130 856
-rect 14298 800 19282 856
-rect 19450 800 23790 856
-rect 23958 800 28942 856
-rect 29110 800 33450 856
-rect 33618 800 38602 856
-rect 38770 800 43110 856
-rect 43278 800 48262 856
-rect 48430 800 52770 856
-rect 52938 800 57922 856
-rect 58090 800 58126 856
+rect 1582 19144 4378 19200
+rect 4546 19144 12290 19200
+rect 12458 19144 20202 19200
+rect 20370 19144 28114 19200
+rect 28282 19144 36026 19200
+rect 36194 19144 43938 19200
+rect 44106 19144 51850 19200
+rect 52018 19144 59762 19200
+rect 59930 19144 67674 19200
+rect 67842 19144 75586 19200
+rect 75754 19144 83498 19200
+rect 83666 19144 91410 19200
+rect 91578 19144 95202 19200
+rect 1582 856 95202 19144
+rect 1582 800 4378 856
+rect 4546 800 12290 856
+rect 12458 800 20202 856
+rect 20370 800 28114 856
+rect 28282 800 36026 856
+rect 36194 800 43938 856
+rect 44106 800 51850 856
+rect 52018 800 59762 856
+rect 59930 800 67674 856
+rect 67842 800 75586 856
+rect 75754 800 83498 856
+rect 83666 800 91410 856
+rect 91578 800 95202 856
 << metal3 >>
-rect 0 35368 800 35488
-rect 59200 33328 60000 33448
-rect 0 30608 800 30728
-rect 59200 27888 60000 28008
-rect 0 25168 800 25288
-rect 59200 23128 60000 23248
-rect 0 20408 800 20528
-rect 59200 17688 60000 17808
-rect 0 14968 800 15088
-rect 59200 12928 60000 13048
-rect 0 10208 800 10328
-rect 59200 7488 60000 7608
-rect 0 4768 800 4888
-rect 59200 2728 60000 2848
+rect 95200 17280 96000 17400
+rect 0 16600 800 16720
+rect 95200 12384 96000 12504
+rect 0 9936 800 10056
+rect 95200 7488 96000 7608
+rect 0 3272 800 3392
+rect 95200 2592 96000 2712
 << obsm3 >>
-rect 880 35288 59200 35461
-rect 800 33528 59200 35288
-rect 800 33248 59120 33528
-rect 800 30808 59200 33248
-rect 880 30528 59200 30808
-rect 800 28088 59200 30528
-rect 800 27808 59120 28088
-rect 800 25368 59200 27808
-rect 880 25088 59200 25368
-rect 800 23328 59200 25088
-rect 800 23048 59120 23328
-rect 800 20608 59200 23048
-rect 880 20328 59200 20608
-rect 800 17888 59200 20328
-rect 800 17608 59120 17888
-rect 800 15168 59200 17608
-rect 880 14888 59200 15168
-rect 800 13128 59200 14888
-rect 800 12848 59120 13128
-rect 800 10408 59200 12848
-rect 880 10128 59200 10408
-rect 800 7688 59200 10128
-rect 800 7408 59120 7688
-rect 800 4968 59200 7408
-rect 880 4688 59200 4968
-rect 800 2928 59200 4688
-rect 800 2648 59120 2928
-rect 800 2143 59200 2648
+rect 800 17200 95120 17441
+rect 800 16800 95434 17200
+rect 880 16520 95434 16800
+rect 800 12584 95434 16520
+rect 800 12304 95120 12584
+rect 800 10136 95434 12304
+rect 880 9856 95434 10136
+rect 800 7688 95434 9856
+rect 800 7408 95120 7688
+rect 800 3472 95434 7408
+rect 880 3192 95434 3472
+rect 800 2792 95434 3192
+rect 800 2512 95120 2792
+rect 800 2143 95434 2512
 << metal4 >>
-rect 8168 2128 8488 33776
-rect 15392 2128 15712 33776
-rect 22616 2128 22936 33776
-rect 29840 2128 30160 33776
-rect 37064 2128 37384 33776
-rect 44288 2128 44608 33776
-rect 51512 2128 51832 33776
+rect 12662 2128 12982 17456
+rect 24380 2128 24700 17456
+rect 36099 2128 36419 17456
+rect 47817 2128 48137 17456
+rect 59536 2128 59856 17456
+rect 71254 2128 71574 17456
+rect 82973 2128 83293 17456
+rect 94691 2128 95011 17456
+<< obsm4 >>
+rect 59307 4795 59456 13157
+rect 59936 4795 63605 13157
 << labels >>
-rlabel metal2 s 33506 0 33562 800 6 cclk_I[0]
+rlabel metal2 s 28170 19200 28226 20000 6 cclk_I[0]
 port 1 nsew signal output
-rlabel metal2 s 23846 0 23902 800 6 cclk_I[1]
+rlabel metal2 s 75642 19200 75698 20000 6 cclk_I[1]
 port 2 nsew signal output
-rlabel metal2 s 43166 35200 43222 36000 6 cclk_Q[0]
+rlabel metal2 s 28170 0 28226 800 6 cclk_Q[0]
 port 3 nsew signal output
-rlabel metal3 s 59200 12928 60000 13048 6 cclk_Q[1]
+rlabel metal2 s 75642 0 75698 800 6 cclk_Q[1]
 port 4 nsew signal output
-rlabel metal3 s 0 14968 800 15088 6 clk_master
+rlabel metal3 s 0 3272 800 3392 6 clk_master
 port 5 nsew signal input
-rlabel metal2 s 38658 35200 38714 36000 6 clkdiv2_I[0]
+rlabel metal2 s 20258 19200 20314 20000 6 clkdiv2_I[0]
 port 6 nsew signal output
-rlabel metal2 s 48318 0 48374 800 6 clkdiv2_I[1]
+rlabel metal2 s 67730 19200 67786 20000 6 clkdiv2_I[1]
 port 7 nsew signal output
-rlabel metal2 s 18694 35200 18750 36000 6 clkdiv2_Q[0]
+rlabel metal2 s 20258 0 20314 800 6 clkdiv2_Q[0]
 port 8 nsew signal output
-rlabel metal3 s 59200 23128 60000 23248 6 clkdiv2_Q[1]
+rlabel metal2 s 67730 0 67786 800 6 clkdiv2_Q[1]
 port 9 nsew signal output
-rlabel metal2 s 43166 0 43222 800 6 comp_high_I[0]
+rlabel metal2 s 43994 19200 44050 20000 6 comp_high_I[0]
 port 10 nsew signal input
-rlabel metal2 s 57978 35200 58034 36000 6 comp_high_I[1]
+rlabel metal2 s 91466 19200 91522 20000 6 comp_high_I[1]
 port 11 nsew signal input
-rlabel metal3 s 59200 27888 60000 28008 6 comp_high_Q[0]
+rlabel metal2 s 43994 0 44050 800 6 comp_high_Q[0]
 port 12 nsew signal input
-rlabel metal2 s 23846 35200 23902 36000 6 comp_high_Q[1]
+rlabel metal2 s 91466 0 91522 800 6 comp_high_Q[1]
 port 13 nsew signal input
-rlabel metal2 s 4526 35200 4582 36000 6 cos_out[0]
+rlabel metal2 s 4434 19200 4490 20000 6 cos_out[0]
 port 14 nsew signal output
-rlabel metal2 s 57978 0 58034 800 6 cos_out[1]
+rlabel metal2 s 51906 19200 51962 20000 6 cos_out[1]
 port 15 nsew signal output
-rlabel metal3 s 0 25168 800 25288 6 cos_outb[0]
+rlabel metal2 s 12346 19200 12402 20000 6 fb1_I[0]
 port 16 nsew signal output
-rlabel metal3 s 59200 17688 60000 17808 6 cos_outb[1]
+rlabel metal2 s 59818 19200 59874 20000 6 fb1_I[1]
 port 17 nsew signal output
-rlabel metal3 s 0 30608 800 30728 6 fb1_I[0]
+rlabel metal2 s 12346 0 12402 800 6 fb1_Q[0]
 port 18 nsew signal output
-rlabel metal2 s 18 0 74 800 6 fb1_I[1]
+rlabel metal2 s 59818 0 59874 800 6 fb1_Q[1]
 port 19 nsew signal output
-rlabel metal2 s 48318 35200 48374 36000 6 fb1_Q[0]
-port 20 nsew signal output
-rlabel metal3 s 0 4768 800 4888 6 fb1_Q[1]
-port 21 nsew signal output
-rlabel metal2 s 14186 0 14242 800 6 fb2_I[0]
-port 22 nsew signal output
-rlabel metal2 s 14186 35200 14242 36000 6 fb2_I[1]
-port 23 nsew signal output
-rlabel metal2 s 38658 0 38714 800 6 fb2_Q[0]
+rlabel metal2 s 36082 19200 36138 20000 6 phi1b_dig_I[0]
+port 20 nsew signal input
+rlabel metal2 s 83554 19200 83610 20000 6 phi1b_dig_I[1]
+port 21 nsew signal input
+rlabel metal2 s 36082 0 36138 800 6 phi1b_dig_Q[0]
+port 22 nsew signal input
+rlabel metal2 s 83554 0 83610 800 6 phi1b_dig_Q[1]
+port 23 nsew signal input
+rlabel metal3 s 95200 17280 96000 17400 6 read_out_I[0]
 port 24 nsew signal output
-rlabel metal2 s 52826 35200 52882 36000 6 fb2_Q[1]
+rlabel metal3 s 95200 12384 96000 12504 6 read_out_I[1]
 port 25 nsew signal output
-rlabel metal2 s 52826 0 52882 800 6 phi1b_dig_I[0]
-port 26 nsew signal input
-rlabel metal2 s 4526 0 4582 800 6 phi1b_dig_I[1]
-port 27 nsew signal input
-rlabel metal2 s 9678 0 9734 800 6 phi1b_dig_Q[0]
+rlabel metal3 s 95200 7488 96000 7608 6 read_out_Q[0]
+port 26 nsew signal output
+rlabel metal3 s 95200 2592 96000 2712 6 read_out_Q[1]
+port 27 nsew signal output
+rlabel metal3 s 0 16600 800 16720 6 rstb
 port 28 nsew signal input
-rlabel metal3 s 0 10208 800 10328 6 phi1b_dig_Q[1]
-port 29 nsew signal input
-rlabel metal3 s 59200 2728 60000 2848 6 read_out_I[0]
+rlabel metal2 s 4434 0 4490 800 6 sin_out[0]
+port 29 nsew signal output
+rlabel metal2 s 51906 0 51962 800 6 sin_out[1]
 port 30 nsew signal output
-rlabel metal2 s 19338 0 19394 800 6 read_out_I[1]
-port 31 nsew signal output
-rlabel metal3 s 0 35368 800 35488 6 read_out_Q[0]
-port 32 nsew signal output
-rlabel metal3 s 59200 33328 60000 33448 6 read_out_Q[1]
-port 33 nsew signal output
-rlabel metal2 s 28354 35200 28410 36000 6 rstb
-port 34 nsew signal input
-rlabel metal2 s 33506 35200 33562 36000 6 sin_out[0]
-port 35 nsew signal output
-rlabel metal2 s 28998 0 29054 800 6 sin_out[1]
-port 36 nsew signal output
-rlabel metal3 s 0 20408 800 20528 6 sin_outb[0]
-port 37 nsew signal output
-rlabel metal2 s 9034 35200 9090 36000 6 sin_outb[1]
-port 38 nsew signal output
-rlabel metal3 s 59200 7488 60000 7608 6 ud_en
-port 39 nsew signal input
-rlabel metal4 s 8168 2128 8488 33776 6 vccd1
-port 40 nsew power bidirectional
-rlabel metal4 s 22616 2128 22936 33776 6 vccd1
-port 40 nsew power bidirectional
-rlabel metal4 s 37064 2128 37384 33776 6 vccd1
-port 40 nsew power bidirectional
-rlabel metal4 s 51512 2128 51832 33776 6 vccd1
-port 40 nsew power bidirectional
-rlabel metal4 s 15392 2128 15712 33776 6 vssd1
-port 41 nsew ground bidirectional
-rlabel metal4 s 29840 2128 30160 33776 6 vssd1
-port 41 nsew ground bidirectional
-rlabel metal4 s 44288 2128 44608 33776 6 vssd1
-port 41 nsew ground bidirectional
+rlabel metal3 s 0 9936 800 10056 6 ud_en
+port 31 nsew signal input
+rlabel metal4 s 12662 2128 12982 17456 6 vccd1
+port 32 nsew power bidirectional
+rlabel metal4 s 36099 2128 36419 17456 6 vccd1
+port 32 nsew power bidirectional
+rlabel metal4 s 59536 2128 59856 17456 6 vccd1
+port 32 nsew power bidirectional
+rlabel metal4 s 82973 2128 83293 17456 6 vccd1
+port 32 nsew power bidirectional
+rlabel metal4 s 24380 2128 24700 17456 6 vssd1
+port 33 nsew ground bidirectional
+rlabel metal4 s 47817 2128 48137 17456 6 vssd1
+port 33 nsew ground bidirectional
+rlabel metal4 s 71254 2128 71574 17456 6 vssd1
+port 33 nsew ground bidirectional
+rlabel metal4 s 94691 2128 95011 17456 6 vssd1
+port 33 nsew ground bidirectional
 << properties >>
-string FIXED_BBOX 0 0 60000 36000
+string FIXED_BBOX 0 0 96000 20000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 3590540
-string GDS_FILE /local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_09_18_26/results/signoff/digital_unison.magic.gds
-string GDS_START 445932
+string GDS_END 4093632
+string GDS_FILE /local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_09_22_44/results/signoff/digital_unison.magic.gds
+string GDS_START 501876
 << end >>
 

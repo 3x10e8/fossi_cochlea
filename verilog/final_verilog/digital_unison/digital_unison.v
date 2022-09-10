@@ -24,9 +24,9 @@ module digital_unison #(parameter NUM_CORES=2)
 	output wire [NUM_CORES-1:0] clkdiv2_I, clkdiv2_Q,
 	output wire [NUM_CORES-1:0] cclk_I, cclk_Q,
 	output wire [NUM_CORES-1:0] fb1_I, fb1_Q,
-	output wire [NUM_CORES-1:0] fb2_I, fb2_Q, // feedback to -ve side must be inverted in analog
+	//output wire [NUM_CORES-1:0] fb2_I, fb2_Q, // feedback to -ve side must be inverted in analog
 	output wire [NUM_CORES-1:0] cos_out, sin_out,
-	output wire [NUM_CORES-1:0] cos_outb, sin_outb, // must be inverted in analog
+	//output wire [NUM_CORES-1:0] cos_outb, sin_outb, // must be inverted in analog
 
 	// unison outputs
 	output wire [1:0] read_out_I, read_out_Q
@@ -44,9 +44,9 @@ wrapper_first w0(
 
 	// to LO mux
 	.cos_out(cos_out[0]),
-	.cos_outb(cos_outb[0]),
+	//.cos_outb(cos_outb[0]),
 	.sin_out(sin_out[0]),
-	.sin_outb(sin_outb[0]),
+	//.sin_outb(sin_outb[0]),
 
  	// to phi clk gen
 	.clkdiv2_I(clkdiv2_I[0]),
@@ -62,9 +62,9 @@ wrapper_first w0(
 
 	// to feedback cap
 	.fb1_I(fb1_I[0]),
-	.fb2_I(fb2_I[0]),
+	//.fb2_I(fb2_I[0]),
 	.fb1_Q(fb1_Q[0]),
-	.fb2_Q(fb2_Q[0]),
+	//.fb2_Q(fb2_Q[0]),
 
 	// to next digital core
 	.div2out(div2out[0]),
@@ -97,8 +97,8 @@ wrapper_cell w1(
 	
 	.sin_out(sin_out[j+1]),
 	.cos_out(cos_out[j+1]),
-	.sin_outb(sin_outb[j+1]),
-	.cos_outb(cos_outb[j+1]),
+	//.sin_outb(sin_outb[j+1]),
+	//.cos_outb(cos_outb[j+1]),
 
 	.clkdiv2_I(clkdiv2_I[j+1]), // this is clkdiv2 as inputted from previous core, outputting to analog
 	.clkdiv2_Q(clkdiv2_Q[j+1]),
@@ -111,9 +111,9 @@ wrapper_cell w1(
 	.phi1b_dig_Q(phi1b_dig_Q[j+1]),
 	
 	.fb1_I(fb1_I[j+1]),
-	.fb2_I(fb2_I[j+1]),
+	//.fb2_I(fb2_I[j+1]),
 	.fb1_Q(fb1_Q[j+1]),
-	.fb2_Q(fb2_Q[j+1]),
+	//.fb2_Q(fb2_Q[j+1]),
 
 	.div2out(div2out[j+1]),
 	.gray_clk_out(gray_clk_out[j+1]),//
