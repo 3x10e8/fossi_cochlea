@@ -13,7 +13,7 @@
 # limitations under the License.
 # SPDX-License-Identifier: Apache-2.0
 
-set ::env(PDK) "sky130A"
+set ::env(PDK) "sky130B"
 set ::env(STD_CELL_LIBRARY) "sky130_fd_sc_hd"
 
 set script_dir [file dirname [file normalize [info script]]]
@@ -42,14 +42,38 @@ set ::env(SYNTH_STRATEGY) "AREA 1"
 #set ::env(ROUTING_CORES) 8
 set ::env(FP_SIZING) absolute
 
-set ::env(DIE_AREA) "0 0 300 250"
-# pass
+#set ::env(DIE_AREA) "0 0 300 250"
+# pass: not anymore, mpw-7: [ERROR GRT-0118] Routing congestion too high.
 
 #set ::env(DIE_AREA) "0 0 300 200"
 # fail: congestion too high
 
 #set ::env(DIE_AREA) "0 0 250 350"
-# pass
+# pass: not anymore, mpw-7: [ERROR GRT-0118] Routing congestion too high.
+
+#set ::env(DIE_AREA) "0 0 350 350"
+# fail: [ERROR GRT-0118] Routing congestion too high.
+
+#set ::env(DIE_AREA) "0 0 1000 1000"
+# 2 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 300 300"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 300 250"
+# 3 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 300 200"
+# 1 DRC error : Min area of metal1 holes > 0.14um^2 (met1.7)
+
+#set ::env(DIE_AREA) "0 0 300 150"
+# 5 DRC errors: Min area of metal1 holes > 0.14um^2 (met1.7)
+
+set ::env(DIE_AREA) "0 0 300 180"
+# pass with warnings: (note: pin_config needs updating)
+#[WARNING]: Current core area is too small for a power grid. The power grid will be minimized.
+#[WARNING]: This PDK does not support cvc, skipping...
+#[WARNING]: There are max fanout violations in the design at the typical corner. Please refer to '../local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_09_18_26/reports/signoff/30-rcx_sta.slew.rpt'.
 
 #set ::env(DIE_AREA) "0 0 250 300" 
 # fails AREA0/1/2: congestion too high
@@ -67,7 +91,11 @@ set ::env(DIE_AREA) "0 0 300 250"
 
 #set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
-set ::env(PL_BASIC_PLACEMENT) 1
+# set ::env(PL_BASIC_PLACEMENT) 1 
+# resolving [ERROR GRT-0118] Routing congestion too high with PL_BASIC_PLACEMENT 0
+# https://open-source-silicon.slack.com/archives/C016H8WJMBR/p1662708132196759?thread_ts=1662702840.800329&cid=C016H8WJMBR
+set ::env(PL_BASIC_PLACEMENT) 0
+ 
 set ::env(PL_TARGET_DENSITY) 0.55
 
 # Maximum layer used for routing is metal 4.
