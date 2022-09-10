@@ -140,7 +140,19 @@ set ::env(FP_SIZING) absolute
 #set ::env(DIE_AREA) "0 0 480 120"
 # [WARNING]: There are max fanout violations in the design at the typical corner.
 
-set ::env(DIE_AREA) "0 0 960 100"
+#set ::env(DIE_AREA) "0 0 960 100"
+# works for 4 cores
+
+#set ::env(DIE_AREA) "0 0 1920 100"
+# fails for 8 cores: [ERROR GPL-0307] RePlAce divergence detected. Re-run with a smaller max_phi_cof value.
+
+#set ::env(DIE_AREA) "0 0 1440 100"
+# [ERROR GPL-0307] RePlAce divergence detected. Re-run with a smaller max_phi_cof value.
+
+#set ::env(DIE_AREA) "0 0 1440 150"
+# pass
+
+set ::env(DIE_AREA) "0 0 1440 120"
 
 #set ::env(DIE_AREA) "0 0 250 300" 
 # fails AREA0/1/2: congestion too high

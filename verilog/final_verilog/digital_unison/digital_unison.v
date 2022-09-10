@@ -8,7 +8,7 @@
 `endif
 */
 
-module digital_unison #(parameter NUM_CORES=4)
+module digital_unison #(parameter NUM_CORES=6)
 (
 	// global inputs from RISC (must level shift vccd2->vccd1)
 	input rstb, ud_en,//phi1b_dig[0] is corresponding to the first wrapper
