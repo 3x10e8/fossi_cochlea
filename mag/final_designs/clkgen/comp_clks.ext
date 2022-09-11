@@ -14,40 +14,40 @@ node "li_530_n211#" 54 72.9512 530 -211 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_576_n449#" 3747 34.506 576 -449 nw 0 0 0 0 11502 534 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_577_332#" 4047 31.95 577 332 nw 0 0 0 0 10650 526 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "m1_351_268#" "w_577_332#" 2.1005
-cap "w_576_n449#" "m1_351_268#" 1.8879
 cap "li_530_n211#" "m1_351_268#" 2.23127
 cap "li_530_n211#" "w_577_332#" 1.74775
-cap "w_576_n449#" "li_530_n211#" 2.27467
+cap "w_576_n449#" "m1_351_268#" 1.8879
 cap "m1_351_268#" "m2_182_273#" 6.2001
-cap "inverter_1/out" "inverter_2/out" 4.19977
-cap "tg_0/clk_" "inverter_1/out" 0.0764425
-cap "tg_0/clk" "tg_0/inp" 31.3746
-cap "inverter_1/w_n204_204#" "inverter_1/in" 59.3522
-cap "tg_0/inp" "inverter_2/out" 3.75287
-cap "inverter_1/in" "tg_0/out" 25.1523
-cap "inverter_1/w_n204_204#" "tg_0/clk" 92.879
-cap "tg_0/clk_" "tg_0/inp" 61.8024
-cap "inverter_1/w_n204_204#" "inverter_2/out" 5.83749
-cap "tg_0/inp" "inverter_1/out" 5.385
-cap "tg_0/clk" "tg_0/out" 70.7224
-cap "tg_0/clk_" "inverter_1/w_n204_204#" -14.0276
-cap "tg_0/out" "inverter_2/out" 7.14112
-cap "inverter_1/w_n204_204#" "inverter_1/out" 2.34589
-cap "tg_0/clk_" "tg_0/out" 40.2418
-cap "tg_0/clk" "inverter_1/in" 35.0857
-cap "inverter_1/out" "tg_0/out" 2.61059
-cap "inverter_1/in" "inverter_2/out" 2.57692
-cap "tg_0/clk_" "inverter_1/in" 73.4195
-cap "inverter_1/w_n204_204#" "tg_0/inp" 31.2437
-cap "tg_0/clk" "inverter_2/out" 15.8911
-cap "inverter_1/in" "inverter_1/out" 18.1646
-cap "tg_0/inp" "tg_0/out" 8.5104
-cap "tg_0/clk_" "tg_0/clk" -10.4107
-cap "tg_0/clk" "inverter_1/out" 6.07504
-cap "tg_0/clk_" "inverter_2/out" 4.31112
-cap "inverter_1/w_n204_204#" "tg_0/out" 51.6049
-cap "tg_0/inp" "inverter_1/in" 31.5385
+cap "m1_351_268#" "w_577_332#" 2.1005
+cap "li_530_n211#" "w_576_n449#" 2.27467
+cap "inverter_2/out" "tg_0/clk" 15.8911
+cap "inverter_1/out" "inverter_1/in" 18.1646
+cap "tg_0/out" "tg_0/inp" 8.5104
+cap "inverter_2/out" "tg_0/out" 7.14112
+cap "inverter_1/in" "tg_0/clk_" 73.4195
+cap "tg_0/inp" "inverter_1/w_n204_204#" 31.2437
+cap "inverter_2/out" "inverter_1/w_n204_204#" 5.83749
+cap "inverter_1/out" "tg_0/inp" 5.385
+cap "tg_0/out" "tg_0/clk" 70.7224
+cap "inverter_2/out" "inverter_1/out" 4.19977
+cap "tg_0/clk" "inverter_1/w_n204_204#" 92.879
+cap "tg_0/inp" "tg_0/clk_" 61.8024
+cap "inverter_1/out" "tg_0/clk" 6.07504
+cap "inverter_2/out" "tg_0/clk_" 4.31112
+cap "tg_0/out" "inverter_1/w_n204_204#" 51.6049
+cap "inverter_1/in" "tg_0/inp" 31.5385
+cap "tg_0/out" "inverter_1/out" 2.61059
+cap "inverter_2/out" "inverter_1/in" 2.57692
+cap "tg_0/clk" "tg_0/clk_" -10.4107
+cap "inverter_1/out" "inverter_1/w_n204_204#" 2.34589
+cap "tg_0/out" "tg_0/clk_" 40.2418
+cap "inverter_1/in" "tg_0/clk" 35.0857
+cap "inverter_2/out" "tg_0/inp" 3.75287
+cap "tg_0/out" "inverter_1/in" 25.1523
+cap "inverter_1/w_n204_204#" "tg_0/clk_" -14.0276
+cap "inverter_1/out" "tg_0/clk_" 0.0764425
+cap "tg_0/inp" "tg_0/clk" 31.3746
+cap "inverter_1/in" "inverter_1/w_n204_204#" 59.3522
 merge "inverter_0/a_n177_0#" "inverter_1/a_n177_0#" -1454.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46920 -2964 -132480 -3336 0 0 0 0 0 0 0 0 0 0
 merge "inverter_1/a_n177_0#" "inverter_2/a_n177_0#"
 merge "inverter_2/a_n177_0#" "tg_0/clk_"

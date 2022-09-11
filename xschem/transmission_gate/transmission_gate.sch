@@ -41,7 +41,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 0 -60 3 0 {name=M2
 L=Lpmos
-W=1.26
+W=Wpmos
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

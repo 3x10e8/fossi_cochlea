@@ -381,7 +381,7 @@ rect 24004 26083 24081 26089
 rect 24004 26019 24010 26083
 rect 24074 26019 24081 26083
 rect 24004 26013 24081 26019
-use comparator  comparator_0 comparator
+use comparator  comparator_0 /local_disk/fossi_cochlea/mag/final_designs/comparator
 timestamp 1654749871
 transform 1 0 23898 0 1 26079
 box -1669 -1057 1961 897
@@ -393,19 +393,19 @@ use filter  filter_1
 timestamp 1662867291
 transform -1 0 46804 0 1 -2522
 box -1298 2522 22766 33508
-use filter_clkgen  filter_clkgen_0 clkgen
+use filter_clkgen  filter_clkgen_0 /local_disk/fossi_cochlea/mag/final_designs/clkgen
 timestamp 1662868276
 transform 1 0 20194 0 1 33321
 box -1661 -2136 3360 1229
-use level_shifter_low  level_shifter_low_0 level_down_shifter
+use level_shifter_low  level_shifter_low_0 /local_disk/fossi_cochlea/mag/final_designs/level_down_shifter
 timestamp 1662867291
 transform 1 0 24311 0 1 32844
 box -71 -46 2139 722
-use level_shifter_low  level_shifter_low_1
+use level_shifter_low  level_shifter_low_1 /local_disk/fossi_cochlea/mag/final_designs/level_down_shifter
 timestamp 1662867291
 transform 1 0 24311 0 -1 32848
 box -71 -46 2139 722
-use level_up_shifter_d_a  level_up_shifter_d_a_0 level_up_shifter
+use level_up_shifter_d_a  level_up_shifter_d_a_0 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
 timestamp 1662867987
 transform 1 0 11668 0 1 31806
 box 402 498 2794 1682

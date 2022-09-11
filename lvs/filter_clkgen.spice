@@ -1,4 +1,4 @@
-* NGSPICE file created from /local_disk/fossi_cochlea/mag/final_designs/clkgen/filter_clkgen.ext - technology: sky130B
+* NGSPICE file created from filter_clkgen.ext - technology: sky130B
 
 .subckt inv_weak_pulldown_corrected a_30_590# a_n177_50# vnb w_n204_554# in li_n276_n97#
 X0 a_30_590# in w_n204_554# w_n204_554# sky130_fd_pr__pfet_01v8 ad=5.04e+11p pd=3.32e+06u as=4.914e+11p ps=3.3e+06u w=1.26e+06u l=180000u
@@ -100,8 +100,8 @@ X32 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sk
 X33 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
 .ends
 
-.subckt filter_clkgen cclk div2
-+ phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vnb vpb vccd vdda vssd
+.subckt filter_clkgen cclk div2 phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vnb vpb vccd
++ vdda vssd
 Xcclkgen_0 vnb cclkb_ana vdda vnb cclkgen_0/inv_weak_pulldown_corrected_0/in vdda
 + cclk_ana vssd cclkgen
 Xphigen_0 phi2b vpb vdda vnb vdda phigen_0/inv_weak_pulldown_corrected_0/in phi2 vssd

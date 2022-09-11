@@ -8,7 +8,7 @@ N 280 -80 360 -80 {
 lab=#net1}
 N 460 -80 640 -80 {
 lab=#net2}
-N 720 -80 780 -80 {
+N 640 -80 780 -80 {
 lab=#net2}
 N 880 -80 910 -80 {
 lab=#net3}
@@ -36,7 +36,7 @@ N 290 490 370 490 {
 lab=#net8}
 N 470 490 650 490 {
 lab=#net9}
-N 730 490 790 490 {
+N 650 490 790 490 {
 lab=#net9}
 N 890 490 920 490 {
 lab=#net10}
@@ -46,7 +46,7 @@ N 1370 490 1460 490 {
 lab=#net11}
 N 1460 490 1520 490 {
 lab=#net11}
-N 1620 490 2000 490 {
+N 1620 490 1990 490 {
 lab=#net12}
 N 370 280 410 280 {
 lab=#net13}
@@ -58,11 +58,7 @@ N 650 280 650 490 {
 lab=#net9}
 N 1670 750 1780 750 {
 lab=#net14}
-N 2000 30 2000 490 {
-lab=#net12}
-N 1990 30 2000 30 {
-lab=#net12}
-N 1990 -40 1990 30 {
+N 1990 -40 1990 490 {
 lab=#net12}
 N -360 -200 -360 -90 {
 lab=inm}
@@ -100,22 +96,6 @@ N 2080 -70 2310 -70 {
 lab=high}
 N 2080 -50 2310 -50 {
 lab=low}
-N 640 -120 720 -120 {
-lab=#net2}
-N 720 -120 720 -80 {
-lab=#net2}
-N 660 -80 690 -80 {
-lab=GND}
-N 690 -80 690 -40 {
-lab=GND}
-N 650 450 730 450 {
-lab=#net9}
-N 730 450 730 490 {
-lab=#net9}
-N 670 490 700 490 {
-lab=GND}
-N 700 490 700 530 {
-lab=GND}
 N 1030 -80 1260 -80 {
 lab=#net17}
 N 1180 -80 1180 50 {
@@ -134,6 +114,8 @@ N -670 -620 -610 -590 {
 lab=#net19}
 N -670 -580 -610 -620 {
 lab=#net20}
+N 640 -80 640 40 {}
+N 650 490 650 620 {}
 C {clkgen/filter_clkgen_balanced_clks.sym} 50 -570 0 0 {name=x1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 280 -50 0 0 {name=C7 model=cap_mim_m3_1 W=6 L=6.7 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 400 -260 0 0 {name=C8 model=cap_mim_m3_1 W=3.4 L=3 MF=1 spiceprefix=X}
@@ -291,10 +273,10 @@ C {devices/lab_pin.sym} -320 310 2 0 {name=l77 sig_type=std_logic lab=sinb}
 C {devices/lab_pin.sym} -320 360 2 0 {name=l75 sig_type=std_logic lab=sin}
 C {devices/lab_pin.sym} -320 460 2 0 {name=l76 sig_type=std_logic lab=sinb}
 C {devices/lab_pin.sym} 2010 -110 0 0 {name=l85 sig_type=std_logic lab=vccd}
-C {Switched_Caps/mim_cap_stacked_12pF.sym} 650 70 3 0 {name=x9}
-C {devices/gnd.sym} 690 -40 0 0 {name=l105 lab=GND}
-C {Switched_Caps/mim_cap_stacked_12pF.sym} 660 640 3 0 {name=x10}
-C {devices/gnd.sym} 700 530 0 0 {name=l105 lab=GND}
+C {Switched_Caps/mim_cap_stacked_12pF.sym} 490 50 0 0 {name=x9}
+C {devices/gnd.sym} 640 60 0 0 {name=l105 lab=GND}
+C {Switched_Caps/mim_cap_stacked_12pF.sym} 500 630 0 0 {name=x10}
+C {devices/gnd.sym} 650 640 0 0 {name=l105 lab=GND}
 C {Switched_Caps/mim_cap_stacked_6pF.sym} 1030 60 0 0 {name=x11}
 C {devices/gnd.sym} 1180 70 0 0 {name=l105 lab=GND}
 C {Switched_Caps/mim_cap_stacked_3pF.sym} 1630 60 0 0 {name=x12}

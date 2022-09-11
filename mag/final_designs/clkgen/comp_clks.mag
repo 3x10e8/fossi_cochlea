@@ -24,7 +24,7 @@ use inverter  inverter_2 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 828 0 -1 -32
 box -276 -128 368 512
-use tg  tg_0
+use tg  tg_0 /local_disk/fossi_cochlea/mag/final_designs/clkgen
 timestamp 1654741520
 transform 1 0 276 0 -1 -32
 box -276 -128 368 512

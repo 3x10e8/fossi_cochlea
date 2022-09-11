@@ -757,11 +757,11 @@ use cclkgen  cclkgen_0
 timestamp 1654754240
 transform 1 0 876 0 1 -2136
 box 0 0 2484 1184
-use level_up_shifter_d_a  level_up_shifter_d_a_0 level_up_shifter
+use level_up_shifter_d_a  level_up_shifter_d_a_0 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
 timestamp 1662867987
 transform 1 0 -2063 0 1 -1215
 box 402 498 2794 1682
-use level_up_shifter_d_a  level_up_shifter_d_a_1
+use level_up_shifter_d_a  level_up_shifter_d_a_1 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
 timestamp 1662867987
 transform 1 0 -2063 0 -1 -123
 box 402 498 2794 1682

@@ -32,7 +32,7 @@ N -20 -90 -0 -90 {
 lab=out}
 C {sky130_fd_pr/nfet_01v8.sym} 20 60 2 0 {name=M1
 L=Lnmos
-W=0.42
+W=Wnmos
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -46,7 +46,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -40 -120 2 1 {name=M2
 L=Lpmos
-W=1.26
+W=Wpmos
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

@@ -8,19 +8,19 @@ use tg tg_0 1 0 276 0 -1 -32
 use inverter inverter_0 1 0 276 0 1 128
 node "m2_135_n86#" 2 191.621 135 -86 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17952 1124 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "tg_0/clk" "inverter_0/out" 3.4427
-cap "inverter_0/w_n204_204#" "tg_0/out" 19.5923
+cap "tg_0/out" "inverter_0/out" 2.35546
+cap "tg_0/clk_" "tg_0/inp" 42.348
 cap "tg_0/clk_" "inverter_0/out" 2.77479
 cap "inverter_0/w_n204_204#" "tg_0/inp" 17.9914
-cap "inverter_0/out" "tg_0/out" 2.35546
-cap "tg_0/clk_" "tg_0/clk" 2.1934
-cap "tg_0/inp" "inverter_0/out" 12.2184
 cap "tg_0/clk_" "tg_0/out" 4.22943
 cap "tg_0/clk" "tg_0/inp" 35.474
-cap "inverter_0/w_n204_204#" "tg_0/clk" 43.7553
-cap "tg_0/clk_" "tg_0/inp" 42.348
-cap "tg_0/inp" "tg_0/out" 9.84677
-cap "tg_0/clk_" "inverter_0/w_n204_204#" 15.5739
+cap "tg_0/clk" "inverter_0/out" 3.4427
+cap "inverter_0/w_n204_204#" "tg_0/out" 19.5923
+cap "inverter_0/w_n204_204#" "tg_0/clk_" 15.5739
+cap "tg_0/inp" "inverter_0/out" 12.2184
+cap "tg_0/clk" "tg_0/clk_" 2.1934
+cap "tg_0/out" "tg_0/inp" 9.84677
+cap "tg_0/clk" "inverter_0/w_n204_204#" 43.7553
 merge "inverter_0/a_n177_0#" "tg_0/clk_" -643.171 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21896 -1356 -61824 -1480 0 0 0 0 0 0 0 0 0 0
 merge "tg_0/clk_" "VSUBS"
 merge "inverter_0/in" "tg_0/inp" -145.835 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -748 -180 0 0 0 0 0 0 0 0
