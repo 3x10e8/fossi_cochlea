@@ -1,7 +1,11 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1654741520
+timestamp 1662862968
+<< metal4 >>
+rect -2672 2188 -1770 2365
+<< metal5 >>
+rect 19436 -1709 19756 -1136
 use cap_10_10__side_x2  cap_10_10__side_x2_0
 array 0 0 -3056 0 5 2720
 timestamp 1654741520
@@ -28,4 +32,9 @@ use cap_10_10_edge_x2  cap_10_10_edge_x2_3
 timestamp 1654741520
 transform -1 0 19046 0 -1 2737
 box -712 -702 2344 2354
+<< labels >>
+flabel metal4 -2672 2188 -1770 2365 1 FreeSans 3200 90 0 0 sig
+port 1 n default bidirectional
+flabel metal5 19436 -1709 19756 -1136 1 FreeSans 3200 90 0 0 vss
+port 2 n default bidirectional
 << end >>

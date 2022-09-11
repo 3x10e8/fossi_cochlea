@@ -1,51 +1,61 @@
 magic
 tech sky130B
-timestamp 1654741520
+magscale 1 2
+timestamp 1662863227
+<< metal4 >>
+rect -2672 7538 -1770 7724
+<< metal5 >>
+rect 19436 -1710 19756 -1137
 use cap_10_10__side_x2  cap_10_10__side_x2_0
-array 0 0 1528 0 5 -1360
+array 0 0 3056 0 5 -2720
 timestamp 1654741520
-transform 0 1 7174 -1 0 4083
-box -356 -183 1172 1177
+transform 0 1 14348 -1 0 8166
+box -712 -366 2344 2354
 use cap_10_10__side_x2  cap_10_10__side_x2_1
-array 0 0 1528 0 5 -1360
+array 0 0 3056 0 5 -2720
 timestamp 1654741520
-transform 0 -1 1368 1 0 -981
-box -356 -183 1172 1177
+transform 0 -1 2736 1 0 -1962
+box -712 -366 2344 2354
 use cap_10_10__side_x2  cap_10_10__side_x2_2
 timestamp 1654741520
-transform 1 0 -981 0 1 374
-box -356 -183 1172 1177
+transform 1 0 -1962 0 1 748
+box -712 -366 2344 2354
 use cap_10_10__side_x2  cap_10_10__side_x2_3
 timestamp 1654741520
-transform -1 0 9523 0 -1 2728
-box -356 -183 1172 1177
+transform -1 0 19046 0 -1 5456
+box -712 -366 2344 2354
 use cap_10_10__side_x2  cap_10_10__side_x2_4
 timestamp 1654741520
-transform -1 0 9523 0 -1 1368
-box -356 -183 1172 1177
+transform -1 0 19046 0 -1 2736
+box -712 -366 2344 2354
 use cap_10_10__side_x2  cap_10_10__side_x2_5
 timestamp 1654741520
-transform 1 0 -981 0 1 1734
-box -356 -183 1172 1177
+transform 1 0 -1962 0 1 3468
+box -712 -366 2344 2354
 use cap_10_10_edge_x2  cap_10_10_edge_x2_0
 timestamp 1654741520
-transform 1 0 -981 0 1 -986
-box -356 -351 1172 1177
+transform 1 0 -1962 0 1 -1972
+box -712 -702 2344 2354
 use cap_10_10_edge_x2  cap_10_10_edge_x2_1
 timestamp 1654741520
-transform 0 -1 9528 1 0 -981
-box -356 -351 1172 1177
+transform 0 -1 19056 1 0 -1962
+box -712 -702 2344 2354
 use cap_10_10_edge_x2  cap_10_10_edge_x2_2
 timestamp 1654741520
-transform -1 0 9523 0 -1 4088
-box -356 -351 1172 1177
+transform -1 0 19046 0 -1 8176
+box -712 -702 2344 2354
 use cap_10_10_edge_x2  cap_10_10_edge_x2_3
 timestamp 1654741520
-transform 0 1 -986 -1 0 4083
-box -356 -351 1172 1177
+transform 0 1 -1972 -1 0 8166
+box -712 -702 2344 2354
 use cap_10_10_x2  cap_10_10_x2_0
-array 0 5 1360 0 1 1360
+array 0 5 2720 0 1 2720
 timestamp 1654741520
-transform 1 0 379 0 1 374
-box -188 -183 1172 1177
+transform 1 0 758 0 1 748
+box -376 -366 2344 2354
+<< labels >>
+flabel metal4 -2672 7538 -1770 7724 1 FreeSans 3200 90 0 0 sig
+port 1 n default bidirectional
+flabel metal5 19436 -1710 19756 -1137 1 FreeSans 3200 90 0 0 vss
+port 2 n default bidirectional
 << end >>

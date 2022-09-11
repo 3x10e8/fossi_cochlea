@@ -1,28 +1,28 @@
-timestamp 1654733229
+timestamp 1662867987
 version 8.3
-tech sky130A
+tech sky130B
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
 use comp_clks_stg1 comp_clks_stg1_0 1 0 402 0 -1 1138
 parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
-node "a_1230_594#" 7247 2292.48 1230 594 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133210 8874 0 0 21070 1274 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_1203_1219#" 7016 2274.21 1203 1219 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130100 8562 0 0 27102 1720 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_1260_620#" 5370 1956.82 1260 620 ndif 0 0 0 0 0 0 0 0 53760 2816 5544 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 34646 2582 44998 2736 19878 1172 0 0 0 0 0 0 0 0
-node "a_1811_1506#" 5529 2571.82 1811 1506 p 0 0 0 0 0 0 0 0 53760 2816 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 47328 3328 47505 2902 19976 1176 0 0 0 0 0 0 0 0
-node "w_1715_1303#" 8178 1724.4 1715 1303 nw 0 0 0 0 95120 1284 0 0 67356 3492 5964 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68476 4844 206610 7008 0 0 0 0 0 0 0 0 0 0
-substrate "a_1112_620#" 0 0 1112 620 ppd 0 0 0 0 0 0 0 0 62400 3200 15720 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68816 4796 179993 6286 4144 260 0 0 0 0 0 0 0 0
-cap "a_1811_1506#" "w_1715_1303#" 1933.38
-cap "a_1260_620#" "a_1203_1219#" 203.852
-cap "a_1230_594#" "a_1203_1219#" 483.652
-cap "a_1260_620#" "a_1811_1506#" 215.005
-cap "a_1260_620#" "w_1715_1303#" 1430.97
-cap "a_1230_594#" "a_1811_1506#" 177.176
-cap "a_1230_594#" "w_1715_1303#" 152.659
-cap "a_1811_1506#" "a_1203_1219#" 192.185
-cap "a_1203_1219#" "w_1715_1303#" 183.776
-cap "a_1230_594#" "a_1260_620#" 188.666
+node "a_1230_594#" 7247 1220.34 1230 594 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133210 8874 0 0 21070 1274 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1203_1219#" 7016 1341.41 1203 1219 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130100 8562 0 0 27102 1720 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1260_620#" 5370 1173.46 1260 620 ndif 0 0 0 0 0 0 0 0 53760 2816 5544 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 34646 2582 44998 2736 19878 1172 0 0 0 0 0 0 0 0
+node "a_1811_1506#" 5529 1414.61 1811 1506 p 0 0 0 0 0 0 0 0 53760 2816 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 47328 3328 47505 2902 19976 1176 0 0 0 0 0 0 0 0
+node "w_1715_1303#" 8178 1728.79 1715 1303 nw 0 0 0 0 95120 1284 0 0 67356 3492 5964 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68476 4844 206610 7008 0 0 0 0 0 0 0 0 0 0
+substrate "a_1112_620#" 0 0 1112 620 ppd 0 0 0 0 0 0 0 0 62400 3200 15720 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68816 4796 182393 6336 4144 260 0 0 0 0 0 0 0 0
+cap "a_1811_1506#" "a_1203_1219#" 58.531
+cap "w_1715_1303#" "a_1260_620#" 586.998
+cap "a_1260_620#" "a_1230_594#" 58.3278
+cap "w_1715_1303#" "a_1230_594#" 84.9453
+cap "a_1260_620#" "a_1203_1219#" 73.5944
+cap "w_1715_1303#" "a_1203_1219#" 104.449
+cap "a_1811_1506#" "a_1260_620#" 157.585
+cap "w_1715_1303#" "a_1811_1506#" 803.023
+cap "a_1203_1219#" "a_1230_594#" 226.569
+cap "a_1811_1506#" "a_1230_594#" 40.9992
 device msubckt sky130_fd_pr__nfet_01v8 2527 620 2528 621 l=30 w=120 "a_1112_620#" "a_1203_1219#" 60 0 "a_1811_1506#" 120 0 "a_1112_620#" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2441 620 2442 621 l=30 w=120 "a_1112_620#" "a_1203_1219#" 60 0 "a_1112_620#" 120 0 "a_1811_1506#" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2354 620 2355 621 l=30 w=120 "a_1112_620#" "a_1203_1219#" 60 0 "a_1811_1506#" 120 0 "a_1112_620#" 120 0
@@ -57,19 +57,65 @@ device msubckt sky130_fd_pr__nfet_01v8 1316 1060 1317 1061 l=30 w=120 "a_1112_62
 device msubckt sky130_fd_pr__nfet_01v8 1230 1060 1231 1061 l=30 w=120 "a_1112_620#" "a_1203_1219#" 60 0 "w_1715_1303#" 120 0 "a_1260_620#" 120 0
 device msubckt sky130_fd_pr__pfet_01v8 1930 1375 1931 1376 l=30 w=84 "w_1715_1303#" "a_1260_620#" 60 0 "w_1715_1303#" 84 0 "a_1811_1506#" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 1829 1375 1830 1376 l=30 w=84 "w_1715_1303#" "a_1811_1506#" 60 0 "a_1260_620#" 84 0 "w_1715_1303#" 84 0
-cap "comp_clks_stg1_0/tg_0/out" "w_1715_1303#" 1.85542
-cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/inverter_0/out" 6.77363
-cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/tg_0/clk" 11.0212
-cap "comp_clks_stg1_0/tg_0/inp" "w_1715_1303#" 1.21875
-cap "comp_clks_stg1_0/tg_0/inp" "comp_clks_stg1_0/inverter_0/out" 8.48778
-cap "comp_clks_stg1_0/inverter_0/out" "comp_clks_stg1_0/inverter_0/w_n204_204#" 57.9178
-cap "comp_clks_stg1_0/tg_0/clk" "comp_clks_stg1_0/inverter_0/out" 2.87692
-cap "a_1260_620#" "comp_clks_stg1_0/tg_0/clk_" 19.9285
-cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/tg_0/clk_" 32.4107
-cap "a_1260_620#" "comp_clks_stg1_0/inverter_0/w_n204_204#" 5.77495
-cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/inverter_0/w_n204_204#" 17.9426
-cap "comp_clks_stg1_0/tg_0/clk_" "w_1715_1303#" 5.04331
-cap "comp_clks_stg1_0/inverter_0/out" "comp_clks_stg1_0/tg_0/clk_" 57.0906
-merge "comp_clks_stg1_0/inverter_0/out" "a_1230_594#" 56.9213 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74118 0 0 0 -35 -72 0 0 0 0 0 0 0 0 0 0 0 0
-merge "comp_clks_stg1_0/tg_0/out" "a_1203_1219#" 64.2478 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74118 0 0 0 -68 -72 0 0 0 0 0 0 0 0 0 0 0 0
-merge "comp_clks_stg1_0/VSUBS" "a_1112_620#" 11.0058 0 0 0 0 0 0 0 0 47880 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16932 0 0 0 0 0 0 0 0 0 0 0
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "a_1260_620#" 29.2038
+cap "a_1811_1506#" "comp_clks_stg1_0/tg_0/inp" 1.03066
+cap "comp_clks_stg1_0/tg_0/clk" "w_1715_1303#" 37.9539
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/inverter_0/w_n204_204#" 35.2569
+cap "a_1260_620#" "comp_clks_stg1_0/inverter_0/out" 6.06192
+cap "w_1715_1303#" "comp_clks_stg1_0/tg_0/inp" 9.80292
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "comp_clks_stg1_0/tg_0/out" 1.88215
+cap "comp_clks_stg1_0/tg_0/clk" "a_1260_620#" 8.39276
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/inverter_0/out" 42.0377
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/tg_0/clk" -7.77435
+cap "comp_clks_stg1_0/tg_0/inp" "a_1260_620#" 25.9054
+cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/inverter_0/out" 1.95847
+cap "comp_clks_stg1_0/tg_0/clk" "comp_clks_stg1_0/tg_0/out" 10.126
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/tg_0/inp" -0.343427
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "comp_clks_stg1_0/inverter_0/out" 55.7145
+cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/tg_0/inp" 13.6641
+cap "comp_clks_stg1_0/tg_0/clk" "comp_clks_stg1_0/inverter_0/w_n204_204#" -2.91227
+cap "comp_clks_stg1_0/tg_0/clk_" "a_1811_1506#" 2.32037
+cap "w_1715_1303#" "a_1260_620#" -1.73384
+cap "a_1811_1506#" "comp_clks_stg1_0/tg_0/out" 2.92934
+cap "comp_clks_stg1_0/tg_0/clk" "comp_clks_stg1_0/inverter_0/out" 6.13273
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "comp_clks_stg1_0/tg_0/inp" -2.8621
+cap "comp_clks_stg1_0/tg_0/clk_" "w_1715_1303#" 22.4324
+cap "comp_clks_stg1_0/tg_0/inp" "comp_clks_stg1_0/inverter_0/out" 12.8867
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "a_1811_1506#" 0.822164
+cap "w_1715_1303#" "comp_clks_stg1_0/tg_0/out" 12.6755
+cap "comp_clks_stg1_0/tg_0/clk" "comp_clks_stg1_0/tg_0/inp" -0.0837489
+cap "comp_clks_stg1_0/tg_0/clk_" "a_1260_620#" 30.7449
+cap "a_1811_1506#" "comp_clks_stg1_0/inverter_0/out" 0.290392
+cap "comp_clks_stg1_0/tg_0/out" "a_1260_620#" 7.49966
+cap "comp_clks_stg1_0/tg_0/clk" "a_1811_1506#" 4.30412
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/tg_0/out" 34.7806
+cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/inverter_0/out" 0.0668747
+cap "comp_clks_stg1_0/tg_0/inp" "a_1260_620#" 0.110882
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/tg_0/inp" 0.645362
+cap "w_1715_1303#" "a_1811_1506#" -1.32644
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "comp_clks_stg1_0/inverter_0/out" 0.206606
+cap "comp_clks_stg1_0/tg_0/out" "comp_clks_stg1_0/tg_0/inp" 0.0311199
+cap "a_1811_1506#" "a_1260_620#" -0.067233
+cap "comp_clks_stg1_0/tg_0/clk_" "a_1811_1506#" 3.07682
+cap "a_1811_1506#" "comp_clks_stg1_0/tg_0/out" 5.24403
+cap "w_1715_1303#" "a_1260_620#" -1.27253
+cap "comp_clks_stg1_0/tg_0/clk_" "w_1715_1303#" 3.58415
+cap "comp_clks_stg1_0/tg_0/inp" "comp_clks_stg1_0/inverter_0/out" 0.166353
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "a_1811_1506#" 2.67442
+cap "w_1715_1303#" "comp_clks_stg1_0/tg_0/out" 5.64126
+cap "comp_clks_stg1_0/tg_0/clk_" "a_1260_620#" 0.176153
+cap "comp_clks_stg1_0/tg_0/out" "a_1260_620#" 0.169616
+cap "a_1811_1506#" "comp_clks_stg1_0/inverter_0/out" 0.775608
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/tg_0/out" 0.0336404
+cap "comp_clks_stg1_0/tg_0/clk" "a_1811_1506#" 9.6867
+cap "a_1811_1506#" "comp_clks_stg1_0/tg_0/inp" 1.67528
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/inverter_0/w_n204_204#" 3.4661
+cap "comp_clks_stg1_0/tg_0/clk" "w_1715_1303#" 12.8214
+cap "a_1260_620#" "comp_clks_stg1_0/inverter_0/out" -0.001484
+cap "w_1715_1303#" "comp_clks_stg1_0/tg_0/inp" 5.51974
+cap "comp_clks_stg1_0/inverter_0/w_n204_204#" "comp_clks_stg1_0/tg_0/out" 0.71017
+cap "comp_clks_stg1_0/tg_0/clk_" "comp_clks_stg1_0/inverter_0/out" 0.606932
+cap "comp_clks_stg1_0/tg_0/clk" "a_1260_620#" 0.868399
+merge "comp_clks_stg1_0/inverter_0/out" "a_1230_594#" -83.8771 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -35 -72 0 0 0 0 0 0 0 0 0 0 0 0
+merge "comp_clks_stg1_0/tg_0/out" "a_1203_1219#" -97.1363 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -68 -72 0 0 0 0 0 0 0 0 0 0 0 0
+merge "comp_clks_stg1_0/VSUBS" "a_1112_620#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

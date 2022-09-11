@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -52,7 +52,7 @@ spiceprefix=X
 C {devices/ipin.sym} -120 0 0 0 {name=p1 lab=in}
 C {devices/iopin.sym} 80 0 0 0 {name=p2 lab=out}
 C {sky130_fd_pr/pfet_01v8.sym} -20 -60 0 0 {name=M3
-L=Lmin
+L=Lpmos
 W=Wpmos
 nf=1
 mult=1

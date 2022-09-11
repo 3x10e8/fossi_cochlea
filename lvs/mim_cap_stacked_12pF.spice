@@ -1,0 +1,7 @@
+** sch_path: /local_disk/fossi_cochlea/xschem/Switched_Caps/mim_cap_stacked_12pF.sch
+.subckt mim_cap_stacked_12pF sig vss
+*.PININFO sig:B vss:B
+XC1 sig vss sky130_fd_pr__cap_mim_m3_1 W=10 L=10 MF=32 m=32
+XC2 vss sig sky130_fd_pr__cap_mim_m3_2 W=10 L=10 VM=32 m=32
+.ends
+.end

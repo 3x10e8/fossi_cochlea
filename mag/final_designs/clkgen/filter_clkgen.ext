@@ -1,6 +1,6 @@
-timestamp 1654734827
+timestamp 1662868276
 version 8.3
-tech sky130A
+tech sky130B
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
@@ -9,295 +9,1183 @@ use phigen phigen_0 1 0 876 0 1 40
 use level_up_shifter_d_a level_up_shifter_d_a_1 1 0 -2063 0 -1 -123
 use level_up_shifter_d_a level_up_shifter_d_a_0 1 0 -2063 0 1 -1215
 use cclkgen cclkgen_0 1 0 876 0 1 -2136
-node "m2_1904_n322#" 4 437.001 1904 -322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37555 2216 0 0 0 0 0 0 0 0
-node "m2_1282_n700#" 8 750.166 1282 -700 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70361 4422 0 0 0 0 0 0 0 0
-node "m2_n465_n594#" 2 745.433 -465 -594 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8288 520 99208 3226 0 0 0 0 0 0
-node "m1_1286_n1837#" 2 309.437 1286 -1837 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25688 1428 0 0 0 0 0 0 0 0 0 0
-node "m1_694_n2136#" 1 286.898 694 -2136 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50304 1240 0 0 0 0 0 0 0 0 0 0
-node "m1_n1644_n706#" 0 58.6382 -1644 -706 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4428 272 0 0 0 0 0 0 0 0 0 0
-node "div2" 0 52.4328 -1540 -396 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3712 244 0 0 0 0 0 0 0 0 0 0
-node "m1_n1090_n158#" 2 788.29 -1090 -158 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6656 464 8288 520 19208 784 112706 2586 0 0 0 0
-node "GND" 0 54.976 -1638 -158 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3840 256 0 0 0 0 0 0 0 0 0 0
-node "GND" 5 1612.55 2759 -1580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12432 780 12432 780 28812 1176 288960 6892 0 0 0 0
-node "m1_1813_598#" 5 1604.49 1813 598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12432 780 12432 780 28812 1176 289620 6912 0 0 0 0
-node "m1_723_n717#" 5 1849.85 723 -717 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 55476 1670 12432 780 28812 1176 288960 6892 0 0 0 0
-node "VDD1" 0 53.3152 -1456 392 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3808 248 0 0 0 0 0 0 0 0 0 0
-node "m1_n1551_n1786#" 4 1145.74 -1551 -1786 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9791 688 13208 804 34833 1284 214602 4754 0 0 0 0
-node "m1_3216_n2124#" 6 1451.43 3216 -2124 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
-node "m1_2299_n1035#" 6 1429.69 2299 -1035 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
-node "VCCD" 6 1670.55 1377 -1037 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
-node "m1_635_371#" 1 514.594 635 371 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 96576 2204 0 0 0 0 0 0 0 0 0 0
-node "li_72_n1663#" 14 649.803 72 -1663 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3569 240 8362 522 66556 2202 0 0 0 0 0 0
-node "li_73_291#" 15 693.519 73 291 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3835 248 8288 520 82259 2618 0 0 0 0 0 0
+port "vpb" 10 1904 -322 1939 751 m2
+port "vnb" 9 1282 -700 1317 373 m2
+port "cclkb_ana" 7 3031 -1880 3082 -1696 m1
+port "cclk_ana" 8 3031 -1392 3082 -1208 m1
+port "phi1b" 5 3031 -792 3082 -608 m1
+port "phi1" 6 3031 -304 3082 -120 m1
+port "vssd" 13 -1116 -717 -686 -621 m4
+port "phi2b" 3 3032 296 3080 480 m1
+port "phi2" 4 3032 784 3080 968 m1
+port "vccd" 11 -1661 371 -1016 468 m1
+port "vdda" 12 635 371 731 1224 m1
+port "cclk" 1 -1492 -989 -1355 -953 p
+port "div2" 2 -1492 -385 -1355 -349 p
+node "vpb" 4 244.31 1904 -322 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37555 2216 0 0 0 0 0 0 0 0
+node "vnb" 8 592.731 1282 -700 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70525 4414 0 0 0 0 0 0 0 0
+node "m2_n465_n594#" 2 626.892 -465 -594 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8288 520 99208 3226 0 0 0 0 0 0
+node "cclkb_ana" 0 92.5101 3031 -1880 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "m1_1286_n1837#" 2 186.042 1286 -1837 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25688 1428 0 0 0 0 0 0 0 0 0 0
+node "m1_694_n2136#" 1 267.715 694 -2136 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50304 1240 0 0 0 0 0 0 0 0 0 0
+node "cclk_ana" 0 86.6063 3031 -1392 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "phi1b" 0 86.1532 3031 -792 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "m1_n692_n717#" 0 141.766 -692 -717 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23616 684 0 0 0 0 0 0 0 0 0 0
+node "m1_n1644_n706#" 0 41.2624 -1644 -706 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4428 272 0 0 0 0 0 0 0 0 0 0
+node "m1_n1540_n396#" 0 43.2177 -1540 -396 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3712 244 0 0 0 0 0 0 0 0 0 0
+node "phi1" 0 85.3993 3031 -304 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "vssd" 3 926.012 -1116 -717 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6656 464 22496 1008 33416 1272 158594 3542 0 0 0 0
+node "GND" 0 36.5252 -1638 -158 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3840 256 0 0 0 0 0 0 0 0 0 0
+node "phi2b" 0 73.0981 3032 296 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8832 464 0 0 0 0 0 0 0 0 0 0
+node "GND" 5 841.774 2759 -1580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12432 780 12432 780 28812 1176 288960 6892 0 0 0 0
+node "m1_1813_598#" 5 822.823 1813 598 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12432 780 12432 780 28812 1176 289620 6912 0 0 0 0
+node "m1_723_n717#" 5 1343.47 723 -717 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 55476 1670 12432 780 28812 1176 288960 6892 0 0 0 0
+node "phi2" 0 91.7026 3032 784 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8832 464 0 0 0 0 0 0 0 0 0 0
+node "vccd" 4 1398.91 -1661 371 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 69028 1940 13208 804 34833 1284 214602 4754 0 0 0 0
+node "m1_3216_n2124#" 6 1305.68 3216 -2124 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
+node "m1_2299_n1035#" 6 856.368 2299 -1035 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
+node "VCCD" 6 876.547 1377 -1037 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16576 1040 16576 1040 38416 1568 288960 6892 0 0 0 0
+node "vdda" 1 464.552 635 371 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 96576 2204 0 0 0 0 0 0 0 0 0 0
+node "li_72_n1663#" 14 532.312 72 -1663 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3569 240 8362 522 66556 2202 0 0 0 0 0 0
+node "li_73_291#" 15 585.522 73 291 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 3835 248 8288 520 82259 2618 0 0 0 0 0 0
+node "cclk" 183 87.3926 -1492 -989 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4932 346 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "div2" 183 87.3102 -1492 -385 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4932 346 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_2236_n1050#" 3942 809.37 2236 -1050 nw 0 0 0 0 269790 2626 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n1589_n721#" 2571 283.866 -1589 -721 nw 0 0 0 0 94622 1386 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_2073_28#" 3625 1179.67 2073 28 nw 0 0 0 0 393225 3092 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_1106_n173#" 2488 483.732 1106 -173 nw 0 0 0 0 161244 1796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_1267_724#" 1126 387.09 1267 724 nw 0 0 0 0 129030 1442 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "m2_1282_n700#" "li_72_n1663#" 13.4434
-cap "m1_1813_598#" "m1_1286_n1837#" 42.8323
-cap "GND" "w_2236_n1050#" 98.736
-cap "m1_2299_n1035#" "w_2073_28#" 291.887
-cap "w_1106_n173#" "m2_1282_n700#" 114.597
-cap "m1_3216_n2124#" "w_2073_28#" 291.887
-cap "VCCD" "w_1106_n173#" 151.395
-cap "m1_n1551_n1786#" "VDD1" 75.7895
-cap "VCCD" "w_1267_724#" 151.395
-cap "m2_1904_n322#" "m1_1813_598#" 470.534
-cap "GND" "w_2073_28#" 124.291
-cap "m1_723_n717#" "li_72_n1663#" 191.978
-cap "m2_1904_n322#" "m1_2299_n1035#" 10.2493
-cap "div2" "m1_n1551_n1786#" 36.1714
-cap "m1_2299_n1035#" "m1_1813_598#" 600.32
-cap "m2_n465_n594#" "m2_1282_n700#" 13.3333
-cap "m1_n1090_n158#" "m1_n1551_n1786#" 221.303
-cap "li_73_291#" "m1_723_n717#" 116.085
-cap "VCCD" "m2_1282_n700#" 119.386
-cap "m1_n1090_n158#" "w_n1589_n721#" 35.8292
-cap "m2_1282_n700#" "m1_1286_n1837#" 16.1
-cap "VCCD" "m1_1286_n1837#" 43.1565
-cap "GND" "m1_2299_n1035#" 601.925
-cap "m1_3216_n2124#" "GND" 608.432
-cap "m2_n465_n594#" "m1_723_n717#" 273.494
-cap "m1_n1644_n706#" "m1_n1551_n1786#" 72
-cap "m1_635_371#" "m1_723_n717#" 19.0286
-cap "m1_723_n717#" "m2_1282_n700#" 23.6805
-cap "m1_2299_n1035#" "w_2236_n1050#" 266.312
-cap "m1_n1551_n1786#" "w_n1589_n721#" 234.201
-cap "VCCD" "m1_723_n717#" 603.539
-cap "m1_3216_n2124#" "w_2236_n1050#" 245.402
-cap "VCCD" "m1_1813_598#" 600.643
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 191.182
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" 24.387
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_0/a_1260_620#" 0.505102
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" "level_up_shifter_d_a_0/a_1260_620#" 52.8733
-cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 1.54167
-cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 0.505102
-cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 0.172324
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_0/a_1260_620#" 0.61875
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/in" 16.3364
-cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_0/a_1203_1219#" 0.61875
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 1.54167
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1260_620#" 52.8733
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 134.926
-cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_0/a_1260_620#" 100.865
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 29.6974
-cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_0/a_1203_1219#" 1.13437
-cap "level_up_shifter_d_a_1/a_1203_1219#" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 1.46859
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" -2.66454e-15
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" 187.608
-cap "level_up_shifter_d_a_1/a_1203_1219#" "level_up_shifter_d_a_0/a_1203_1219#" 24
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 7.79598
-cap "level_up_shifter_d_a_1/a_1203_1219#" "level_up_shifter_d_a_0/a_1811_1506#" 1.75313
-cap "level_up_shifter_d_a_1/a_1811_1506#" "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" 124.919
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1203_1219#" 1.13437
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_590#" 4.68354
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/a_1203_1219#" 1.46859
-cap "level_up_shifter_d_a_1/a_1230_594#" "level_up_shifter_d_a_0/a_1203_1219#" 0.898438
-cap "level_up_shifter_d_a_1/a_1230_594#" "level_up_shifter_d_a_0/a_1230_594#" 3.89844
-cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_590#" 0.495252
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1811_1506#" 56.4387
-cap "level_up_shifter_d_a_1/a_1811_1506#" "level_up_shifter_d_a_0/a_1203_1219#" 1.75313
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/a_1811_1506#" 56.4387
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 3.52754
-cap "level_up_shifter_d_a_1/a_1811_1506#" "level_up_shifter_d_a_0/a_1811_1506#" 109.016
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1260_620#" 3.52754
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/comp_clks_0/tg_0/inp" 0.9
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 273.007
-cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk_" 20.8622
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 260.097
-cap "cclkgen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.39344
-cap "cclkgen_0/comp_clks_0/inverter_0/out" "phigen_1/comp_clks_0/tg_0/out" 6.65217
-cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 1.0584
-cap "cclkgen_0/inv_weak_pulldown_corrected_1/in" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 953.13
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk" 344.764
-cap "cclkgen_0/comp_clks_0/tg_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 8.09736
-cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 15.3642
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 99.8148
-cap "cclkgen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/vnb" -2.66454e-15
-cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 155.783
-cap "cclkgen_0/comp_clks_0/tg_0/inp" "phigen_1/comp_clks_0/tg_0/clk_" 254.06
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk_" 30.035
-cap "cclkgen_0/inv_weak_pulldown_corrected_1/in" "phigen_1/comp_clks_0/tg_0/clk" 271.565
-cap "phigen_1/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/clk" 52.2786
-cap "cclkgen_0/comp_clks_0/tg_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 126.648
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 107.464
-cap "cclkgen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/clk" 47.1453
-cap "cclkgen_0/comp_clks_0/inverter_0/out" "phigen_1/comp_clks_0/tg_0/inp" 12.2833
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 1.44815
-cap "cclkgen_0/inv_weak_pulldown_corrected_0/in" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.495252
-cap "phigen_1/comp_clks_0/tg_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 0.000360109
-cap "cclkgen_0/comp_clks_0/tg_0/inp" "phigen_1/comp_clks_0/tg_0/clk_" -165.353
-cap "cclkgen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_2/out" 13.5517
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk" 471.64
-cap "cclkgen_0/comp_clks_0/inverter_0/out" "phigen_1/comp_clks_0/tg_0/out" 52.7
-cap "phigen_1/comp_clks_0/tg_0/inp" "cclkgen_0/comp_clks_0/inverter_0/out" 1.26837
-cap "cclkgen_0/comp_clks_0/inverter_0/out" "phigen_1/comp_clks_0/tg_0/clk" 45.9946
-cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_0/out" 33.6367
-cap "cclkgen_0/comp_clks_0/tg_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 14.85
-cap "cclkgen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/clk_" 15.3956
-cap "phigen_1/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/clk" 53.6267
-cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 1.38462
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 162.999
-cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.505102
-cap "level_up_shifter_d_a_0/a_1260_620#" "level_up_shifter_d_a_1/a_1112_620#" 75.5884
-cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" 0.61875
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 59.0099
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.54167
-cap "level_up_shifter_d_a_0/a_1260_620#" "level_up_shifter_d_a_1/a_1260_620#" 100.865
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 1.54167
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 43.7
-cap "level_up_shifter_d_a_1/a_1112_620#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 0.21064
-cap "level_up_shifter_d_a_0/a_1260_620#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.505102
-cap "level_up_shifter_d_a_1/a_1112_620#" "level_up_shifter_d_a_1/a_1260_620#" 52.8733
-cap "level_up_shifter_d_a_0/a_1260_620#" "level_up_shifter_d_a_1/a_1203_1219#" 0.61875
-cap "level_up_shifter_d_a_0/a_1260_620#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 72.9959
-cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" 50.452
-cap "level_up_shifter_d_a_1/a_1112_620#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 24.387
-cap "level_up_shifter_d_a_1/a_1112_620#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" 166.081
-cap "level_up_shifter_d_a_1/a_1203_1219#" "level_up_shifter_d_a_0/a_1230_594#" 1.79688
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" 133.344
-cap "level_up_shifter_d_a_0/a_1203_1219#" "phigen_1/inv_weak_pulldown_corrected_0/in" 170.962
-cap "level_up_shifter_d_a_1/a_1203_1219#" "level_up_shifter_d_a_0/a_1203_1219#" 57.5
-cap "level_up_shifter_d_a_1/a_1203_1219#" "phigen_1/inv_weak_pulldown_corrected_0/in" 1.13437
-cap "level_up_shifter_d_a_0/a_1203_1219#" "level_up_shifter_d_a_1/a_1811_1506#" 1.75313
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_0/inv_weak_pulldown_corrected_0/in" 98.9722
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1260_620#" 3.52754
-cap "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/in" -3.55271e-15
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 1.40164
-cap "level_up_shifter_d_a_0/w_1715_1303#" "phigen_0/inv_weak_pulldown_corrected_0/in" 136.439
-cap "level_up_shifter_d_a_0/a_1203_1219#" "level_up_shifter_d_a_1/a_1260_620#" 1.13437
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_0/inv_weak_pulldown_corrected_0/in" 306.96
-cap "phigen_0/inv_weak_pulldown_corrected_0/a_30_590#" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.410793
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/a_1203_1219#" 1.46859
-cap "level_up_shifter_d_a_1/a_1203_1219#" "phigen_0/inv_weak_pulldown_corrected_0/in" 1.75313
-cap "level_up_shifter_d_a_1/a_1230_594#" "level_up_shifter_d_a_0/a_1230_594#" 9.88281
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 7.79598
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/w_1715_1303#" 22.1785
-cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 109.016
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/in" 227.771
-cap "level_up_shifter_d_a_0/a_1203_1219#" "level_up_shifter_d_a_1/a_1230_594#" 0.898438
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_30_590#" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.410793
-cap "level_up_shifter_d_a_1/a_1203_1219#" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 1.46859
-cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1811_1506#" 56.4387
-cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/a_1230_594#" 21.5904
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 67.6354
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 7.76694
-cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/in" 8.88178e-16
-cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_0/out" 6.65217
-cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.39344
-cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_0/in" 0.340461
-cap "phigen_1/comp_clks_0/inverter_0/out" "phigen_0/inv_weak_pullup_corrected_0/out" 12.2833
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 839.93
-cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/tg_0/clk" 115.731
-cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/vpb" 58.1818
-cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 181.239
-cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/inp" 3.88732
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 93.7776
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 109.582
-cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/out" 319.468
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 48.9888
-cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk" 107.779
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" -3.55271e-15
-cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 24.3246
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.410793
-cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 106.583
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 46.3611
-cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/comp_clks_0/tg_0/clk" 100.668
-cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.410793
-cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/clk" 52.2786
-cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk" 277.567
-cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/inv_weak_pullup_corrected_0/out" 475.008
-cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk" 0.226275
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 122.015
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk" 424.255
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 15.3956
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_0/out" 33.6367
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/out" 0.172324
-cap "phigen_1/comp_clks_0/inverter_0/out" "phigen_0/comp_clks_0/tg_0/out" 52.7
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/inverter_2/out" 0.8625
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/inp" -14.0246
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/inp" -180.661
-cap "phigen_1/comp_clks_0/inverter_0/out" "phigen_0/comp_clks_0/tg_0/inp" 1.26837
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 15.3956
-cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/inp" -165.546
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 387.505
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/out" 54.7905
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_0/out" 45.9946
-cap "phigen_1/comp_clks_0/inverter_1/out" "phigen_0/comp_clks_0/inverter_2/out" 13.5517
-cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/inp" -4.4991
-cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_0/inv_weak_pulldown_corrected_0/a_n177_50#" 124.373
-cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pullup_corrected_0/vpb" 61.4583
-cap "phigen_0/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" -4.18971
-cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_0/comp_clks_0/tg_0/clk_" 149.409
-cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_0/inv_weak_pullup_corrected_0/inp" 204.436
-cap "phigen_0/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/vpb" 110.132
-cap "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" "phigen_0/comp_clks_0/tg_0/clk_" 48.9888
-cap "phigen_0/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 4.433
-cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_0/inv_weak_pullup_corrected_0/out" 75.7395
-cap "phigen_0/comp_clks_0/inverter_0/out" "phigen_0/comp_clks_0/tg_0/clk_" 33.6367
-cap "phigen_0/comp_clks_0/inverter_0/w_n204_204#" "phigen_0/comp_clks_0/tg_0/clk_" 147.618
-cap "phigen_0/comp_clks_0/tg_0/inp" "phigen_0/comp_clks_0/tg_0/clk_" 1.79487
-merge "phigen_0/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/vpb" -253.384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1295 -214 0 0 0 0 0 0 0 0
-merge "phigen_1/inv_weak_pullup_corrected_0/vpb" "m2_1904_n322#"
-merge "phigen_0/comp_clks_0/tg_0/clk_" "phigen_0/VSUBS" -4801.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59126 -2464 -879587 -5612 -14825 -260 0 0 0 0 0 0 0 0
-merge "phigen_0/VSUBS" "phigen_0/inv_weak_pulldown_corrected_0/a_n177_50#"
-merge "phigen_0/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk_"
-merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_"
-merge "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" "m1_n1090_n158#"
-merge "m1_n1090_n158#" "cclkgen_0/comp_clks_0/tg_0/clk_"
-merge "cclkgen_0/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk_"
-merge "phigen_1/comp_clks_0/tg_0/clk_" "GND"
-merge "GND" "m1_1813_598#"
-merge "m1_1813_598#" "cclkgen_0/VSUBS"
-merge "cclkgen_0/VSUBS" "cclkgen_0/inv_weak_pulldown_corrected_0/a_n177_50#"
-merge "cclkgen_0/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/VSUBS"
-merge "phigen_1/VSUBS" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#"
-merge "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "m1_723_n717#"
-merge "m1_723_n717#" "level_up_shifter_d_a_0/a_1112_620#"
-merge "level_up_shifter_d_a_0/a_1112_620#" "level_up_shifter_d_a_1/a_1112_620#"
-merge "level_up_shifter_d_a_1/a_1112_620#" "VSUBS"
-merge "phigen_0/comp_clks_0/inverter_0/w_n204_204#" "phigen_0/w_1197_875#" -8707.83 0 0 0 0 483250 -12896 0 0 -736050 0 -350631 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1611225 -10072 -663547 -14132 0 0 0 0 0 0 0 0 0 0
-merge "phigen_0/w_1197_875#" "level_up_shifter_d_a_0/w_1715_1303#"
-merge "level_up_shifter_d_a_0/w_1715_1303#" "m1_635_371#"
-merge "m1_635_371#" "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#"
+cap "m1_2299_n1035#" "m1_694_n2136#" 1.01022
+cap "w_2073_28#" "GND" 43.5338
+cap "VCCD" "w_1106_n173#" 38.5595
+cap "w_2073_28#" "vnb" 7.40689
+cap "w_n1589_n721#" "m2_n465_n594#" 6.8866
+cap "phi2b" "w_2236_n1050#" 0.353279
+cap "w_2073_28#" "m1_2299_n1035#" 76.8736
+cap "li_72_n1663#" "VCCD" 7.89445
+cap "GND" "phi2b" 1.66112
+cap "VCCD" "m1_1813_598#" 506.88
+cap "VCCD" "phi1b" 0.00179351
+cap "GND" "vpb" 14.9068
+cap "w_2236_n1050#" "phi2" 0.0006083
+cap "phi2b" "m1_2299_n1035#" 1.32255
+cap "GND" "phi2" 1.66112
+cap "GND" "m1_3216_n2124#" 521.198
+cap "w_2236_n1050#" "m1_3216_n2124#" 60.4179
+cap "m1_n1540_n396#" "div2" 1.80547
+cap "VCCD" "m1_694_n2136#" 16.5418
+cap "vnb" "vpb" 47.9907
+cap "m1_1813_598#" "cclkb_ana" 0.715758
+cap "m1_723_n717#" "m2_n465_n594#" 183.962
+cap "vccd" "m2_n465_n594#" 2.42006
+cap "m1_2299_n1035#" "vpb" 22.6666
+cap "m1_2299_n1035#" "phi2" 1.32255
+cap "m1_2299_n1035#" "m1_3216_n2124#" 103.836
+cap "vssd" "cclk" 0.376861
+cap "m1_n692_n717#" "m2_n465_n594#" 0.993362
+cap "w_2073_28#" "VCCD" 20.5491
+cap "li_73_291#" "m1_723_n717#" 119.548
+cap "vccd" "li_73_291#" 0.154022
+cap "VCCD" "phi2b" 0.00150696
+cap "vdda" "w_1267_724#" 19.7606
+cap "m1_1813_598#" "w_1106_n173#" 8.64866
+cap "li_72_n1663#" "m1_1813_598#" 4.1176
+cap "VCCD" "vpb" 14.1541
+cap "VCCD" "phi2" 0.00150696
+cap "vdda" "m1_723_n717#" 40.9215
+cap "phi1b" "m1_1813_598#" 0.728442
+cap "li_72_n1663#" "m1_694_n2136#" 11.1919
+cap "m1_2299_n1035#" "m2_n465_n594#" 1.17139
+cap "m2_n465_n594#" "vnb" 14.6677
+cap "m1_3216_n2124#" "cclkb_ana" 1.72721
+cap "m1_723_n717#" "m1_1286_n1837#" 1.45504
+cap "m1_1813_598#" "m1_694_n2136#" 2.84352
+cap "div2" "cclk" 3.85915
+cap "li_73_291#" "vnb" 14.0216
+cap "m1_2299_n1035#" "li_73_291#" 3.29914
+cap "w_2073_28#" "m1_1813_598#" 15.3967
+cap "w_n1589_n721#" "vccd" 42.6105
+cap "GND" "phi1" 1.69668
+cap "phi1" "w_2236_n1050#" 0.623856
+cap "vssd" "div2" 0.374028
+cap "w_2073_28#" "phi1b" 0.677463
+cap "w_n1589_n721#" "m1_n692_n717#" 5.90703
+cap "phi2b" "m1_1813_598#" 0.712057
+cap "phi1" "m1_2299_n1035#" 1.35161
+cap "GND" "vccd" 7.36774
+cap "w_1106_n173#" "vpb" 11.3287
+cap "cclk_ana" "w_2236_n1050#" 0.985982
+cap "m1_3216_n2124#" "w_1106_n173#" 0.00370492
+cap "m1_723_n717#" "w_1267_724#" 7.25254
+cap "GND" "cclk_ana" 1.69668
+cap "vssd" "m1_n1644_n706#" 1.71939
+cap "VCCD" "m2_n465_n594#" 7.4597
+cap "vdda" "vnb" 0.0318273
+cap "vdda" "m1_2299_n1035#" 0.876523
+cap "m1_1813_598#" "vpb" 36.6952
+cap "phi2" "m1_1813_598#" 0.712057
+cap "m1_3216_n2124#" "m1_1813_598#" 6.77599
+cap "GND" "m1_1286_n1837#" 0.90817
+cap "cclk_ana" "m1_2299_n1035#" 1.35161
+cap "phi1b" "m1_3216_n2124#" 1.72721
+cap "m1_n692_n717#" "m1_723_n717#" 4.0856
+cap "m1_n692_n717#" "vccd" 6.89655
+cap "VCCD" "li_73_291#" 13.6811
+cap "m1_1286_n1837#" "vnb" 3.30753
+cap "m1_2299_n1035#" "m1_1286_n1837#" 1.53407
+cap "w_2073_28#" "phi2b" 13.6205
+cap "VCCD" "phi1" 0.00179351
+cap "w_2073_28#" "vpb" 37.2768
+cap "w_2073_28#" "phi2" 0.749388
+cap "vdda" "VCCD" 21.9108
+cap "w_2073_28#" "m1_3216_n2124#" 73.6403
+cap "w_n1589_n721#" "m1_n1540_n396#" 2.23974
+cap "GND" "w_1267_724#" 2.19475
+cap "VCCD" "cclk_ana" 0.00179351
+cap "w_2236_n1050#" "m1_723_n717#" 0.880471
+cap "vssd" "m2_n465_n594#" 13.3167
+cap "phi2b" "m1_3216_n2124#" 1.69087
+cap "phi2b" "vpb" 0.97074
+cap "phi2b" "phi2" 5.9661
+cap "w_1267_724#" "vnb" 1.88906
+cap "m1_2299_n1035#" "w_1267_724#" 5.22547
+cap "VCCD" "m1_1286_n1837#" 30.2666
+cap "li_72_n1663#" "m2_n465_n594#" 74.7079
+cap "m1_1813_598#" "m2_n465_n594#" 3.90697
+cap "m1_723_n717#" "vnb" 44.656
+cap "m1_3216_n2124#" "vpb" 4.40406
+cap "m1_3216_n2124#" "phi2" 1.69087
+cap "m1_2299_n1035#" "m1_723_n717#" 7.7096
+cap "cclk_ana" "cclkb_ana" 6.33898
+cap "m1_n1540_n396#" "vccd" 23.1845
+cap "li_73_291#" "m1_1813_598#" 8.44368
+cap "m1_1286_n1837#" "cclkb_ana" 1.49419
+cap "m1_694_n2136#" "m2_n465_n594#" 2.40729
+cap "phi1" "w_1106_n173#" 0.594202
+cap "VCCD" "w_1267_724#" 33.1673
+cap "phi1" "m1_1813_598#" 0.728442
+cap "phi1" "phi1b" 6.33898
+cap "GND" "w_2236_n1050#" 33.1307
+cap "VCCD" "m1_723_n717#" 532.398
+cap "vdda" "m1_1813_598#" 8.34016
+cap "w_2073_28#" "li_73_291#" 2.28913
+cap "w_2236_n1050#" "vnb" 6.50058
+cap "cclk_ana" "m1_1813_598#" 0.728442
+cap "GND" "vnb" 3.65625
+cap "w_n1589_n721#" "cclk" 3.48741
+cap "GND" "m1_2299_n1035#" 507.385
+cap "w_2236_n1050#" "m1_2299_n1035#" 60.8538
+cap "w_1106_n173#" "m1_1286_n1837#" 0.812923
+cap "phi1b" "cclk_ana" 4.81545
+cap "m1_1813_598#" "m1_1286_n1837#" 25.6289
+cap "m1_2299_n1035#" "vnb" 13.7973
+cap "w_2073_28#" "phi1" 1.23091
+cap "w_n1589_n721#" "vssd" 17.6787
+cap "li_73_291#" "vpb" 9.63143
+cap "vccd" "cclk" 1.81333
+cap "m1_694_n2136#" "m1_1286_n1837#" 3.06227
+cap "GND" "vssd" 7.33478
+cap "phi2b" "phi1" 6.79828
+cap "w_2073_28#" "cclk_ana" 0.255931
+cap "VCCD" "w_2236_n1050#" 14.4142
+cap "VCCD" "GND" 6.89559
+cap "vssd" "m1_723_n717#" 7.80213
+cap "phi1" "vpb" 1.01036
+cap "phi1" "m1_3216_n2124#" 1.72721
+cap "vssd" "vccd" 284.073
+cap "m1_1813_598#" "w_1267_724#" 7.20568
+cap "m1_723_n717#" "w_1106_n173#" 8.63036
+cap "vssd" "m1_n692_n717#" 30.0483
+cap "VCCD" "vnb" 85.8818
+cap "vdda" "vpb" 2.04081
+cap "li_72_n1663#" "m1_723_n717#" 140.422
+cap "VCCD" "m1_2299_n1035#" 93.2737
+cap "li_72_n1663#" "vccd" 0.165005
+cap "m1_723_n717#" "m1_1813_598#" 47.4012
+cap "w_2236_n1050#" "cclkb_ana" 0.550944
+cap "GND" "cclkb_ana" 1.66665
+cap "cclk_ana" "m1_3216_n2124#" 1.72721
+cap "m1_2299_n1035#" "cclkb_ana" 1.32786
+cap "m1_3216_n2124#" "m1_1286_n1837#" 0.22668
+cap "m1_1286_n1837#" "vpb" 0.0494689
+cap "m1_723_n717#" "m1_694_n2136#" 17.383
+cap "w_n1589_n721#" "div2" 3.56976
+cap "li_73_291#" "m2_n465_n594#" 86.4833
+cap "w_2073_28#" "m1_723_n717#" 2.37473
+cap "m1_n1540_n396#" "cclk" 0.141546
+cap "w_n1589_n721#" "m1_n1644_n706#" 1.58566
+cap "GND" "w_1106_n173#" 2.37016
+cap "w_2236_n1050#" "m1_1813_598#" 9.84686
+cap "GND" "m1_1813_598#" 67.8643
+cap "div2" "vccd" 2.79968
+cap "w_1267_724#" "vpb" 1.28236
+cap "w_1106_n173#" "vnb" 21.021
+cap "phi1b" "w_2236_n1050#" 1.01761
+cap "m1_3216_n2124#" "w_1267_724#" 4.55888e-05
+cap "m1_2299_n1035#" "w_1106_n173#" 6.12138
+cap "GND" "phi1b" 1.69668
+cap "vssd" "m1_n1540_n396#" 0.580468
+cap "GND" "m1_n1644_n706#" 4.09302
+cap "phi2" "w_1267_724#" 0.488611
+cap "li_72_n1663#" "m1_2299_n1035#" 1.27209
+cap "VCCD" "cclkb_ana" 0.00176807
+cap "vdda" "m2_n465_n594#" 4.90007
+cap "li_72_n1663#" "vnb" 15.558
+cap "m1_1813_598#" "vnb" 35.9708
+cap "m1_723_n717#" "vpb" 8.91407
+cap "m1_2299_n1035#" "m1_1813_598#" 513.69
+cap "phi1b" "m1_2299_n1035#" 1.35161
+cap "m1_n1644_n706#" "vccd" 34.2456
+cap "m1_n1644_n706#" "m1_n692_n717#" 0.835443
+cap "vdda" "li_73_291#" 24.7671
+cap "m1_694_n2136#" "vnb" 1.43845
+cap "level_up_shifter_d_a_1/w_1715_1303#" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_590#" 0.0104552
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.8428
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.789938
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 2.35803
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 31.1266
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 6.2178
+cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_1/a_1811_1506#" 0.011651
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.00128511
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 2.31164
+cap "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" "level_up_shifter_d_a_1/a_1260_620#" 1.18963
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_1/a_1811_1506#" 0.00492506
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 1.07228
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 31.8866
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 26.3943
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" -0.493587
+cap "level_up_shifter_d_a_1/w_1715_1303#" "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" 0.133841
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 3.54956
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 2.37149
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 5.71164
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.00865123
+cap "level_up_shifter_d_a_1/w_1715_1303#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 7.85873e-07
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 7.60788
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 91.7312
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 0.656148
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.42109e-14
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/a_1260_620#" -4.94361
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.23991
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" 3.5103
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.000117934
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 104.031
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" -0.881889
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1260_620#" 99.3125
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.44194
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 0.869623
+cap "level_up_shifter_d_a_1/a_1260_620#" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.00038247
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.96391
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 1.32765
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_590#" 0.00312845
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 4.98424
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.55368
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/w_1715_1303#" 19.3532
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 15.0799
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.74519
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 3.69111
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/a_1260_620#" 9.98838
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 41.3231
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 8.0224
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 0.49068
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 26.8197
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/w_1715_1303#" 25.6979
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 13.3579
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/w_1715_1303#" 1.6173
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_1/a_1260_620#" -0.461593
+cap "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.122904
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 26.9714
+cap "level_up_shifter_d_a_1/w_1715_1303#" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.56917
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 2.65358
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 0.346243
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/a_1811_1506#" -0.146607
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 6.5512e-05
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 6.55963
+cap "level_up_shifter_d_a_1/a_1260_620#" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_590#" 0.0161928
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/a_1260_620#" 2.2565
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1811_1506#" 15.4662
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/w_1715_1303#" 1.13216
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" -3.95887
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/inp" 6.35678
+cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_1/a_1811_1506#" 0.790522
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 4.56456
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1260_620#" 7.73622e-05
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.554173
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.212204
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 5.96727
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/comp_clks_0/tg_0/clk_" 0.0383212
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.84384
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.11569
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 11.6549
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 0.365926
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 0.40428
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 191.486
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 10.5021
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.3807
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 2.34265
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/a_1260_620#" 0.616483
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 8.75258e-05
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/out" 0.365926
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" 1.34543
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 7.44946
+cap "level_up_shifter_d_a_1/a_1811_1506#" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.501752
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.00530645
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1260_620#" 12.9947
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.94441
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 7.58562
+cap "level_up_shifter_d_a_0/w_1715_1303#" "phigen_1/comp_clks_0/tg_0/clk" 2.60634
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.982623
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" -0.122717
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1811_1506#" 12.3032
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 1.56886
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 4.38836
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.00820828
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 11.6049
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 9.68886
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/inp" 1.40389
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.9369
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk" 195.377
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.129827
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 12.4199
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 6.06789
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 0.050553
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1811_1506#" 1.89043
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.302461
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.0939
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.165879
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 1.46567
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 29.1875
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 9.38498
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 0.251347
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 6.49509
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 1.28372
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/a_1811_1506#" 3.4384
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.110232
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/out" 0.542205
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.316132
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 11.3785
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/comp_clks_0/tg_0/inp" 1.85183
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1811_1506#" 98.5389
+cap "level_up_shifter_d_a_1/a_1260_620#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.29266
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 9.05314
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1260_620#" 3.59366
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/a_1811_1506#" 0.620599
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 2.45258
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 7.54448
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 6.12762
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.27857
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.000550517
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/a_1260_620#" 0.0343275
+cap "level_up_shifter_d_a_0/w_1715_1303#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 13.699
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_0/out" 0.236461
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 12.7445
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 1.86981
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 8.99787
+cap "level_up_shifter_d_a_1/a_1260_620#" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.00531078
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.508118
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 17.3728
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 21.8178
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk" 0.587631
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 2.01444
+cap "level_up_shifter_d_a_0/w_1715_1303#" "phigen_1/comp_clks_0/tg_0/clk_" 1.96265
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1260_620#" 0.0635174
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 3.20701
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 1.2629
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/comp_clks_0/tg_0/out" 0.0170009
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.0299829
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.225829
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/in" 0.950695
+cap "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" "cclkgen_0/comp_clks_0/tg_0/inp" 0.676982
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 24.0089
+cap "level_up_shifter_d_a_1/a_1260_620#" "level_up_shifter_d_a_1/a_1811_1506#" 0.972564
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/out" 19.0347
+cap "phigen_0/comp_clks_0/inverter_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 0.0167896
+cap "cclkgen_0/comp_clks_0/tg_0/out" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" -5.61515e-06
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/out" 0.76845
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/inverter_1/in" 1.85993
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1260_620#" 0.00172603
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/out" 18.0494
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.0105585
+cap "cclkgen_0/comp_clks_0/inverter_1/in" "cclkgen_0/inv_weak_pulldown_corrected_1/in" -0.64926
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/comp_clks_0/tg_0/clk_" 0.0111043
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "cclkgen_0/comp_clks_0/tg_0/inp" 2.06644
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/out" 8.58232
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.0335845
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1203_1219#" 5.10044
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 0.704472
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.103076
+cap "level_up_shifter_d_a_1/a_1203_1219#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.484311
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/comp_clks_0/tg_0/inp" 1.5937
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 10.214
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 164.001
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/comp_clks_0/tg_0/inp" 2.06944
+cap "level_up_shifter_d_a_1/a_1230_594#" "level_up_shifter_d_a_1/a_1811_1506#" 0.110429
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 88.2478
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/in" 0.846404
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/out" 0.445263
+cap "cclkgen_0/inv_weak_pulldown_corrected_1/in" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" -0.508416
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.804402
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0103169
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1230_594#" 0.0161891
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 0.0782907
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1260_620#" 0.0871301
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 109.358
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.970871
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 3.26807
+cap "cclkgen_0/comp_clks_0/tg_0/inp" "cclkgen_0/comp_clks_0/inverter_1/in" -0.542673
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.994133
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "cclkgen_0/comp_clks_0/tg_0/inp" 0.00480074
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 19.6262
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/out" 0.025082
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.597843
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/out" 1.1542
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.0896095
+cap "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.15821
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 1.91833
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/tg_0/out" -0.0421649
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/inp" 132.745
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/out" 0.244278
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.460224
+cap "cclkgen_0/inv_weak_pulldown_corrected_1/in" "cclkgen_0/comp_clks_0/tg_0/out" -0.000143152
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 2.71044
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 3.8383
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/tg_0/out" 1.72884
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.00784673
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/a_1203_1219#" 0.05118
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1230_594#" 2.55855
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 0.177777
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/inp" -0.73754
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/inp" 116.935
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/out" 15.1335
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.00395685
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_2/out" 1.69905
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1230_594#" 0.233307
+cap "cclkgen_0/comp_clks_0/tg_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" -1.14489e-05
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1811_1506#" 2.46399
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 339.55
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_2/out" 1.01396
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 17.5783
+cap "cclkgen_0/comp_clks_0/tg_0/inp" "cclkgen_0/comp_clks_0/tg_0/out" -5.94723e-05
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/out" 3.01285
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1203_1219#" 0.171779
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1260_620#" 0.558891
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.355773
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_2/out" 0.92565
+cap "level_up_shifter_d_a_1/a_1260_620#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.911635
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 7.29223
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_2/out" 0.550456
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 4.65678
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pullup_corrected_0/out" 0.0221841
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.220958
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 1.0163
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/inp" 3.30321
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/out" 1.69905
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.93801
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/inp" 1.86549
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 1.43675
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/vpb" 0.312397
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1203_1219#" 1.99206
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/tg_0/inp" 21.1551
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 25.9144
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.54138
+cap "cclkgen_0/comp_clks_0/tg_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" -21.433
+cap "phigen_0/comp_clks_0/inverter_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.025082
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/out" 0.92565
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1230_594#" 2.25833
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/inp" 91.1899
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 3.28548
+cap "level_up_shifter_d_a_1/a_1230_594#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 6.35808
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/out" 2.79769
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1811_1506#" 7.14766
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.000306553
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.630666
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/inverter_2/out" -0.747096
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" -1.03686
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/in" 10.7059
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 28.0487
+cap "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" "phigen_1/inv_weak_pullup_corrected_0/out" 0.00103787
+cap "cclkgen_0/comp_clks_0/tg_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" -0.575055
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/inp" 3.62034
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.468014
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1203_1219#" 1.48106
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/comp_clks_0/tg_0/out" -4.83922e-05
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.00665439
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/in" 6.08376
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.0700917
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 0.105934
+cap "level_up_shifter_d_a_1/a_1230_594#" "cclkgen_0/comp_clks_0/tg_0/inp" 0.443498
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.0812608
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.484433
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 0.0589972
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.680211
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1203_1219#" 0.497385
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 24.7507
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.710262
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 1.64291
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 206.181
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.270247
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.118863
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 0.117241
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1811_1506#" 17.6999
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.745413
+cap "level_up_shifter_d_a_1/a_1811_1506#" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 8.1358
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/inp" 44.0151
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.846358
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 4.80766
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/out" 2.69976
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.0317835
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_2/out" 3.8587
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 40.1231
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/out" 0.276405
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0239876
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.852442
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_2/out" 0.0160207
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/out" 1.66343
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 20.7398
+cap "cclkgen_0/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_2/out" -6.33898
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 0.275981
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_2/out" 0.35144
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.483404
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/tg_0/out" 1.00674
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.65097
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/tg_0/inp" 0.00188344
+cap "phigen_0/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0492699
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_0/in" 0.0583319
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.0820242
+cap "cclkgen_0/inv_weak_pulldown_corrected_1/in" "cclkgen_0/comp_clks_0/tg_0/out" -0.000765085
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/in" 1.10693
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/tg_0/out" 0.747177
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/in" 52.1877
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.368133
+cap "cclkgen_0/comp_clks_0/tg_0/inp" "cclkgen_0/comp_clks_0/inverter_1/in" -0.17012
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/out" 3.66573
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.0237599
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0302961
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/in" 2.35786
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 215.916
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/inp" 36.3537
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_2/out" 3.29941
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 1.02547
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.14966
+cap "phigen_0/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.129633
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.337949
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/out" 16.337
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/tg_0/out" 0.966934
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_2/out" 0.133035
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0127345
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 5.12263
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_2/out" 5.70459
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 0.452826
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/out" 0.0458986
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/out" 2.9503
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_2/out" 1.94483
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/inverter_1/in" 0.00385035
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/out" 59.2283
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 1.516
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.166465
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 3.61011
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 1.5973
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/out" 1.58286
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/comp_clks_0/inverter_2/out" -0.529457
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_0/in" 0.000575035
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 5.28368
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/out" -2.04104
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_2/out" 0.130116
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/inverter_2/out" 1.71098
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.210809
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" -0.000179635
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.112935
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.00875739
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/in" 21.8677
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.271029
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 0.162479
+cap "cclkgen_0/inv_weak_pulldown_corrected_0/in" "cclkgen_0/comp_clks_0/tg_0/out" 0.000151039
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/inp" 0.335454
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_1/in" 0.204806
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/inp" 19.8653
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.89445
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_2/out" 1.45189
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/tg_0/out" 0.0158969
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/inverter_2/out" 0.57574
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 1.02605
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.0237599
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/out" 0.108105
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/out" 35.0877
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/a_30_590#" 0.0165235
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 5.97038
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.789938
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 7.42461e-05
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 22.1592
+cap "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 0.0836898
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 8.96169
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 27.0187
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 2.75651
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 1.00257
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 7.34573e-05
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.869623
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.8438
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 2.18516e-06
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 77.5749
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" 0.101286
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 9.16955
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 3.10153
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 93.7595
+cap "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/in" 1.28645
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 0.509441
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.000231198
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.10032
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" 2.08324
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 16.4475
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/in" 5.68437
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 2.18516e-06
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 1.44194
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 6.11119
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 9.92265
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 45.7152
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.96229
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.212235
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_1/a_1260_620#" 2.92293
+cap "level_up_shifter_d_a_1/w_1715_1303#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 6.4203
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" -3.92535
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.672289
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 8.96845
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/in" 9.40355
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 43.33
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 43.7775
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_1/w_1715_1303#" 1.13216
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 48.4076
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 2.356
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/a_30_590#" 0.00260486
+cap "level_up_shifter_d_a_1/w_1715_1303#" "phigen_1/inv_weak_pulldown_corrected_0/in" 10.1457
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 3.8936
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" -0.150927
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 55.1088
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" 14.7382
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" -0.968299
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 45.5937
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_0/inv_weak_pulldown_corrected_0/in" 15.3972
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 11.182
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" 28.6505
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/a_1260_620#" 77.2208
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/in" -3.60376
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/a_30_590#" 0.00212886
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 27.981
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/in" 198.253
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 2.34875
+cap "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_1/w_1715_1303#" 11.1231
+cap "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 26.4538
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 0.00633003
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.6436
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.189337
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 21.8279
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_0/comp_clks_0/tg_0/out" 0.474319
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.0439727
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.316132
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 5.83408
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.59156
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/in" 12.2226
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1260_620#" 0.343122
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 19.9718
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.0343275
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.27448
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_0/out" 0.221562
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 8.63641
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/in" 24.9037
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 2.30646
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 7.52116
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 3.68991
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 15.3707
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.13515
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 1.70996
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 4.44417
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.00199466
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1811_1506#" 10.2944
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 3.0393
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 1.00292
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 14.8299
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/vpb" 0.510433
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk_" 1.757
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1260_620#" 1.21177
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.0245109
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 6.88936
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1260_620#" 1.01898
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.0309591
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.590364
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/out" 0.196155
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.266164
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" -0.0922868
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 1.82488
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 0.00948074
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 4.70421
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 10.0284
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 189.409
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 30.8989
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 6.27857
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.00149426
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.000796767
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 10.2517
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/inv_weak_pulldown_corrected_0/in" -1.13623
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/inp" -2.43246
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 1.39339
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 28.2829
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/out" 1.05604
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/inp" 12.6315
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pulldown_corrected_0/in" 5.1418
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 0.626857
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 138.475
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 18.907
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 114.916
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 10.8377
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.145534
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/out" 1.1747
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 154.848
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.600269
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.143476
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.0223981
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.175564
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 255.507
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 1.94881
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 0.365926
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/a_1811_1506#" 9.17945
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "phigen_1/inv_weak_pullup_corrected_0/inp" 1.49001
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 0.0013198
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.293969
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 5.84625
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1260_620#" 0.727506
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.679101
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/in" 87.1166
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" 0.000290598
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 16.5685
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/inp" 5.15727
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 0.122247
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.949586
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/comp_clks_0/tg_0/out" 0.0151073
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/out" 2.76123e-05
+cap "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 0.00104092
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1260_620#" 1.16754
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" 38.3681
+cap "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/out" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/out" 49.043
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 0.0865487
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/out" 34.0948
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" 0.55669
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1230_594#" 7.93715e-05
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0897172
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.360377
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 9.66369
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/inp" 23.8863
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/inp" -28.1449
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/a_1230_594#" 2.5333
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/out" 1.25777
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/out" 30.3745
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/out" 0.00154975
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.858222
+cap "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.124989
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/comp_clks_0/inverter_1/out" -0.240371
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/out" 18.1259
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" -1.41078
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 6.13206
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/inp" 4.29627
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.327459
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 10.6086
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 92.0802
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_1/a_1203_1219#" 0.00509976
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" -1.03626
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" 0.0532319
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/tg_0/out" 0.0300405
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1230_594#" 0.00103728
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 3.39425
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/inv_weak_pulldown_corrected_0/in" -1.27491
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 1.09079
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_0/a_1203_1219#" 0.0355008
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/inverter_1/in" 1.60625
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/inp" -5.19436
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_2/out" 0.375193
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" -0.160132
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.0526253
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/out" 125.85
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/comp_clks_0/inverter_1/in" 2.04699
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 10.644
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pulldown_corrected_0/in" -0.799358
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.086346
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_2/out" 0.685092
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.0993259
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_0/comp_clks_0/tg_0/out" 0.0515049
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pulldown_corrected_0/vnb" -11.143
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 20.6895
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.255215
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1203_1219#" 0.233129
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 1.65074
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/inp" 27.9334
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" 6.08288
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/in" 0.846404
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_0/a_1230_594#" 1.8821
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1811_1506#" 3.21135
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_1/in" 0.745413
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/a_1203_1219#" 1.18206
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 12.3504
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/comp_clks_0/inverter_2/out" -0.0332468
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pulldown_corrected_0/vnb" -0.616541
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/inp" 0.406852
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 0.0801243
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.0134315
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "level_up_shifter_d_a_0/a_1230_594#" 0.17296
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.178957
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 1.09244
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 55.3771
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk_" 60.6945
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/vpb" 198.741
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "level_up_shifter_d_a_1/a_1203_1219#" 0.0467512
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 6.96498e-05
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" -0.143273
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1811_1506#" 0.48305
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/tg_0/out" 7.682
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_2/out" 0.941023
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1230_594#" 0.0348018
+cap "level_up_shifter_d_a_0/a_1203_1219#" "phigen_1/inv_weak_pullup_corrected_0/inp" 1.31532
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/in" 1.17845
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" -0.542673
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "cclkgen_0/comp_clks_0/tg_0/inp" 3.00829
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/inp" 72.6049
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/inp" 140.092
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.00909734
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_1/a_1203_1219#" 0.0722889
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/out" 6.12183
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/inverter_2/out" 1.72754
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/comp_clks_0/tg_0/out" -0.143273
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" -0.157378
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/in" 0.851903
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.156382
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/a_1203_1219#" 1.31513
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pulldown_corrected_0/in" 2.83271
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/out" 133.036
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 418.874
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.172207
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0675303
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_1/a_1203_1219#" 0.110691
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 1.04624
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "level_up_shifter_d_a_0/a_1230_594#" 0.166674
+cap "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.802348
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.172207
+cap "phigen_1/comp_clks_0/tg_0/clk" "level_up_shifter_d_a_0/a_1203_1219#" 1.53779
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" -0.759335
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 37.9292
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 1.30193
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/out" 0.92565
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/in" 0.950695
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/in" 3.14128
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 7.23324
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/inp" 11.9012
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/in" 7.54148
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 11.0823
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.651794
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.846358
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/out" 0.796481
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/inverter_1/in" -0.829655
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_1/out" 1.69905
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.385894
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 8.9439
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 2.54525
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/inp" 274.676
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/a_1230_594#" 0.225693
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.484433
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 44.5458
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/in" 1.14569
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 7.92402
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 0.175727
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/in" 7.67405
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/inp" 7.54639
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 23.0298
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/vpb" 44.4187
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/out" 3.77541
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_2/out" 0.380094
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 37.7848
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_1/a_1203_1219#" 0.913418
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 11.9575
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" -1.58933
+cap "level_up_shifter_d_a_0/a_1230_594#" "phigen_1/inv_weak_pullup_corrected_0/inp" 8.31877
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/inp" 1.23971
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_1/in" 11.2545
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 46.2843
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pullup_corrected_0/inp" -39.0079
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/inv_weak_pulldown_corrected_1/a_30_50#" 0.0992554
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "level_up_shifter_d_a_0/a_1203_1219#" 2.74693
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.960546
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/comp_clks_0/tg_0/out" -1.05941
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 75.8051
+cap "phigen_1/inv_weak_pullup_corrected_0/inp" "cclkgen_0/comp_clks_0/tg_0/inp" 2.9857
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/inv_weak_pulldown_corrected_1/in" 2.79118
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0780035
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0511119
+cap "phigen_1/comp_clks_0/tg_0/clk_" "level_up_shifter_d_a_0/a_1230_594#" 0.233307
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/inv_weak_pullup_corrected_0/out" 3.28642
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/vpb" 54.771
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk_" 14.9397
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/inverter_1/in" 0.368133
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/comp_clks_0/tg_0/out" -0.0527188
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/inverter_2/out" -9.12149
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/tg_0/out" 0.00608857
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/in" 32.4443
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.335454
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_0/comp_clks_0/inverter_2/out" -2.98305
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk_" 268.795
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 0.160237
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/out" 1.58286
+cap "phigen_0/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0317835
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/tg_0/out" 0.00713381
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/inverter_2/out" 1.47345
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_1/in" 74.2787
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/in" 6.81049
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/out" 0.0458986
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_1/in" 0.166465
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_2/out" 1.93554
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 35.9735
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/in" 1.08635
+cap "phigen_1/inv_weak_pulldown_corrected_0/in" "phigen_1/comp_clks_0/tg_0/out" 0.000136609
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/in" 3.7531
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0339112
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_2/out" 1.24444
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.165189
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.0363828
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 0.0369252
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_2/out" 1.58286
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_2/out" 0.114095
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/tg_0/out" 5.57319
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" -0.17012
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/inverter_1/out" -3.8099
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/out" 23.9331
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/out" 6.29398
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.00912757
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.0301835
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.303481
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_2/out" -0.167089
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.792275
+cap "phigen_0/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.129633
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/inverter_1/out" 3.12486
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 0.0547148
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/inverter_1/out" 4.47948
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_1/out" 0.89445
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/comp_clks_0/inverter_1/in" 0.00452773
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.116565
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_2/out" 0.104361
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.0485442
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/comp_clks_0/inverter_1/in" 0.104776
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/vpb" 1.45751
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/clk_" 15.1012
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.214671
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/inverter_1/out" 0.966934
+cap "phigen_1/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_2/out" -6.33898
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/inverter_1/out" 1.71098
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/out" 35.9659
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.000142569
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" 1.69418
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/out" 9.50496
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_1/in" 46.8896
+cap "phigen_1/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pullup_corrected_0/out" 0.00220034
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/tg_0/out" 0.108105
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/tg_0/out" 89.336
+cap "phigen_1/comp_clks_0/inverter_2/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.213974
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_2/out" 0.137883
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/tg_0/out" 1.14196
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/inp" 2.9068
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/out" 0.00533433
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.00742662
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 0.102717
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_2/out" 0.218406
+cap "phigen_0/comp_clks_0/inverter_2/out" "phigen_1/comp_clks_0/tg_0/out" 0.0458986
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 9.65279
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/inp" 0.521058
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/inp" 1.61347
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/comp_clks_0/inverter_1/out" -0.121154
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 22.9705
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 1.516
+cap "phigen_1/comp_clks_0/inverter_1/out" "cclkgen_0/comp_clks_0/inverter_1/out" 1.34962
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" 0.0237599
+cap "phigen_0/inv_weak_pulldown_corrected_0/in" "phigen_0/comp_clks_0/tg_0/out" 0.00205733
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/inp" 0.425853
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/inp" 0.830263
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/out" 52.6495
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/in" 2.37534
+cap "phigen_1/comp_clks_0/tg_0/clk_" "cclkgen_0/comp_clks_0/tg_0/out" 3.4942
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/comp_clks_0/inverter_1/out" 0.368133
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.567688
+cap "phigen_0/comp_clks_0/tg_0/out" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.0185758
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/in" 1.10693
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/comp_clks_0/inverter_1/in" 0.204806
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/comp_clks_0/tg_0/clk_" 2.68064
+cap "phigen_1/comp_clks_0/inverter_1/in" "cclkgen_0/comp_clks_0/tg_0/out" 0.187845
+cap "phigen_1/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/in" 6.76643
+cap "phigen_1/comp_clks_0/tg_0/clk" "cclkgen_0/comp_clks_0/tg_0/out" 1.6995
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/tg_0/out" 0.168294
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_2/out" 5.97137
+cap "phigen_0/comp_clks_0/tg_0/out" "cclkgen_0/comp_clks_0/inverter_1/out" 0.0492699
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "cclkgen_0/comp_clks_0/tg_0/inp" 4.95915
+cap "phigen_1/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" -0.0525392
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.208356
+cap "phigen_1/comp_clks_0/tg_0/clk" "phigen_0/inv_weak_pullup_corrected_0/inp" 0.491567
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 3.71514
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pulldown_corrected_0/in" 2.32433
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_0/out" 0.258076
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/inp" 15.7433
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 1.61867
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 0.834237
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 10.0125
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/vpb" 3.18811
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 0.600269
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/out" 2.9884
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 0.867586
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/tg_0/clk_" 44.8527
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.0791148
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/tg_0/out" 0.00296306
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/vpb" 25.697
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.243015
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pulldown_corrected_0/a_30_50#" 0.00909734
+cap "phigen_1/w_1197_875#" "phigen_0/comp_clks_0/tg_0/out" 0.781705
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 1.83046
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/vpb" 4.67576
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/comp_clks_0/inverter_1/in" -2.94764
+cap "w_2236_n1050#" "phigen_1/comp_clks_0/tg_0/clk_" 0.0935177
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/out" 79.2069
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.406852
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/out" 3.59913
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_1/out" 0.00484968
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/tg_0/out" 0.00154975
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 1.65074
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pullup_corrected_0/inp" -4.80101
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 15.3153
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/a_234_496#" 0.652348
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pulldown_corrected_0/in" 0.48305
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.120872
+cap "phigen_1/w_1197_875#" "phigen_0/comp_clks_0/inverter_1/in" 9.92445
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 20.9942
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/inp" 2.7522
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/out" 0.331991
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 7.7498
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pulldown_corrected_0/in" -0.135945
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/comp_clks_0/inverter_1/in" -0.00748084
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 0.105751
+cap "w_2236_n1050#" "phigen_0/inv_weak_pullup_corrected_0/out" 0.0611603
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/inp" 67.3867
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_1/inv_weak_pullup_corrected_0/inp" 5.44488
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" 1.9675
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/in" 5.76244
+cap "phigen_1/w_1197_875#" "phigen_0/comp_clks_0/inverter_1/out" 1.72754
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/vpb" 27.4416
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/tg_0/clk_" 93.4958
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/out" 0.0800975
+cap "w_2236_n1050#" "phigen_0/comp_clks_0/inverter_1/in" 0.0102483
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 18.0909
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pulldown_corrected_0/in" 7.0438
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/in" 1.14569
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/a_30_50#" -0.157378
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/inverter_1/in" 0.851903
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 8.94277
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pulldown_corrected_0/vnb" 0.603558
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/out" 0.941023
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" -0.0459237
+cap "phigen_0/inv_weak_pullup_corrected_0/inp" "phigen_0/inv_weak_pulldown_corrected_0/in" -1.26934
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_1/in" 0.0153883
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/inp" 0.179133
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/in" 1.08635
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/inverter_1/in" 3.48429
+cap "phigen_1/w_1197_875#" "phigen_0/comp_clks_0/inverter_1/out" 3.15875
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/in" 14.5134
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/tg_0/clk_" 68.7821
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/tg_0/out" 0.187845
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_0/comp_clks_0/inverter_2/out" -2.98305
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/tg_0/out" 0.00963804
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/inv_weak_pullup_corrected_0/out" 0.425853
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/out" 0.742537
+cap "w_2236_n1050#" "phigen_0/comp_clks_0/inverter_1/in" 0.0372268
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/inp" 1.26792
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_1/in" 0.214671
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/inverter_1/out" 0.966934
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/inverter_1/in" 0.0680224
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/inverter_1/out" 1.71098
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/inverter_1/out" 1.68098
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_1/in" 0.0101485
+cap "phigen_1/w_1197_875#" "phigen_1/inv_weak_pullup_corrected_0/vpb" 0.890957
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/out" 0.0205379
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pulldown_corrected_0/in" 0.0228265
+cap "w_2236_n1050#" "phigen_0/comp_clks_0/inverter_1/out" 0.00960469
+cap "w_2236_n1050#" "phigen_1/comp_clks_0/tg_0/clk_" 0.0381385
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_1/out" 1.34962
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/out" 9.4439
+cap "phigen_1/inv_weak_pullup_corrected_0/vpb" "phigen_0/comp_clks_0/inverter_1/out" 0.000585348
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_1/inv_weak_pullup_corrected_0/vpb" 1.82001
+cap "phigen_1/w_1197_875#" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 0.208356
+cap "phigen_0/comp_clks_0/inverter_1/in" "phigen_1/comp_clks_0/tg_0/clk" 0.0479989
+cap "phigen_1/w_1197_875#" "phigen_1/comp_clks_0/tg_0/clk" 0.024534
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/comp_clks_0/inverter_1/in" 0.123573
+cap "phigen_0/comp_clks_0/inverter_1/out" "phigen_1/comp_clks_0/inverter_2/out" 0.137883
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/out" 10.7165
+cap "phigen_1/w_1197_875#" "phigen_0/comp_clks_0/inverter_1/in" 33.3227
+cap "phigen_0/inv_weak_pullup_corrected_0/out" "phigen_1/inv_weak_pullup_corrected_0/out" 0.114029
+cap "phigen_1/comp_clks_0/tg_0/clk_" "phigen_0/inv_weak_pullup_corrected_0/a_234_496#" 0.567688
+merge "phigen_1/comp_clks_0/inverter_1/out" "phi1" -91.267 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "phigen_0/inv_weak_pullup_corrected_0/w_1_458#" "level_up_shifter_d_a_0/w_1715_1303#" -9195.1 0 0 0 0 -483511 -12896 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -168912 -10072 -541138 -14516 0 0 0 0 0 0 0 0 0 0
+merge "level_up_shifter_d_a_0/w_1715_1303#" "vdda"
+merge "vdda" "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#"
 merge "phigen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "w_1267_724#"
-merge "w_1267_724#" "phigen_0/comp_clks_0/tg_0/clk"
-merge "phigen_0/comp_clks_0/tg_0/clk" "phigen_1/w_1197_875#"
-merge "phigen_1/w_1197_875#" "w_2073_28#"
+merge "w_1267_724#" "cclkgen_0/comp_clks_0/w_577_332#"
+merge "cclkgen_0/comp_clks_0/w_577_332#" "cclkgen_0/comp_clks_0/tg_0/clk"
+merge "cclkgen_0/comp_clks_0/tg_0/clk" "m1_3216_n2124#"
+merge "m1_3216_n2124#" "cclkgen_0/inv_weak_pulldown_corrected_0/li_n276_n97#"
+merge "cclkgen_0/inv_weak_pulldown_corrected_0/li_n276_n97#" "level_up_shifter_d_a_1/w_1715_1303#"
+merge "level_up_shifter_d_a_1/w_1715_1303#" "m1_694_n2136#"
+merge "m1_694_n2136#" "cclkgen_0/comp_clks_0/inverter_0/w_n204_204#"
+merge "cclkgen_0/comp_clks_0/inverter_0/w_n204_204#" "phigen_0/comp_clks_0/tg_0/clk"
+merge "phigen_0/comp_clks_0/tg_0/clk" "phigen_1/comp_clks_0/tg_0/clk"
+merge "phigen_1/comp_clks_0/tg_0/clk" "w_2236_n1050#"
+merge "w_2236_n1050#" "phigen_1/w_1197_875#"
+merge "phigen_1/w_1197_875#" "m1_2299_n1035#"
+merge "m1_2299_n1035#" "VCCD"
+merge "VCCD" "w_2073_28#"
 merge "w_2073_28#" "phigen_0/inv_weak_pulldown_corrected_0/li_n276_n97#"
 merge "phigen_0/inv_weak_pulldown_corrected_0/li_n276_n97#" "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#"
 merge "phigen_1/inv_weak_pulldown_corrected_0/w_n204_554#" "w_1106_n173#"
-merge "w_1106_n173#" "cclkgen_0/comp_clks_0/tg_0/clk"
-merge "cclkgen_0/comp_clks_0/tg_0/clk" "m1_3216_n2124#"
-merge "m1_3216_n2124#" "cclkgen_0/comp_clks_0/w_577_332#"
-merge "cclkgen_0/comp_clks_0/w_577_332#" "phigen_1/comp_clks_0/tg_0/clk"
-merge "phigen_1/comp_clks_0/tg_0/clk" "m1_2299_n1035#"
-merge "m1_2299_n1035#" "w_2236_n1050#"
-merge "w_2236_n1050#" "cclkgen_0/inv_weak_pulldown_corrected_0/li_n276_n97#"
-merge "cclkgen_0/inv_weak_pulldown_corrected_0/li_n276_n97#" "level_up_shifter_d_a_1/w_1715_1303#"
-merge "level_up_shifter_d_a_1/w_1715_1303#" "m1_694_n2136#"
-merge "m1_694_n2136#" "cclkgen_0/inv_weak_pulldown_corrected_0/w_n204_554#"
-merge "cclkgen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#"
-merge "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" "VCCD"
-merge "phigen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/a_1811_1506#" -98.9656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10370 -136 0 0 5264 -232 0 0 0 0 0 0 0 0
-merge "level_up_shifter_d_a_0/a_1811_1506#" "li_73_291#"
-merge "phigen_0/inv_weak_pulldown_corrected_0/vnb" "cclkgen_0/inv_weak_pulldown_corrected_1/vnb" -524.615 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4598 -320 22680 -464 0 0 0 0 0 0 0 0
-merge "cclkgen_0/inv_weak_pulldown_corrected_1/vnb" "cclkgen_0/inv_weak_pulldown_corrected_0/vnb"
+merge "cclkgen_0/VSUBS" "level_up_shifter_d_a_0/a_1112_620#" -5237.36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40732 -2464 -171402 -6178 -4144 -260 0 0 0 0 0 0 0 0
+merge "level_up_shifter_d_a_0/a_1112_620#" "level_up_shifter_d_a_1/a_1112_620#"
+merge "level_up_shifter_d_a_1/a_1112_620#" "phigen_0/VSUBS"
+merge "phigen_0/VSUBS" "phigen_1/VSUBS"
+merge "phigen_1/VSUBS" "VSUBS"
+merge "VSUBS" "cclkgen_0/comp_clks_0/tg_0/clk_"
+merge "cclkgen_0/comp_clks_0/tg_0/clk_" "phigen_0/comp_clks_0/tg_0/clk_"
+merge "phigen_0/comp_clks_0/tg_0/clk_" "phigen_1/comp_clks_0/tg_0/clk_"
+merge "phigen_1/comp_clks_0/tg_0/clk_" "m1_1813_598#"
+merge "m1_1813_598#" "cclkgen_0/inv_weak_pulldown_corrected_0/a_n177_50#"
+merge "cclkgen_0/inv_weak_pulldown_corrected_0/a_n177_50#" "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk_"
+merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk_" "GND"
+merge "GND" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_"
+merge "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk_" "m1_n692_n717#"
+merge "m1_n692_n717#" "vssd"
+merge "vssd" "phigen_0/inv_weak_pulldown_corrected_0/a_n177_50#"
+merge "phigen_0/inv_weak_pulldown_corrected_0/a_n177_50#" "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#"
+merge "phigen_1/inv_weak_pulldown_corrected_0/a_n177_50#" "m1_723_n717#"
+merge "cclkgen_0/comp_clks_0/inverter_1/out" "cclk_ana" -89.9961 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "cclkgen_0/comp_clks_0/inverter_2/out" "cclkb_ana" -94.7792 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "phigen_0/comp_clks_0/inverter_2/out" "phi2b" -77.2267 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8832 -464 0 0 0 0 0 0 0 0 0 0
+merge "level_up_shifter_d_a_0/a_1811_1506#" "phigen_0/inv_weak_pulldown_corrected_0/in" -451.384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1156 -136 0 0 -3328 -232 0 0 0 0 0 0 0 0
+merge "phigen_0/inv_weak_pulldown_corrected_0/in" "li_73_291#"
+merge "phigen_1/comp_clks_0/inverter_2/out" "phi1b" -91.5132 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "cclkgen_0/inv_weak_pulldown_corrected_1/vnb" "cclkgen_0/inv_weak_pulldown_corrected_0/vnb" -747.491 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3192 -320 -4095 -456 0 0 0 0 0 0 0 0
 merge "cclkgen_0/inv_weak_pulldown_corrected_0/vnb" "m1_1286_n1837#"
-merge "m1_1286_n1837#" "phigen_1/inv_weak_pulldown_corrected_0/vnb"
-merge "phigen_1/inv_weak_pulldown_corrected_0/vnb" "m2_1282_n700#"
-merge "phigen_1/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_0/a_1260_620#" -193.47 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18042 -470 0 0 0 0 0 0 0 0
-merge "level_up_shifter_d_a_0/a_1260_620#" "m2_n465_n594#"
-merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk" "VDD1" -1584.18 0 0 0 0 18216 -2210 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10304 -1356 -14535 -2688 65128 0 96674 0 63168 0 0 0 0 0
-merge "VDD1" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/w_n204_204#"
+merge "m1_1286_n1837#" "phigen_0/inv_weak_pulldown_corrected_0/vnb"
+merge "phigen_0/inv_weak_pulldown_corrected_0/vnb" "phigen_1/inv_weak_pulldown_corrected_0/vnb"
+merge "phigen_1/inv_weak_pulldown_corrected_0/vnb" "vnb"
+merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/w_n204_204#" -1699.12 0 0 0 0 -47058 -2210 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21896 -1356 -134484 -3690 0 0 0 0 0 0 0 0 0 0
 merge "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/w_n204_204#" "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk"
 merge "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/clk" "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#"
-merge "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" "m1_n1551_n1786#"
-merge "m1_n1551_n1786#" "m1_n1644_n706#"
+merge "level_up_shifter_d_a_1/comp_clks_stg1_0/inverter_0/w_n204_204#" "vccd"
+merge "vccd" "m1_n1644_n706#"
 merge "m1_n1644_n706#" "w_n1589_n721#"
-merge "cclkgen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" -112.442 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13634 -136 0 0 416 -232 0 0 0 0 0 0 0 0
+merge "level_up_shifter_d_a_0/a_1260_620#" "phigen_1/inv_weak_pulldown_corrected_0/in" -548.412 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6788 -470 0 0 0 0 0 0 0 0
+merge "phigen_1/inv_weak_pulldown_corrected_0/in" "m2_n465_n594#"
+merge "phigen_0/comp_clks_0/inverter_1/out" "phi2" -94.5359 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8832 -464 0 0 0 0 0 0 0 0 0 0
+merge "phigen_0/inv_weak_pullup_corrected_0/vpb" "phigen_1/inv_weak_pullup_corrected_0/vpb" -298.844 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1295 -214 0 0 0 0 0 0 0 0
+merge "phigen_1/inv_weak_pullup_corrected_0/vpb" "vpb"
+merge "cclkgen_0/inv_weak_pulldown_corrected_0/in" "level_up_shifter_d_a_1/a_1811_1506#" -384.408 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1156 -136 0 0 -3328 -232 0 0 0 0 0 0 0 0
 merge "level_up_shifter_d_a_1/a_1811_1506#" "li_72_n1663#"
-merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/in" -83.6958 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17697 -236 0 0 0 0 0 0 0 0 0 0
-merge "level_up_shifter_d_a_0/comp_clks_stg1_0/inverter_0/in" "div2"
+merge "level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/inp" "m1_n1540_n396#" -240.962 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4932 -346 0 0 0 0 -3454 -236 0 0 0 0 0 0 0 0 0 0
+merge "m1_n1540_n396#" "div2"
+merge "level_up_shifter_d_a_1/comp_clks_stg1_0/tg_0/inp" "cclk" -198.822 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4932 -346 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cclkgen_0/inv_weak_pulldown_corrected_0/w_n204_554#" "phigen_1/inv_weak_pulldown_corrected_0/li_n276_n97#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

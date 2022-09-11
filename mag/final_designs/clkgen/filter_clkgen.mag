@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1654754240
+timestamp 1662868276
 << nwell >>
 rect 1267 724 1597 1115
 rect 1283 9 1613 29
@@ -10,6 +10,9 @@ rect 1106 -173 1613 9
 rect 1283 -362 1613 -173
 rect -1589 -721 -1083 -534
 rect 2236 -1050 3294 -795
+<< poly >>
+rect -1492 -385 -1355 -349
+rect -1492 -989 -1355 -953
 << viali >>
 rect 73 291 107 325
 rect 72 -1663 106 -1629
@@ -27,10 +30,12 @@ rect 3217 1205 3273 1216
 rect 3217 1153 3219 1205
 rect 3271 1153 3273 1205
 rect 3217 1142 3273 1153
-rect -1546 450 -1494 456
-rect -1546 392 -1494 398
-rect -1456 392 -1400 460
+rect -1661 450 -1016 468
+rect -1661 398 -1546 450
+rect -1494 398 -1016 450
+rect -1661 371 -1016 398
 rect 635 371 731 1128
+rect 3032 784 3080 968
 rect 906 705 962 716
 rect 906 653 908 705
 rect 960 653 962 705
@@ -46,6 +51,7 @@ rect 2759 597 2815 608
 rect 59 334 124 337
 rect 59 282 66 334
 rect 118 282 124 334
+rect 3032 296 3080 480
 rect 59 278 124 282
 rect 1378 116 1434 127
 rect 1378 64 1380 116
@@ -62,6 +68,7 @@ rect 3216 51 3272 62
 rect -1638 -158 -1590 -78
 rect -1090 -100 -1038 -94
 rect -1090 -158 -1038 -152
+rect 3031 -304 3082 -120
 rect -1540 -396 -1476 -338
 rect 912 -398 968 -387
 rect 912 -408 914 -398
@@ -80,7 +87,9 @@ rect 2761 -491 2817 -480
 rect -1644 -706 -1590 -624
 rect -1550 -639 -1498 -633
 rect -1550 -697 -1498 -691
+rect -692 -717 -446 -621
 rect 723 -717 966 -621
+rect 3031 -792 3082 -608
 rect 1377 -974 1433 -963
 rect 1377 -1026 1379 -974
 rect 1431 -1026 1433 -974
@@ -95,6 +104,7 @@ rect 3272 -1024 3274 -972
 rect 3218 -1035 3274 -1024
 rect -1087 -1183 -1035 -1177
 rect -1087 -1241 -1035 -1235
+rect 3031 -1392 3082 -1208
 rect 917 -1479 973 -1468
 rect 917 -1531 919 -1479
 rect 971 -1531 973 -1479
@@ -113,6 +123,7 @@ rect 115 -1673 122 -1621
 rect 59 -1674 122 -1673
 rect 694 -2040 790 -1709
 rect 1286 -1837 1962 -1799
+rect 3031 -1880 3082 -1696
 rect 694 -2136 887 -2040
 rect 1378 -2061 1434 -2050
 rect 1378 -2113 1380 -2061
@@ -190,6 +201,9 @@ rect 998 -597 1007 -541
 rect 1063 -597 1072 -541
 rect -1552 -637 -1496 -628
 rect -1552 -702 -1496 -693
+rect -692 -632 -544 -621
+rect -692 -706 -686 -632
+rect -554 -706 -544 -632
 rect 1282 -700 1317 373
 rect 1378 118 1434 127
 rect 1378 53 1434 62
@@ -204,7 +218,7 @@ rect 1840 -426 1896 -417
 rect 1840 -491 1896 -482
 rect 2761 -426 2817 -417
 rect 2761 -491 2817 -482
-rect 1284 -741 1310 -700
+rect -692 -717 -544 -706
 rect -1089 -1181 -1033 -1172
 rect -1089 -1246 -1033 -1237
 rect 917 -1477 973 -1468
@@ -215,7 +229,7 @@ rect 998 -1685 1007 -1628
 rect 1063 -1685 1072 -1628
 rect -1554 -1726 -1494 -1717
 rect -1554 -1799 -1494 -1790
-rect 1284 -1799 1314 -741
+rect 1284 -1799 1314 -700
 rect 1377 -972 1433 -963
 rect 1377 -1037 1433 -1028
 rect 2299 -970 2355 -961
@@ -286,6 +300,7 @@ rect -1552 -691 -1550 -639
 rect -1550 -691 -1498 -639
 rect -1498 -691 -1496 -639
 rect -1552 -693 -1496 -691
+rect -686 -706 -554 -632
 rect 1378 116 1434 118
 rect 1378 64 1380 116
 rect 1380 64 1432 116
@@ -457,6 +472,10 @@ rect -1573 -633 -1475 -618
 rect -1573 -697 -1556 -633
 rect -1492 -697 -1475 -633
 rect -1573 -716 -1475 -697
+rect -692 -632 -544 -621
+rect -692 -706 -686 -632
+rect -554 -706 -544 -632
+rect -692 -717 -544 -706
 rect 1357 -968 1455 -950
 rect 1357 -1032 1373 -968
 rect 1437 -1032 1455 -968
@@ -586,6 +605,7 @@ rect -1556 -693 -1552 -637
 rect -1552 -693 -1496 -637
 rect -1496 -693 -1492 -637
 rect -1556 -697 -1492 -693
+rect -686 -706 -554 -632
 rect 1373 -972 1437 -968
 rect 1373 -1028 1377 -972
 rect 1377 -1028 1433 -972
@@ -653,13 +673,18 @@ rect -1573 -1726 -1479 -697
 rect -1116 -94 -1022 -68
 rect -1116 -158 -1096 -94
 rect -1032 -158 -1022 -94
-rect -1116 -1177 -1022 -158
-rect -1116 -1241 -1093 -1177
-rect -1029 -1241 -1022 -1177
-rect -1116 -1267 -1022 -1241
+rect -1116 -621 -1022 -158
 rect 898 -392 984 647
 rect 898 -456 908 -392
 rect 972 -456 984 -392
+rect -1116 -632 -544 -621
+rect -1116 -706 -686 -632
+rect -554 -706 -544 -632
+rect -1116 -717 -544 -706
+rect -1116 -1177 -1022 -717
+rect -1116 -1241 -1093 -1177
+rect -1029 -1241 -1022 -1177
+rect -1116 -1267 -1022 -1241
 rect -1573 -1790 -1556 -1726
 rect -1492 -1790 -1479 -1726
 rect -1573 -1811 -1479 -1790
@@ -732,12 +757,12 @@ use cclkgen  cclkgen_0
 timestamp 1654754240
 transform 1 0 876 0 1 -2136
 box 0 0 2484 1184
-use level_up_shifter_d_a  level_up_shifter_d_a_0 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
-timestamp 1654754240
+use level_up_shifter_d_a  level_up_shifter_d_a_0 level_up_shifter
+timestamp 1662867987
 transform 1 0 -2063 0 1 -1215
 box 402 498 2794 1682
-use level_up_shifter_d_a  level_up_shifter_d_a_1 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
-timestamp 1654754240
+use level_up_shifter_d_a  level_up_shifter_d_a_1
+timestamp 1662867987
 transform 1 0 -2063 0 -1 -123
 box 402 498 2794 1682
 use phigen  phigen_0
@@ -751,7 +776,31 @@ box 0 0 2484 1184
 << labels >>
 rlabel metal4 2739 750 2739 750 7 GND
 rlabel metal4 1438 1118 1438 1118 3 VCCD
-rlabel metal1 -1536 -366 -1536 -366 7 div2
-rlabel metal1 -1430 452 -1430 452 1 VDD1
 rlabel metal1 -1616 -96 -1616 -96 1 GND
+flabel poly -1492 -989 -1355 -953 1 FreeSans 3200 0 0 0 cclk
+port 1 n default input
+flabel poly -1492 -385 -1355 -349 1 FreeSans 3200 0 0 0 div2
+port 2 n default input
+flabel metal1 3032 296 3080 480 1 FreeSans 800 0 0 0 phi2b
+port 3 n default output
+flabel metal1 3032 784 3080 968 1 FreeSans 800 0 0 0 phi2
+port 4 n default output
+flabel metal1 3031 -792 3082 -608 1 FreeSans 800 0 0 0 phi1b
+port 5 n default output
+flabel metal1 3031 -304 3082 -120 1 FreeSans 800 0 0 0 phi1
+port 6 n default output
+flabel metal1 3031 -1880 3082 -1696 1 FreeSans 800 0 0 0 cclkb_ana
+port 7 n default output
+flabel metal1 3031 -1392 3082 -1208 1 FreeSans 800 0 0 0 cclk_ana
+port 8 n default output
+flabel metal2 1282 -700 1317 373 1 FreeSans 3200 0 0 0 vnb
+port 9 n default input
+flabel metal2 1904 -322 1939 751 1 FreeSans 1600 0 0 0 vpb
+port 10 n default input
+flabel metal1 -1661 371 -1016 468 1 FreeSans 3200 0 0 0 vccd
+port 11 n default bidirectional
+flabel metal1 635 371 731 1224 1 FreeSans 3200 0 0 0 vdda
+port 12 n default bidirectional
+flabel metal4 -1116 -717 -686 -621 1 FreeSans 3200 0 0 0 vssd
+port 13 n default bidirectional
 << end >>

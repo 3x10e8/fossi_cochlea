@@ -1,9 +1,11 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
 S {}
 E {}
+T {unused
+} 190 -420 0 0 0.3 0.3 {}
 N 450 -240 540 -240 {
 lab=outb}
 N 550 -240 550 -210 {

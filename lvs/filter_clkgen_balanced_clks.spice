@@ -1,0 +1,142 @@
+** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/filter_clkgen_balanced_clks.sch
+.subckt filter_clkgen_balanced_clks div2 phi2 phi2b phi1 phi1b cclk_ana cclkb_ana vpb vnb cclk vdda
++ vccd vssd
+*.PININFO div2:I phi2:O phi2b:O phi1:O phi1b:O cclk_ana:O cclkb_ana:O vpb:I vnb:I cclk:I vdda:B
+*+ vccd:B vssd:B
+X4 phi2dd phi2 phi2b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X7 phi1dd phi1 phi1b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X10 div2dd cclk_ana cclkb_ana vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X1 div2 net3 net7 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X2 net1 phi2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X5 net2 phi1d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X8 net5 div2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X9 div2d div2dd vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X3 phi2d phi2dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
+X6 phi1d phi1dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
+X11 cclk net4 net6 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x15 vdda vccd net3 net2 net1 vssd net7 level_up_shifter_no_inv
+X14 vdda vccd net4 outb_alone net5 vssd net6 level_up_shifter_no_inv
+.ends
+
+* expanding   symbol:  clkgen/comp_clks.sym # of pins=5
+** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sch
+.subckt comp_clks clk clka clkb vdda vssa   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO clk:I clka:O clkb:O vdda:I vssa:I
+X3 clk clkt vssa vdda vdda vssa transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X1 clk clki vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X2 clki clka vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X4 clkt clkb vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+.ends
+
+
+* expanding   symbol:  clkgen/comp_clks_1stage.sym # of pins=5
+** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sch
+.subckt comp_clks_1stage clk clka clkb vdda vssa   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO clk:I clka:O clkb:O vdda:I vssa:I
+X3 clk clkb vssa vdda vdda vssa transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X1 clk clka vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+.ends
+
+
+* expanding   symbol:  inv/inv_weak_pulldown.sym # of pins=5
+** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv_weak_pulldown.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv_weak_pulldown.sch
+.subckt inv_weak_pulldown in out Vnb vdda vssa   Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54
+*.PININFO in:I out:B Vnb:I vdda:I vssa:I
+XM1 net1 in vssa vssa sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 out Vnb net1 vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 out in vdda vdda sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inv/inv_weak_pullup.sym # of pins=5
+** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv_weak_pullup.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv_weak_pullup.sch
+.subckt inv_weak_pullup in out Vpb vdda vssa   Wpmos=1.26 Lpmos=0.54 Wmin=0.42 Lmin=0.18
+*.PININFO in:I out:B Vpb:I vdda:I vssa:I
+XM1 out in vssa vssa sky130_fd_pr__nfet_01v8 L=Lmin W=Wmin nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 out Vpb net1 vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net1 in vdda vdda sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  level_shifter/level_up_shifter_no_inv.sym # of pins=7
+** sym_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sch
+.subckt level_up_shifter_no_inv vdda1 vccd1 in outb out vssd1 inb
+*.PININFO in:I vdda1:B out:O outb:O inb:I vssd1:B vccd1:B
+XM7 outb out vdda1 vdda1 sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 out outb vdda1 vdda1 sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 outb inb vdda1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM3 outb in vssd1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM4 vssd1 in outb vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM5 out inb vssd1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM6 vssd1 inb out vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM9 vdda1 in out vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM10 out in vdda1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM11 vdda1 inb outb vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=4 m=4
+.ends
+
+
+* expanding   symbol:  transmission_gate/transmission_gate.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/transmission_gate.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/transmission_gate.sch
+.subckt transmission_gate in out ctrl_ ctrl vdda vssa   Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO in:B out:B ctrl_:I ctrl:I vdda:I vssa:I
+XM1 out ctrl in vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out ctrl_ in vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inv/inv.sym # of pins=4
+** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv.sch
+.subckt inv in out vdda vssa   Wpmos=3 Lpmos=0.18 Wnmos=1 Lnmos=0.18
+*.PININFO in:I out:B vdda:I vssa:I
+XM1 vssa in out vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vdda in out vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=1.26 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
