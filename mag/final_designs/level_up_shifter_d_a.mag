@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662952756
+timestamp 1662953364
 << nwell >>
 rect 1715 1303 2125 1535
 << nmos >>
@@ -784,7 +784,7 @@ rect 2123 622 2129 674
 rect 2181 622 2187 674
 rect 2123 620 2187 622
 use comp_clks_stg1  comp_clks_stg1_0 /local_disk/fossi_cochlea/mag/final_designs
-timestamp 1662950163
+timestamp 1662953364
 transform 1 0 402 0 -1 1138
 box 0 -545 644 640
 << labels >>

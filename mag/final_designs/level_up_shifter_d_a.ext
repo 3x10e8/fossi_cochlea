@@ -1,4 +1,4 @@
-timestamp 1662952756
+timestamp 1662953364
 version 8.3
 tech sky130B
 style ngspice()
@@ -23,6 +23,8 @@ node "outb" 5370 1139.4 1617 675 m2 0 0 0 0 0 0 0 0 53760 2816 5544 300 0 0 0 0 
 node "out" 5529 1413.95 2136 674 m2 0 0 0 0 0 0 0 0 53760 2816 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 47328 3328 47505 2902 19976 1176 0 0 0 0 0 0 0 0
 node "vdda" 8178 1715.74 1506 1586 m1 0 0 0 0 95120 1284 0 0 67356 3492 5964 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68476 4844 206610 7008 0 0 0 0 0 0 0 0 0 0
 substrate "vssd" 0 0 1112 620 ppd 0 0 0 0 0 0 0 0 62400 3200 15720 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68816 4796 182393 6336 0 0 0 0 0 0 0 0 0 0
+cap "vdda" "a_1230_594#" 84.9453
+cap "a_1203_1219#" "out" 58.531
 cap "outb" "vssd" 22.1537
 cap "vccd" "vssd" 51.3333
 cap "clk" "vssd" 13.8225
@@ -51,8 +53,6 @@ cap "vdda" "vssd" 7.61446
 cap "out" "a_1230_594#" 40.9992
 cap "a_1203_1219#" "a_1230_594#" 226.569
 cap "a_1203_1219#" "vccd" 0.846836
-cap "vdda" "a_1230_594#" 84.9453
-cap "a_1203_1219#" "out" 58.531
 device msubckt sky130_fd_pr__nfet_01v8 2527 620 2528 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "out" 120 0 "vssd" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2441 620 2442 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "vssd" 120 0 "out" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2354 620 2355 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "out" 120 0 "vssd" 120 0
@@ -120,8 +120,11 @@ cap "comp_clks_stg1_0/clkb" "vdda" 12.8457
 cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/vdd" -1.06102
 cap "outb" "comp_clks_stg1_0/vss" 8.92803
 cap "vdda" "comp_clks_stg1_0/vss" 3.25917
-cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/vss" 0.645362
+cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vdd" 0.206606
+cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/clkb" 0.0298118
+cap "outb" "out" -0.067233
 cap "comp_clks_stg1_0/clka" "outb" -0.001484
+cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/vss" 0.645362
 cap "out" "vdda" -1.40216
 cap "comp_clks_stg1_0/clk" "out" 1.66557
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/clk" 0.147657
@@ -136,16 +139,13 @@ cap "comp_clks_stg1_0/clk" "vdda" 5.42465
 cap "comp_clks_stg1_0/clkb" "comp_clks_stg1_0/vdd" 0.71017
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vss" 0.537369
 cap "outb" "comp_clks_stg1_0/vdd" 1.02095
-cap "outb" "comp_clks_stg1_0/clkb" 0.169616
-cap "comp_clks_stg1_0/clka" "out" 0.775608
 cap "comp_clks_stg1_0/vdd" "comp_clks_stg1_0/vss" 3.4661
 cap "vdda" "comp_clks_stg1_0/vdd" 12.3854
+cap "outb" "comp_clks_stg1_0/clkb" 0.169616
+cap "comp_clks_stg1_0/clka" "out" 0.775608
 cap "out" "comp_clks_stg1_0/vdd" 2.67442
 cap "comp_clks_stg1_0/clkb" "vdda" 5.6382
 cap "outb" "comp_clks_stg1_0/vss" 0.275431
-cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vdd" 0.206606
-cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/clkb" 0.0298118
-cap "outb" "out" -0.067233
 merge "comp_clks_stg1_0/VSUBS" "comp_clks_stg1_0/vss" -287.735 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -61824 -1480 0 0 0 0 0 0 0 0 0 0
 merge "comp_clks_stg1_0/vss" "vssd"
 merge "comp_clks_stg1_0/vdd" "vccd" -534.587 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -102720 -2524 0 0 0 0 0 0 0 0 0 0

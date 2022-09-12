@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662946268
+timestamp 1662953364
 << nwell >>
 rect 1197 875 1382 1089
 << metal1 >>
@@ -9,9 +9,9 @@ rect 1149 809 1415 857
 rect 928 252 962 387
 rect 524 218 962 252
 use comp_clks  comp_clks_0
-timestamp 1662935569
+timestamp 1662950490
 transform 1 0 1288 0 1 544
-box 0 -547 1196 640
+box 0 -544 1196 640
 use inv_weak_pulldown_corrected  inv_weak_pulldown_corrected_0
 timestamp 1654741520
 transform 1 0 276 0 1 128

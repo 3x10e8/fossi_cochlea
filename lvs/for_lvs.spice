@@ -1,51 +1,53 @@
 ** sch_path: /local_disk/fossi_cochlea/xschem/tryandtest/for_lvs.sch
-.subckt for_lvs inp inm vdda ctrl ctrl_ vccd fb1 vssd vpb vnb div2 cclk phi1b_dig high_buf th1 th2
-*.PININFO inp:I inm:I vdda:B ctrl:I ctrl_:I vccd:B fb1:I vssd:B vpb:I vnb:I div2:I cclk:I
-*+ phi1b_dig:O high_buf:O th1:I th2:I
+.subckt for_lvs inp inm vdda vccd fb1 vssd div2 cclk phi1b_dig high_buf th1 th2 vpb vnb lo
+*.PININFO inp:I inm:I vdda:B vccd:B fb1:I vssd:B div2:I cclk:I phi1b_dig:O high_buf:O th1:B th2:B
+*+ vpb:B vnb:B lo:I
 x1 cclk phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vpb vnb vdda vssd vccd div2
 + filter_clkgen_balanced_clks
-XC7 net1 vssd sky130_fd_pr__cap_mim_m3_1 W=6 L=6.7 MF=1 m=1
-XC8 net6 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
+XC7 net1 vssd sky130_fd_pr__cap_mim_m3_1 W=6.7 L=6 MF=1 m=1
+XC8 net5 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
 XC9 net3 vssd sky130_fd_pr__cap_mim_m3_1 W=4 L=5 MF=1 m=1
 XC10 net4 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
-x2 th2 th1 cclk_ana cclkb_ana net7 vssd vdda analogMux
-XC17 net8 vssd sky130_fd_pr__cap_mim_m3_1 W=6 L=6.7 MF=1 m=1
-XC18 net13 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
-XC19 net10 vssd sky130_fd_pr__cap_mim_m3_1 W=4 L=5 MF=1 m=1
-XC20 net11 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
-x4 th1 th2 cclk_ana cclkb_ana net14 vssd vdda analogMux
-x5 inm inp ctrl ctrl_ net15 vssd vdda analogMux
-x6 inp inm ctrl ctrl_ net22 vssd vdda analogMux
-x7 inm inp ctrl ctrl_ net23 vssd vdda analogMux
-x8 inp inm ctrl ctrl_ net16 vssd vdda analogMux
-x13 fb_inv net6 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x14 net6 net2 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x15 net15 net1 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x16 net1 net2 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x17 net2 net3 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x18 net3 net18 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x19 net18 net4 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x20 net4 net5 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x21 net11 net12 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x22 net19 net11 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x23 net10 net19 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x24 net9 net10 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x25 net8 net9 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x26 net16 net8 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x27 fb net13 phi1b phi1 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x28 net13 net9 phi2b phi2 vdda vssd tg Wpmos=0.42 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x2 th2 th1 cclk_ana cclkb_ana net6 vssd vdda analogMux
+XC17 net7 vssd sky130_fd_pr__cap_mim_m3_1 W=6.7 L=6 MF=1 m=1
+XC18 net11 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
+XC19 net9 vssd sky130_fd_pr__cap_mim_m3_1 W=4 L=5 MF=1 m=1
+XC20 net10 vssd sky130_fd_pr__cap_mim_m3_1 W=3.4 L=3 MF=1 m=1
+x4 th1 th2 cclk_ana cclkb_ana net12 vssd vdda analogMux
+x5 inm inp ctrl ctrl_ net13 vssd vdda analogMux
+x6 inp inm ctrl ctrl_ net20 vssd vdda analogMux
+x7 inm inp ctrl ctrl_ net21 vssd vdda analogMux
+x8 inp inm ctrl ctrl_ net14 vssd vdda analogMux
+x13 fb_inv net5 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
 x9 net2 vssd mim_cap_stacked_12pF
-x10 net9 vssd mim_cap_stacked_12pF
-x11 net18 vssd mim_cap_stacked_6pF
-x12 net5 net7 mim_cap_stacked_3pF
-x29 net19 vssd mim_cap_stacked_6pF
-x30 net12 net14 mim_cap_stacked_3pF
-x33 vdda net21 fb_inv fb vssd net20 level_up_shifter_no_inv
-X34 fb1 net20 net21 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x35 net5 net12 high_buf phi1_dig phi1b_dig net17 vccd vssd comparator_single_tail Wplus=0.42
+x10 net8 vssd mim_cap_stacked_12pF
+x11 net16 vssd mim_cap_stacked_6pF
+x12 high net6 mim_cap_stacked_3pF
+x29 net17 vssd mim_cap_stacked_6pF
+x30 low net12 mim_cap_stacked_3pF
+x33 vdda net19 fb_inv fb vssd net18 level_up_shifter_no_inv
+X34 fb1 net18 net19 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x35 high low high_buf phi1_dig phi1b_dig net15 vccd vssd comparator_single_tail Wplus=0.42
 + Lplus=0.42 Wminus=0.42 Lminus=0.15
 x3 vdda vccd phi1 phi1_dig vssd level_down_shifter
 x31 vdda vccd phi1b phi1b_dig vssd level_down_shifter
+x14 net5 net2 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x15 net13 net1 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x16 net1 net2 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x17 net2 net3 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x18 net3 net16 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x19 net16 net4 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x20 net4 high phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x21 fb net11 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x22 net11 net8 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x23 net14 net7 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x24 net7 net8 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x25 net8 net9 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x26 net9 net17 phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x27 net17 net10 phi1b phi1 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x28 net10 low phi2b phi2 vdda vssd switch Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+x32 vdda net23 ctrl_ ctrl vssd net22 level_up_shifter_no_inv
+X36 lo net22 net23 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 **** begin user architecture code
  .lib /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 .include /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
@@ -94,17 +96,17 @@ XM8 out c vref2 vdda sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2
 .ends
 
 
-* expanding   symbol:  transmission_gate/tg.sym # of pins=6
-** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sym
-** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sch
-.subckt tg in out ctrl_ ctrl vdd vss   Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+* expanding   symbol:  transmission_gate/switch.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/switch.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/switch.sch
+.subckt switch in out ctrl_ ctrl vdd vss   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
 *.PININFO in:B out:B ctrl_:I ctrl:I vdd:B vss:B
 XM1 out ctrl in vss sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 XM2 out ctrl_ in vdd sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=2 m=2
++ sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -182,7 +184,7 @@ XM11 vdd inb outb vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2
 .subckt comp_clks_1stage clk clka clkb vdd vss   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 *.PININFO clk:I clka:O clkb:O vdd:B vss:B
 X1 clk clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-x2 clk clkb vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x2 clk clkb vss vdd vdd vss tg
 .ends
 
 
@@ -255,12 +257,12 @@ x2 net1 vssd vssd vccd vccd out sky130_fd_sc_hd__inv_8
 * expanding   symbol:  clkgen/comp_clks.sym # of pins=5
 ** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sym
 ** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sch
-.subckt comp_clks clk clka clkb vdd vss   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+.subckt comp_clks clk clka clkb vdd vss   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
 *.PININFO clk:I clka:O clkb:O vdd:B vss:B
 X1 clk clki vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
 X2 clki clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
 X4 clkt clkb vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-x3 clk clkt vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x3 clk clkt vss vdd vdd vss tg
 .ends
 
 
@@ -319,6 +321,20 @@ XM1 vss in out vss sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2
 XM2 vdd in out vdd sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  xschem/transmission_gate/tg.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sch
+.subckt tg in out ctrl_ ctrl vdd vss
+*.PININFO in:B out:B ctrl_:I ctrl:I vdd:B vss:B
+XM1 out ctrl in vss sky130_fd_pr__nfet_01v8 L=0.18 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out ctrl_ in vdd sky130_fd_pr__pfet_01v8 L=0.18 W=0.63 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
 .ends
 
 .end

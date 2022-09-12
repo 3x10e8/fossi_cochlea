@@ -1,8 +1,8 @@
 v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {type=subcircuit 
-format="@name @pinlist @symname" 
-template="name=x1"}
+format="@name @pinlist @symname Wpmos=@Wpmos Lpmos=@Lpmos Wnmos=@Wnmos Lnmos=@Lnmos" 
+template="name=x1 Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos"}
 V {}
 S {}
 E {}
@@ -30,5 +30,8 @@ B 5 17.5 37.5 22.5 42.5 {name=vss
 dir=inout}
 A 4 0 -10 7.071067811865476 315 360 {}
 T {@name} -10 10 0 0 0.4 0.4 {}
+T {@Wpmos / @Lpmos
+@Wnmos / @Lnmos} 30.25 0.25 0 0 0.15 0.15 { layer=13}
 T {vdd} 26 -38 1 0 0.1 0.1 {}
 T {vss} 26 24 1 0 0.1 0.1 {}
+T {matched} 58 -4 2 0 0.1 0.1 {}

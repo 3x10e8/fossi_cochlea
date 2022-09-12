@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662946268
+timestamp 1662953364
 << nwell >>
 rect 1267 724 1597 1115
 rect 1283 9 1613 29
@@ -756,25 +756,25 @@ rect 3195 -2119 3212 -2055
 rect 3276 -2119 3281 -2055
 rect 3195 -2136 3281 -2119
 use cclkgen  cclkgen_0
-timestamp 1662946268
+timestamp 1662953364
 transform 1 0 876 0 1 -2136
-box 0 -3 2484 1269
-use level_up_shifter_d_a  level_up_shifter_d_a_0 level_up_shifter
-timestamp 1662946268
+box 0 0 2484 1184
+use level_up_shifter_d_a  level_up_shifter_d_a_0
+timestamp 1662953364
 transform 1 0 -2063 0 1 -1215
-box 402 498 2794 1685
+box 402 498 2794 1683
 use level_up_shifter_d_a  level_up_shifter_d_a_1
-timestamp 1662946268
+timestamp 1662953364
 transform 1 0 -2063 0 -1 -123
-box 402 498 2794 1685
+box 402 498 2794 1683
 use phigen  phigen_0
-timestamp 1662946268
+timestamp 1662953364
 transform 1 0 876 0 1 40
-box 0 -3 2484 1269
+box 0 0 2484 1184
 use phigen  phigen_1
-timestamp 1662946268
+timestamp 1662953364
 transform 1 0 876 0 1 -1048
-box 0 -3 2484 1269
+box 0 0 2484 1184
 << labels >>
 rlabel metal4 2739 750 2739 750 7 GND
 rlabel metal4 1438 1118 1438 1118 3 VCCD

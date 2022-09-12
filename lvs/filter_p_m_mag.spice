@@ -95,11 +95,11 @@ X32 outb comp_clks_stg1_0/clkb vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=
 X33 vdda comp_clks_stg1_0/clka out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
 .ends
 
-.subckt filter_clkgen cclk div2 phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vnb vpb vccd
-+ vdda GND
+.subckt filter_clkgen cclk div2 phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vpb vccd
++ vdda vnb GND
 Xcclkgen_0 vnb cclkb_ana cclk_ana vdda vnb level_up_shifter_d_a_1/out GND cclkgen
-Xphigen_1 vpb phi1b vnb level_up_shifter_d_a_0/outb phi1 vdda GND phigen
 Xphigen_0 vpb phi2b vnb level_up_shifter_d_a_0/out phi2 vdda GND phigen
+Xphigen_1 vpb phi1b vnb level_up_shifter_d_a_0/outb phi1 vdda GND phigen
 Xlevel_up_shifter_d_a_0 vccd div2 level_up_shifter_d_a_0/outb level_up_shifter_d_a_0/out
 + vdda GND level_up_shifter_d_a
 Xlevel_up_shifter_d_a_1 vccd cclk level_up_shifter_d_a_1/outb level_up_shifter_d_a_1/out
@@ -263,15 +263,15 @@ Xcap_10_10__side_x2_1[5] vss sig cap_10_10__side_x2
 
 .subckt filter m2_n261_28387# phi2 phi1 m3_n1255_33008# analog_mux_0/cclkb ctrlb analog_mux_0/vref2
 + analog_mux_0/vref1 m3_n1255_33208# mux_0/out2 m2_n649_28654# analog_mux_0/cclk mux_0/out1
-+ ctrl m1_21058_32712# cmos_switch_6/in cmos_switch_0/in m3_n1255_33408# mux_0/VDD
-+ phi1b phi2b m1_20912_32832# cap_3pF_0/sig VSUBS
++ ctrl cmos_switch_6/in cmos_switch_0/in m3_n1255_33408# mux_0/VDD phi1b phi2b cap_3pF_0/sig
++ VSUBS
 Xcmos_switch_0 cmos_switch_1/out mux_0/VDD phi1b VSUBS cmos_switch_0/in phi1 cmos_switch
 Xcmos_switch_1 cmos_switch_1/out mux_0/VDD phi2b VSUBS cap_12pF_0/sig phi2 cmos_switch
 Xcap_20fF_0 VSUBS cmos_switch_3/out cap_20fF
 Xcmos_switch_2 cmos_switch_3/out mux_0/VDD phi1b VSUBS cap_12pF_0/sig phi1 cmos_switch
 Xcmos_switch_3 cmos_switch_3/out mux_0/VDD phi2b VSUBS cap_6pF_0/sig phi2 cmos_switch
-Xanalog_mux_0 m1_21058_32712# analog_mux_0/cclk cap_3pF_0/ref mux_0/VDD m1_20912_32832#
-+ analog_mux_0/cclkb VSUBS analog_mux_0/vref2 analog_mux_0/vref1 analog_mux
+Xanalog_mux_0 ctrl analog_mux_0/cclk cap_3pF_0/ref mux_0/VDD ctrlb analog_mux_0/cclkb
++ VSUBS analog_mux_0/vref2 analog_mux_0/vref1 analog_mux
 Xcmos_switch_4 cmos_switch_5/out mux_0/VDD phi1b VSUBS cap_6pF_0/sig phi1 cmos_switch
 Xcap_12pF_0 cap_12pF_0/sig VSUBS cap_12pF
 Xcmos_switch_5 cmos_switch_5/out mux_0/VDD phi2b VSUBS cap_3pF_0/sig phi2 cmos_switch
@@ -292,7 +292,7 @@ X1 a_1138_96# A a_1032_466# VSUBS sky130_fd_pr__nfet_01v8 ad=1.554e+11p pd=1.58e
 .ends
 
 .subckt comparator a_10_n824# inp inv_LV_7/VSUBS a_n618_473# a_n524_n144# a_280_n337#
-+ w_n359_n11#
++ w_n359_n11# inv_LV_4/a_1032_466#
 Xinv_LV_2 inv_LV_2/A w_n359_n11# inv_LV_7/VSUBS inv_LV_3/A w_n359_n11# inv_LV_7/VSUBS
 + inv_LV
 Xinv_LV_3 inv_LV_3/A w_n359_n11# inv_LV_7/VSUBS li_1873_504# w_n359_n11# inv_LV_7/VSUBS
@@ -322,27 +322,24 @@ X11 high low inv_LV_7/VSUBS inv_LV_7/VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=
 X12 w_n359_n11# a_10_n824# FP w_n359_n11# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1.155e+11p ps=1.39e+06u w=420000u l=150000u
 .ends
 
-.subckt filter_p_m fb1 vssd vccd vdda
-Xfilter_clkgen_0 filter_clkgen_0/cclk filter_clkgen_0/div2 filter_1/phi2b filter_1/phi2
-+ filter_1/phi1b filter_1/phi1 filter_clkgen_0/cclkb_ana filter_clkgen_0/cclk_ana
-+ filter_clkgen_0/vnb filter_clkgen_0/vpb vccd vdda vssd filter_clkgen
+.subckt filter_p_m vssd vccd vdda th1 th2 div2 cclk fb1 high_buf phi1b_dig lo vnb
++ vpb inm inp
+Xfilter_clkgen_0 cclk div2 filter_1/phi2b filter_1/phi2 filter_1/phi1b filter_1/phi1
++ filter_clkgen_0/cclkb_ana filter_clkgen_0/cclk_ana vpb vccd vdda vnb vssd filter_clkgen
 Xlevel_shifter_low_0 vdda vccd vssd level_shifter_low_0/sky130_fd_sc_hd__inv_8_1/Y
 + filter_1/phi1 level_shifter_low
-Xlevel_shifter_low_1 vdda vccd vssd level_shifter_low_1/sky130_fd_sc_hd__inv_8_1/Y
-+ filter_1/phi1b level_shifter_low
-Xfilter_0 filter_1/m2_n261_28387# filter_1/phi2 filter_1/phi1 filter_1/analog_mux_0/vref1
-+ filter_clkgen_0/cclkb_ana filter_1/ctrlb filter_1/analog_mux_0/vref1 filter_1/analog_mux_0/vref2
-+ filter_1/analog_mux_0/vref2 filter_0/mux_0/out2 filter_1/m2_n649_28654# filter_clkgen_0/cclk_ana
-+ filter_0/mux_0/out1 filter_1/ctrl filter_1/ctrl fb_inv filter_0/mux_0/out1 vccd
-+ vdda filter_1/phi1b filter_1/phi2b filter_1/ctrlb comparator_0/inp vssd filter
-Xfilter_1 filter_1/m2_n261_28387# filter_1/phi2 filter_1/phi1 filter_1/analog_mux_0/vref1
-+ filter_clkgen_0/cclkb_ana filter_1/ctrlb filter_1/analog_mux_0/vref2 filter_1/analog_mux_0/vref1
-+ filter_1/analog_mux_0/vref2 filter_1/mux_0/out2 filter_1/m2_n649_28654# filter_clkgen_0/cclk_ana
-+ filter_1/mux_0/out1 filter_1/ctrl filter_1/ctrl fb filter_1/mux_0/out2 vccd vdda
-+ filter_1/phi1b filter_1/phi2b filter_1/ctrlb filter_1/cap_3pF_0/sig vssd filter
+Xlevel_shifter_low_1 vdda vccd vssd phi1b_dig filter_1/phi1b level_shifter_low
+Xfilter_0 inm filter_1/phi2 filter_1/phi1 th2 filter_clkgen_0/cclkb_ana ctrl_ th2
++ th1 th1 filter_0/mux_0/out2 inp filter_clkgen_0/cclk_ana filter_0/mux_0/out1 ctrl
++ fb_inv filter_0/mux_0/out1 vccd vdda filter_1/phi1b filter_1/phi2b comparator_0/inp
++ vssd filter
+Xfilter_1 inm filter_1/phi2 filter_1/phi1 th2 filter_clkgen_0/cclkb_ana ctrl_ th1
++ th2 th1 filter_1/mux_0/out2 inp filter_clkgen_0/cclk_ana filter_1/mux_0/out1 ctrl
++ fb filter_1/mux_0/out2 vccd vdda filter_1/phi1b filter_1/phi2b filter_1/cap_3pF_0/sig
++ vssd filter
 Xcomparator_0 level_shifter_low_0/sky130_fd_sc_hd__inv_8_1/Y comparator_0/inp vssd
-+ level_shifter_low_1/sky130_fd_sc_hd__inv_8_1/Y vssd filter_1/cap_3pF_0/sig vccd
-+ comparator
++ phi1b_dig vssd filter_1/cap_3pF_0/sig vccd high_buf comparator
 Xlevel_up_shifter_d_a_0 vccd fb1 fb fb_inv vdda vssd level_up_shifter_d_a
+Xlevel_up_shifter_d_a_1 vccd lo ctrl_ ctrl vdda vssd level_up_shifter_d_a
 .ends
 

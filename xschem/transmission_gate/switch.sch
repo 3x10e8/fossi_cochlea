@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 T {ctrl_ is the inverse of ctrl} -250 -150 0 0 0.4 0.4 {}
+T {Matched sizing for charge balance} 160 -180 0 0 0.4 0.4 {}
 N -30 -10 110 -10 { lab=ctrl}
 N 30 -130 30 30 { lab=in}
 N 30 30 80 30 { lab=in}
@@ -30,8 +31,8 @@ C {devices/iopin.sym} 250 -50 0 0 {name=p2 lab=out}
 C {devices/ipin.sym} -30 -90 0 0 {name=p3 lab=ctrl_}
 C {devices/ipin.sym} -30 -10 0 0 {name=p4 lab=ctrl}
 C {sky130_fd_pr/nfet_01v8.sym} 110 10 1 0 {name=M1
-L=0.18
-W=0.42
+L=Lnmos
+W=Wnmos
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -44,10 +45,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 110 -110 3 0 {name=M2
-L=0.18
-W=0.63
+L=Lpmos
+W=Wpmos
 nf=1
-mult=2
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
