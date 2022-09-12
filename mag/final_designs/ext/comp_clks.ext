@@ -1,0 +1,106 @@
+timestamp 1662950490
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use tg tg_0 1 0 276 0 -1 -32
+use inverter inverter_2 1 0 828 0 -1 -32
+use inverter inverter_1 1 0 828 0 1 128
+use inverter inverter_0 1 0 276 0 1 128
+port "clk" 3 182 273 400 305 m2
+port "clkb" 5 867 -288 918 -104 m1
+port "vss" 2 0 0 1196 96 m1
+port "clka" 4 867 200 918 384 m1
+port "vdd" 1 0 544 1196 640 m1
+node "clk" 2 162.874 182 273 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17536 1140 0 0 0 0 0 0 0 0
+node "clkb" 0 58.7658 867 -288 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "vdd" 2 557.676 0 -544 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133221 3402 0 0 0 0 0 0 0 0 0 0
+node "vss" 2 398.158 0 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 123864 3048 0 0 0 0 0 0 0 0 0 0
+node "clka" 0 75.7649 867 200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "m1_351_268#" 1 44.5462 351 268 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14018 738 0 0 0 0 0 0 0 0 0 0
+node "vdd" 2 457.002 0 544 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 114816 2584 0 0 0 0 0 0 0 0 0 0
+node "li_530_n211#" 54 72.9512 530 -211 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4896 356 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_576_n449#" 3747 34.506 576 -449 nw 0 0 0 0 11502 534 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_577_332#" 4047 31.95 577 332 nw 0 0 0 0 10650 526 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "w_576_n449#" "clkb" 0.146212
+cap "vdd" "w_577_332#" 0.924665
+cap "vss" "clk" 26.5082
+cap "vss" "vdd" 159.7
+cap "vss" "li_530_n211#" 3.31718
+cap "clkb" "vdd" 30.138
+cap "vss" "clka" 21.8571
+cap "clkb" "li_530_n211#" 0.662081
+cap "vss" "m1_351_268#" 96.9189
+cap "vdd" "w_577_332#" 0.513904
+cap "li_530_n211#" "w_577_332#" 1.74775
+cap "clka" "w_577_332#" 0.50031
+cap "m1_351_268#" "w_577_332#" 0.476365
+cap "w_576_n449#" "vdd" 0.627585
+cap "vss" "clkb" 25.787
+cap "clk" "vdd" 3.94747
+cap "li_530_n211#" "vdd" 2.17023
+cap "clka" "vdd" 16.0286
+cap "m1_351_268#" "vdd" 76.0283
+cap "vss" "w_577_332#" 0.851025
+cap "w_576_n449#" "vdd" 3.87959
+cap "w_576_n449#" "li_530_n211#" 2.27467
+cap "w_576_n449#" "m1_351_268#" 0.31732
+cap "clk" "vdd" 3.16707
+cap "clk" "clka" 1.09756
+cap "vdd" "li_530_n211#" 10.7994
+cap "clk" "m1_351_268#" 5.23798
+cap "m1_351_268#" "li_530_n211#" 1.16198
+cap "m1_351_268#" "clka" 7.88333
+cap "vss" "vdd" 72.3614
+cap "w_576_n449#" "vss" 0.919108
+cap "inverter_1/out" "tg_0/ctrl" 6.07504
+cap "inverter_2/out" "tg_0/ctrl_" -21.4339
+cap "tg_0/out" "inverter_1/vdd" 49.3876
+cap "inverter_1/in" "tg_0/in" 32.5006
+cap "tg_0/out" "inverter_1/out" 2.61059
+cap "inverter_2/out" "inverter_1/in" 2.57692
+cap "tg_0/ctrl" "tg_0/ctrl_" -136.543
+cap "inverter_1/out" "inverter_1/vdd" -14.183
+cap "tg_0/out" "tg_0/ctrl_" 35.9978
+cap "inverter_1/in" "tg_0/ctrl" 37.6135
+cap "inverter_2/out" "tg_0/in" 3.73974
+cap "tg_0/out" "inverter_1/in" 26.2216
+cap "inverter_1/vdd" "tg_0/ctrl_" -87.0943
+cap "inverter_1/out" "tg_0/ctrl_" -21.7807
+cap "tg_0/in" "tg_0/ctrl" 31.5246
+cap "inverter_1/in" "inverter_1/vdd" -15.052
+cap "inverter_2/out" "tg_0/ctrl" -13.9358
+cap "inverter_1/out" "inverter_1/in" 10.2812
+cap "tg_0/out" "tg_0/in" 8.40571
+cap "inverter_2/out" "tg_0/out" 6.40302
+cap "inverter_1/in" "tg_0/ctrl_" -23.4995
+cap "tg_0/in" "inverter_1/vdd" 27.2963
+cap "inverter_2/out" "inverter_1/vdd" 5.83749
+cap "inverter_1/out" "tg_0/in" 4.28744
+cap "tg_0/out" "tg_0/ctrl" 135.372
+cap "inverter_2/out" "inverter_1/out" 4.19977
+cap "tg_0/ctrl" "inverter_1/vdd" 91.3033
+cap "tg_0/in" "tg_0/ctrl_" 65.2673
+merge "inverter_0/vss" "inverter_1/vss" -1806.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46920 -2964 -249210 -6102 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/vss" "inverter_2/vss"
+merge "inverter_2/vss" "tg_0/ctrl_"
+merge "tg_0/ctrl_" "VSUBS"
+merge "VSUBS" "tg_0/vss"
+merge "tg_0/vss" "vss"
+merge "inverter_0/in" "tg_0/in" -204.453 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -196 -142 0 0 0 0 0 0 0 0
+merge "tg_0/in" "clk"
+merge "inverter_0/vdd" "inverter_1/vdd" -1491.54 0 0 0 0 -2556 -1728 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6256 -504 -249671 -6120 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/vdd" "w_577_332#"
+merge "w_577_332#" "inverter_2/vdd"
+merge "inverter_2/vdd" "tg_0/vdd"
+merge "tg_0/vdd" "w_576_n449#"
+merge "w_576_n449#" "tg_0/ctrl"
+merge "tg_0/ctrl" "vdd"
+merge "inverter_0/out" "inverter_1/in" -186.934 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -860 -212 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/in" "m1_351_268#"
+merge "inverter_2/in" "tg_0/out" -272.212 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -238 -150 0 0 0 0 0 0 0 0 0 0 0 0
+merge "tg_0/out" "li_530_n211#"
+merge "inverter_1/out" "clka" -107.014 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "inverter_2/out" "clkb" -94.9992 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0

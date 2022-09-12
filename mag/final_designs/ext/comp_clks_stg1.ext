@@ -1,0 +1,57 @@
+timestamp 1662950163
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use tg tg_0 1 0 276 0 -1 -32
+use inverter inverter_0 1 0 276 0 1 128
+port "clk" 3 135 -86 169 274 m2
+port "vdd" 1 63 -544 644 -448 m1
+port "vss" 2 0 0 644 96 m1
+port "clka" 4 315 200 366 384 m1
+port "clkb" 5 500 -405 534 -88 li
+node "clk" 2 170.692 135 -86 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17952 1124 0 0 0 0 0 0 0 0
+node "vdd" 2 371.9 63 -544 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74808 2246 0 0 0 0 0 0 0 0 0 0
+node "vss" 2 298.699 0 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80036 2346 0 0 0 0 0 0 0 0 0 0
+node "clka" 0 83.3699 315 200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 470 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1 209.986 155 544 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46944 1170 0 0 0 0 0 0 0 0 0 0
+node "clkb" 119 152.824 500 -405 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10778 702 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "clkb" 1.38926
+cap "vdd" "clkb" 10.9363
+cap "vdd" "vss" 38.6988
+cap "clka" "vss" 21.8571
+cap "clk" "vss" 20.1639
+cap "vdd" "vss" 121.961
+cap "vdd" "clka" 16.0286
+cap "vdd" "clk" 2.69141
+cap "clka" "clk" 1.47408
+cap "vdd" "clk" 3.56638
+cap "vss" "clkb" 4.88589
+cap "tg_0/out" "tg_0/ctrl_" 15.875
+cap "tg_0/ctrl" "tg_0/in" 35.7753
+cap "tg_0/out" "inverter_0/out" 2.35546
+cap "inverter_0/vdd" "tg_0/in" 15.3008
+cap "tg_0/ctrl" "tg_0/ctrl_" -67.4131
+cap "tg_0/ctrl" "inverter_0/out" 4.48585
+cap "inverter_0/vdd" "tg_0/ctrl_" -19.387
+cap "inverter_0/vdd" "inverter_0/out" -16.0286
+cap "tg_0/in" "tg_0/ctrl_" 31.4099
+cap "tg_0/out" "tg_0/ctrl" 40.2855
+cap "inverter_0/out" "tg_0/in" 10.7443
+cap "inverter_0/vdd" "tg_0/out" 18.25
+cap "inverter_0/out" "tg_0/ctrl_" -19.0823
+cap "tg_0/out" "tg_0/in" 9.75407
+cap "inverter_0/vdd" "tg_0/ctrl" 43.9867
+merge "inverter_0/vss" "tg_0/ctrl_" -876.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21896 -1356 -124528 -3084 0 0 0 0 0 0 0 0 0 0
+merge "tg_0/ctrl_" "VSUBS"
+merge "VSUBS" "tg_0/vss"
+merge "tg_0/vss" "vss"
+merge "inverter_0/in" "tg_0/in" -132.559 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -748 -180 0 0 0 0 0 0 0 0
+merge "tg_0/in" "clk"
+merge "inverter_0/out" "clka" -86.0793 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9384 -470 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/vdd" "tg_0/vdd" -564.843 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -104305 -2688 0 0 0 0 0 0 0 0 0 0
+merge "tg_0/vdd" "tg_0/ctrl"
+merge "tg_0/ctrl" "vdd"
+merge "tg_0/out" "clkb" -190.858 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10778 -702 0 0 0 0 0 0 0 0 0 0 0 0

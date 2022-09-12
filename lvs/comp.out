@@ -1,16 +1,3 @@
-Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 
@@ -24,6 +11,19 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 
 Class tg (1):  Merged 1 parallel devices.
 Subcircuit summary:
@@ -43,9 +43,9 @@ Subcircuit pins:
 Circuit 1: tg                              |Circuit 2: tg                              
 -------------------------------------------|-------------------------------------------
 ctrl_                                      |ctrl_                                      
-vdda                                       |vdda                                       
+vdd                                        |vdd                                        
 ctrl                                       |ctrl                                       
-vssa                                       |vssa                                       
+vss                                        |vss                                        
 in                                         |in                                         
 out                                        |out                                        
 ---------------------------------------------------------------------------------------
@@ -108,13 +108,49 @@ Circuit 1 comp_clks instance tg:3 property "Lnmos" has no match in circuit 2.
 Subcircuit pins:
 Circuit 1: comp_clks                       |Circuit 2: comp_clks                       
 -------------------------------------------|-------------------------------------------
-clka                                       |inverter_1/out **Mismatch**                
-clkb                                       |inverter_2/out **Mismatch**                
-vssa                                       |VSUBS **Mismatch**                         
-vdda                                       |vdda                                       
-clk                                        |tg_0/in **Mismatch**                       
+clka                                       |clka                                       
+clkb                                       |clkb                                       
+vss                                        |vss                                        
+vdd                                        |vdd                                        
+clk                                        |clk                                        
 ---------------------------------------------------------------------------------------
-Cell pin lists for comp_clks and comp_clks altered to match.
+Cell pin lists are equivalent.
+Device classes comp_clks and comp_clks are equivalent.
+Flattening unmatched subcell comp_clks_1stage in circuit level_up_shifter_d_a (0)(1 instance)
+Flattening unmatched subcell inv in circuit level_up_shifter_d_a (0)(1 instance)
+Flattening unmatched subcell level_up_shifter_no_inv in circuit level_up_shifter_d_a (0)(1 instance)
+Flattening unmatched subcell comp_clks_stg1 in circuit level_up_shifter_d_a (1)(1 instance)
+Flattening unmatched subcell inverter in circuit level_up_shifter_d_a (1)(1 instance)
+
+Class level_up_shifter_d_a (0):  Merged 4 parallel devices.
+Class level_up_shifter_d_a (1):  Merged 29 parallel devices.
+Subcircuit summary:
+Circuit 1: level_up_shifter_d_a            |Circuit 2: level_up_shifter_d_a            
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (33->5)            |sky130_fd_pr__nfet_01v8 (33->5)            
+sky130_fd_pr__pfet_01v8 (3)                |sky130_fd_pr__pfet_01v8 (4->3)             
+tg (1)                                     |tg (1)                                     
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Property errors were found.
+Netlists match uniquely.
+There were property errors.
+Circuit 1 level_up_shifter_d_a instance comp_clks_1stage:1/tg:2 property "Lnmos" has no match in circuit 2.
+
+Subcircuit pins:
+Circuit 1: level_up_shifter_d_a            |Circuit 2: level_up_shifter_d_a            
+-------------------------------------------|-------------------------------------------
+vdda                                       |vdda                                       
+vssd                                       |vssd                                       
+vccd                                       |vccd                                       
+out                                        |out                                        
+outb                                       |outb                                       
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes level_up_shifter_d_a and level_up_shifter_d_a are equivalent.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_03v3_nvt is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_03v3_nvt is a placeholder, treated as a black box.
 
@@ -168,16 +204,15 @@ VNB                                        |VNB
 Cell pin lists are equivalent.
 Device classes sky130_fd_sc_hd__inv_8 and sky130_fd_sc_hd__inv_8 are equivalent.
 Flattening unmatched subcell filter_clkgen_balanced_clks in circuit for_lvs (0)(1 instance)
-Flattening unmatched subcell comp_clks_1stage in circuit for_lvs (0)(3 instances)
-Flattening unmatched subcell transmission_gate in circuit for_lvs (0)(3 instances)
-Flattening unmatched subcell inv in circuit for_lvs (0)(3 instances)
 Flattening unmatched subcell inv_weak_pulldown in circuit for_lvs (0)(4 instances)
 Flattening unmatched subcell inv_weak_pullup in circuit for_lvs (0)(2 instances)
-Flattening unmatched subcell level_up_shifter_no_inv in circuit for_lvs (0)(3 instances)
 Flattening unmatched subcell analogMux in circuit for_lvs (0)(6 instances)
 Flattening unmatched subcell mim_cap_stacked_12pF in circuit for_lvs (0)(2 instances)
 Flattening unmatched subcell mim_cap_stacked_6pF in circuit for_lvs (0)(2 instances)
 Flattening unmatched subcell mim_cap_stacked_3pF in circuit for_lvs (0)(2 instances)
+Flattening unmatched subcell level_up_shifter_no_inv in circuit for_lvs (0)(1 instance)
+Flattening unmatched subcell comp_clks_1stage in circuit for_lvs (0)(1 instance)
+Flattening unmatched subcell inv in circuit for_lvs (0)(1 instance)
 Flattening unmatched subcell comparator_single_tail in circuit for_lvs (0)(1 instance)
 Flattening unmatched subcell inv in circuit for_lvs (0)(8 instances)
 Flattening unmatched subcell level_down_shifter in circuit for_lvs (0)(2 instances)
@@ -187,9 +222,6 @@ Flattening unmatched subcell inv_weak_pulldown_corrected in circuit filter_p_m (
 Flattening unmatched subcell phigen in circuit filter_p_m (1)(2 instances)
 Flattening unmatched subcell inv_weak_pulldown_corrected in circuit filter_p_m (1)(2 instances)
 Flattening unmatched subcell inv_weak_pullup_corrected in circuit filter_p_m (1)(2 instances)
-Flattening unmatched subcell level_up_shifter_d_a in circuit filter_p_m (1)(3 instances)
-Flattening unmatched subcell comp_clks_stg1 in circuit filter_p_m (1)(3 instances)
-Flattening unmatched subcell inverter in circuit filter_p_m (1)(3 instances)
 Flattening unmatched subcell level_shifter_low in circuit filter_p_m (1)(2 instances)
 Flattening unmatched subcell filter in circuit filter_p_m (1)(2 instances)
 Flattening unmatched subcell cmos_switch in circuit filter_p_m (1)(16 instances)
@@ -212,261 +244,174 @@ Flattening unmatched subcell comparator in circuit filter_p_m (1)(1 instance)
 Flattening unmatched subcell inv_LV in circuit filter_p_m (1)(8 instances)
 
 Flattening instances of tg in cell for_lvs (0) makes a better match
+Making another compare attempt.
+
+Flattening instances of level_up_shifter_d_a in cell for_lvs (0) makes a better match
+Flattening instances of level_up_shifter_d_a in cell filter_p_m (1) makes a better match
+Making another compare attempt.
+
+Flattening instances of tg in cell for_lvs (0) makes a better match
 Flattening instances of tg in cell filter_p_m (1) makes a better match
 Making another compare attempt.
 
-Class for_lvs (0):  Merged 12 parallel devices.
-Class filter_p_m (1):  Merged 299 parallel devices.
+Class for_lvs (0):  Merged 4 parallel devices.
+Class filter_p_m (1):  Merged 212 parallel devices.
 Subcircuit summary:
 Circuit 1: for_lvs                         |Circuit 2: filter_p_m                      
 -------------------------------------------|-------------------------------------------
 comp_clks (3)                              |comp_clks (3)                              
 sky130_fd_pr__nfet_01v8 (148->64)          |sky130_fd_pr__nfet_01v8 (148->64)          
-sky130_fd_pr__pfet_01v8 (78->62)           |sky130_fd_pr__pfet_01v8 (68->62)           
+sky130_fd_pr__pfet_01v8 (81->62)           |sky130_fd_pr__pfet_01v8 (65->62)           
 sky130_fd_pr__cap_mim_m3_1 (120->14)       |sky130_fd_pr__cap_mim_m3_1 (120->14)       
 sky130_fd_pr__cap_mim_m3_2 (112->6)        |sky130_fd_pr__cap_mim_m3_2 (112->6)        
 sky130_fd_pr__nfet_03v3_nvt (2)            |sky130_fd_pr__nfet_03v3_nvt (2)            
 sky130_fd_pr__nfet_01v8_lvt (5)            |sky130_fd_pr__nfet_01v8_lvt (5)            
 sky130_fd_sc_hd__inv_8 (4)                 |sky130_fd_sc_hd__inv_8 (4)                 
 Number of devices: 160                     |Number of devices: 160                     
-Number of nets: 83 **Mismatch**            |Number of nets: 87 **Mismatch**            
+Number of nets: 83                         |Number of nets: 83                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match with 9 symmetries.
+Circuits match correctly.
+There were property errors.
+mim_cap_stacked_12pF:9/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_0//cap_12pF_0//cap_10_10_edge_x2_1/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+mim_cap_stacked_12pF:10/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_1//cap_12pF_0//cap_10_10_edge_x2_1/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+mim_cap_stacked_3pF:12/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_0//cap_3pF_0//cap_10_10_center_x2_0[0]/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+mim_cap_stacked_3pF:30/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_1//cap_3pF_0//cap_10_10_center_x2_0[0]/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+mim_cap_stacked_6pF:11/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_0//cap_6pF_0//cap_10_10_edge_x2_0/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+mim_cap_stacked_6pF:29/sky130_fd_pr__cap_mim_m3_2:C2 vs. filter_1//cap_6pF_0//cap_10_10_edge_x2_0/sky130_fd_pr__cap_mim_m3_2:0:
+Property VM in circuit1 has no matching property in circuit2
+sky130_fd_pr__cap_mim_m3_1:C17 vs. filter_1//cap_40fF_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: 6.7   circuit2: 6   (delta=11%, cutoff=1%)
+ W circuit1: 6   circuit2: 6.7   (delta=11%, cutoff=1%)
+sky130_fd_pr__cap_mim_m3_1:C7 vs. filter_0//cap_40fF_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: 6.7   circuit2: 6   (delta=11%, cutoff=1%)
+ W circuit1: 6   circuit2: 6.7   (delta=11%, cutoff=1%)
+tg:17/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_2/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:24/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_2/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:23/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_3/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:18/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_3/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:21/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_5/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:20/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_5/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:19/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_4/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:22/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_4/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:26/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_0/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:15/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_0/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:13/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_6/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:27/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_6/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:16/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_1/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:25/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_1/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:28/sky130_fd_pr__pfet_01v8:M2 vs. filter_1//cmos_switch_7/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:14/sky130_fd_pr__pfet_01v8:M2 vs. filter_0//cmos_switch_7/sky130_fd_pr__pfet_01v8:1:
+ W circuit1: 1.26   circuit2: 0.42   (delta=100%, cutoff=1%)
+ L circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:17/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_2/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:24/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_2/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:23/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_3/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:18/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_3/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:21/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_5/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:20/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_5/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:19/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_4/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:22/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_4/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:26/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_0/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:15/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_0/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:13/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_6/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:27/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_6/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:16/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_1/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:25/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_1/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:28/sky130_fd_pr__nfet_01v8:M1 vs. filter_1//cmos_switch_7/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+tg:14/sky130_fd_pr__nfet_01v8:M1 vs. filter_0//cmos_switch_7/sky130_fd_pr__nfet_01v8:0:
+ l circuit1: 0.18   circuit2: 0.15   (delta=18.2%, cutoff=1%)
+Circuit 1 for_lvs instance filter_clkgen_balanced_clks:1/comp_clks:10 property "Lnmos" has no match in circuit 2.
+Circuit 1 for_lvs instance filter_clkgen_balanced_clks:1/comp_clks:7 property "Lnmos" has no match in circuit 2.
+Circuit 1 for_lvs instance filter_clkgen_balanced_clks:1/comp_clks:4 property "Lnmos" has no match in circuit 2.
+
+Subcircuit pins:
 Circuit 1: for_lvs                         |Circuit 2: filter_p_m                      
-
+-------------------------------------------|-------------------------------------------
+phi1b_dig                                  |(no matching pin)                          
+inp                                        |(no matching pin)                          
+inm                                        |(no matching pin)                          
+ctrl_                                      |(no matching pin)                          
+ctrl                                       |(no matching pin)                          
+vccd                                       |vccd                                       
+vssd                                       |vssd                                       
+vdda                                       |vdda                                       
+vpb                                        |(no matching pin)                          
+high_buf                                   |(no matching pin)                          
+vnb                                        |(no matching pin)                          
+th1                                        |(no matching pin)                          
+th2                                        |(no matching pin)                          
+div2                                       |(no matching pin)                          
+fb1                                        |fb1                                        
+cclk                                       |(no matching pin)                          
+inp                                        |(no matching pin)                          
+inm                                        |(no matching pin)                          
+ctrl                                       |(no matching pin)                          
+ctrl_                                      |(no matching pin)                          
+vpb                                        |(no matching pin)                          
+vnb                                        |(no matching pin)                          
+div2                                       |(no matching pin)                          
+cclk                                       |(no matching pin)                          
+phi1b_dig                                  |(no matching pin)                          
+high_buf                                   |(no matching pin)                          
+th1                                        |(no matching pin)                          
+th2                                        |(no matching pin)                          
 ---------------------------------------------------------------------------------------
-Net: fb1                                   |Net: fb1                                   
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
-  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-Net: vssd                                  |Net: vssd                                  
-  sky130_fd_pr__nfet_01v8/(1|3) = 23       |  sky130_fd_pr__nfet_01v8/(1|3) = 23       
-  sky130_fd_pr__nfet_01v8/4 = 64           |  sky130_fd_pr__nfet_01v8/4 = 64           
-  comp_clks/vssa = 3                       |  comp_clks/VSUBS = 3                      
-  sky130_fd_pr__pfet_01v8/2 = 3            |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_sc_hd__inv_8/VGND = 4          |  sky130_fd_sc_hd__inv_8/VGND = 4          
-  sky130_fd_sc_hd__inv_8/VNB = 4           |  sky130_fd_sc_hd__inv_8/VNB = 4           
-  sky130_fd_pr__cap_mim_m3_1/2 = 12        |  sky130_fd_pr__cap_mim_m3_1/2 = 12        
-  sky130_fd_pr__cap_mim_m3_2/1 = 4         |  sky130_fd_pr__cap_mim_m3_2/1 = 4         
-  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 5    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 5    
-  sky130_fd_pr__nfet_01v8_lvt/4 = 5        |  sky130_fd_pr__nfet_01v8_lvt/4 = 5        
-  sky130_fd_pr__nfet_03v3_nvt/4 = 2        |  sky130_fd_pr__nfet_03v3_nvt/4 = 2        
-                                           |                                           
-Net: vccd                                  |Net: vccd                                  
-  sky130_fd_pr__pfet_01v8/4 = 20           |  sky130_fd_pr__pfet_01v8/4 = 20           
-  sky130_fd_pr__nfet_01v8/2 = 3            |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/(1|3) = 15       |  sky130_fd_pr__pfet_01v8/(1|3) = 15       
-  sky130_fd_sc_hd__inv_8/VPB = 2           |  sky130_fd_sc_hd__inv_8/VPB = 2           
-  sky130_fd_sc_hd__inv_8/VPWR = 2          |  sky130_fd_sc_hd__inv_8/VPWR = 2          
-                                           |                                           
-(no matching net)                          |Net: /level_up_shifter_d_a_0/comp_clks_stg 
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
-                                           |                                           
-(no matching net)                          |Net: /level_up_shifter_d_a_0/comp_clks_stg 
-                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi1_dig                              |Net: level_shifter_low_0/sky130_fd_sc_hd__ 
-  sky130_fd_pr__nfet_01v8_lvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
-  sky130_fd_pr__pfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_sc_hd__inv_8/Y = 1             |  sky130_fd_sc_hd__inv_8/Y = 1             
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: level_up_shifter_d_a_0/comp_clks_stg1 
-                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-(no matching net)                          |Net: level_up_shifter_d_a_0/comp_clks_stg1 
-                                           |  sky130_fd_pr__nfet_01v8/2 = 1            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi1b_dig                             |Net: level_shifter_low_1/sky130_fd_sc_hd__ 
-  sky130_fd_pr__nfet_01v8_lvt/2 = 2        |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
-  sky130_fd_sc_hd__inv_8/Y = 1             |  sky130_fd_sc_hd__inv_8/Y = 1             
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: comparator_single_tail:35/tail        |Net: /comparator_0/tail                    
-  sky130_fd_pr__nfet_03v3_nvt/(1|3) = 2    |  sky130_fd_pr__nfet_03v3_nvt/(1|3) = 2    
-  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: vdda                                  |Net: vdda                                  
-  comp_clks/vdda = 3                       |  comp_clks/vdda = 3                       
-  sky130_fd_pr__pfet_01v8/(1|3) = 12       |  sky130_fd_pr__pfet_01v8/(1|3) = 12       
-  sky130_fd_pr__pfet_01v8/4 = 42           |  sky130_fd_pr__pfet_01v8/4 = 42           
-  sky130_fd_pr__nfet_01v8/(1|3) = 6        |  sky130_fd_pr__nfet_01v8/(1|3) = 6        
-  sky130_fd_sc_hd__inv_8/VPB = 2           |  sky130_fd_sc_hd__inv_8/VPB = 2           
-  sky130_fd_sc_hd__inv_8/VPWR = 2          |  sky130_fd_sc_hd__inv_8/VPWR = 2          
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: cclkb_ana                             |Net: filter_clkgen_0/cclkb_ana             
-  comp_clks/clkb = 1                       |  comp_clks/inverter_2/out = 1             
-  sky130_fd_pr__pfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
-  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: cclk_ana                              |Net: filter_clkgen_0/cclk_ana              
-  comp_clks/clka = 1                       |  comp_clks/inverter_1/out = 1             
-  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
-  sky130_fd_pr__pfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi1b                                 |Net: filter_1/phi1b                        
-  comp_clks/clkb = 1                       |  comp_clks/inverter_2/out = 1             
-  sky130_fd_pr__pfet_01v8/2 = 8            |  sky130_fd_pr__pfet_01v8/2 = 8            
-  sky130_fd_sc_hd__inv_8/A = 1             |  sky130_fd_sc_hd__inv_8/A = 1             
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi1                                  |Net: filter_1/phi1                         
-  comp_clks/clka = 1                       |  comp_clks/inverter_1/out = 1             
-  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/2 = 8            
-  sky130_fd_sc_hd__inv_8/A = 1             |  sky130_fd_sc_hd__inv_8/A = 1             
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi2b                                 |Net: filter_1/phi2b                        
-  comp_clks/clkb = 1                       |  comp_clks/inverter_2/out = 1             
-  sky130_fd_pr__pfet_01v8/2 = 8            |  sky130_fd_pr__pfet_01v8/2 = 8            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: phi2                                  |Net: filter_1/phi2                         
-  comp_clks/clka = 1                       |  comp_clks/inverter_1/out = 1             
-  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/2 = 8            
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: for_lvs                         |Circuit 2: filter_p_m                      
-
----------------------------------------------------------------------------------------
-(no matching instance)                     |Instance: level_up_shifter_d_a_0//comp_clk 
-                                           |  (1,3) = (41,4)                           
-                                           |  2 = 4                                    
-                                           |  4 = 41                                   
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: level_up_shifter_d_a_0//comp_clk 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 1                                    
-                                           |  4 = 41                                   
-                                           |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: analogMux:7/sky130_fd_pr__pfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:7/sky130_fd_pr__pfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:6/sky130_fd_pr__pfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:6/sky130_fd_pr__pfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: analogMux:5/sky130_fd_pr__pfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:5/sky130_fd_pr__pfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:8/sky130_fd_pr__pfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
-                                           |                                           
-Instance: analogMux:8/sky130_fd_pr__pfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__pf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 67                                   |  4 = 67                                   
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching instance)                     |Instance: level_up_shifter_d_a_0//comp_clk 
-                                           |  (1,3) = (128,4)                          
-                                           |  2 = 4                                    
-                                           |  4 = 128                                  
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: level_up_shifter_d_a_0//comp_clk 
-                                           |  (1,3) = (4,4)                            
-                                           |  2 = 1                                    
-                                           |  4 = 128                                  
-                                           |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: analogMux:7/sky130_fd_pr__nfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:7/sky130_fd_pr__nfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:6/sky130_fd_pr__nfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:6/sky130_fd_pr__nfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,4)                            |  (1,3) = (8,4)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: analogMux:5/sky130_fd_pr__nfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:5/sky130_fd_pr__nfet_0 |Instance: filter_0//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:8/sky130_fd_pr__nfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
-                                           |                                           
-Instance: analogMux:8/sky130_fd_pr__nfet_0 |Instance: filter_1//mux_0/sky130_fd_pr__nf 
-  (1,3) = (8,6)                            |  (1,3) = (8,6)                            
-  2 = 8                                    |  2 = 8                                    
-  4 = 129                                  |  4 = 128                                  
----------------------------------------------------------------------------------------
-Netlists do not match.
-Netlists do not match.
+Cell pin lists for for_lvs and filter_p_m altered to match.
+Cells failed matching, or top level cell failed pin matching.
 The following cells had property errors:
  comp_clks
+ level_up_shifter_d_a
+ for_lvs

@@ -1,0 +1,116 @@
+* NGSPICE file created from filter_clkgen.ext - technology: sky130B
+
+.subckt inv_weak_pulldown_corrected a_30_590# a_n177_50# vnb w_n204_554# in li_n276_n97#
+X0 a_30_590# in w_n204_554# w_n204_554# sky130_fd_pr__pfet_01v8 ad=5.04e+11p pd=3.32e+06u as=4.914e+11p ps=3.3e+06u w=1.26e+06u l=180000u
+X1 a_30_50# in a_n177_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=1.323e+11p pd=1.47e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
+X2 a_30_590# vnb a_30_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=1.323e+11p pd=1.47e+06u as=0p ps=0u w=420000u l=540000u
+.ends
+
+.subckt tg inp out clk_ clk
+X0 out clk_ inp clk sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X1 inp clk_ out clk sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X2 out clk inp clk_ sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=2.415e+11p ps=1.99e+06u w=420000u l=180000u
+.ends
+
+.subckt inverter w_n204_204# a_n177_0# out in
+X0 out in a_n177_0# a_n177_0# sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
+X1 w_n204_204# in out w_n204_204# sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X2 out in w_n204_204# w_n204_204# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+.ends
+
+.subckt comp_clks inverter_1/out tg_0/inp inverter_2/out w_577_332# tg_0/clk VSUBS
+Xtg_0 tg_0/inp tg_0/out VSUBS tg_0/clk tg
+Xinverter_0 w_577_332# VSUBS inverter_1/in tg_0/inp inverter
+Xinverter_1 w_577_332# VSUBS inverter_1/out inverter_1/in inverter
+Xinverter_2 tg_0/clk VSUBS inverter_2/out tg_0/out inverter
+.ends
+
+.subckt cclkgen inv_weak_pulldown_corrected_1/vnb comp_clks_0/inverter_2/out comp_clks_0/tg_0/clk
++ inv_weak_pulldown_corrected_0/vnb inv_weak_pulldown_corrected_0/in comp_clks_0/w_577_332#
++ comp_clks_0/inverter_1/out VSUBS
+Xinv_weak_pulldown_corrected_0 inv_weak_pulldown_corrected_1/in VSUBS inv_weak_pulldown_corrected_0/vnb
++ comp_clks_0/w_577_332# inv_weak_pulldown_corrected_0/in comp_clks_0/tg_0/clk inv_weak_pulldown_corrected
+Xinv_weak_pulldown_corrected_1 comp_clks_0/tg_0/inp VSUBS inv_weak_pulldown_corrected_1/vnb
++ comp_clks_0/w_577_332# inv_weak_pulldown_corrected_1/in comp_clks_0/tg_0/clk inv_weak_pulldown_corrected
+Xcomp_clks_0 comp_clks_0/inverter_1/out comp_clks_0/tg_0/inp comp_clks_0/inverter_2/out
++ comp_clks_0/w_577_332# comp_clks_0/tg_0/clk VSUBS comp_clks
+.ends
+
+.subckt inv_weak_pullup_corrected inp w_1_458# li_n53_n248# out vpb a_40_n75#
+X0 out vpb a_234_496# w_1_458# sky130_fd_pr__pfet_01v8 ad=4.536e+11p pd=3.24e+06u as=3.654e+11p ps=3.1e+06u w=1.26e+06u l=540000u
+X1 a_234_496# inp w_1_458# w_1_458# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=3.78e+11p ps=3.12e+06u w=1.26e+06u l=180000u
+X2 out inp a_40_n75# a_40_n75# sky130_fd_pr__nfet_01v8 ad=1.218e+11p pd=1.42e+06u as=1.554e+11p ps=1.58e+06u w=420000u l=180000u
+.ends
+
+.subckt phigen comp_clks_0/inverter_2/out inv_weak_pullup_corrected_0/vpb comp_clks_0/tg_0/clk
++ inv_weak_pulldown_corrected_0/vnb w_1197_875# inv_weak_pulldown_corrected_0/in comp_clks_0/inverter_1/out
++ VSUBS
+Xinv_weak_pulldown_corrected_0 inv_weak_pullup_corrected_0/inp VSUBS inv_weak_pulldown_corrected_0/vnb
++ w_1197_875# inv_weak_pulldown_corrected_0/in comp_clks_0/tg_0/clk inv_weak_pulldown_corrected
+Xinv_weak_pullup_corrected_0 inv_weak_pullup_corrected_0/inp w_1197_875# comp_clks_0/tg_0/clk
++ inv_weak_pullup_corrected_0/out inv_weak_pullup_corrected_0/vpb VSUBS inv_weak_pullup_corrected
+Xcomp_clks_0 comp_clks_0/inverter_1/out inv_weak_pullup_corrected_0/out comp_clks_0/inverter_2/out
++ w_1197_875# comp_clks_0/tg_0/clk VSUBS comp_clks
+.ends
+
+.subckt comp_clks_stg1 tg_0/inp tg_0/out inverter_0/out inverter_0/w_n204_204# tg_0/clk
++ VSUBS
+Xtg_0 tg_0/inp tg_0/out VSUBS tg_0/clk tg
+Xinverter_0 inverter_0/w_n204_204# VSUBS inverter_0/out tg_0/inp inverter
+.ends
+
+.subckt level_up_shifter_d_a comp_clks_stg1_0/tg_0/inp comp_clks_stg1_0/VSUBS w_1715_1303#
++ comp_clks_stg1_0/inverter_0/w_n204_204# a_1260_620# a_1811_1506# comp_clks_stg1_0/tg_0/clk
+Xcomp_clks_stg1_0 comp_clks_stg1_0/tg_0/inp comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/inverter_0/out
++ comp_clks_stg1_0/inverter_0/w_n204_204# comp_clks_stg1_0/tg_0/clk comp_clks_stg1_0/VSUBS
++ comp_clks_stg1
+X0 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6839e+12p ps=1.746e+07u w=600000u l=150000u
+X1 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6965e+12p ps=1.749e+07u w=600000u l=150000u
+X2 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X3 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X4 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X5 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X6 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X7 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X8 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X9 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X10 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X11 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X12 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X13 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X14 a_1811_1506# a_1260_620# w_1715_1303# w_1715_1303# sky130_fd_pr__pfet_01v8 ad=1.26e+11p pd=1.44e+06u as=1.491e+11p ps=1.55e+06u w=420000u l=150000u
+X15 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X16 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X17 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X18 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X19 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X20 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X21 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X22 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X23 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X24 w_1715_1303# a_1811_1506# a_1260_620# w_1715_1303# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1.386e+11p ps=1.5e+06u w=420000u l=150000u
+X25 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X26 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X27 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X28 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X29 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X30 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X31 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X32 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X33 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+.ends
+
+.subckt filter_clkgen cclk div2 phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vnb vpb vccd
++ vdda vssd
+Xcclkgen_0 vnb cclkb_ana vdda vnb cclkgen_0/inv_weak_pulldown_corrected_0/in vdda
++ cclk_ana vssd cclkgen
+Xphigen_0 phi2b vpb vdda vnb vdda phigen_0/inv_weak_pulldown_corrected_0/in phi2 vssd
++ phigen
+Xphigen_1 phi1b vpb vdda vnb vdda phigen_1/inv_weak_pulldown_corrected_0/in phi1 vssd
++ phigen
+Xlevel_up_shifter_d_a_0 div2 vssd vdda vccd phigen_1/inv_weak_pulldown_corrected_0/in
++ phigen_0/inv_weak_pulldown_corrected_0/in vccd level_up_shifter_d_a
+Xlevel_up_shifter_d_a_1 cclk vssd vdda vccd level_up_shifter_d_a_1/a_1260_620# cclkgen_0/inv_weak_pulldown_corrected_0/in
++ vccd level_up_shifter_d_a
+.ends
+

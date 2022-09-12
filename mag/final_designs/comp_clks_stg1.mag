@@ -1,0 +1,40 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1662950163
+<< locali >>
+rect 500 -405 534 -88
+<< metal1 >>
+rect 155 544 644 640
+rect 315 200 366 384
+rect 0 0 644 96
+rect 25 -183 69 0
+rect 25 -223 279 -183
+rect 435 -191 627 -151
+rect 583 -448 627 -191
+rect 63 -544 644 -448
+rect 583 -545 627 -544
+<< metal2 >>
+rect 135 -52 169 274
+rect 135 -86 337 -52
+use inverter  inverter_0
+timestamp 1662948631
+transform 1 0 276 0 1 128
+box -276 -128 368 512
+use tg  tg_0
+timestamp 1662948056
+transform 1 0 276 0 -1 -32
+box -276 -128 368 512
+<< labels >>
+flabel metal1 63 -544 644 -448 1 FreeSans 320 0 0 0 vdd
+port 1 n default bidirectional
+flabel metal1 155 544 644 640 1 FreeSans 320 0 0 0 vdd
+flabel metal1 0 0 644 96 1 FreeSans 320 0 0 0 vss
+port 2 n default bidirectional
+flabel metal2 135 -86 169 274 1 FreeSans 320 0 0 0 clk
+port 3 n default input
+flabel metal1 315 200 366 384 1 FreeSans 320 0 0 0 clka
+port 4 n default output
+flabel locali 500 -405 534 -88 1 FreeSans 320 0 0 0 clkb
+port 5 n default output
+<< end >>

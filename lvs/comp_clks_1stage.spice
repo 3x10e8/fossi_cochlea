@@ -1,13 +1,11 @@
-** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sch
-.subckt comp_clks clk clka clkb vdd vss
+** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sch
+.subckt comp_clks_1stage clk clka clkb vdd vss
 *.PININFO clk:I clka:O clkb:O vdd:B vss:B
-X1 clk clki vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X2 clki clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X4 clkt clkb vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-x3 clk clkt vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+X1 clk clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+x2 clk clkb vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 .ends
 
-* expanding   symbol:  xschem/inv/inv.sym # of pins=4
+* expanding   symbol:  inv/inv.sym # of pins=4
 ** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv.sym
 ** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv.sch
 .subckt inv in out vdd vss   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos

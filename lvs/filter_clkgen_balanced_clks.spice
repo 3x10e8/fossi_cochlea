@@ -6,37 +6,25 @@
 X4 phi2dd phi2 phi2b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X7 phi1dd phi1 phi1b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X10 div2dd cclk_ana cclkb_ana vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-X1 div2 net3 net7 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X2 net1 phi2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X5 net2 phi1d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
-X8 net5 div2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X8 net3 div2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X9 div2d div2dd vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X3 phi2d phi2dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
 X6 phi1d phi1dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
-X11 cclk net4 net6 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x15 vdda vccd net3 net2 net1 vssd net7 level_up_shifter_no_inv
-X14 vdda vccd net4 outb_alone net5 vssd net6 level_up_shifter_no_inv
+x12 vdda vccd vssd div2 net2 net1 level_up_shifter_d_a
+x1 vdda vccd vssd cclk net4 net3 level_up_shifter_d_a
 .ends
 
 * expanding   symbol:  clkgen/comp_clks.sym # of pins=5
 ** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sym
 ** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks.sch
-.subckt comp_clks clk clka clkb vdda vssa   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-*.PININFO clk:I clka:O clkb:O vdda:I vssa:I
-X3 clk clkt vssa vdda vdda vssa transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X1 clk clki vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X2 clki clka vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X4 clkt clkb vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-.ends
-
-
-* expanding   symbol:  clkgen/comp_clks_1stage.sym # of pins=5
-** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sym
-** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sch
-.subckt comp_clks_1stage clk clka clkb vdda vssa   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-*.PININFO clk:I clka:O clkb:O vdda:I vssa:I
-X3 clk clkb vssa vdda vdda vssa transmission_gate Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-X1 clk clka vdda vssa inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+.subckt comp_clks clk clka clkb vdd vss   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO clk:I clka:O clkb:O vdd:B vss:B
+X1 clk clki vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X2 clki clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+X4 clkt clkb vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+x3 clk clkt vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 .ends
 
 
@@ -74,70 +62,89 @@ XM5 net1 in vdda vdda sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)
 .ends
 
 
-* expanding   symbol:  level_shifter/level_up_shifter_no_inv.sym # of pins=7
-** sym_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sym
-** sch_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sch
-.subckt level_up_shifter_no_inv vdda1 vccd1 in outb out vssd1 inb
-*.PININFO in:I vdda1:B out:O outb:O inb:I vssd1:B vccd1:B
-XM7 outb out vdda1 vdda1 sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM8 out outb vdda1 vdda1 sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2 outb inb vdda1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM3 outb in vssd1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM4 vssd1 in outb vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM5 out inb vssd1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM6 vssd1 inb out vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM9 vdda1 in out vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM10 out in vdda1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=4 m=4
-XM11 vdda1 inb outb vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=4 m=4
-.ends
-
-
-* expanding   symbol:  transmission_gate/transmission_gate.sym # of pins=6
-** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/transmission_gate.sym
-** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/transmission_gate.sch
-.subckt transmission_gate in out ctrl_ ctrl vdda vssa   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos
-+ Lnmos=Lnmos
-*.PININFO in:B out:B ctrl_:I ctrl:I vdda:I vssa:I
-XM1 out ctrl in vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM2 out ctrl_ in vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
+* expanding   symbol:  xschem/level_shifter/level_up_shifter_d_a.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_d_a.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_d_a.sch
+.subckt level_up_shifter_d_a vdda vccd vssd clk outb out
+*.PININFO clk:I outb:O out:O vdda:B vccd:B vssd:B
+X1 clk net1 net2 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x15 vdda net1 outb out vssd net2 level_up_shifter_no_inv
 .ends
 
 
 * expanding   symbol:  xschem/inv/inv.sym # of pins=4
 ** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv.sym
 ** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv.sch
-.subckt inv in out vdda vssa   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
-*.PININFO in:I out:B vdda:I vssa:I
-XM1 vssa in out vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+.subckt inv in out vdd vss   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+*.PININFO in:I out:B vdd:B vss:B
+XM1 vss in out vss sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XM2 vdda in out vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM2 vdd in out vdd sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  xschem/transmission_gate/tg.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/transmission_gate/tg.sch
+.subckt tg in out ctrl_ ctrl vdd vss   Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO in:B out:B ctrl_:I ctrl:I vdd:B vss:B
+XM1 out ctrl in vss sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out ctrl_ in vdd sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2
+.ends
+
+
+* expanding   symbol:  clkgen/comp_clks_1stage.sym # of pins=5
+** sym_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/clkgen/comp_clks_1stage.sch
+.subckt comp_clks_1stage clk clka clkb vdd vss   Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+*.PININFO clk:I clka:O clkb:O vdd:B vss:B
+X1 clk clka vdd vss inv Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+x2 clk clkb vss vdd vdd vss tg Wpmos=0.63 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+.ends
+
+
+* expanding   symbol:  level_shifter/level_up_shifter_no_inv.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_no_inv.sch
+.subckt level_up_shifter_no_inv vdd in outb out vss inb
+*.PININFO in:I vdd:B out:O outb:O inb:I vss:B
+XM7 outb out vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 out outb vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 outb inb vdd vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM3 outb in vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM4 vss in outb vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM5 out inb vss vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM6 vss inb out vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM9 vdd in out vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM10 out in vdd vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
+XM11 vdd inb outb vss sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=4 m=4
 .ends
 
 .end

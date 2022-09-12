@@ -1,0 +1,51 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1662950490
+<< nwell >>
+rect 577 332 627 545
+rect 576 -449 630 -236
+<< locali >>
+rect 530 -211 674 -177
+<< metal1 >>
+rect 0 544 1196 640
+rect 351 268 677 311
+rect 867 200 918 384
+rect 0 0 1196 96
+rect 251 -232 290 0
+rect 422 -205 588 -160
+rect 543 -448 588 -205
+rect 867 -288 918 -104
+rect 0 -544 1196 -448
+<< metal2 >>
+rect 182 273 400 305
+rect 367 -47 400 273
+use inverter  inverter_0
+timestamp 1662948631
+transform 1 0 276 0 1 128
+box -276 -128 368 512
+use inverter  inverter_1
+timestamp 1662948631
+transform 1 0 828 0 1 128
+box -276 -128 368 512
+use inverter  inverter_2
+timestamp 1662948631
+transform 1 0 828 0 -1 -32
+box -276 -128 368 512
+use tg  tg_0 /local_disk/fossi_cochlea/mag/final_designs
+timestamp 1662948056
+transform 1 0 276 0 -1 -32
+box -276 -128 368 512
+<< labels >>
+flabel metal1 0 544 1196 640 1 FreeSans 320 0 0 0 vdd
+port 1 n default bidirectional
+flabel metal1 0 -544 1196 -448 1 FreeSans 320 0 0 0 vdd
+flabel metal1 0 0 1196 96 1 FreeSans 320 0 0 0 vss
+port 2 n default bidirectional
+flabel metal2 182 273 400 305 1 FreeSans 320 0 0 0 clk
+port 3 n default input
+flabel metal1 867 200 918 384 1 FreeSans 320 0 0 0 clka
+port 4 n default output
+flabel metal1 867 -288 918 -104 1 FreeSans 320 0 0 0 clkb
+port 5 n default output
+<< end >>

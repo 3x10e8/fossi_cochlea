@@ -63,16 +63,14 @@ x31 vdda vccd phi1b phi1b_dig vssd level_down_shifter
 X4 phi2dd phi2 phi2b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X7 phi1dd phi1 phi1b vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X10 div2dd cclk_ana cclkb_ana vdda vssd comp_clks Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-X1 div2 net4 net8 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
 X2 net1 phi2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X5 net2 phi1d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
-X8 net6 div2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
+X8 net3 div2d vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X9 div2d div2dd vnb vdda vssd inv_weak_pulldown Wpmos=1.26 Lpmos= Wnmos= Lnmos=0.54
 X3 phi2d phi2dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
 X6 phi1d phi1dd vpb vdda vssd inv_weak_pullup Wpmos=1.26 Lpmos=0.54 Wnmos= Lnmos=
-X11 cclk net5 net7 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
-x15 vdda net4 net2 net1 vssd net8 level_up_shifter_no_inv
-X14 vdda net5 net3 net6 vssd net7 level_up_shifter_no_inv
+x12 vdda vccd vssd div2 net2 net1 level_up_shifter_d_a
+x1 vdda vccd vssd cclk net4 net3 level_up_shifter_d_a
 .ends
 
 
@@ -297,6 +295,16 @@ XM3 out Vpb net1 vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1
 XM5 net1 in vdda vdda sky130_fd_pr__pfet_01v8 L=Lmin W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  xschem/level_shifter/level_up_shifter_d_a.sym # of pins=6
+** sym_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_d_a.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/level_shifter/level_up_shifter_d_a.sch
+.subckt level_up_shifter_d_a vdda vccd vssd clk outb out
+*.PININFO clk:I outb:O out:O vdda:B vccd:B vssd:B
+X1 clk net1 net2 vccd vssd comp_clks_1stage Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18
+x15 vdda net1 outb out vssd net2 level_up_shifter_no_inv
 .ends
 
 

@@ -6,33 +6,34 @@ X1 a_30_50# in a_n177_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=1.323e+11p pd=1.
 X2 a_30_590# vnb a_30_50# a_n177_50# sky130_fd_pr__nfet_01v8 ad=1.323e+11p pd=1.47e+06u as=0p ps=0u w=420000u l=540000u
 .ends
 
-.subckt tg ctrl_ ctrl in out vssa vdda
-X0 out ctrl_ in vdda sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
-X1 in ctrl_ out vdda sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
-X2 out ctrl in vssa sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=2.415e+11p ps=1.99e+06u w=420000u l=180000u
+.subckt tg ctrl_ ctrl in out vdd vss
+X0 out ctrl_ in vdd sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X1 in ctrl_ out vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X2 out ctrl in vss sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=2.415e+11p ps=1.99e+06u w=420000u l=180000u
 .ends
 
-.subckt inverter w_n204_204# a_n177_0# out in
-X0 out in a_n177_0# a_n177_0# sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
-X1 w_n204_204# in out w_n204_204# sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
-X2 out in w_n204_204# w_n204_204# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+.subckt inverter in out vdd vss
+X0 out in vss vss sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
+X1 vdd in out vdd sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X2 out in vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
 .ends
 
-.subckt comp_clks inverter_1/out tg_0/in inverter_2/out vdda VSUBS
-Xtg_0 VSUBS vdda tg_0/in tg_0/out VSUBS vdda tg
-Xinverter_0 vdda VSUBS inverter_1/in tg_0/in inverter
-Xinverter_1 vdda VSUBS inverter_1/out inverter_1/in inverter
-Xinverter_2 vdda VSUBS inverter_2/out tg_0/out inverter
+.subckt comp_clks clk clka clkb vdd vss
+Xtg_0 vss vdd clk tg_0/out vdd vss tg
+Xinverter_0 clk inverter_1/in vdd vss inverter
+Xinverter_1 inverter_1/in clka vdd vss inverter
+Xinverter_2 tg_0/out clkb vdd vss inverter
 .ends
 
-.subckt cclkgen inv_weak_pulldown_corrected_1/vnb comp_clks_0/inverter_2/out inv_weak_pulldown_corrected_0/vnb
-+ inv_weak_pulldown_corrected_0/in comp_clks_0/vdda comp_clks_0/inverter_1/out VSUBS
+.subckt cclkgen inv_weak_pulldown_corrected_1/vnb comp_clks_0/clkb comp_clks_0/clka
++ comp_clks_0/vdd inv_weak_pulldown_corrected_0/vnb inv_weak_pulldown_corrected_0/in
++ VSUBS
 Xinv_weak_pulldown_corrected_0 inv_weak_pulldown_corrected_1/in VSUBS inv_weak_pulldown_corrected_0/vnb
-+ comp_clks_0/vdda inv_weak_pulldown_corrected_0/in comp_clks_0/vdda inv_weak_pulldown_corrected
-Xinv_weak_pulldown_corrected_1 comp_clks_0/tg_0/in VSUBS inv_weak_pulldown_corrected_1/vnb
-+ comp_clks_0/vdda inv_weak_pulldown_corrected_1/in comp_clks_0/vdda inv_weak_pulldown_corrected
-Xcomp_clks_0 comp_clks_0/inverter_1/out comp_clks_0/tg_0/in comp_clks_0/inverter_2/out
-+ comp_clks_0/vdda VSUBS comp_clks
++ comp_clks_0/vdd inv_weak_pulldown_corrected_0/in comp_clks_0/vdd inv_weak_pulldown_corrected
+Xinv_weak_pulldown_corrected_1 comp_clks_0/clk VSUBS inv_weak_pulldown_corrected_1/vnb
++ comp_clks_0/vdd inv_weak_pulldown_corrected_1/in comp_clks_0/vdd inv_weak_pulldown_corrected
+Xcomp_clks_0 comp_clks_0/clk comp_clks_0/clka comp_clks_0/clkb comp_clks_0/vdd VSUBS
++ comp_clks
 .ends
 
 .subckt inv_weak_pullup_corrected inp w_1_458# li_n53_n248# out vpb a_40_n75#
@@ -41,74 +42,68 @@ X1 a_234_496# inp w_1_458# w_1_458# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=3.78e
 X2 out inp a_40_n75# a_40_n75# sky130_fd_pr__nfet_01v8 ad=1.218e+11p pd=1.42e+06u as=1.554e+11p ps=1.58e+06u w=420000u l=180000u
 .ends
 
-.subckt phigen comp_clks_0/inverter_2/out inv_weak_pullup_corrected_0/vpb inv_weak_pulldown_corrected_0/vnb
-+ inv_weak_pulldown_corrected_0/in comp_clks_0/inverter_1/out comp_clks_0/vdda VSUBS
+.subckt phigen inv_weak_pullup_corrected_0/vpb comp_clks_0/clkb inv_weak_pulldown_corrected_0/vnb
++ inv_weak_pulldown_corrected_0/in comp_clks_0/clka comp_clks_0/vdd VSUBS
 Xinv_weak_pulldown_corrected_0 inv_weak_pullup_corrected_0/inp VSUBS inv_weak_pulldown_corrected_0/vnb
-+ comp_clks_0/vdda inv_weak_pulldown_corrected_0/in comp_clks_0/vdda inv_weak_pulldown_corrected
-Xinv_weak_pullup_corrected_0 inv_weak_pullup_corrected_0/inp comp_clks_0/vdda comp_clks_0/vdda
-+ inv_weak_pullup_corrected_0/out inv_weak_pullup_corrected_0/vpb VSUBS inv_weak_pullup_corrected
-Xcomp_clks_0 comp_clks_0/inverter_1/out inv_weak_pullup_corrected_0/out comp_clks_0/inverter_2/out
-+ comp_clks_0/vdda VSUBS comp_clks
++ comp_clks_0/vdd inv_weak_pulldown_corrected_0/in comp_clks_0/vdd inv_weak_pulldown_corrected
+Xinv_weak_pullup_corrected_0 inv_weak_pullup_corrected_0/inp comp_clks_0/vdd comp_clks_0/vdd
++ comp_clks_0/clk inv_weak_pullup_corrected_0/vpb VSUBS inv_weak_pullup_corrected
+Xcomp_clks_0 comp_clks_0/clk comp_clks_0/clka comp_clks_0/clkb comp_clks_0/vdd VSUBS
++ comp_clks
 .ends
 
-.subckt comp_clks_stg1 tg_0/in tg_0/vdda tg_0/out tg_0/ctrl inverter_0/out tg_0/ctrl_
-+ inverter_0/w_n204_204# VSUBS
-Xtg_0 tg_0/ctrl_ tg_0/ctrl tg_0/in tg_0/out VSUBS tg_0/vdda tg
-Xinverter_0 inverter_0/w_n204_204# VSUBS inverter_0/out tg_0/in inverter
+.subckt comp_clks_stg1 vdd clk clka clkb vss
+Xtg_0 vss vdd clk clkb vdd vss tg
+Xinverter_0 clk clka vdd vss inverter
 .ends
 
-.subckt level_up_shifter_d_a comp_clks_stg1_0/tg_0/ctrl comp_clks_stg1_0/tg_0/ctrl_
-+ comp_clks_stg1_0/tg_0/in w_1715_1303# comp_clks_stg1_0/inverter_0/w_n204_204# comp_clks_stg1_0/VSUBS
-+ a_1260_620# a_1811_1506# comp_clks_stg1_0/tg_0/vdda
-Xcomp_clks_stg1_0 comp_clks_stg1_0/tg_0/in comp_clks_stg1_0/tg_0/vdda comp_clks_stg1_0/tg_0/out
-+ comp_clks_stg1_0/tg_0/ctrl comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/tg_0/ctrl_
-+ comp_clks_stg1_0/inverter_0/w_n204_204# comp_clks_stg1_0/VSUBS comp_clks_stg1
-X0 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6839e+12p ps=1.746e+07u w=600000u l=150000u
-X1 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6965e+12p ps=1.749e+07u w=600000u l=150000u
-X2 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X3 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X4 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X5 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X6 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X7 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X8 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X9 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X10 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X11 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X12 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X13 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X14 a_1811_1506# a_1260_620# w_1715_1303# w_1715_1303# sky130_fd_pr__pfet_01v8 ad=1.26e+11p pd=1.44e+06u as=1.491e+11p ps=1.55e+06u w=420000u l=150000u
-X15 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X16 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X17 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X18 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X19 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X20 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X21 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X22 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X23 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X24 w_1715_1303# a_1811_1506# a_1260_620# w_1715_1303# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1.386e+11p ps=1.5e+06u w=420000u l=150000u
-X25 w_1715_1303# comp_clks_stg1_0/tg_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X26 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X27 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/tg_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X28 a_1260_620# comp_clks_stg1_0/inverter_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X29 a_1811_1506# comp_clks_stg1_0/inverter_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X30 comp_clks_stg1_0/VSUBS comp_clks_stg1_0/inverter_0/out a_1260_620# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X31 a_1811_1506# comp_clks_stg1_0/tg_0/out comp_clks_stg1_0/VSUBS comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X32 a_1260_620# comp_clks_stg1_0/tg_0/out w_1715_1303# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
-X33 w_1715_1303# comp_clks_stg1_0/inverter_0/out a_1811_1506# comp_clks_stg1_0/VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+.subckt level_up_shifter_d_a vccd clk outb out vdda vssd
+Xcomp_clks_stg1_0 vccd clk comp_clks_stg1_0/clka comp_clks_stg1_0/clkb vssd comp_clks_stg1
+X0 out comp_clks_stg1_0/clka vdda vssd sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6839e+12p ps=1.746e+07u w=600000u l=150000u
+X1 outb comp_clks_stg1_0/clka vssd vssd sky130_fd_pr__nfet_01v8 ad=1.344e+12p pd=1.408e+07u as=1.6965e+12p ps=1.749e+07u w=600000u l=150000u
+X2 outb comp_clks_stg1_0/clkb vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X3 vssd comp_clks_stg1_0/clkb out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X4 vdda comp_clks_stg1_0/clka out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X5 outb comp_clks_stg1_0/clka vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X6 vdda comp_clks_stg1_0/clkb outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X7 out comp_clks_stg1_0/clkb vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X8 out comp_clks_stg1_0/clka vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X9 vssd comp_clks_stg1_0/clka outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X10 vdda comp_clks_stg1_0/clka out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X11 outb comp_clks_stg1_0/clka vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X12 vssd comp_clks_stg1_0/clka outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X13 outb comp_clks_stg1_0/clkb vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X14 out outb vdda vdda sky130_fd_pr__pfet_01v8 ad=1.26e+11p pd=1.44e+06u as=1.491e+11p ps=1.55e+06u w=420000u l=150000u
+X15 vdda comp_clks_stg1_0/clkb outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X16 vssd comp_clks_stg1_0/clka outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X17 vssd comp_clks_stg1_0/clkb out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X18 outb comp_clks_stg1_0/clkb vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X19 out comp_clks_stg1_0/clkb vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X20 vdda comp_clks_stg1_0/clka out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X21 vdda comp_clks_stg1_0/clkb outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X22 out comp_clks_stg1_0/clkb vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X23 vssd comp_clks_stg1_0/clkb out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X24 vdda out outb vdda sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1.386e+11p ps=1.5e+06u w=420000u l=150000u
+X25 vdda comp_clks_stg1_0/clkb outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X26 out comp_clks_stg1_0/clka vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X27 vssd comp_clks_stg1_0/clkb out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X28 outb comp_clks_stg1_0/clka vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X29 out comp_clks_stg1_0/clka vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X30 vssd comp_clks_stg1_0/clka outb vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X31 out comp_clks_stg1_0/clkb vssd vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X32 outb comp_clks_stg1_0/clkb vdda vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
+X33 vdda comp_clks_stg1_0/clka out vssd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=600000u l=150000u
 .ends
 
 .subckt filter_clkgen cclk div2 phi2b phi2 phi1b phi1 cclkb_ana cclk_ana vnb vpb vccd
 + vdda GND
-Xcclkgen_0 vnb cclkb_ana vnb cclkgen_0/inv_weak_pulldown_corrected_0/in vdda cclk_ana
-+ GND cclkgen
-Xphigen_0 phi2b vpb vnb phigen_0/inv_weak_pulldown_corrected_0/in phi2 vdda GND phigen
-Xphigen_1 phi1b vpb vnb phigen_1/inv_weak_pulldown_corrected_0/in phi1 vdda GND phigen
-Xlevel_up_shifter_d_a_0 vccd GND div2 vdda vccd GND phigen_1/inv_weak_pulldown_corrected_0/in
-+ phigen_0/inv_weak_pulldown_corrected_0/in vccd level_up_shifter_d_a
-Xlevel_up_shifter_d_a_1 vccd GND cclk vdda vccd GND level_up_shifter_d_a_1/a_1260_620#
-+ cclkgen_0/inv_weak_pulldown_corrected_0/in vccd level_up_shifter_d_a
+Xcclkgen_0 vnb cclkb_ana cclk_ana vdda vnb level_up_shifter_d_a_1/out GND cclkgen
+Xphigen_1 vpb phi1b vnb level_up_shifter_d_a_0/outb phi1 vdda GND phigen
+Xphigen_0 vpb phi2b vnb level_up_shifter_d_a_0/out phi2 vdda GND phigen
+Xlevel_up_shifter_d_a_0 vccd div2 level_up_shifter_d_a_0/outb level_up_shifter_d_a_0/out
++ vdda GND level_up_shifter_d_a
+Xlevel_up_shifter_d_a_1 vccd cclk level_up_shifter_d_a_1/outb level_up_shifter_d_a_1/out
++ vdda GND level_up_shifter_d_a
 .ends
 
 .subckt sky130_fd_sc_hd__inv_8 A VGND VPWR Y VNB VPB
@@ -268,18 +263,18 @@ Xcap_10_10__side_x2_1[5] vss sig cap_10_10__side_x2
 
 .subckt filter m2_n261_28387# phi2 phi1 m3_n1255_33008# analog_mux_0/cclkb ctrlb analog_mux_0/vref2
 + analog_mux_0/vref1 m3_n1255_33208# mux_0/out2 m2_n649_28654# analog_mux_0/cclk mux_0/out1
-+ ctrl m1_21058_32712# cmos_switch_0/in m3_n1255_33408# mux_0/VDD phi1b phi2b m1_20912_32832#
-+ cap_3pF_0/sig VSUBS
++ ctrl m1_21058_32712# cmos_switch_6/in cmos_switch_0/in m3_n1255_33408# mux_0/VDD
++ phi1b phi2b m1_20912_32832# cap_3pF_0/sig VSUBS
 Xcmos_switch_0 cmos_switch_1/out mux_0/VDD phi1b VSUBS cmos_switch_0/in phi1 cmos_switch
 Xcmos_switch_1 cmos_switch_1/out mux_0/VDD phi2b VSUBS cap_12pF_0/sig phi2 cmos_switch
-Xcmos_switch_2 cmos_switch_3/out mux_0/VDD phi1b VSUBS cap_12pF_0/sig phi1 cmos_switch
 Xcap_20fF_0 VSUBS cmos_switch_3/out cap_20fF
+Xcmos_switch_2 cmos_switch_3/out mux_0/VDD phi1b VSUBS cap_12pF_0/sig phi1 cmos_switch
 Xcmos_switch_3 cmos_switch_3/out mux_0/VDD phi2b VSUBS cap_6pF_0/sig phi2 cmos_switch
-Xcmos_switch_4 cmos_switch_5/out mux_0/VDD phi1b VSUBS cap_6pF_0/sig phi1 cmos_switch
 Xanalog_mux_0 m1_21058_32712# analog_mux_0/cclk cap_3pF_0/ref mux_0/VDD m1_20912_32832#
 + analog_mux_0/cclkb VSUBS analog_mux_0/vref2 analog_mux_0/vref1 analog_mux
-Xcmos_switch_5 cmos_switch_5/out mux_0/VDD phi2b VSUBS cap_3pF_0/sig phi2 cmos_switch
+Xcmos_switch_4 cmos_switch_5/out mux_0/VDD phi1b VSUBS cap_6pF_0/sig phi1 cmos_switch
 Xcap_12pF_0 cap_12pF_0/sig VSUBS cap_12pF
+Xcmos_switch_5 cmos_switch_5/out mux_0/VDD phi2b VSUBS cap_3pF_0/sig phi2 cmos_switch
 Xcmos_switch_6 cmos_switch_7/out mux_0/VDD phi1b VSUBS cmos_switch_6/in phi1 cmos_switch
 Xcmos_switch_7 cmos_switch_7/out mux_0/VDD phi2b VSUBS cap_12pF_0/sig phi2 cmos_switch
 Xcap_10fF_0 VSUBS cmos_switch_5/out cap_10fF
@@ -327,7 +322,7 @@ X11 high low inv_LV_7/VSUBS inv_LV_7/VSUBS sky130_fd_pr__nfet_01v8_lvt ad=0p pd=
 X12 w_n359_n11# a_10_n824# FP w_n359_n11# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1.155e+11p ps=1.39e+06u w=420000u l=150000u
 .ends
 
-.subckt filter_p_m
+.subckt filter_p_m fb1 vssd vccd vdda
 Xfilter_clkgen_0 filter_clkgen_0/cclk filter_clkgen_0/div2 filter_1/phi2b filter_1/phi2
 + filter_1/phi1b filter_1/phi1 filter_clkgen_0/cclkb_ana filter_clkgen_0/cclk_ana
 + filter_clkgen_0/vnb filter_clkgen_0/vpb vccd vdda vssd filter_clkgen
@@ -338,17 +333,16 @@ Xlevel_shifter_low_1 vdda vccd vssd level_shifter_low_1/sky130_fd_sc_hd__inv_8_1
 Xfilter_0 filter_1/m2_n261_28387# filter_1/phi2 filter_1/phi1 filter_1/analog_mux_0/vref1
 + filter_clkgen_0/cclkb_ana filter_1/ctrlb filter_1/analog_mux_0/vref1 filter_1/analog_mux_0/vref2
 + filter_1/analog_mux_0/vref2 filter_0/mux_0/out2 filter_1/m2_n649_28654# filter_clkgen_0/cclk_ana
-+ filter_0/mux_0/out1 filter_1/ctrl filter_1/ctrl filter_0/mux_0/out1 vccd vdda filter_1/phi1b
-+ filter_1/phi2b filter_1/ctrlb comparator_0/inp vssd filter
++ filter_0/mux_0/out1 filter_1/ctrl filter_1/ctrl fb_inv filter_0/mux_0/out1 vccd
++ vdda filter_1/phi1b filter_1/phi2b filter_1/ctrlb comparator_0/inp vssd filter
 Xfilter_1 filter_1/m2_n261_28387# filter_1/phi2 filter_1/phi1 filter_1/analog_mux_0/vref1
 + filter_clkgen_0/cclkb_ana filter_1/ctrlb filter_1/analog_mux_0/vref2 filter_1/analog_mux_0/vref1
 + filter_1/analog_mux_0/vref2 filter_1/mux_0/out2 filter_1/m2_n649_28654# filter_clkgen_0/cclk_ana
-+ filter_1/mux_0/out1 filter_1/ctrl filter_1/ctrl filter_1/mux_0/out2 vccd vdda filter_1/phi1b
-+ filter_1/phi2b filter_1/ctrlb filter_1/cap_3pF_0/sig vssd filter
++ filter_1/mux_0/out1 filter_1/ctrl filter_1/ctrl fb filter_1/mux_0/out2 vccd vdda
++ filter_1/phi1b filter_1/phi2b filter_1/ctrlb filter_1/cap_3pF_0/sig vssd filter
 Xcomparator_0 level_shifter_low_0/sky130_fd_sc_hd__inv_8_1/Y comparator_0/inp vssd
 + level_shifter_low_1/sky130_fd_sc_hd__inv_8_1/Y vssd filter_1/cap_3pF_0/sig vccd
 + comparator
-Xlevel_up_shifter_d_a_0 level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/ctrl level_up_shifter_d_a_0/comp_clks_stg1_0/tg_0/ctrl_
-+ fb1 vdda vccd vssd fb fb_inv vccd level_up_shifter_d_a
+Xlevel_up_shifter_d_a_0 vccd fb1 fb fb_inv vdda vssd level_up_shifter_d_a
 .ends
 

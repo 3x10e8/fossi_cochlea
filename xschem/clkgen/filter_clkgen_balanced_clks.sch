@@ -9,7 +9,7 @@ T {Generate
 non-overlapping 
 phi1/phi2 clks} 20 -210 2 0 0.4 0.4 {}
 T {clk from digital core
-(previous core's div2 out)} -570 -210 0 0 0.4 0.4 {}
+(previous core's div2 out)} -550 -260 0 0 0.4 0.4 {}
 T {Comparator
 sampling clk} 360 -50 0 0 0.4 0.4 {}
 T {Last cap
@@ -26,7 +26,7 @@ N -140 -160 -140 -90 { lab=#net1}
 N -140 -160 -100 -160 { lab=#net1}
 N -140 -50 -140 0 { lab=#net2}
 N -140 0 -100 0 { lab=#net2}
-N -760 -130 -700 -130 { lab=div2}
+N -630 -170 -570 -170 { lab=div2}
 N 270 240 300 240 { lab=cclkb_ana}
 N 270 200 300 200 { lab=cclk_ana}
 N 0 220 40 220 { lab=div2d}
@@ -35,34 +35,20 @@ N -160 -90 -140 -90 {
 lab=#net1}
 N -160 -50 -140 -50 {
 lab=#net2}
-N -740 180 -680 180 {
+N -610 140 -550 140 {
 lab=cclk}
-N -250 200 -230 200 {
-lab=#net3}
-N -270 -110 -250 -110 {
-lab=#net2}
 N -270 -90 -160 -90 {
 lab=#net1}
-N -640 -150 -570 -150 {
-lab=#net4}
 N -250 -110 -180 -110 {
 lab=#net2}
 N -180 -110 -180 -50 {
 lab=#net2}
 N -180 -50 -160 -50 {
 lab=#net2}
-N -620 160 -550 160 {
-lab=#net5}
 N -250 220 -100 220 {
 lab=#net6}
-N -620 200 -550 200 {
-lab=#net7}
-N -550 190 -550 200 {
-lab=#net7}
-N -640 -110 -570 -110 {
-lab=#net8}
-N -570 -120 -570 -110 {
-lab=#net8}
+N -270 -110 -250 -110 {}
+N -250 200 -230 200 {}
 C {devices/lab_pin.sym} 20 0 3 0 {name=l8 sig_type=std_logic lab=phi1d}
 C {devices/lab_pin.sym} -100 20 0 0 {name=l13 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 160 0 3 0 {name=l14 sig_type=std_logic lab=phi1dd}
@@ -71,7 +57,7 @@ C {devices/lab_pin.sym} 40 -180 0 0 {name=l19 sig_type=std_logic lab=vpb}
 C {devices/lab_pin.sym} -100 -140 0 0 {name=l20 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 160 -160 3 0 {name=l21 sig_type=std_logic lab=phi2dd}
 C {devices/lab_pin.sym} 20 220 1 0 {name=l26 sig_type=std_logic lab=div2d}
-C {devices/ipin.sym} -760 -130 0 0 {name=p1 lab=div2}
+C {devices/ipin.sym} -630 -170 0 0 {name=p1 lab=div2}
 C {devices/opin.sym} 300 -180 0 0 {name=p3 lab=phi2}
 C {devices/opin.sym} 300 -140 0 0 {name=p4 lab=phi2b}
 C {devices/opin.sym} 300 -20 0 0 {name=p5 lab=phi1}
@@ -84,7 +70,6 @@ C {clkgen/comp_clks.sym} 230 -160 0 0 {name=X4 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 
 C {clkgen/comp_clks.sym} 230 0 0 0 {name=X7 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {clkgen/comp_clks.sym} 230 220 0 0 {name=X10 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {devices/lab_pin.sym} 160 220 1 0 {name=l3 sig_type=std_logic lab=div2dd}
-C {clkgen/comp_clks_1stage.sym} -670 -130 0 0 {name=X1 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
 C {inv/inv_weak_pulldown.sym} -50 -160 0 0 {name=X2 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
 C {inv/inv_weak_pulldown.sym} -50 0 0 0 {name=X5 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
 C {inv/inv_weak_pulldown.sym} -50 220 0 0 {name=X8 Wpmos=1.26 Lmin=0.18 Wmin=0.42 Lnmos=0.54}
@@ -100,14 +85,10 @@ C {devices/lab_pin.sym} 90 180 0 0 {name=l22 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 40 -20 0 0 {name=l24 sig_type=std_logic lab=vpb}
 C {devices/lab_pin.sym} -100 240 0 0 {name=l1 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 40 240 0 0 {name=l2 sig_type=std_logic lab=vnb}
-C {devices/lab_pin.sym} -670 -90 0 0 {name=l25 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 230 180 0 0 {name=l30 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 230 -40 0 0 {name=l31 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 230 -200 0 0 {name=l32 sig_type=std_logic lab=vdda}
-C {devices/ipin.sym} -740 180 0 0 {name=p2 lab=cclk}
-C {devices/lab_pin.sym} -250 160 2 0 {name=l33 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} -270 -150 2 0 {name=l36 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} -270 -70 2 0 {name=l38 sig_type=std_logic lab=vssd}
+C {devices/ipin.sym} -610 140 0 0 {name=p2 lab=cclk}
 C {devices/iopin.sym} -690 -360 2 0 {name=p14 lab=vdda}
 C {devices/iopin.sym} -690 -340 2 0 {name=p13 lab=vccd}
 C {devices/iopin.sym} -690 -320 2 0 {name=p12 lab=vssd}
@@ -118,13 +99,14 @@ C {devices/lab_pin.sym} 90 40 0 0 {name=l15 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 90 260 0 0 {name=l17 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} -50 260 0 0 {name=l23 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 230 260 0 0 {name=l27 sig_type=std_logic lab=vssd}
-C {devices/lab_pin.sym} -250 240 2 0 {name=l28 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 230 -120 0 0 {name=l29 sig_type=std_logic lab=vssd}
 C {devices/lab_pin.sym} 230 40 0 0 {name=l35 sig_type=std_logic lab=vssd}
-C {clkgen/comp_clks_1stage.sym} -650 180 0 0 {name=X11 Wpmos=1.26 Lpmos=0.18 Wnmos=0.42 Lnmos=0.18}
-C {devices/lab_pin.sym} -650 220 0 0 {name=l40 sig_type=std_logic lab=vssd}
-C {level_shifter/level_up_shifter_no_inv.sym} -420 -110 0 0 {name=x15}
-C {level_shifter/level_up_shifter_no_inv.sym} -400 200 0 0 {name=X14}
-C {devices/lab_pin.sym} -670 -170 0 0 {name=l12 sig_type=std_logic lab=vccd}
-C {devices/lab_pin.sym} -650 140 0 0 {name=l39 sig_type=std_logic lab=vccd}
 C {devices/noconn.sym} -230 200 2 0 {name=l1}
+C {xschem/level_shifter/level_up_shifter_d_a.sym} -420 -130 0 0 {name=x12}
+C {devices/lab_pin.sym} -270 -170 2 0 {name=l36 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} -270 -130 2 0 {name=l38 sig_type=std_logic lab=vssd}
+C {devices/lab_pin.sym} -270 -150 2 0 {name=l12 sig_type=std_logic lab=vccd}
+C {xschem/level_shifter/level_up_shifter_d_a.sym} -400 180 0 0 {name=x1}
+C {devices/lab_pin.sym} -250 140 2 0 {name=l36 sig_type=std_logic lab=vdda}
+C {devices/lab_pin.sym} -250 180 2 0 {name=l38 sig_type=std_logic lab=vssd}
+C {devices/lab_pin.sym} -250 160 2 0 {name=l12 sig_type=std_logic lab=vccd}

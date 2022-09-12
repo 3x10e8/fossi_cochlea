@@ -1,4 +1,4 @@
-* NGSPICE file created from comp_clks.ext - technology: sky130B
+* NGSPICE file created from comp_clks_stg1.ext - technology: sky130B
 
 .subckt tg ctrl_ ctrl in out vdd vss
 X0 out ctrl_ in vdd sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
@@ -12,10 +12,8 @@ X1 vdd in out vdd sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11
 X2 out in vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
 .ends
 
-.subckt comp_clks vdd vss clk clka clkb
-Xtg_0 vss vdd clk tg_0/out vdd vss tg
-Xinverter_0 clk inverter_1/in vdd vss inverter
-Xinverter_1 inverter_1/in clka vdd vss inverter
-Xinverter_2 tg_0/out clkb vdd vss inverter
+.subckt comp_clks_stg1 vdd vss clk clka clkb
+Xtg_0 vss vdd clk clkb vdd vss tg
+Xinverter_0 clk clka vdd vss inverter
 .ends
 

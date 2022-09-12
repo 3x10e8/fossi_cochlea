@@ -1,0 +1,8 @@
+* NGSPICE file created from inverter.ext - technology: sky130B
+
+.subckt inverter in out vdd vss
+X0 out in vss vss sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
+X1 vdd in out vdd sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X2 out in vdd vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+.ends
+
