@@ -10,6 +10,11 @@
 
 module digital_unison #(parameter NUM_CORES=8)
 (
+	`ifdef USE_POWER_PINS
+	    inout vccd1,	// User area 1 1.8V supply
+	    inout vssd1,	// User area 1 digital ground
+	`endif
+
 	// global inputs from RISC (must level shift vccd2->vccd1)
 	input rstb, ud_en,//phi1b_dig[0] is corresponding to the first wrapper
 

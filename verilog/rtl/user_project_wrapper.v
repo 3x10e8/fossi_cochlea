@@ -29,16 +29,18 @@
  *-------------------------------------------------------------
  */
 
-module user_project_wrapper  (
+module user_project_wrapper #(
+    parameter BITS = 32
+) (
 `ifdef USE_POWER_PINS
-    inout vdda1,	// User area 1 3.3V supply
-    inout vdda2,	// User area 2 3.3V supply
-    inout vssa1,	// User area 1 analog ground
-    inout vssa2,	// User area 2 analog ground
-    inout vccd1,	// User area 1 1.8V supply
-    inout vccd2,	// User area 2 1.8v supply
-    inout vssd1,	// User area 1 digital ground
-    inout vssd2,	// User area 2 digital ground
+    inout vdda1,    // User area 1 3.3V supply
+    inout vdda2,    // User area 2 3.3V supply
+    inout vssa1,    // User area 1 analog ground
+    inout vssa2,    // User area 2 analog ground
+    inout vccd1,    // User area 1 1.8V supply
+    inout vccd2,    // User area 2 1.8v supply
+    inout vssd1,    // User area 1 digital ground
+    inout vssd2,    // User area 2 digital ground
 `endif
 
     // Wishbone Slave ports (WB MI A)
@@ -79,50 +81,60 @@ module user_project_wrapper  (
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
+genvar i;
+generate
+    for (i=0; i<=5; i=i+1) begin
+        digital_unison #(
+            .NUM_CORES(6)
+        ) digital_unison_instance (
+            `ifdef USE_POWER_PINS
+                .vccd1(vccd1),  // User area 1 1.8V power
+                .vssd1(vssd1),  // User area 1 digital ground
+            `endif
+            .read_out_I(la_data_out[4*i +3 +3 : 4*i +2 +3]),
+            .read_out_Q(la_data_out[4*i +1 +3 : 4*i +0 +3]),
+            .rstb(la_data_in[2]),
+            .ud_en(la_data_in[1]),
+            .clk_master(la_data_in[0])
+            
+            /* interface to analog core
+            .comp_high_I(comp_high_I),
+            .comp_high_Q(comp_high_Q),
+            .phi1b_dig_I(phi1b_dig_I),
+            .phi1b_dig_Q(phi1b_dig_Q),
+            .clkdiv2_I(clkdiv2_I),
+            .clkdiv2_Q(clkdiv2_Q),
+            .cclk_I(cclk_I),
+            .cclk_Q(cclk_Q),
+            .fb1_I(fb1_I),
+            .fb1_Q(fb1_Q),
+            .cos_out(cos_out),
+            .sin_out(sin_out),
+            */
 
-filter_p_m_fin mprj (
-`ifdef USE_POWER_PINS
-	.vdda1(vdda1),
-	.vssa1(vssa1),
-`endif
-/*
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
-
-    // MGMT SoC Wishbone Slave
-
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
-
-    // Logic Analyzer
-
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-*/
-    // IO Pads
-    .inp(analog_io[0]),
-    .inm(analog_io[1]),
-    .phi1(analog_io[2]),
-    .phi2(analog_io[3]),
-    .phi1b(analog_io[4]),
-    .phi2b(analog_io[5]),
-    .vbotp(analog_io[6]),
-    .vbotm(analog_io[7]),
-    .compout(analog_io[8]),
-    .pol(analog_io[9]),
-    .polxevent(analog_io[10]),
-
-    // IRQ
-    //.irq(user_irq)
-);
+            /*
+            // IO Pads
+            .io_in (io_in),
+            .io_out(io_out),
+            .io_oeb(io_oeb),
+                
+            // IO Pads
+            .inp(analog_io[0]),
+            .inm(analog_io[1]),
+            .phi1(analog_io[2]),
+            .phi2(analog_io[3]),
+            .phi1b(analog_io[4]),
+            .phi2b(analog_io[5]),
+            .vbotp(analog_io[6]),
+            .vbotm(analog_io[7]),
+            .compout(analog_io[8]),
+            .pol(analog_io[9]),
+            .polxevent(analog_io[10]),
+            */
+        );
+    end
+endgenerate
 
 endmodule	// user_project_wrapper
+    
 
-`default_nettype wire

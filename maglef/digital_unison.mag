@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662979617
+timestamp 1663021196
 << obsli1 >>
 rect 1104 2159 382812 21777
 << obsm1 >>
@@ -469,7 +469,7 @@ string FIXED_BBOX 0 0 384000 24000
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 15155838
-string GDS_FILE /local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_12_03_41/results/signoff/digital_unison.magic.gds
+string GDS_FILE /local_disk/fossi_cochlea/openlane/digital_unison/runs/22_09_12_15_14/results/signoff/digital_unison.magic.gds
 string GDS_START 644014
 << end >>
 
