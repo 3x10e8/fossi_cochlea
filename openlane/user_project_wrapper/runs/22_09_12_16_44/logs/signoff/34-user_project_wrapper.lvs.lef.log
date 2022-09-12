@@ -1,0 +1,9 @@
+LVS reports:
+    net count difference = 5652
+    device count difference = 4021
+    unmatched nets = 2
+    unmatched devices = 2
+    unmatched pins = 0
+    property failures = 0
+
+Total errors = 9677

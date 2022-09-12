@@ -1,0 +1,130 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[WARNING ORD-1011] LEF master digital_unison has no liberty cell.
+[INFO]: Setting output delay to: 8.0
+[INFO]: Setting input delay to: 8.0
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainty to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[INFO]: Setting timing derate to: 0.5 %
+min_report
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+No paths found.
+min_report_end
+max_report
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+No paths found.
+max_report_end
+check_report
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: la_data_in[0] (input port clocked by user_clock2)
+Endpoint: genblk1[0].digital_unison_instance/clk_master (internal pin)
+Path Group: (none)
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          8.00    8.00 ^ input external delay
+                  0.01    0.00    8.00 ^ la_data_in[0] (in)
+     6    0.00                           la_data_in[0] (net)
+                  0.01    0.00    8.00 ^ genblk1[0].digital_unison_instance/clk_master (digital_unison)
+                                  8.00   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.
+check_report_end
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack INF
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack INF
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock user_clock2
+No launch/capture paths found.
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+                           0.0%       0.0%       0.0%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 1382400 u^2 100% utilization.
+area_report_end

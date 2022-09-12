@@ -1,0 +1,20 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[INFO ODB-0127] Reading DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/routing/user_project_wrapper.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0094] 		Created 100000 Insts
+[INFO ODB-0130]     Created 645 pins.
+[INFO ODB-0131]     Created 125746 components and 258510 component-terminals.
+[INFO ODB-0132]     Created 8 special nets and 257880 connections.
+[INFO ODB-0133]     Created 637 nets and 42 connections.
+[INFO ODB-0134] Finished DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/routing/user_project_wrapper.def

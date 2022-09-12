@@ -1,0 +1,82 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[INFO ODB-0127] Reading DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/floorplan/user_project_wrapper.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0094] 		Created 100000 Insts
+[INFO ODB-0130]     Created 637 pins.
+[INFO ODB-0131]     Created 125746 components and 258510 component-terminals.
+[INFO ODB-0133]     Created 637 nets and 42 connections.
+[INFO ODB-0134] Finished DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/floorplan/user_project_wrapper.def
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[0\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[0\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[1\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[1\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[2\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[2\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[3\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[3\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[4\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[4\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance genblk1\[5\].digital_unison_instance is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance genblk1\[5\].digital_unison_instance is not connected to any net.
+[INFO PDN-0001] Inserting grid: stdcell_grid
+[INFO PDN-0001] Inserting grid: macro - genblk1\[0\].digital_unison_instance
+[INFO PDN-0001] Inserting grid: macro - genblk1\[1\].digital_unison_instance
+[INFO PDN-0001] Inserting grid: macro - genblk1\[2\].digital_unison_instance
+[INFO PDN-0001] Inserting grid: macro - genblk1\[3\].digital_unison_instance
+[INFO PDN-0001] Inserting grid: macro - genblk1\[4\].digital_unison_instance
+[INFO PDN-0001] Inserting grid: macro - genblk1\[5\].digital_unison_instance
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1039.1700, 686.8850) - (1042.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1126.1700, 2571.5300) - (1129.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1144.7700, 70.1300) - (1147.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1219.1700, 686.8850) - (1222.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1306.1700, 2571.5300) - (1309.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1324.7700, 70.1300) - (1327.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1399.1700, 686.8850) - (1402.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1486.1700, 2571.5300) - (1489.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1504.7700, 70.1300) - (1507.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1579.1700, 686.8850) - (1582.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1666.1700, 2571.5300) - (1669.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1684.7700, 70.1300) - (1687.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1759.1700, 686.8850) - (1762.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1846.1700, 2571.5300) - (1849.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1864.7700, 70.1300) - (1867.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1939.1700, 686.8850) - (1942.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2026.1700, 2571.5300) - (2029.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2044.7700, 70.1300) - (2047.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2119.1700, 686.8850) - (2122.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2206.1700, 2571.5300) - (2209.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2224.7700, 70.1300) - (2227.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2299.1700, 686.8850) - (2302.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1144.7700, 70.1300) - (1147.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1324.7700, 70.1300) - (1327.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1504.7700, 70.1300) - (1507.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1684.7700, 70.1300) - (1687.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1864.7700, 70.1300) - (1867.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2044.7700, 70.1300) - (2047.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2224.7700, 70.1300) - (2227.8700, 72.1150) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1039.1700, 686.8850) - (1042.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1219.1700, 686.8850) - (1222.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1399.1700, 686.8850) - (1402.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1579.1700, 686.8850) - (1582.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1759.1700, 686.8850) - (1762.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1939.1700, 686.8850) - (1942.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2119.1700, 686.8850) - (2122.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2299.1700, 686.8850) - (2302.2700, 687.6300) on vssa2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1126.1700, 2571.5300) - (1129.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1306.1700, 2571.5300) - (1309.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1486.1700, 2571.5300) - (1489.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1666.1700, 2571.5300) - (1669.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (1846.1700, 2571.5300) - (1849.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2026.1700, 2571.5300) - (2029.2700, 2572.1150) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (2206.1700, 2571.5300) - (2209.2700, 2572.1150) on vccd2

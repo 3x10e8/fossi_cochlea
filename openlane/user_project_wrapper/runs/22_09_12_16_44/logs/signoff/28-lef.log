@@ -1,0 +1,63 @@
+
+Magic 8.3 revision 320 - Compiled on Sun Sep  4 10:31:49 UTC 2022.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(vendor): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Using technology "sky130B", version 1.0.291-82-gfa87f8f
+Reading LEF data from file /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 78 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 79 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 112 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 114 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 115 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 122 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 123 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 156 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 167 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 209 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 249 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 251 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 290 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 291 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 797 lines.
+Reading LEF data from file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/../../../../lef/digital_unison.lef.
+This action cannot be undone.
+LEF read: Processed 1002 lines.
+user_project_wrapper: 10000 rects
+user_project_wrapper: 20000 rects
+user_project_wrapper: 30000 rects
+user_project_wrapper: 40000 rects
+Processing timestamp mismatches: digital_unison.
+[INFO]: Writing abstract LEF
+Generating LEF output /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/signoff/user_project_wrapper.lef for cell user_project_wrapper:
+Diagnostic:  Write LEF header for cell user_project_wrapper
+Diagnostic:  Writing LEF output for cell user_project_wrapper
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__tapvpwrvgnd_1" at bad file path /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/signoff/sky130_fd_sc_hd__tapvpwrvgnd_1.mag.
+The cell exists in the search paths at /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__tapvpwrvgnd_1.mag.
+The discovered version will be used.
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_3" at bad file path /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/signoff/sky130_fd_sc_hd__decap_3.mag.
+The cell exists in the search paths at /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_3.mag.
+The discovered version will be used.
+Diagnostic:  Scale value is 0.005000
+[INFO]: LEF Write Complete

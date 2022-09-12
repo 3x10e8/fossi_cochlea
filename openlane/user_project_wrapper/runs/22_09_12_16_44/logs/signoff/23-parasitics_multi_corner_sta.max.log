@@ -1,0 +1,263 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.max.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.max.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.max.lef
+[INFO ODB-0127] Reading DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/routing/user_project_wrapper.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0094] 		Created 100000 Insts
+[INFO ODB-0130]     Created 645 pins.
+[INFO ODB-0131]     Created 125746 components and 258510 component-terminals.
+[INFO ODB-0132]     Created 8 special nets and 257880 connections.
+[INFO ODB-0133]     Created 637 nets and 42 connections.
+[INFO ODB-0134] Finished DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/results/routing/user_project_wrapper.def
+min_report
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+
+======================= Slowest Corner ===================================
+
+No paths found.
+
+======================= Typical Corner ===================================
+
+No paths found.
+
+======================= Fastest Corner ===================================
+
+No paths found.
+min_report_end
+max_report
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+
+======================= Slowest Corner ===================================
+
+No paths found.
+
+======================= Typical Corner ===================================
+
+No paths found.
+
+======================= Fastest Corner ===================================
+
+No paths found.
+max_report_end
+check_report
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+
+======================= Slowest Corner ===================================
+
+Startpoint: la_data_in[2] (input port clocked by user_clock2)
+Endpoint: genblk1[5].digital_unison_instance/rstb (internal pin)
+Path Group: (none)
+Path Type: max
+Corner: ss
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          8.00    8.00 ^ input external delay
+                  1.46    1.18    9.18 ^ la_data_in[2] (in)
+     6    0.20                           la_data_in[2] (net)
+                  1.55    0.00    9.18 ^ genblk1[5].digital_unison_instance/rstb (digital_unison)
+                                  9.18   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+======================= Typical Corner ===================================
+
+Startpoint: la_data_in[2] (input port clocked by user_clock2)
+Endpoint: genblk1[5].digital_unison_instance/rstb (internal pin)
+Path Group: (none)
+Path Type: max
+Corner: tt
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          8.00    8.00 ^ input external delay
+                  0.89    0.77    8.77 ^ la_data_in[2] (in)
+     6    0.20                           la_data_in[2] (net)
+                  1.04    0.00    8.77 ^ genblk1[5].digital_unison_instance/rstb (digital_unison)
+                                  8.77   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+======================= Fastest Corner ===================================
+
+Startpoint: la_data_in[2] (input port clocked by user_clock2)
+Endpoint: genblk1[5].digital_unison_instance/rstb (internal pin)
+Path Group: (none)
+Path Type: max
+Corner: ff
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          8.00    8.00 ^ input external delay
+                  0.66    0.61    8.61 ^ la_data_in[2] (in)
+     6    0.20                           la_data_in[2] (net)
+                  0.85    0.00    8.61 ^ genblk1[5].digital_unison_instance/rstb (digital_unison)
+                                  8.61   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+
+======================= Slowest Corner ===================================
+
+No paths found.
+
+======================= Typical Corner ===================================
+
+No paths found.
+
+======================= Fastest Corner ===================================
+
+No paths found.
+check_report_end
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+======================= Slowest Corner ===================================
+
+
+======================= Typical Corner ===================================
+
+
+======================= Fastest Corner ===================================
+
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack INF
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack INF
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+
+======================== Slowest Corner ==================================
+
+Clock user_clock2
+No launch/capture paths found.
+
+
+======================= Typical Corner ===================================
+
+Clock user_clock2
+No launch/capture paths found.
+
+
+======================= Fastest Corner ===================================
+
+Clock user_clock2
+No launch/capture paths found.
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+
+
+======================= Slowest Corner =================================
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+                           0.0%       0.0%     100.0%
+
+======================= Typical Corner ===================================
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+                           0.0%       0.0%     100.0%
+
+
+======================= Fastest Corner =================================
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   9.71e-09   9.71e-09 100.0%
+                           0.0%       0.0%     100.0%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 1535722 u^2 15% utilization.
+area_report_end

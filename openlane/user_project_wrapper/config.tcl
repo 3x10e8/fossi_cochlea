@@ -39,22 +39,27 @@ set ::env(VERILOG_FILES) "\
 
 ## Clock configurations
 set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "digital_unison\[0\].clk_master digital_unison\[1\].clk_master digital_unison\[2\].clk_master digital_unison\[3\].clk_master digital_unison\[4\].clk_master digital_unison\[5\].clk_master"
+set ::env(CLOCK_NET) "genblk1\[0\].digital_unison_instance.clk_master genblk1\[1\].digital_unison_instance.clk_master genblk1\[2\].digital_unison_instance.clk_master genblk1\[3\].digital_unison_instance.clk_master genblk1\[4\].digital_unison_instance.clk_master genblk1\[5\].digital_unison_instance.clk_master"
 
 set ::env(CLOCK_PERIOD) "40"
 
 ## Internal Macros
 ### Macro PDN Connections
 set ::env(FP_PDN_MACRO_HOOKS) "\
-	digital_unison vccd1 vssd1 vccd1 vssd1"
+	genblk1\[0\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1\[1\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1\[2\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1\[3\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1\[4\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1\[5\].digital_unison_instance vccd1 vssd1 vccd1 vssd1 "
 
 ### Macro Placement
-set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
+set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../../../verilog/rtl/digital_unison.v"
+	$script_dir/../../../../verilog/final_verilog/digital_unison/digital_unison.v"
 
 set ::env(EXTRA_LEFS) "\
 	$script_dir/../../../../lef/digital_unison.lef"
@@ -82,7 +87,10 @@ set ::env(FP_PDN_ENABLE_RAILS) 0
 
 set ::env(DIODE_INSERTION_STRATEGY) 0
 set ::env(FILL_INSERTION) 0
-set ::env(TAP_DECAP_INSERTION) 0
+# set ::env(TAP_DECAP_INSERTION) 0
+# setting to 1, from https://open-source-silicon.slack.com/archives/C032Y8J3KHA/p1662949908087539
+set ::env(TAP_DECAP_INSERTION) 1
+
 set ::env(CLOCK_TREE_SYNTH) 0
 
 

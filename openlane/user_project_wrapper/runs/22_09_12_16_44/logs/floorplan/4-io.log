@@ -1,0 +1,27 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/merged.nom.lef
+[INFO ODB-0127] Reading DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/floorplan/3-initial_fp.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0130]     Created 637 pins.
+[INFO ODB-0131]     Created 6 components and 630 component-terminals.
+[INFO ODB-0133]     Created 637 nets and 42 connections.
+[INFO ODB-0134] Finished DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_12_16_44/tmp/floorplan/3-initial_fp.def
+[WARNING PPL-0015] Macro genblk1\[0\].digital_unison_instance is not placed.
+[WARNING PPL-0015] Macro genblk1\[1\].digital_unison_instance is not placed.
+[WARNING PPL-0015] Macro genblk1\[2\].digital_unison_instance is not placed.
+[WARNING PPL-0015] Macro genblk1\[3\].digital_unison_instance is not placed.
+[WARNING PPL-0015] Macro genblk1\[4\].digital_unison_instance is not placed.
+[WARNING PPL-0015] Macro genblk1\[5\].digital_unison_instance is not placed.
+Found 0 macro blocks.
+Using 1u default distance from corners.
+[INFO PPL-0007] Random pin placement.
