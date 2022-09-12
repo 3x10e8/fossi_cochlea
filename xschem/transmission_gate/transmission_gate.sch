@@ -14,13 +14,13 @@ N -140 -40 0 -40 { lab=ctrl_}
 N -140 0 -80 0 { lab=in}
 N 80 0 140 0 { lab=out}
 N 0 80 0 130 {
-lab=vssa}
+lab=vss}
 N -80 -80 -30 -80 {
 lab=in}
 N 30 -80 80 -80 {
 lab=out}
 N 0 -140 0 -80 {
-lab=vdda}
+lab=vdd}
 C {devices/iopin.sym} -140 0 2 0 {name=p1 lab=in}
 C {devices/iopin.sym} 140 0 0 0 {name=p2 lab=out}
 C {devices/ipin.sym} -140 -40 0 0 {name=p3 lab=ctrl_}
@@ -53,5 +53,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 0 -140 1 0 {name=p5 lab=vdda}
-C {devices/ipin.sym} 0 130 3 0 {name=p6 lab=vssa}
+C {devices/ipin.sym} 0 -140 1 0 {name=p5 lab=vdd}
+C {devices/ipin.sym} 0 130 3 0 {name=p6 lab=vss}

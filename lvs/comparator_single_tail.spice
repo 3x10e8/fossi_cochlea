@@ -1,0 +1,66 @@
+** sch_path: /local_disk/fossi_cochlea/xschem/comparator_latest/comparator_single_tail.sch
+.subckt comparator_single_tail phi1 phi1b inp inm low_buf vccd vssd high_buf
+*.PININFO phi1:I phi1b:I inp:I inm:I low_buf:O vccd:B vssd:B high_buf:O
+XM12 FP inp tail vssd sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM13 FN inm tail vssd sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM14 pfetw low vccd vccd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 high FP pfetw vccd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 pfete FN low vccd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vccd high pfete vccd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM7 low high vssd vssd sky130_fd_pr__nfet_01v8_lvt L=2 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM9 high low vssd vssd sky130_fd_pr__nfet_01v8_lvt L=2 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM10 tail phi1 vssd vssd sky130_fd_pr__nfet_01v8_lvt L=2 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 vccd phi1 FP vccd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 FN phi1 vccd vccd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+X1 high net1 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X2 net1 net2 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X3 net2 net3 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X4 net3 high_buf vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X5 low net4 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X6 net4 net5 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X7 net5 net6 vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+X8 net6 low_buf vccd vssd inv Wpmos=0.42 Lpmos=0.15 Wnmos=0.42 Lnmos=0.15
+XM4 high phi1b vssd vssd sky130_fd_pr__nfet_01v8_lvt L=2 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 low phi1b vssd vssd sky130_fd_pr__nfet_01v8_lvt L=2 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+* expanding   symbol:  xschem/inv/inv.sym # of pins=4
+** sym_path: /local_disk/fossi_cochlea/xschem/inv/inv.sym
+** sch_path: /local_disk/fossi_cochlea/xschem/inv/inv.sch
+.subckt inv in out vdda vssa   Wpmos=Wpmos Lpmos=Lpmos Wnmos=Wnmos Lnmos=Lnmos
+*.PININFO in:I out:B vdda:I vssa:I
+XM1 vssa in out vssa sky130_fd_pr__nfet_01v8 L=Lnmos W=Wnmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vdda in out vdda sky130_fd_pr__pfet_01v8 L=Lpmos W=Wpmos nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -38,13 +38,13 @@ lab=#net2}
 N -740 180 -680 180 {
 lab=cclk}
 N -250 200 -230 200 {
-lab=outb_alone}
+lab=#net3}
 N -270 -110 -250 -110 {
 lab=#net2}
 N -270 -90 -160 -90 {
 lab=#net1}
 N -640 -150 -570 -150 {
-lab=#net3}
+lab=#net4}
 N -250 -110 -180 -110 {
 lab=#net2}
 N -180 -110 -180 -50 {
@@ -52,17 +52,17 @@ lab=#net2}
 N -180 -50 -160 -50 {
 lab=#net2}
 N -620 160 -550 160 {
-lab=#net4}
-N -250 220 -100 220 {
 lab=#net5}
+N -250 220 -100 220 {
+lab=#net6}
 N -620 200 -550 200 {
-lab=#net6}
+lab=#net7}
 N -550 190 -550 200 {
-lab=#net6}
+lab=#net7}
 N -640 -110 -570 -110 {
-lab=#net7}
+lab=#net8}
 N -570 -120 -570 -110 {
-lab=#net7}
+lab=#net8}
 C {devices/lab_pin.sym} 20 0 3 0 {name=l8 sig_type=std_logic lab=phi1d}
 C {devices/lab_pin.sym} -100 20 0 0 {name=l13 sig_type=std_logic lab=vnb}
 C {devices/lab_pin.sym} 160 0 3 0 {name=l14 sig_type=std_logic lab=phi1dd}
@@ -106,9 +106,7 @@ C {devices/lab_pin.sym} 230 -40 0 0 {name=l31 sig_type=std_logic lab=vdda}
 C {devices/lab_pin.sym} 230 -200 0 0 {name=l32 sig_type=std_logic lab=vdda}
 C {devices/ipin.sym} -740 180 0 0 {name=p2 lab=cclk}
 C {devices/lab_pin.sym} -250 160 2 0 {name=l33 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} -250 180 2 0 {name=l34 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} -270 -150 2 0 {name=l36 sig_type=std_logic lab=vdda}
-C {devices/lab_pin.sym} -270 -130 2 0 {name=l37 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} -270 -70 2 0 {name=l38 sig_type=std_logic lab=vssd}
 C {devices/iopin.sym} -690 -360 2 0 {name=p14 lab=vdda}
 C {devices/iopin.sym} -690 -340 2 0 {name=p13 lab=vccd}
@@ -129,4 +127,4 @@ C {level_shifter/level_up_shifter_no_inv.sym} -420 -110 0 0 {name=x15}
 C {level_shifter/level_up_shifter_no_inv.sym} -400 200 0 0 {name=X14}
 C {devices/lab_pin.sym} -670 -170 0 0 {name=l12 sig_type=std_logic lab=vccd}
 C {devices/lab_pin.sym} -650 140 0 0 {name=l39 sig_type=std_logic lab=vccd}
-C {devices/lab_pin.sym} -230 200 2 0 {name=l41 sig_type=std_logic lab=outb_alone}
+C {devices/noconn.sym} -230 200 2 0 {name=l1}

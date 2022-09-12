@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1654749871
+timestamp 1662929294
 << nwell >>
 rect -1669 664 -666 827
 rect 958 662 1961 837
@@ -767,8 +767,8 @@ rlabel metal4 -690 -287 -690 -287 7 inp
 rlabel locali -135 -111 -135 -111 7 FP
 rlabel locali 427 -109 427 -109 3 FN
 rlabel locali 144 -337 144 -337 1 tail
-rlabel locali 824 342 824 342 3 low
 rlabel pdiff -183 201 -183 201 7 pfetw
 rlabel pdiff 475 195 475 195 3 pfete
-rlabel locali -532 342 -532 342 7 low
+flabel locali -601 332 -516 367 1 FreeSans 800 0 0 0 high
+flabel locali 808 332 893 367 1 FreeSans 800 0 0 0 low
 << end >>

@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1661199331
+timestamp 1662946268
 << locali >>
 rect -341 29074 -307 29090
 << viali >>
@@ -3341,71 +3341,71 @@ rect 21122 2522 21442 2546
 rect 21762 2546 21804 2782
 rect 22040 2546 22082 2782
 rect 21762 2522 22082 2546
-use analog_mux  analog_mux_0 /local_disk/fossi_cochlea/mag/final_designs/mux
+use analog_mux  analog_mux_0 mux
 timestamp 1654748254
 transform 1 0 20673 0 1 30912
 box -231 -36 446 2107
-use cap_3pF  cap_3pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
-timestamp 1654741520
+use cap_3pF  cap_3pF_0 caps
+timestamp 1662862107
 transform 0 1 16965 -1 0 20343
 box -6669 2096 15759 5484
-use cap_6pF  cap_6pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
-timestamp 1654741520
+use cap_6pF  cap_6pF_0 caps
+timestamp 1662862968
 transform 0 1 15305 -1 0 24342
 box -2674 -2673 19758 3439
-use cap_10fF  cap_10fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
+use cap_10fF  cap_10fF_0 caps
 timestamp 1654741520
 transform 1 0 18937 0 1 28644
 box -28 -28 708 628
-use cap_10fF  cap_10fF_1 /local_disk/fossi_cochlea/mag/final_designs/caps
+use cap_10fF  cap_10fF_1
 timestamp 1654741520
 transform 1 0 5164 0 1 28662
 box -28 -28 708 628
-use cap_12pF  cap_12pF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
-timestamp 1654741520
+use cap_12pF  cap_12pF_0 caps
+timestamp 1662863227
 transform 0 1 3438 -1 0 24342
 box -2674 -2674 19758 8878
-use cap_20fF  cap_20fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
+use cap_20fF  cap_20fF_0 caps
 timestamp 1654741520
 transform 1 0 12735 0 1 28665
 box -28 -28 828 1028
-use cap_40fF  cap_40fF_0 /local_disk/fossi_cochlea/mag/final_designs/caps
+use cap_40fF  cap_40fF_0 caps
 timestamp 1654741520
 transform 1 0 901 0 1 28672
 box -28 -28 1368 1228
-use cmos_switch  cmos_switch_0 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_0 switch
 timestamp 1654741520
 transform 1 0 557 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_1 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_1
 timestamp 1654741520
 transform -1 0 2617 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_2 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_2
 timestamp 1654741520
 transform 1 0 12307 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_3 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_3
 timestamp 1654741520
 transform -1 0 13925 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_4 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_4
 timestamp 1654741520
 transform 1 0 18517 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_5 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_5
 timestamp 1654741520
 transform -1 0 20077 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_6 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_6
 timestamp 1654741520
 transform 1 0 4817 0 1 28398
 box -175 -95 235 3570
-use cmos_switch  cmos_switch_7 /local_disk/fossi_cochlea/mag/final_designs/switch
+use cmos_switch  cmos_switch_7
 timestamp 1654741520
 transform -1 0 6187 0 1 28398
 box -175 -95 235 3570
-use mux  mux_0 /local_disk/fossi_cochlea/mag/final_designs/mux
+use mux  mux_0 mux
 timestamp 1654741520
 transform 0 -1 -104 1 0 28489
 box -224 -79 685 681

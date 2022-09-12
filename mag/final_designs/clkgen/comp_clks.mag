@@ -1,14 +1,20 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1654754240
+timestamp 1662935569
 << nwell >>
 rect 577 332 627 545
 rect 576 -449 630 -236
 << locali >>
 rect 530 -211 674 -177
 << metal1 >>
+rect 0 544 1196 640
 rect 351 268 677 311
+rect 251 2 280 4
+rect 251 -232 290 2
+rect 422 -205 588 -160
+rect 543 -448 588 -205
+rect 0 -544 1196 -448
 << metal2 >>
 rect 182 273 400 305
 rect 367 -47 400 273
@@ -16,16 +22,19 @@ use inverter  inverter_0 /local_disk/fossi_cochlea/mag/final_designs/inverter
 timestamp 1654754240
 transform 1 0 276 0 1 128
 box -276 -128 368 512
-use inverter  inverter_1 /local_disk/fossi_cochlea/mag/final_designs/inverter
+use inverter  inverter_1
 timestamp 1654754240
 transform 1 0 828 0 1 128
 box -276 -128 368 512
-use inverter  inverter_2 /local_disk/fossi_cochlea/mag/final_designs/inverter
+use inverter  inverter_2
 timestamp 1654754240
 transform 1 0 828 0 -1 -32
 box -276 -128 368 512
-use tg  tg_0 /local_disk/fossi_cochlea/mag/final_designs/clkgen
-timestamp 1654741520
+use tg  tg_0
+timestamp 1662933550
 transform 1 0 276 0 -1 -32
 box -276 -128 368 512
+<< labels >>
+flabel metal1 0 609 1196 640 1 FreeSans 800 0 0 0 vdda
+flabel metal1 0 -544 1196 -448 1 FreeSans 800 0 0 0 vdda
 << end >>

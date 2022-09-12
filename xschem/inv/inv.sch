@@ -11,25 +11,28 @@ N -0 -0 80 0 { lab=out}
 N 40 60 40 130 { lab=in}
 N -60 130 40 130 { lab=in}
 N -60 60 -60 130 { lab=in}
-N -20 60 0 60 { lab=vssa}
-N -20 60 -20 90 { lab=vssa}
-N -20 90 -0 90 { lab=vssa}
+N -20 60 0 60 { lab=vss}
+N -20 60 -20 90 { lab=vss}
+N -20 90 -0 90 { lab=vss}
 N 0 -220 0 -150 {
-lab=vdda}
+lab=vdd}
 N 0 90 0 160 {
-lab=vssa}
+lab=vss}
 N 0 -150 0 -120 {
-lab=vdda}
+lab=vdd}
 N 0 -90 0 -30 {
 lab=out}
 N -60 -120 -60 -60 {
 lab=in}
 N -20 -150 -0 -150 {
-lab=vdda}
+lab=vdd}
 N -20 -120 -0 -120 {
-lab=vdda}
+lab=vdd}
 N -20 -90 -0 -90 {
 lab=out}
+N -120 -220 -0 -220 {
+lab=vdd}
+N -120 160 -0 160 {}
 C {sky130_fd_pr/nfet_01v8.sym} 20 60 2 0 {name=M1
 L=Lnmos
 W=Wnmos
@@ -60,5 +63,5 @@ spiceprefix=X
 }
 C {devices/ipin.sym} -120 0 0 0 {name=p1 lab=in}
 C {devices/iopin.sym} 80 0 0 0 {name=p2 lab=out}
-C {devices/ipin.sym} 0 -220 1 0 {name=p4 lab=vdda}
-C {devices/ipin.sym} 0 160 3 0 {name=p5 lab=vssa}
+C {devices/iopin.sym} -120 -220 2 0 {name=p1 lab=vdd}
+C {devices/iopin.sym} -120 160 2 0 {name=p1 lab=vss}

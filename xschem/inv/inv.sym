@@ -19,10 +19,10 @@ B 5 -52.5 -2.5 -47.5 2.5 {name=in
 dir=in}
 B 5 47.5 -2.5 52.5 2.5 {name=out
 dir=inout}
-B 5 -2.5 -42.5 2.5 -37.5 {name=vdda
-dir=in}
-B 5 -2.5 37.5 2.5 42.5 {name=vssa
-dir=in}
+B 5 -2.5 -42.5 2.5 -37.5 {name=vdd
+dir=inout}
+B 5 -2.5 37.5 2.5 42.5 {name=vss
+dir=inout}
 A 4 30 0 7.071067811865476 315 360 {}
 T {@name} 0 10 0 0 0.4 0.4 {}
 T {@Wpmos / @Lpmos

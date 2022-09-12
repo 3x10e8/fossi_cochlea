@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662868276
+timestamp 1662946268
 << nwell >>
 rect 1267 724 1597 1115
 rect 1283 9 1613 29
@@ -30,10 +30,11 @@ rect 3217 1205 3273 1216
 rect 3217 1153 3219 1205
 rect 3271 1153 3273 1205
 rect 3217 1142 3273 1153
-rect -1661 450 -1016 468
+rect -1661 450 -1078 468
 rect -1661 398 -1546 450
-rect -1494 398 -1016 450
-rect -1661 371 -1016 398
+rect -1494 398 -1078 450
+rect -1661 371 -1078 398
+rect -1034 371 -1016 468
 rect 635 371 731 1128
 rect 3032 784 3080 968
 rect 906 705 962 716
@@ -65,8 +66,9 @@ rect 3216 114 3272 125
 rect 3216 62 3218 114
 rect 3270 62 3272 114
 rect 3216 51 3272 62
-rect -1638 -158 -1590 -78
 rect -1090 -100 -1038 -94
+rect -1638 -158 -1636 -126
+rect -1592 -158 -1590 -126
 rect -1090 -158 -1038 -152
 rect 3031 -304 3082 -120
 rect -1540 -396 -1476 -338
@@ -754,29 +756,28 @@ rect 3195 -2119 3212 -2055
 rect 3276 -2119 3281 -2055
 rect 3195 -2136 3281 -2119
 use cclkgen  cclkgen_0
-timestamp 1654754240
+timestamp 1662946268
 transform 1 0 876 0 1 -2136
-box 0 0 2484 1184
-use level_up_shifter_d_a  level_up_shifter_d_a_0 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
-timestamp 1662867987
+box 0 -3 2484 1269
+use level_up_shifter_d_a  level_up_shifter_d_a_0 level_up_shifter
+timestamp 1662946268
 transform 1 0 -2063 0 1 -1215
-box 402 498 2794 1682
-use level_up_shifter_d_a  level_up_shifter_d_a_1 /local_disk/fossi_cochlea/mag/final_designs/level_up_shifter
-timestamp 1662867987
+box 402 498 2794 1685
+use level_up_shifter_d_a  level_up_shifter_d_a_1
+timestamp 1662946268
 transform 1 0 -2063 0 -1 -123
-box 402 498 2794 1682
+box 402 498 2794 1685
 use phigen  phigen_0
-timestamp 1654754240
+timestamp 1662946268
 transform 1 0 876 0 1 40
-box 0 0 2484 1184
+box 0 -3 2484 1269
 use phigen  phigen_1
-timestamp 1654754240
+timestamp 1662946268
 transform 1 0 876 0 1 -1048
-box 0 0 2484 1184
+box 0 -3 2484 1269
 << labels >>
 rlabel metal4 2739 750 2739 750 7 GND
 rlabel metal4 1438 1118 1438 1118 3 VCCD
-rlabel metal1 -1616 -96 -1616 -96 1 GND
 flabel poly -1492 -989 -1355 -953 1 FreeSans 3200 0 0 0 cclk
 port 1 n default input
 flabel poly -1492 -385 -1355 -349 1 FreeSans 3200 0 0 0 div2

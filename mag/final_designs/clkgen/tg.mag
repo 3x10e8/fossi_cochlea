@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1654741520
+timestamp 1662933550
 << nwell >>
 rect -253 204 302 417
 << nmos >>
@@ -181,13 +181,9 @@ rect -19 188 39 200
 rect -19 154 -5 188
 rect 29 154 39 188
 rect -19 142 39 154
-rect 146 166 200 173
-rect 279 166 307 416
-rect 146 156 307 166
-rect -19 -32 9 142
+rect 146 156 200 173
 rect 146 122 156 156
-rect 190 138 307 156
-rect 190 122 200 138
+rect 190 122 200 156
 rect 146 105 200 122
 rect 43 11 55 63
 rect 139 11 151 63
@@ -209,8 +205,16 @@ rect 55 11 139 20
 rect 49 11 55 63
 rect 139 11 145 63
 << labels >>
-flabel polycont -5 154 29 188 0 FreeSans 160 0 0 0 clk_
-flabel ndiffc 55 20 139 54 0 FreeSans 160 0 0 0 inp
+flabel metal1 -5 154 29 188 1 FreeSans 400 0 0 0 ctrl_
+port 1 n default input
+flabel metal1 156 122 190 156 1 FreeSans 400 0 0 0 ctrl
+port 2 n default input
+flabel metal1 -29 -128 29 -32 1 FreeSans 400 0 0 0 vssa
+port 3 n default bidirectional
+flabel metal1 -29 416 29 512 1 FreeSans 400 0 0 0 vdda
+port 4 n default bidirectional
+flabel metal2 55 20 139 54 1 FreeSans 400 0 0 0 in
+port 5 n default input
 flabel ndiffc 214 22 248 56 0 FreeSans 160 0 0 0 out
-flabel polycont 156 122 190 156 0 FreeSans 160 0 0 0 clk
+port 6 nsew default output
 << end >>

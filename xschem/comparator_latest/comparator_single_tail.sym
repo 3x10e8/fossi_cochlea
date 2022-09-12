@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {type=subcircuit 
 format="@name @pinlist @symname Wplus=@Wplus Lplus=@Wplus Wminus=@Wminus Lminus=@Lminus" 
@@ -30,13 +30,13 @@ B 5 17.5 -82.5 22.5 -77.5 {name=inp
 dir=in}
 B 5 17.5 -42.5 22.5 -37.5 {name=inm
 dir=in}
-B 5 107.5 -72.5 112.5 -67.5 {name=high
+B 5 107.5 -72.5 112.5 -67.5 {name=high_buf
 dir=out}
 B 5 77.5 -112.5 82.5 -107.5 {name=phi1
 dir=in}
 B 5 77.5 -12.5 82.5 -7.5 {name=phi1b
 dir=in}
-B 5 107.5 -52.5 112.5 -47.5 {name=low
+B 5 107.5 -52.5 112.5 -47.5 {name=low_buf
 dir=out}
 B 5 37.5 -112.5 42.5 -107.5 {name=vccd
 dir=inout}

@@ -4,8 +4,6 @@ K {}
 V {}
 S {}
 E {}
-T {unused
-} 190 -420 0 0 0.3 0.3 {}
 N 450 -240 540 -240 {
 lab=outb}
 N 550 -240 550 -210 {
@@ -21,15 +19,15 @@ lab=outb}
 N 690 -340 730 -340 {
 lab=out}
 N 650 -370 650 -340 {
-lab=vdda1}
+lab=vdd}
 N 650 -410 650 -370 {
-lab=vdda1}
+lab=vdd}
 N 450 -410 450 -370 {
-lab=vdda1}
+lab=vdd}
 N 450 -410 650 -410 {
-lab=vdda1}
+lab=vdd}
 N 550 -450 550 -410 {
-lab=vdda1}
+lab=vdd}
 N 1000 -240 1000 -210 {
 lab=out}
 N 1100 -250 1100 -240 {
@@ -43,15 +41,15 @@ lab=out}
 N 820 -340 860 -340 {
 lab=outb}
 N 900 -370 900 -340 {
-lab=vdda1}
+lab=vdd}
 N 900 -410 900 -370 {
-lab=vdda1}
+lab=vdd}
 N 1100 -410 1100 -370 {
-lab=vdda1}
+lab=vdd}
 N 900 -410 1100 -410 {
-lab=vdda1}
+lab=vdd}
 N 1010 -450 1010 -410 {
-lab=vdda1}
+lab=vdd}
 N 650 -240 810 -240 {
 lab=outb}
 N 820 -340 820 -240 {
@@ -77,11 +75,11 @@ lab=in}
 N 1040 -180 1040 -120 {
 lab=inb}
 N 390 -370 540 -370 {
-lab=vdda1}
+lab=vdd}
 N 390 -310 540 -310 {
 lab=outb}
 N 390 -340 540 -340 {
-lab=vssd1}
+lab=vss}
 N 350 -400 350 -340 {
 lab=inb}
 N 350 -400 580 -400 {
@@ -107,11 +105,11 @@ lab=in}
 N 880 -210 1000 -210 {
 lab=out}
 N 880 -150 1000 -150 {
-lab=vssd1}
+lab=vss}
 N 880 -180 1000 -180 {
-lab=vssd1}
+lab=vss}
 N 940 -180 940 -150 {
-lab=vssd1}
+lab=vss}
 N 840 -180 840 -80 {
 lab=inb}
 N 840 -80 1040 -80 {
@@ -119,11 +117,11 @@ lab=inb}
 N 1040 -120 1040 -80 {
 lab=inb}
 N 1030 -370 1180 -370 {
-lab=vdda1}
+lab=vdd}
 N 1030 -310 1180 -310 {
 lab=out}
 N 1030 -340 1180 -340 {
-lab=vssd1}
+lab=vss}
 N 1220 -400 1220 -340 {
 lab=in}
 N 990 -400 1220 -400 {
@@ -133,15 +131,14 @@ lab=in}
 N 1100 -310 1100 -250 {
 lab=out}
 C {devices/ipin.sym} 320 -460 0 0 {name=p1 lab=in}
-C {devices/lab_pin.sym} 630 -150 3 0 {name=l2 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 630 -150 3 0 {name=l2 sig_type=std_logic lab=vss}
 C {devices/lab_pin.sym} 470 -180 0 0 {name=l3 sig_type=std_logic lab=in}
-C {devices/iopin.sym} 550 -440 3 0 {name=p4 lab=vdda1}
+C {devices/iopin.sym} 320 -520 2 0 {name=p4 lab=vdd}
 C {devices/lab_pin.sym} 350 -340 0 0 {name=l5 sig_type=std_logic lab=inb}
-C {devices/lab_pin.sym} 940 -150 1 1 {name=l6 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 940 -150 1 1 {name=l6 sig_type=std_logic lab=vss}
 C {devices/lab_pin.sym} 1080 -180 0 1 {name=l7 sig_type=std_logic lab=inb}
-C {devices/lab_pin.sym} 1110 -340 1 1 {name=l8 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 1110 -340 1 1 {name=l8 sig_type=std_logic lab=vss}
 C {devices/lab_pin.sym} 1220 -340 0 1 {name=l9 sig_type=std_logic lab=in}
-C {devices/lab_pin.sym} 1010 -450 1 0 {name=l10 sig_type=std_logic lab=vdda1}
 C {devices/opin.sym} 1080 -220 0 0 {name=p5 lab=out}
 C {devices/opin.sym} 620 -220 0 0 {name=p6 lab=outb}
 C {sky130_fd_pr/pfet_01v8.sym} 670 -340 0 1 {name=M7
@@ -173,8 +170,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/ipin.sym} 320 -440 0 0 {name=p7 lab=inb}
-C {devices/iopin.sym} 320 -390 2 0 {name=p2 lab=vssd1}
-C {devices/iopin.sym} 320 -410 2 0 {name=p3 lab=vccd1}
+C {devices/iopin.sym} 320 -500 2 0 {name=p2 lab=vss}
 C {sky130_fd_pr/nfet_01v8.sym} 370 -340 2 1 {name=M2
 L=0.15
 W=0.6
@@ -287,4 +283,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 460 -340 3 0 {name=l1 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} 460 -340 3 0 {name=l1 sig_type=std_logic lab=vss}
+C {devices/lab_pin.sym} 550 -450 1 0 {name=l10 sig_type=std_logic lab=vdd}
+C {devices/lab_pin.sym} 1010 -450 1 0 {name=l10 sig_type=std_logic lab=vdd}

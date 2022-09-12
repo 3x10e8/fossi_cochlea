@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -14,13 +14,17 @@ N -30 -90 110 -90 { lab=ctrl_}
 N -30 -50 30 -50 { lab=in}
 N 190 -50 250 -50 { lab=out}
 N 110 30 110 80 {
-lab=vssa}
+lab=vdd}
 N 30 -130 80 -130 {
 lab=in}
 N 140 -130 190 -130 {
 lab=out}
-N 110 -190 110 -130 {
-lab=vdda}
+N 110 -200 110 -130 {
+lab=vdd}
+N -30 -200 110 -200 {
+lab=vdd}
+N -30 80 110 80 {
+lab=vdd}
 C {devices/iopin.sym} -30 -50 2 0 {name=p1 lab=in}
 C {devices/iopin.sym} 250 -50 0 0 {name=p2 lab=out}
 C {devices/ipin.sym} -30 -90 0 0 {name=p3 lab=ctrl_}
@@ -53,5 +57,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 110 -190 1 0 {name=p5 lab=vdda}
-C {devices/ipin.sym} 110 80 3 0 {name=p6 lab=vssa}
+C {devices/iopin.sym} -30 -200 2 0 {name=p1 lab=vdd}
+C {devices/iopin.sym} -30 80 2 0 {name=p1 lab=vss}

@@ -1,5 +1,0 @@
-* SPICE3 file created from /Volumes/export/isn/ankur/Documents/fossi_cochlea/mag/final_designs/clkgen/tg.ext - technology: sky130A
-
-X0 out GND inp VDDA sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
-X1 out GND inp VDDA sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
-X2 out VDDA inp GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=180000u

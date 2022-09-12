@@ -1,0 +1,21 @@
+* NGSPICE file created from comp_clks.ext - technology: sky130B
+
+.subckt tg ctrl_ ctrl in out vssa vdda
+X0 out ctrl_ in vdda sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X1 in ctrl_ out vdda sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+X2 out ctrl in vssa sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=2.415e+11p ps=1.99e+06u w=420000u l=180000u
+.ends
+
+.subckt inverter w_n204_204# a_n177_0# out in
+X0 out in a_n177_0# a_n177_0# sky130_fd_pr__nfet_01v8 ad=1.302e+11p pd=1.46e+06u as=1.365e+11p ps=1.49e+06u w=420000u l=180000u
+X1 w_n204_204# in out w_n204_204# sky130_fd_pr__pfet_01v8 ad=5.859e+11p pd=4.38e+06u as=2.52e+11p ps=2.06e+06u w=630000u l=180000u
+X2 out in w_n204_204# w_n204_204# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=180000u
+.ends
+
+.subckt comp_clks
+Xtg_0 VSUBS vdda tg_0/in tg_0/out VSUBS vdda tg
+Xinverter_0 vdda VSUBS inverter_1/in tg_0/in inverter
+Xinverter_1 vdda VSUBS inverter_1/out inverter_1/in inverter
+Xinverter_2 vdda VSUBS inverter_2/out tg_0/out inverter
+.ends
+

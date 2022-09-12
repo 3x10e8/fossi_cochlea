@@ -13,6 +13,6 @@ EOF
 pwd
 ls
 cd /local_disk/fossi_cochlea/lvs
-mv /local_disk/fossi_cochlea/mag/final_designs/$1/$2.spice .
-netgen -batch lvs "$3.spice $3" "$2.spice $2" /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.tech/netgen/sky130B_setup.tcl 
+mv /local_disk/fossi_cochlea/mag/final_designs/$1/$2.spice ./$2_mag.spice
+netgen -batch lvs "$3.spice $3" "$2_mag.spice $2" /local_disk/fossi_cochlea/dependencies/pdks/sky130B/libs.tech/netgen/sky130B_setup.tcl 
 gedit comp.out &
