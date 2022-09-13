@@ -96,8 +96,8 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
 ### PDN config
 #set ::env(FP_PDN_VOFFSET) 16.32
 #set ::env(FP_PDN_VPITCH) 153.6
-set ::env(FP_PDN_HORIZONTAL_HALO) 50
-set ::env(FP_PDN_VERTICAL_HALO) 200
+set ::env(FP_PDN_HORIZONTAL_HALO) 420
+set ::env(FP_PDN_VERTICAL_HALO) 420
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
