@@ -81,6 +81,174 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_0 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[6:5]),
+    .read_out_Q(la_data_out[4:3]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_1 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[10:9]),
+    .read_out_Q(la_data_out[8:7]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_2 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[14:13]),
+    .read_out_Q(la_data_out[12:11]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_3 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[18:17]),
+    .read_out_Q(la_data_out[16:15]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_4 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[22:21]),
+    .read_out_Q(la_data_out[20:19]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+
+digital_unison #(
+    .NUM_CORES(6)
+) digital_unison_instance_5 (
+    `ifdef USE_POWER_PINS
+        inout vccd1,    // User area 1 1.8V supply
+        inout vssd1,    // User area 1 digital ground
+    `endif
+    .read_out_I(la_data_out[26:25]),
+    .read_out_Q(la_data_out[24:23]),
+    .rstb(la_data_in[2]),
+    .ud_en(la_data_in[1]),
+    .clk_master(la_data_in[0])
+    /* interface to analog core
+    .comp_high_I(comp_high_I),
+    .comp_high_Q(comp_high_Q),
+    .phi1b_dig_I(phi1b_dig_I),
+    .phi1b_dig_Q(phi1b_dig_Q),
+    .clkdiv2_I(clkdiv2_I),
+    .clkdiv2_Q(clkdiv2_Q),
+    .cclk_I(cclk_I),
+    .cclk_Q(cclk_Q),
+    .fb1_I(fb1_I),
+    .fb1_Q(fb1_Q),
+    .cos_out(cos_out),
+    .sin_out(sin_out),
+    */
+);
+/*
 genvar i;
 generate
     for (i=0; i<=5; i=i+1) begin
@@ -97,7 +265,7 @@ generate
             .ud_en(la_data_in[1]),
             .clk_master(la_data_in[0])
             
-            /* interface to analog core
+            // interface to analog core
             .comp_high_I(comp_high_I),
             .comp_high_Q(comp_high_Q),
             .phi1b_dig_I(phi1b_dig_I),
@@ -110,9 +278,7 @@ generate
             .fb1_Q(fb1_Q),
             .cos_out(cos_out),
             .sin_out(sin_out),
-            */
 
-            /*
             // IO Pads
             .io_in (io_in),
             .io_out(io_out),
@@ -130,11 +296,11 @@ generate
             .compout(analog_io[8]),
             .pol(analog_io[9]),
             .polxevent(analog_io[10]),
-            */
+            
         );
     end
 endgenerate
-
+*/
 endmodule	// user_project_wrapper
     
 
