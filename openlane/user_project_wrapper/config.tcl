@@ -45,13 +45,13 @@ set ::env(CLOCK_PERIOD) "40"
 
 ## Internal Macros
 ### Macro PDN Connections
-set ::env(FP_PDN_MACRO_HOOKS) "\
-	genblk1\[0\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1\[1\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1\[2\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1\[3\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1\[4\].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1\[5\].digital_unison_instance vccd1 vssd1 vccd1 vssd1 "
+set ::env(FP_PDN_MACRO_HOOKS) {\
+	genblk1[0].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1[1].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1[2].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1[3].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1[4].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
+	genblk1[5].digital_unison_instance vccd1 vssd1 vccd1 vssd1 }
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
