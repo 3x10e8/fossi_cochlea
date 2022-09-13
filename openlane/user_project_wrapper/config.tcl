@@ -39,19 +39,56 @@ set ::env(VERILOG_FILES) "\
 
 ## Clock configurations
 set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "genblk1\[0\].digital_unison_instance.clk_master genblk1\[1\].digital_unison_instance.clk_master genblk1\[2\].digital_unison_instance.clk_master genblk1\[3\].digital_unison_instance.clk_master genblk1\[4\].digital_unison_instance.clk_master genblk1\[5\].digital_unison_instance.clk_master"
+set ::env(CLOCK_NET) "digital_unison_instance_0.clk_master digital_unison_instance_1.clk_master digital_unison_instance_2.clk_master digital_unison_instance_3.clk_master digital_unison_instance_4.clk_master digital_unison_instance_5.clk_master"
 
 set ::env(CLOCK_PERIOD) "40"
 
 ## Internal Macros
 ### Macro PDN Connections
-set ::env(FP_PDN_MACRO_HOOKS) {\
-	genblk1[0].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1[1].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1[2].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1[3].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1[4].digital_unison_instance vccd1 vssd1 vccd1 vssd1, \
-	genblk1[5].digital_unison_instance vccd1 vssd1 vccd1 vssd1 }
+set ::env(FP_PDN_MACRO_HOOKS) "\
+	digital_unison_instance_0 vccd1 vssd1 vccd1 vssd1, \
+	digital_unison_instance_1 vccd1 vssd1 vccd1 vssd1, \
+	digital_unison_instance_2 vccd1 vssd1 vccd1 vssd1, \
+	digital_unison_instance_3 vccd1 vssd1 vccd1 vssd1, \
+	digital_unison_instance_4 vccd1 vssd1 vccd1 vssd1, \
+	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1 "
+
+set ::env(GRT_OBS) "\
+	met1 500 300 2500 500, \
+	met2 500 300 2500 500, \
+	met3 500 300 2500 500, \
+	met4 500 300 2500 500, \
+	met5 500 300 2500 500, \
+	met1 500 620 2500 1020, \
+	met2 500 620 2500 1020, \
+	met3 500 620 2500 1020, \
+	met4 500 620 2500 1020, \
+	met5 500 620 2500 1020, \
+	met1 500 1140 2500 1540, \
+	met2 500 1140 2500 1540, \
+	met3 500 1140 2500 1540, \
+	met4 500 1140 2500 1540, \
+	met5 500 1140 2500 1540, \
+	met1 500 1660 2500 2060, \
+	met2 500 1660 2500 2060, \
+	met3 500 1660 2500 2060, \
+	met4 500 1660 2500 2060, \
+	met5 500 1660 2500 2060, \
+	met1 500 2180 2500 2580, \
+	met2 500 2180 2500 2580, \
+	met3 500 2180 2500 2580, \
+	met4 500 2180 2500 2580, \
+	met5 500 2180 2500 2580, \
+	met1 500 2700 2500 3100, \
+	met2 500 2700 2500 3100, \
+	met3 500 2700 2500 3100, \
+	met4 500 2700 2500 3100, \
+	met5 500 2700 2500 3100, \
+	met1 500 3220 2500 3420, \
+	met2 500 3220 2500 3420, \
+	met3 500 3220 2500 3420, \
+	met4 500 3220 2500 3420, \
+	met5 500 3220 2500 3420"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
@@ -68,7 +105,8 @@ set ::env(EXTRA_GDS_FILES) "\
 	$script_dir/../../../../gds/digital_unison.gds"
 
 # set ::env(GLB_RT_MAXLAYER) 5
-set ::env(RT_MAX_LAYER) {met4}
+#set ::env(RT_MAX_LAYER) {met4}
+set ::env(RT_MAX_LAYER) {met5}
 
 # disable pdn check nodes becuase it hangs with multiple power domains.
 # any issue with pdn connections will be flagged with LVS so it is not a critical check.
@@ -87,9 +125,9 @@ set ::env(FP_PDN_ENABLE_RAILS) 0
 
 set ::env(DIODE_INSERTION_STRATEGY) 0
 set ::env(FILL_INSERTION) 0
-# set ::env(TAP_DECAP_INSERTION) 0
-# setting to 1, from https://open-source-silicon.slack.com/archives/C032Y8J3KHA/p1662949908087539
 set ::env(TAP_DECAP_INSERTION) 1
+# setting to 1, from https://open-source-silicon.slack.com/archives/C032Y8J3KHA/p1662949908087539
+#set ::env(TAP_DECAP_INSERTION) 1
 
 set ::env(CLOCK_TREE_SYNTH) 0
 

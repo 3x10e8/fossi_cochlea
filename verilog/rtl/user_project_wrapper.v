@@ -82,16 +82,16 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 digital_unison #(
-    .NUM_CORES(6)
+    .NUM_CORES(8)
 ) digital_unison_instance_0 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[6:5]),
-    .read_out_Q(la_data_out[4:3]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
+    .read_out_I(la_data_out[11:10]),
+    .read_out_Q(la_data_out[9:8]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
     .clk_master(la_data_in[0])
     /* interface to analog core
     .comp_high_I(comp_high_I),
@@ -110,17 +110,17 @@ digital_unison #(
 );
 
 digital_unison #(
-    .NUM_CORES(6)
+    .NUM_CORES(8)
 ) digital_unison_instance_1 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[10:9]),
-    .read_out_Q(la_data_out[8:7]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
-    .clk_master(la_data_in[0])
+    .read_out_I(la_data_out[15:14]),
+    .read_out_Q(la_data_out[13:12]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
+    .clk_master(la_data_in[1])
     /* interface to analog core
     .comp_high_I(comp_high_I),
     .comp_high_Q(comp_high_Q),
@@ -141,14 +141,14 @@ digital_unison #(
     .NUM_CORES(6)
 ) digital_unison_instance_2 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[14:13]),
-    .read_out_Q(la_data_out[12:11]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
-    .clk_master(la_data_in[0])
+    .read_out_I(la_data_out[19:18]),
+    .read_out_Q(la_data_out[17:16]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
+    .clk_master(la_data_in[2])
     /* interface to analog core
     .comp_high_I(comp_high_I),
     .comp_high_Q(comp_high_Q),
@@ -166,17 +166,17 @@ digital_unison #(
 );
 
 digital_unison #(
-    .NUM_CORES(6)
+    .NUM_CORES(8)
 ) digital_unison_instance_3 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[18:17]),
-    .read_out_Q(la_data_out[16:15]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
-    .clk_master(la_data_in[0])
+    .read_out_I(la_data_out[23:22]),
+    .read_out_Q(la_data_out[21:20]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
+    .clk_master(la_data_in[3])
     /* interface to analog core
     .comp_high_I(comp_high_I),
     .comp_high_Q(comp_high_Q),
@@ -194,17 +194,17 @@ digital_unison #(
 );
 
 digital_unison #(
-    .NUM_CORES(6)
+    .NUM_CORES(8)
 ) digital_unison_instance_4 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[22:21]),
-    .read_out_Q(la_data_out[20:19]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
-    .clk_master(la_data_in[0])
+    .read_out_I(la_data_out[27:26]),
+    .read_out_Q(la_data_out[25:24]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
+    .clk_master(la_data_in[4])
     /* interface to analog core
     .comp_high_I(comp_high_I),
     .comp_high_Q(comp_high_Q),
@@ -222,17 +222,17 @@ digital_unison #(
 );
 
 digital_unison #(
-    .NUM_CORES(6)
+    .NUM_CORES(8)
 ) digital_unison_instance_5 (
     `ifdef USE_POWER_PINS
-        inout vccd1,    // User area 1 1.8V supply
-        inout vssd1,    // User area 1 digital ground
+        .vccd1(vccd1),  // User area 1 1.8V power
+        .vssd1(vssd1),  // User area 1 digital groun
     `endif
-    .read_out_I(la_data_out[26:25]),
-    .read_out_Q(la_data_out[24:23]),
-    .rstb(la_data_in[2]),
-    .ud_en(la_data_in[1]),
-    .clk_master(la_data_in[0])
+    .read_out_I(la_data_out[31:30]),
+    .read_out_Q(la_data_out[29:28]),
+    .rstb(la_data_in[7]),
+    .ud_en(la_data_in[6]),
+    .clk_master(la_data_in[5])
     /* interface to analog core
     .comp_high_I(comp_high_I),
     .comp_high_Q(comp_high_Q),
