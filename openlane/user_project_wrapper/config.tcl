@@ -94,21 +94,23 @@ set ::env(GRT_OBS) "\
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
 
 ### PDN config
-#set ::env(FP_PDN_VOFFSET) 16.32
-#set ::env(FP_PDN_VPITCH) 153.6
-set ::env(FP_PDN_HORIZONTAL_HALO) 420
-set ::env(FP_PDN_VERTICAL_HALO) 420
+set ::env(PDN_CFG) $script_dir/../../pdn_cfg.tcl
+#set ::env(FP_PDN_HORIZONTAL_HALO) 420
+#set ::env(FP_PDN_VERTICAL_HALO) 420
 
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../../../verilog/final_verilog/digital_unison/digital_unison.v"
+	$script_dir/../../../../verilog/final_verilog/digital_unison/digital_unison.v \
+	$script_dir/../../../../verilog/rtl/filter_p_m.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../../../lef/digital_unison.lef"
+	$script_dir/../../../../lef/digital_unison.lef \
+	$script_dir/../../../../lef/filter_p_m.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../../../gds/digital_unison.gds"
+	$script_dir/../../../../gds/digital_unison.gds \
+	$script_dir/../../../../gds/filter_p_m.gds"
 
 # set ::env(GLB_RT_MAXLAYER) 5
 #set ::env(RT_MAX_LAYER) {met4}

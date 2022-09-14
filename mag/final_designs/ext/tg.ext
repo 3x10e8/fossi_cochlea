@@ -18,16 +18,16 @@ node "out" 1514 229.532 214 22 ndc 0 0 0 0 0 0 0 0 5208 292 23436 876 0 0 0 0 0 
 node "ctrl_" 831 269.749 -5 154 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21412 1268 0 0 2244 200 3364 232 0 0 0 0 0 0 0 0 0 0
 node "vdd" 2974 897.997 -29 416 m1 0 0 0 0 118215 1536 0 0 9176 396 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 34018 1852 61769 1482 0 0 0 0 0 0 0 0 0 0
 substrate "vss" 0 0 -29 -128 m1 0 0 0 0 0 0 0 0 0 0 5810 306 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29848 1720 61824 1480 0 0 0 0 0 0 0 0 0 0
-cap "ctrl_" "vdd" 35.4445
-cap "in" "out" 167.696
-cap "ctrl" "out" 49.9732
-cap "ctrl" "in" 26.9812
-cap "out" "vdd" 238.675
 cap "in" "vdd" 37.2037
 cap "ctrl" "vdd" 9.06517
 cap "out" "ctrl_" 29.1476
 cap "in" "ctrl_" 21.8098
 cap "ctrl" "ctrl_" 13.5282
+cap "ctrl_" "vdd" 35.4445
+cap "in" "out" 167.696
+cap "ctrl" "out" 49.9732
+cap "ctrl" "in" 26.9812
+cap "out" "vdd" 238.675
 device msubckt sky130_fd_pr__nfet_01v8 160 0 161 1 l=36 w=84 "vss" "ctrl" 72 0 "in" 84 0 "out" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 110 240 111 241 l=36 w=126 "vdd" "ctrl_" 72 0 "in" 126 0 "out" 126 0
 device msubckt sky130_fd_pr__pfet_01v8 -6 240 -5 241 l=36 w=126 "vdd" "ctrl_" 72 0 "out" 126 0 "in" 126 0

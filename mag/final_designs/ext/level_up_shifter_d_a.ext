@@ -1,4 +1,4 @@
-timestamp 1662951150
+timestamp 1662953364
 version 8.3
 tech sky130B
 style ngspice()
@@ -14,20 +14,15 @@ port "outb" 5 1617 675 1651 1062 m2
 port "out" 6 2136 674 2170 1062 m2
 port "vdda" 4 1506 1586 2794 1682 m1
 node "clk" 1 97.9638 537 864 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12240 788 0 0 0 0 0 0 0 0
-node "vccd" 1 212.983 557 498 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46944 1170 0 0 0 0 0 0 0 0 0 0
+node "vccd" 1 209.791 557 498 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46944 1170 0 0 0 0 0 0 0 0 0 0
 node "vssd" 1 171.423 402 1042 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 61824 1480 0 0 0 0 0 0 0 0 0 0
 node "vccd" 1 229.314 465 1586 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 55776 1354 0 0 0 0 0 0 0 0 0 0
-node "a_1230_594#" 7247 1220.34 1230 594 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133210 8874 0 0 21070 1274 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_1203_1219#" 7016 1341.41 1203 1219 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130100 8562 0 0 27102 1720 0 0 0 0 0 0 0 0 0 0 0 0
-node "outb" 5370 1157.6 1617 675 m2 0 0 0 0 0 0 0 0 53760 2816 5544 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 34646 2582 44998 2736 19878 1172 0 0 0 0 0 0 0 0
+node "a_1230_594#" 7247 1220.07 1230 594 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133210 8874 0 0 21070 1274 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1203_1219#" 7016 1341.3 1203 1219 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130100 8562 0 0 27102 1720 0 0 0 0 0 0 0 0 0 0 0 0
+node "outb" 5370 1139.4 1617 675 m2 0 0 0 0 0 0 0 0 53760 2816 5544 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 34646 2582 44998 2736 19878 1172 0 0 0 0 0 0 0 0
 node "out" 5529 1413.95 2136 674 m2 0 0 0 0 0 0 0 0 53760 2816 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7734 534 0 0 47328 3328 47505 2902 19976 1176 0 0 0 0 0 0 0 0
-node "vdda" 8178 1716.04 1506 1586 m1 0 0 0 0 95120 1284 0 0 67356 3492 5964 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68476 4844 206610 7008 0 0 0 0 0 0 0 0 0 0
-substrate "vssd" 0 0 1112 620 ppd 0 0 0 0 0 0 0 0 62400 3200 15720 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68816 4796 182393 6336 4144 260 0 0 0 0 0 0 0 0
-cap "vccd" "a_1230_594#" 1.67425
-cap "vccd" "clk" 0.977269
-cap "vdda" "vssd" 7.61446
-cap "out" "a_1230_594#" 40.9992
-cap "a_1203_1219#" "a_1230_594#" 226.569
+node "vdda" 8178 1715.74 1506 1586 m1 0 0 0 0 95120 1284 0 0 67356 3492 5964 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68476 4844 206610 7008 0 0 0 0 0 0 0 0 0 0
+substrate "vssd" 0 0 1112 620 ppd 0 0 0 0 0 0 0 0 62400 3200 15720 742 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68816 4796 182393 6336 0 0 0 0 0 0 0 0 0 0
 cap "a_1203_1219#" "vccd" 0.846836
 cap "vdda" "a_1230_594#" 84.9453
 cap "a_1203_1219#" "out" 58.531
@@ -36,7 +31,7 @@ cap "vccd" "vssd" 51.3333
 cap "clk" "vssd" 13.8225
 cap "vdda" "out" 803.023
 cap "vdda" "a_1203_1219#" 104.449
-cap "outb" "a_1230_594#" 58.0906
+cap "outb" "a_1230_594#" 58.1267
 cap "vccd" "a_1230_594#" 2.07031
 cap "a_1230_594#" "clk" 2.44032
 cap "outb" "out" 157.585
@@ -53,6 +48,11 @@ cap "vccd" "vssd" 43.2048
 cap "out" "vssd" 2.2817
 cap "a_1203_1219#" "vssd" 4.34257
 cap "outb" "clk" 16.5456
+cap "vccd" "a_1230_594#" 1.67425
+cap "vccd" "clk" 0.977269
+cap "vdda" "vssd" 7.61446
+cap "out" "a_1230_594#" 40.9992
+cap "a_1203_1219#" "a_1230_594#" 226.569
 device msubckt sky130_fd_pr__nfet_01v8 2527 620 2528 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "out" 120 0 "vssd" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2441 620 2442 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "vssd" 120 0 "out" 120 0
 device msubckt sky130_fd_pr__nfet_01v8 2354 620 2355 621 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "out" 120 0 "vssd" 120 0
@@ -87,10 +87,6 @@ device msubckt sky130_fd_pr__nfet_01v8 1316 1060 1317 1061 l=30 w=120 "vssd" "a_
 device msubckt sky130_fd_pr__nfet_01v8 1230 1060 1231 1061 l=30 w=120 "vssd" "a_1203_1219#" 60 0 "vdda" 120 0 "outb" 120 0
 device msubckt sky130_fd_pr__pfet_01v8 1930 1375 1931 1376 l=30 w=84 "vdda" "outb" 60 0 "vdda" 84 0 "out" 84 0
 device msubckt sky130_fd_pr__pfet_01v8 1829 1375 1830 1376 l=30 w=84 "vdda" "out" 60 0 "outb" 84 0 "vdda" 84 0
-cap "comp_clks_stg1_0/clka" "out" 0.290392
-cap "outb" "comp_clks_stg1_0/clkb" 8.42006
-cap "vdda" "comp_clks_stg1_0/vdd" 26.6561
-cap "comp_clks_stg1_0/vdd" "comp_clks_stg1_0/vss" -22.9029
 cap "out" "comp_clks_stg1_0/vdd" 0.822164
 cap "comp_clks_stg1_0/clkb" "vdda" 12.8457
 cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/vdd" -1.06102
@@ -119,19 +115,16 @@ cap "comp_clks_stg1_0/clk" "vdda" 2.70287
 cap "comp_clks_stg1_0/clkb" "comp_clks_stg1_0/vdd" 1.03532
 cap "outb" "comp_clks_stg1_0/vdd" 8.94594
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vss" 38.2506
-cap "comp_clks_stg1_0/vdd" "comp_clks_stg1_0/vss" 3.4661
-cap "vdda" "comp_clks_stg1_0/vdd" 12.3854
-cap "outb" "comp_clks_stg1_0/clkb" 0.169616
-cap "comp_clks_stg1_0/clka" "out" 0.775608
-cap "out" "comp_clks_stg1_0/vdd" 2.67442
-cap "comp_clks_stg1_0/clkb" "vdda" 5.6382
-cap "outb" "comp_clks_stg1_0/vss" 0.275431
-cap "vdda" "comp_clks_stg1_0/vss" 3.25917
+cap "comp_clks_stg1_0/clka" "out" 0.290392
+cap "outb" "comp_clks_stg1_0/clkb" 8.42006
+cap "vdda" "comp_clks_stg1_0/vdd" 26.6561
+cap "comp_clks_stg1_0/vdd" "comp_clks_stg1_0/vss" -24.5207
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vdd" 0.206606
 cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/clkb" 0.0298118
 cap "outb" "out" -0.067233
-cap "comp_clks_stg1_0/clka" "outb" -0.001484
+cap "vdda" "comp_clks_stg1_0/vss" 3.25917
 cap "comp_clks_stg1_0/clk" "comp_clks_stg1_0/vss" 0.645362
+cap "comp_clks_stg1_0/clka" "outb" -0.001484
 cap "out" "vdda" -1.40216
 cap "comp_clks_stg1_0/clk" "out" 1.66557
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/clk" 0.147657
@@ -146,7 +139,14 @@ cap "comp_clks_stg1_0/clk" "vdda" 5.42465
 cap "comp_clks_stg1_0/clkb" "comp_clks_stg1_0/vdd" 0.71017
 cap "comp_clks_stg1_0/clka" "comp_clks_stg1_0/vss" 0.537369
 cap "outb" "comp_clks_stg1_0/vdd" 1.02095
-merge "comp_clks_stg1_0/VSUBS" "comp_clks_stg1_0/vss" -290.693 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -61824 -1480 0 0 0 0 0 0 0 0 0 0
+cap "outb" "comp_clks_stg1_0/clkb" 0.169616
+cap "comp_clks_stg1_0/clka" "out" 0.775608
+cap "comp_clks_stg1_0/vdd" "comp_clks_stg1_0/vss" 3.4661
+cap "vdda" "comp_clks_stg1_0/vdd" 12.3854
+cap "out" "comp_clks_stg1_0/vdd" 2.67442
+cap "comp_clks_stg1_0/clkb" "vdda" 5.6382
+cap "outb" "comp_clks_stg1_0/vss" 0.275431
+merge "comp_clks_stg1_0/VSUBS" "comp_clks_stg1_0/vss" -287.735 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -61824 -1480 0 0 0 0 0 0 0 0 0 0
 merge "comp_clks_stg1_0/vss" "vssd"
 merge "comp_clks_stg1_0/vdd" "vccd" -534.587 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -102720 -2524 0 0 0 0 0 0 0 0 0 0
 merge "comp_clks_stg1_0/clk" "clk" -150.238 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12240 -788 0 0 0 0 0 0 0 0

@@ -1,4 +1,4 @@
-timestamp 1662950163
+timestamp 1662953364
 version 8.3
 tech sky130B
 style ngspice()
@@ -18,10 +18,6 @@ node "clka" 0 83.3699 315 200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "vdd" 1 209.986 155 544 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46944 1170 0 0 0 0 0 0 0 0 0 0
 node "clkb" 119 152.824 500 -405 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10778 702 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "vdd" "clkb" 1.38926
-cap "vdd" "clkb" 10.9363
-cap "vdd" "vss" 38.6988
-cap "clka" "vss" 21.8571
 cap "clk" "vss" 20.1639
 cap "vdd" "vss" 121.961
 cap "vdd" "clka" 16.0286
@@ -29,21 +25,25 @@ cap "vdd" "clk" 2.69141
 cap "clka" "clk" 1.47408
 cap "vdd" "clk" 3.56638
 cap "vss" "clkb" 4.88589
+cap "vdd" "clkb" 1.38926
+cap "vdd" "clkb" 10.9363
+cap "vdd" "vss" 38.6988
+cap "clka" "vss" 21.8571
+cap "inverter_0/vdd" "tg_0/ctrl_" -19.387
+cap "inverter_0/vdd" "inverter_0/out" -16.0286
+cap "tg_0/out" "tg_0/ctrl" 40.2855
+cap "tg_0/in" "tg_0/ctrl_" 31.4099
+cap "inverter_0/out" "tg_0/in" 10.7443
+cap "inverter_0/vdd" "tg_0/out" 18.25
+cap "inverter_0/out" "tg_0/ctrl_" -19.0823
+cap "tg_0/out" "tg_0/in" 9.75407
+cap "inverter_0/vdd" "tg_0/ctrl" 43.9867
 cap "tg_0/out" "tg_0/ctrl_" 15.875
 cap "tg_0/ctrl" "tg_0/in" 35.7753
 cap "tg_0/out" "inverter_0/out" 2.35546
 cap "inverter_0/vdd" "tg_0/in" 15.3008
 cap "tg_0/ctrl" "tg_0/ctrl_" -67.4131
 cap "tg_0/ctrl" "inverter_0/out" 4.48585
-cap "inverter_0/vdd" "tg_0/ctrl_" -19.387
-cap "inverter_0/vdd" "inverter_0/out" -16.0286
-cap "tg_0/in" "tg_0/ctrl_" 31.4099
-cap "tg_0/out" "tg_0/ctrl" 40.2855
-cap "inverter_0/out" "tg_0/in" 10.7443
-cap "inverter_0/vdd" "tg_0/out" 18.25
-cap "inverter_0/out" "tg_0/ctrl_" -19.0823
-cap "tg_0/out" "tg_0/in" 9.75407
-cap "inverter_0/vdd" "tg_0/ctrl" 43.9867
 merge "inverter_0/vss" "tg_0/ctrl_" -876.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21896 -1356 -124528 -3084 0 0 0 0 0 0 0 0 0 0
 merge "tg_0/ctrl_" "VSUBS"
 merge "VSUBS" "tg_0/vss"
