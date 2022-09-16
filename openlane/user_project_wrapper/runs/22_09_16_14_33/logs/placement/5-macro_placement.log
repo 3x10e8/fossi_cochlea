@@ -1,0 +1,29 @@
+OpenROAD 4174c3ad802d2ac1d04d387d2c4b883903f6647e 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_16_14_33/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_16_14_33/tmp/merged.nom.lef at line 68342.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 443 library cells
+[INFO ODB-0226] Finished LEF file:  /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_16_14_33/tmp/merged.nom.lef
+[INFO ODB-0127] Reading DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_16_14_33/tmp/floorplan/4-io.def
+[INFO ODB-0128] Design: user_project_wrapper
+[INFO ODB-0130]     Created 637 pins.
+[INFO ODB-0131]     Created 8 components and 651 component-terminals.
+[INFO ODB-0133]     Created 672 nets and 103 connections.
+[INFO ODB-0134] Finished DEF file: /local_disk/fossi_cochlea/openlane/user_project_wrapper/runs/22_09_16_14_33/tmp/floorplan/4-io.def
+Placing the following macros:
+{'digital_unison_instance_0': ['500000', '320000', 'N'], 'analog_Q_0': ['500000', '100000', 'N'], 'digital_unison_instance_1': ['500000', '860000', 'N'], 'digital_unison_instance_2': ['500000', '1400000', 'N'], 'digital_unison_instance_3': ['500000', '1940000', 'N'], 'digital_unison_instance_4': ['500000', '2480000', 'N'], 'digital_unison_instance_5': ['500000', '3020000', 'N']}
+Design name: user_project_wrapper
+Placing analog_Q_0
+Placing digital_unison_instance_0
+Placing digital_unison_instance_1
+Placing digital_unison_instance_2
+Placing digital_unison_instance_3
+Placing digital_unison_instance_4
+Placing digital_unison_instance_5
+Successfully placed 7 instances
