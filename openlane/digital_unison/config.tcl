@@ -152,7 +152,10 @@ set ::env(FP_SIZING) absolute
 #set ::env(DIE_AREA) "0 0 1440 150"
 # pass
 
-set ::env(DIE_AREA) "0 0 1920 120"
+# set ::env(DIE_AREA) "0 0 1920 120"
+# pass, but too small to fit 8 analog cores
+
+set ::env(DIE_AREA) "0 0 2040 120"
 
 #set ::env(DIE_AREA) "0 0 250 300" 
 # fails AREA0/1/2: congestion too high
