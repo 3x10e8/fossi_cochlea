@@ -1,19 +1,10 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663377545
-<< error_p >>
-rect 47730 579 51182 580
-rect 98514 579 101966 580
-rect 149298 579 152750 580
-rect 200082 579 203534 580
-rect 250866 579 254318 580
-rect 301650 579 305102 580
-rect 352434 579 355886 580
-rect 403218 579 406670 580
-use filter_p_m  filter_p_m_0 /local_disk/fossi_cochlea/mag/final_designs
+timestamp 1663464516
+use filter_p_m  filter_p_m_0
 array 0 7 50784 0 0 13945
-timestamp 1663377545
+timestamp 1663464270
 transform 1 0 26 0 1 0
 box -26 0 51192 35689
 << end >>
