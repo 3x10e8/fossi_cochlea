@@ -32,7 +32,7 @@ use inverter  inverter_2
 timestamp 1662948631
 transform 1 0 828 0 -1 -32
 box -276 -128 368 512
-use tg  tg_0 /local_disk/fossi_cochlea/mag/final_designs
+use tg  tg_0
 timestamp 1662948056
 transform 1 0 276 0 -1 -32
 box -276 -128 368 512

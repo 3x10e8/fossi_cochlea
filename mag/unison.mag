@@ -1,20 +1,11 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663377545
-<< error_p >>
-rect 47730 -35110 51182 -35109
-rect 98514 -35110 101966 -35109
-rect 149298 -35110 152750 -35109
-rect 200082 -35110 203534 -35109
-rect 250866 -35110 254318 -35109
-rect 301650 -35110 305102 -35109
-rect 352434 -35110 355886 -35109
-rect 403218 -35110 406670 -35109
-use analog_core_Q  analog_core_Q_0
-timestamp 1663377545
+timestamp 1663635562
+use analog_core_Q  analog_core_Q_0 final_designs
+timestamp 1663635562
 transform 1 0 0 0 1 -35689
-box 0 0 406706 35689
+box 0 0 406272 35689
 use digital_unison  digital_unison_0
 timestamp 1663374934
 transform 1 0 0 0 1 0

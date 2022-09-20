@@ -94,23 +94,26 @@ digital_unison #(
     .read_out_Q(la_data_out[9:8]),
     .rstb(la_data_in[7]),
     .ud_en(la_data_in[6]),
-    .clk_master(la_data_in[0]),
+    .clk_master(la_data_in[0])
     
-    //interface to analog core
-    //.comp_high_I(comp_high_I),
-    .comp_high_Q(comp_high_Q),
-    //.phi1b_dig_I(phi1b_dig_I),
-    .phi1b_dig_Q(phi1b_dig_Q),
-    //.clkdiv2_I(clkdiv2_I),
-    .clkdiv2_Q(clkdiv2_Q),
-    //.cclk_I(cclk_I),
-    .cclk_Q(cclk_Q),
-    //.fb1_I(fb1_I),
-    .fb1_Q(fb1_Q),
-    //.cos_out(cos_out),
-    .sin_out(sin_out)
+	/*
+	    //interface to analog core
+	    //.comp_high_I(comp_high_I),
+	    .comp_high_Q(comp_high_Q),
+	    //.phi1b_dig_I(phi1b_dig_I),
+	    .phi1b_dig_Q(phi1b_dig_Q),
+	    //.clkdiv2_I(clkdiv2_I),
+	    .clkdiv2_Q(clkdiv2_Q),
+	    //.cclk_I(cclk_I),
+	    .cclk_Q(cclk_Q),
+	    //.fb1_I(fb1_I),
+	    .fb1_Q(fb1_Q),
+	    //.cos_out(cos_out),
+	    .sin_out(sin_out)
+	*/
 );
 
+/*
 filter_p_m analog_Q_0 (
     `ifdef USE_POWER_PINS
         .vdda1(vdda1),
@@ -129,6 +132,29 @@ filter_p_m analog_Q_0 (
     .fb1(fb1_Q),
     .high_buf(comp_high_Q),
     .phi1b_dig(phi1b_dig_Q)
+);
+*/
+
+analog_core_Q analog_core_Q_0 (
+    `ifdef USE_POWER_PINS
+        .vdda(vdda1),
+        .vccd(vccd1), // User area 1 1.8V power
+        .vssd(vssd1), // User area 1 digital groun
+    `endif
+    .inp(analog_io[0]),
+    .inm(analog_io[1]),
+    .vpb(analog_io[2]),
+    .vnb(analog_io[3]),
+    .th1(analog_io[4]),
+    .th2(analog_io[5])
+	/*,
+	    .div2(clkdiv2_Q),
+	    .cclk(cclk_Q),
+	    .lo(sin_out),
+	    .fb1(fb1_Q),
+	    .high_buf(comp_high_Q),
+	    .phi1b_dig(phi1b_dig_Q)
+	*/
 );
 
 digital_unison #(

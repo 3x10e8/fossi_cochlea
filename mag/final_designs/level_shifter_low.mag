@@ -69,7 +69,7 @@ rect 802 28 949 50
 rect 1000 50 1009 78
 rect 1000 28 1152 50
 rect 802 -46 1152 28
-use sky130_fd_sc_hd__inv_8  sky130_fd_sc_hd__inv_8_0 dependencies/pdks/sky130B/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__inv_8  sky130_fd_sc_hd__inv_8_0
 timestamp 1662439860
 transform 1 0 -18 0 1 2
 box -38 -48 866 592

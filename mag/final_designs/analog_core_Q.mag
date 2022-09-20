@@ -1,10 +1,43 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663464516
+timestamp 1663642648
+<< metal3 >>
+rect 405414 31640 406272 31740
+rect 405414 31440 406272 31540
+rect 405418 30886 406272 30986
+rect 405418 30686 406272 30786
+rect 405420 30486 406272 30586
+rect 405400 29358 406272 29458
+<< metal4 >>
+rect 404942 962 406272 1160
+rect 404942 320 406272 519
+<< obsm4 >>
+rect -188 1484 -182 29300
+<< obsm5 >>
+rect -188 1484 -182 29300
 use filter_p_m  filter_p_m_0
 array 0 7 50784 0 0 13945
-timestamp 1663464270
+timestamp 1663642476
 transform 1 0 26 0 1 0
-box -26 0 51192 35689
+box -26 -328 50758 35689
+<< labels >>
+flabel metal3 405414 31640 406272 31740 1 FreeSans 1600 0 0 0 vnb
+port 1 n default bidirectional
+flabel metal3 405414 31440 406272 31540 1 FreeSans 1600 0 0 0 vpb
+port 2 n default bidirectional
+flabel metal3 405418 30886 406272 30986 1 FreeSans 1600 0 0 0 vccd
+port 3 n default bidirectional
+flabel metal3 405418 30686 406272 30786 1 FreeSans 1600 0 0 0 th1
+port 4 n default bidirectional
+flabel metal3 405420 30486 406272 30586 1 FreeSans 1600 0 0 0 th2
+port 5 n default bidirectional
+flabel space 405400 29550 406272 29649 1 FreeSans 1600 0 0 0 vssd
+port 6 n default bidirectional
+flabel metal3 405400 29358 406272 29458 1 FreeSans 1600 0 0 0 vdda
+port 7 n default bidirectional
+flabel metal4 404942 962 406272 1160 1 FreeSans 1600 0 0 0 inm
+port 8 n default bidirectional
+flabel metal4 404942 320 406272 519 1 FreeSans 1600 0 0 0 inp
+port 9 n default bidirectional
 << end >>

@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1662953364
+timestamp 1663630899
 << nwell >>
 rect 1267 724 1597 1115
 rect 1283 9 1613 29
@@ -34,7 +34,6 @@ rect -1661 450 -1078 468
 rect -1661 398 -1546 450
 rect -1494 398 -1078 450
 rect -1661 371 -1078 398
-rect -1034 371 -1016 468
 rect 635 371 731 1128
 rect 3032 784 3080 968
 rect 906 705 962 716
@@ -759,11 +758,23 @@ use cclkgen  cclkgen_0
 timestamp 1662953364
 transform 1 0 876 0 1 -2136
 box 0 0 2484 1184
+use cclkgen  cclkgen_1
+timestamp 1662953364
+transform 1 0 876 0 1 -2136
+box 0 0 2484 1184
 use level_up_shifter_d_a  level_up_shifter_d_a_0
 timestamp 1662953364
 transform 1 0 -2063 0 1 -1215
 box 402 498 2794 1683
 use level_up_shifter_d_a  level_up_shifter_d_a_1
+timestamp 1662953364
+transform 1 0 -2063 0 1 -1215
+box 402 498 2794 1683
+use level_up_shifter_d_a  level_up_shifter_d_a_2
+timestamp 1662953364
+transform 1 0 -2063 0 -1 -123
+box 402 498 2794 1683
+use level_up_shifter_d_a  level_up_shifter_d_a_3
 timestamp 1662953364
 transform 1 0 -2063 0 -1 -123
 box 402 498 2794 1683
@@ -773,15 +784,19 @@ transform 1 0 876 0 1 40
 box 0 0 2484 1184
 use phigen  phigen_1
 timestamp 1662953364
+transform 1 0 876 0 1 40
+box 0 0 2484 1184
+use phigen  phigen_2
+timestamp 1662953364
+transform 1 0 876 0 1 -1048
+box 0 0 2484 1184
+use phigen  phigen_3
+timestamp 1662953364
 transform 1 0 876 0 1 -1048
 box 0 0 2484 1184
 << labels >>
 rlabel metal4 2739 750 2739 750 7 GND
 rlabel metal4 1438 1118 1438 1118 3 VCCD
-flabel poly -1492 -989 -1355 -953 1 FreeSans 3200 0 0 0 cclk
-port 1 n default input
-flabel poly -1492 -385 -1355 -349 1 FreeSans 3200 0 0 0 div2
-port 2 n default input
 flabel metal1 3032 296 3080 480 1 FreeSans 800 0 0 0 phi2b
 port 3 n default output
 flabel metal1 3032 784 3080 968 1 FreeSans 800 0 0 0 phi2
@@ -794,14 +809,18 @@ flabel metal1 3031 -1880 3082 -1696 1 FreeSans 800 0 0 0 cclkb_ana
 port 7 n default output
 flabel metal1 3031 -1392 3082 -1208 1 FreeSans 800 0 0 0 cclk_ana
 port 8 n default output
-flabel metal2 1282 -700 1317 373 1 FreeSans 3200 0 0 0 vnb
-port 9 n default input
-flabel metal2 1904 -322 1939 751 1 FreeSans 1600 0 0 0 vpb
-port 10 n default input
-flabel metal1 -1661 371 -1016 468 1 FreeSans 3200 0 0 0 vccd
-port 11 n default bidirectional
-flabel metal1 635 371 731 1224 1 FreeSans 3200 0 0 0 vdda
-port 12 n default bidirectional
-flabel metal4 -1116 -717 -686 -621 1 FreeSans 3200 0 0 0 vssd
-port 13 n default bidirectional
+flabel metal1 -1494 371 -1078 468 1 FreeSans 800 0 0 0 vccd
+port 14 n default bidirectional
+flabel poly -1492 -385 -1355 -349 1 FreeSans 800 0 0 0 div2
+port 15 n default input
+flabel poly -1492 -989 -1355 -953 1 FreeSans 800 0 0 0 cclk
+port 16 n default input
+flabel metal4 -1116 -717 -686 -621 1 FreeSans 800 0 0 0 vssd
+port 17 n default bidirectional
+flabel metal1 635 371 731 1224 1 FreeSans 800 0 0 0 vdda
+port 18 n
+flabel metal2 1282 -700 1317 373 1 FreeSans 800 0 0 0 vnb
+port 19 n default bidirectional
+flabel metal2 1904 -322 1939 751 1 FreeSans 800 0 0 0 vpb
+port 20 n default bidirectional
 << end >>

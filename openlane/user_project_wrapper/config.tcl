@@ -104,15 +104,15 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
 	$script_dir/../../../../verilog/final_verilog/digital_unison/digital_unison.v \
-	$script_dir/../../../../verilog/rtl/filter_p_m.v"
+	$script_dir/../../../../verilog/rtl/analog_core_Q.v"
 
 set ::env(EXTRA_LEFS) "\
 	$script_dir/../../../../lef/digital_unison.lef \
-	$script_dir/../../../../lef/filter_p_m.lef"
+	$script_dir/../../../../lef/analog_core_Q.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
 	$script_dir/../../../../gds/digital_unison.gds \
-	$script_dir/../../../../gds/filter_p_m.gds"
+	$script_dir/../../../../gds/analog_core_Q.gds"
 
 # set ::env(GLB_RT_MAXLAYER) 5
 #set ::env(RT_MAX_LAYER) {met4}
