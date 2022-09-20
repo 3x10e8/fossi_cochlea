@@ -51,7 +51,10 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	digital_unison_instance_2 vccd1 vssd1 vccd1 vssd1, \
 	digital_unison_instance_3 vccd1 vssd1 vccd1 vssd1, \
 	digital_unison_instance_4 vccd1 vssd1 vccd1 vssd1, \
-	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1 "
+	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_0 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_0 vdda1 vssa1 vdda1 vssd1"
+# ADC example: https://open-source-silicon.slack.com/archives/C0161A4A59V/p1659367271479269?thread_ts=1659363344.518659&cid=C0161A4A59V
 
 set COMMENTED_OUT {
 	set ::env(GRT_OBS) "\
