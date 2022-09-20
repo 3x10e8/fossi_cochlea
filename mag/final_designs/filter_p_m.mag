@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663642476
+timestamp 1663650483
 << nwell >>
 rect 25556 34014 25620 34078
 << psubdiff >>
@@ -679,7 +679,6 @@ rect -26 322 1074 521
 rect -26 320 573 322
 rect 47642 320 50758 519
 << obsm4 >>
-rect -26 35656 50758 35689
 rect -26 -328 50758 -320
 << metal5 >>
 rect -26 900 692 1220
@@ -688,7 +687,6 @@ rect -26 260 692 580
 rect 47704 579 50758 580
 rect 47384 260 50758 579
 << obsm5 >>
-rect -26 35656 50758 35689
 rect -26 -328 50758 -320
 use comparator  comparator_0
 timestamp 1662929294
@@ -707,11 +705,11 @@ timestamp 1663630899
 transform 1 0 20194 0 1 33977
 box -1661 -2136 3360 1229
 use level_shifter_low  level_shifter_low_0
-timestamp 1662946268
+timestamp 1663650483
 transform 1 0 24311 0 1 33500
 box -71 -46 2139 722
 use level_shifter_low  level_shifter_low_1
-timestamp 1662946268
+timestamp 1663650483
 transform 1 0 24311 0 -1 33504
 box -71 -46 2139 722
 use level_up_shifter_d_a  level_up_shifter_d_a_0

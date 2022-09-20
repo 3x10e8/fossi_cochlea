@@ -137,9 +137,12 @@ filter_p_m analog_Q_0 (
 
 analog_core_Q analog_core_Q_0 (
     `ifdef USE_POWER_PINS
-        .vdda(vdda1),
-        .vccd(vccd1), // User area 1 1.8V power
-        .vssd(vssd1), // User area 1 digital groun
+        //.vdda(vdda1),
+        //.vccd(vccd1), // User area 1 1.8V power
+        //.vssd(vssd1), // User area 1 digital ground
+	.vdda1(vdda1),
+        .vccd1(vccd1), // User area 1 1.8V power
+        .vssd1(vssd1), // User area 1 digital ground
     `endif
     .inp(analog_io[0]),
     .inm(analog_io[1]),

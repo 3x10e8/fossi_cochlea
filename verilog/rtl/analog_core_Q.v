@@ -8,10 +8,14 @@ module analog_core_Q(
 	// all the cores come out to the east side
 
 	`ifdef USE_POWER_PINS
-	    inout vdda, // 1.2V analog supply
+	    //inout vdda, // 1.2V analog supply
 	    //inout vdda2, // tunable analog mux supply
-	    inout vccd, // comparator supply and to level shifters
-	    inout vssd, // all gnds shorted to vssd1
+	    //inout vccd, // comparator supply and to level shifters
+	    //inout vssd, // all gnds shorted to vssd1
+	    inout vdda1, // 1.2V analog supply
+	    //inout vdda2, // tunable analog mux supply
+	    inout vccd1, // comparator supply and to level shifters
+	    inout vssd1, // all gnds shorted to vssd1
 	`endif
 	
 	// interface to analog signals / power bus
