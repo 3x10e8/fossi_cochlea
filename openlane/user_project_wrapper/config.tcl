@@ -52,6 +52,8 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	digital_unison_instance_3 vccd1 vssd1 vccd1 vssd1, \
 	digital_unison_instance_4 vccd1 vssd1 vccd1 vssd1, \
 	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_0 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_0 vdda1 vssa1 vdda1 vssd1, \
 	analog_core_Q_0 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_0 vdda1 vssa1 vdda1 vssd1"
 # ADC example: https://open-source-silicon.slack.com/archives/C0161A4A59V/p1659367271479269?thread_ts=1659363344.518659&cid=C0161A4A59V
@@ -107,14 +109,17 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/../../macro.cfg
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
 	$script_dir/../../../../verilog/final_verilog/digital_unison/digital_unison.v \
+	$script_dir/../../../../verilog/rtl/analog_core_I.v \
 	$script_dir/../../../../verilog/rtl/analog_core_Q.v"
 
 set ::env(EXTRA_LEFS) "\
 	$script_dir/../../../../lef/digital_unison.lef \
+	$script_dir/../../../../lef/analog_core_I.lef \
 	$script_dir/../../../../lef/analog_core_Q.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
 	$script_dir/../../../../gds/digital_unison.gds \
+	$script_dir/../../../../gds/analog_core_I.gds \
 	$script_dir/../../../../gds/analog_core_Q.gds"
 
 # set ::env(GLB_RT_MAXLAYER) 5

@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663650483
+timestamp 1663819943
 << nwell >>
 rect 25556 34014 25620 34078
 << psubdiff >>
@@ -164,7 +164,7 @@ rect 24645 28401 24697 28453
 rect 23884 27572 23936 27624
 rect 24018 26706 24070 26758
 << metal2 >>
-rect 5052 35140 5108 35689
+rect 5052 35140 5108 37140
 rect 5104 35088 5108 35140
 rect 5052 35082 5108 35088
 rect 8880 35140 8932 35146
@@ -200,13 +200,13 @@ rect 10666 29550 10676 29648
 rect 10908 29550 10918 29648
 rect 10666 29540 10918 29550
 rect 11276 29472 11508 34376
-rect 13516 33032 13572 35689
+rect 13516 33032 13572 37140
 rect 18870 35470 18934 35476
 rect 18870 35418 18876 35470
 rect 18928 35418 18934 35470
 rect 18870 35412 18934 35418
-rect 21980 35470 22036 35689
-rect 30444 35490 30500 35689
+rect 21980 35470 22036 37140
+rect 30444 35490 30500 37140
 rect 21980 35418 21982 35470
 rect 22034 35418 22036 35470
 rect 21980 35416 22036 35418
@@ -217,7 +217,7 @@ rect 30429 35409 30434 35481
 rect 30506 35409 30511 35481
 rect 30429 35404 30511 35409
 rect 33938 35459 34002 35468
-rect 38908 35466 38964 35689
+rect 38908 35466 38964 37140
 rect 30434 35400 30506 35404
 rect 24646 34878 24698 34884
 rect 24646 34820 24698 34826
@@ -305,7 +305,7 @@ rect 33938 32119 34002 35395
 rect 38906 35457 38966 35466
 rect 38906 35388 38966 35397
 rect 39368 34985 39428 34994
-rect 47372 34992 47428 35689
+rect 47372 34992 47428 37140
 rect 47368 34983 47428 34992
 rect 47368 34927 47370 34983
 rect 47426 34927 47428 34983
@@ -705,11 +705,11 @@ timestamp 1663630899
 transform 1 0 20194 0 1 33977
 box -1661 -2136 3360 1229
 use level_shifter_low  level_shifter_low_0
-timestamp 1663650483
+timestamp 1663814281
 transform 1 0 24311 0 1 33500
 box -71 -46 2139 722
 use level_shifter_low  level_shifter_low_1
-timestamp 1663650483
+timestamp 1663814281
 transform 1 0 24311 0 -1 33504
 box -71 -46 2139 722
 use level_up_shifter_d_a  level_up_shifter_d_a_0
@@ -721,18 +721,10 @@ timestamp 1662953364
 transform -1 0 39952 0 1 32786
 box 402 498 2794 1683
 << labels >>
-flabel metal3 28122 29358 33044 29458 1 FreeSans 3200 0 0 0 vdda
-port 4 n default bidirectional
 flabel metal3 16 30486 1869 30586 1 FreeSans 800 0 0 0 th2
 port 6 n default bidirectional
-flabel metal3 1242 29549 23388 29649 1 FreeSans 3200 0 0 0 vssd
-port 2 n default bidirectional
-flabel metal3 17 30886 48059 30986 1 FreeSans 3200 0 0 0 vccd
-port 3 n default bidirectional
 flabel metal2 37782 30236 37816 32872 1 FreeSans 1600 0 0 0 ctrl
 flabel metal2 38301 30356 38335 32884 1 FreeSans 1600 0 0 0 ctrl_
-flabel metal2 8890 34470 8923 35131 1 FreeSans 1600 0 0 0 fb1
-port 13 n default input
 flabel metal2 9969 33461 10003 33848 1 FreeSans 1600 0 0 0 fb
 flabel metal2 10488 33460 10522 33848 1 FreeSans 1600 0 0 0 fb_inv
 flabel metal3 15 30686 1868 30786 1 FreeSans 1600 0 0 0 th1
@@ -745,14 +737,22 @@ flabel metal4 372 322 1074 521 1 FreeSans 1600 0 0 0 inp
 port 22 n default bidirectional
 flabel metal4 372 961 1074 1160 1 FreeSans 1600 0 0 0 inm
 port 21 n default bidirectional
-flabel metal2 13516 33032 13572 33899 1 FreeSans 1600 0 0 0 cclk
-port 23 n default input
-flabel metal2 18885 35206 18918 35298 1 FreeSans 1600 0 0 0 div2
-port 24 n default input
-flabel metal4 23866 34990 23948 35467 1 FreeSans 1600 0 0 0 high_buf
-port 14 n default output
-flabel metal2 26386 32115 26450 33233 1 FreeSans 1600 0 0 0 phi1b_dig
-port 25 n default output
-flabel metal2 39381 34469 39414 34962 1 FreeSans 1600 0 0 0 lo
-port 26 n default input
+flabel metal2 5052 35140 5108 37140 1 FreeSans 1600 0 0 0 fb1
+port 28 n default input
+flabel metal2 13516 33032 13572 37140 1 FreeSans 1600 0 0 0 cclk
+port 27 n default input
+flabel metal2 21980 35470 22036 37140 1 FreeSans 1600 0 0 0 div2
+port 29 n default input
+flabel metal2 30444 35481 30500 37140 1 FreeSans 1600 0 0 0 high_buf
+port 30 n default output
+flabel metal2 38908 35457 38964 37140 1 FreeSans 1600 0 0 0 phi1b_dig
+port 31 n default output
+flabel metal2 47372 34983 47428 37140 1 FreeSans 1600 0 0 0 lo
+port 32 n default input
+flabel metal3 47584 29358 50758 29458 1 FreeSans 1600 0 0 0 vdda
+port 33 n default bidirectional
+flabel metal3 46890 29549 50758 29649 1 FreeSans 1600 0 0 0 vssd
+port 34 n default bidirectional
+flabel metal3 47808 30886 50758 30986 1 FreeSans 1600 0 0 0 vccd
+port 35 n default bidirectional
 << end >>

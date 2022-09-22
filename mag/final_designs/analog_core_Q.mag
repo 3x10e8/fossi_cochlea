@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663650483
+timestamp 1663820376
 << metal3 >>
 rect 405414 31640 406272 31740
 rect 405414 31440 406272 31540
@@ -14,9 +14,9 @@ rect 404942 962 406272 1160
 rect 404942 320 406272 519
 use filter_p_m  filter_p_m_0
 array 0 7 50784 0 0 13945
-timestamp 1663650483
+timestamp 1663819943
 transform 1 0 26 0 1 0
-box -26 -328 50758 35689
+box -26 -328 50758 37140
 << labels >>
 flabel metal3 405414 31640 406272 31740 1 FreeSans 1600 0 0 0 vnb
 port 1 n default bidirectional

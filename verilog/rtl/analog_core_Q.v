@@ -5,6 +5,7 @@
 // replicate and flip horizontally for I and Q
 (*blackbox*)
 module analog_core_Q(
+    // This is a replica of analog_core_Q just layout is mirrored
 	// all the cores come out to the east side
 
 	`ifdef USE_POWER_PINS
@@ -21,8 +22,8 @@ module analog_core_Q(
 	// interface to analog signals / power bus
 	inout inp, inm, // (gpio_analog is inout) audio inputs
 	inout vpb, vnb, // (gpio_analog is inout) to current starving inverters in phi clkgen
-	inout th1, th2, // (gpio_analog is inout) thresholds for last cap
-	
+	inout th1, th2 //, // (gpio_analog is inout) thresholds for last cap
+	/*
 	// interface to digital core
 	// to phi clk generation
 	input div2, cclk, // to be level-shifted up from vccd1 to vdda1
@@ -35,5 +36,6 @@ module analog_core_Q(
 	// back to digital
 	output high_buf, // comparator is already on vccd1 domain
 	output phi1b_dig // pol/event ff clock
+	*/
 );
 endmodule
