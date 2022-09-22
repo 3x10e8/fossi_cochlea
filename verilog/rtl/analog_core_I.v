@@ -4,7 +4,8 @@
 
 // replicate and flip horizontally for I and Q
 (*blackbox*)
-module analog_core_Q(
+module analog_core_I(
+    // This is a replica of analog_core_Q just layout is mirrored
 	// all the cores come out to the east side
 
 	`ifdef USE_POWER_PINS
