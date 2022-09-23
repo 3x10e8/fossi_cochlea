@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663956652
+timestamp 1663960762
 << metal1 >>
 rect 406162 36972 406274 36978
 rect 406162 36872 406168 36972
@@ -170,8 +170,8 @@ timestamp 1663891137
 transform 1 0 26 0 1 -162
 box -26 -328 50758 37140
 << labels >>
-flabel metal2 5078 36978 5134 36978 5 FreeSans 1600 0 0 0 fb1[0]
-port 1 s default input
+flabel metal2 5078 36978 5134 36978 1 FreeSans 1600 0 0 0 fb1[0]
+port 1 n default input
 flabel metal2 55862 36978 55918 36978 1 FreeSans 1600 0 0 0 fb1[1]
 port 2 n default input
 flabel metal2 106646 36978 106702 36978 1 FreeSans 1600 0 0 0 fb1[2]

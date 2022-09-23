@@ -1,10 +1,10 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663957550
+timestamp 1663962710
 << metal1 >>
 rect 406166 23488 406172 23588
-rect 406272 23488 407700 23588
+rect 406272 23488 407704 23588
 rect 406466 19488 406472 19588
 rect 406572 19488 407704 19588
 rect 406766 15488 406772 15588
@@ -278,6 +278,6 @@ flabel metal1 407704 15488 407704 15588 5 FreeSans 1600 0 0 0 th2
 port 53 n default bidirectional
 flabel metal1 407704 19488 407704 19588 5 FreeSans 1600 0 0 0 vssd1
 port 54 n ground bidirectional
-flabel space 407704 23488 407704 23588 5 FreeSans 1600 0 0 0 vdda1
+flabel metal1 407704 23488 407704 23588 5 FreeSans 1600 0 0 0 vdda1
 port 55 n power bidirectional
 << end >>

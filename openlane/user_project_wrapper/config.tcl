@@ -54,8 +54,6 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_0 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_0 vdda1 vssa1 vdda1 vssd1, \
-	analog_core_I_0 vccd1 vssd1 vccd1 vssd1, \
-	analog_core_I_0 vdda1 vssa1 vdda1 vssd1, \
 	analog_core_Q_1 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_1 vdda1 vssa1 vdda1 vssd1, \
 	analog_core_I_1 vccd1 vssd1 vccd1 vssd1, \
