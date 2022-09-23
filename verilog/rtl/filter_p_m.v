@@ -5,7 +5,6 @@
 // replicate and flip horizontally for I and Q
 (*blackbox*)
 module filter_p_m(
-	/*
 	`ifdef USE_POWER_PINS
 	    inout vdda1, // 1.2V analog supply
 	    //inout vdda2, // tunable analog mux supply
@@ -18,7 +17,7 @@ module filter_p_m(
 	inout inp, inm, // (gpio_analog is inout) audio inputs
 	inout vpb, vnb, // (gpio_analog is inout) to current starving inverters in phi clkgen
 	inout th1, th2, // (gpio_analog is inout) thresholds for last cap
-	*/
+
 	// interface to digital core
 	// to phi clk generation
 	input div2, cclk, // to be level-shifted up from vccd1 to vdda1
