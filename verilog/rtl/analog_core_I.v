@@ -20,22 +20,22 @@ module analog_core_I(
 	`endif
 	
 	// interface to analog signals / power bus
-	inout inp, inm, // (gpio_analog is inout) audio inputs
+	//inout inp, inm, // (gpio_analog is inout) audio inputs
 	inout vpb, vnb, // (gpio_analog is inout) to current starving inverters in phi clkgen
-	inout th1, th2 //, // (gpio_analog is inout) thresholds for last cap
-	/*
+	inout th1, th2, //, // (gpio_analog is inout) thresholds for last cap
+
 	// interface to digital core
 	// to phi clk generation
-	input div2, cclk, // to be level-shifted up from vccd1 to vdda1
+	input [7:0] div2, cclk, // to be level-shifted up from vccd1 to vdda1
 	// to mux for LO
-	input lo, // to be level-shifted up from vccd1 to vdda2, level-shifter generates complementary outputs
+	input [7:0] lo, // to be level-shifted up from vccd1 to vdda2, level-shifter generates complementary outputs
 	// to filter feedback level-shifter-inverter (duplicates for placement)
-	input fb1, // to be complemented by level shifter
+	input [7:0] fb1, // to be complemented by level shifter
 	//input fbm; // 2=-ve side, must take non-inverted output of level shifter
 	
 	// back to digital
-	output high_buf, // comparator is already on vccd1 domain
-	output phi1b_dig // pol/event ff clock
-	*/
+	output [7:0] high_buf, // comparator is already on vccd1 domain
+	output [7:0] phi1b_dig // pol/event ff clock
+
 );
 endmodule
