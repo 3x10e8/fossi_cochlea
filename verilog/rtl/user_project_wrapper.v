@@ -81,8 +81,9 @@ module user_project_wrapper #(
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
-wire [7:0] comp_high_Q, phi1b_dig_Q, clkdiv2_Q, cclk_Q, fb1_Q, sin_out;
-wire [7:0] comp_high_I, phi1b_dig_I, clkdiv2_I, cclk_I, fb1_I, cos_out;
+// interconnects for first unison:
+wire [7:0] comp_high_Q_0, phi1b_dig_Q_0, clkdiv2_Q_0, cclk_Q_0, fb1_Q_0, sin_out_0;
+wire [7:0] comp_high_I_0, phi1b_dig_I_0, clkdiv2_I_0, cclk_I_0, fb1_I_0, cos_out_0;
 
 digital_unison #(
     .NUM_CORES(8)
@@ -105,14 +106,16 @@ digital_unison #(
     .fb1_I(fb1_I[0]),
     .cos_out(cos_out[0]),
 	*/
-    .comp_high_Q(comp_high_Q[0]),
-    .phi1b_dig_Q(phi1b_dig_Q[0]),
-    .clkdiv2_Q(clkdiv2_Q[0]),
-    .cclk_Q(cclk_Q[0]),
-    .fb1_Q(fb1_Q[0]),
-    .sin_out(sin_out[0])
+    .comp_high_Q(comp_high_Q_0),
+    .phi1b_dig_Q(phi1b_dig_Q_0),
+    .clkdiv2_Q(clkdiv2_Q_0),
+    .cclk_Q(cclk_Q_0),
+    .fb1_Q(fb1_Q_0),
+    .sin_out(sin_out_0)
 );
-filter_p_m analog_core_Q_0 (
+
+filter_p_m analog_core_Q_u0_p0 (
+	/*
     `ifdef USE_POWER_PINS
     	.vdda1(vdda1),
         .vccd1(vccd1), // User area 1 1.8V power
@@ -124,13 +127,37 @@ filter_p_m analog_core_Q_0 (
     .vnb(analog_io[3]),
     .th1(analog_io[4]),
     .th2(analog_io[5]),
+	*/
 	//digital i/o
-    .div2(clkdiv2_Q[0]),
-    .cclk(cclk_Q[0]),
-    .lo(sin_out[0]),
-    .fb1(fb1_Q[0]),
-    .high_buf(comp_high_Q[0]),
-    .phi1b_dig(phi1b_dig_Q[0])
+    .div2(clkdiv2_Q_0[0]),
+    .cclk(cclk_Q_0[0]),
+    .lo(sin_out_0[0]),
+    .fb1(fb1_Q_0[0]),
+    .high_buf(comp_high_Q_0[0]),
+    .phi1b_dig(phi1b_dig_Q_0[0])
+);
+
+filter_p_m analog_core_Q_u0_p1 (
+	/*
+    `ifdef USE_POWER_PINS
+    	.vdda1(vdda1),
+        .vccd1(vccd1), // User area 1 1.8V power
+        .vssd1(vssd1), // User area 1 digital ground
+    `endif
+    .inp(analog_io[0]),
+    .inm(analog_io[1]),
+    .vpb(analog_io[2]),
+    .vnb(analog_io[3]),
+    .th1(analog_io[4]),
+    .th2(analog_io[5]),
+	*/
+	//digital i/o
+    .div2(clkdiv2_Q_0[1]),
+    .cclk(cclk_Q_0[1]),
+    .lo(sin_out_0[1]),
+    .fb1(fb1_Q_0[1]),
+    .high_buf(comp_high_Q_0[1]),
+    .phi1b_dig(phi1b_dig_Q_0[1])
 );
 
 /*
