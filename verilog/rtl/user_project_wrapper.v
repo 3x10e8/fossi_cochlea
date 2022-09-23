@@ -95,24 +95,45 @@ digital_unison #(
     .read_out_Q(la_data_out[9:8]),
     .rstb(la_data_in[7]),
     .ud_en(la_data_in[6]),
-    .clk_master(la_data_in[0])
-	/*,
+    .clk_master(la_data_in[0]),
     //interface to analog core
+	/*
     .comp_high_I(comp_high_I),
-    .comp_high_Q(comp_high_Q[0]),
     .phi1b_dig_I(phi1b_dig_I[0]),
-    .phi1b_dig_Q(phi1b_dig_Q[0]),
     .clkdiv2_I(clkdiv2_I[0]),
-    .clkdiv2_Q(clkdiv2_Q[0]),
     .cclk_I(cclk_I[0]),
-    .cclk_Q(cclk_Q[0]),
     .fb1_I(fb1_I[0]),
-    .fb1_Q(fb1_Q[0]),
     .cos_out(cos_out[0]),
-    .sin_out(sin_out[0])
 	*/
+    .comp_high_Q(comp_high_Q[0]),
+    .phi1b_dig_Q(phi1b_dig_Q[0]),
+    .clkdiv2_Q(clkdiv2_Q[0]),
+    .cclk_Q(cclk_Q[0]),
+    .fb1_Q(fb1_Q[0]),
+    .sin_out(sin_out[0])
+);
+filter_p_m analog_core_Q_0 (
+    `ifdef USE_POWER_PINS
+    	.vdda1(vdda1),
+        .vccd1(vccd1), // User area 1 1.8V power
+        .vssd1(vssd1), // User area 1 digital ground
+    `endif
+    .inp(analog_io[0]),
+    .inm(analog_io[1]),
+    .vpb(analog_io[2]),
+    .vnb(analog_io[3]),
+    .th1(analog_io[4]),
+    .th2(analog_io[5]),
+	//digital i/o
+    .div2(clkdiv2_Q[0]),
+    .cclk(cclk_Q[0]),
+    .lo(sin_out[0]),
+    .fb1(fb1_Q[0]),
+    .high_buf(comp_high_Q[0]),
+    .phi1b_dig(phi1b_dig_Q[0])
 );
 
+/*
 analog_core_Q analog_core_Q_0 (
     `ifdef USE_POWER_PINS
     	.vdda1(vdda1),
@@ -124,15 +145,15 @@ analog_core_Q analog_core_Q_0 (
     .vpb(analog_io[2]),
     .vnb(analog_io[3]),
     .th1(analog_io[4]),
-    .th2(analog_io[5])
-	/*,
+    .th2(analog_io[5]),
+	//digital i/o
     .div2(clkdiv2_Q[0]),
     .cclk(cclk_Q[0]),
     .lo(sin_out[0]),
     .fb1(fb1_Q[0]),
     .high_buf(comp_high_Q[0]),
     .phi1b_dig(phi1b_dig_Q[0])
-	*/
+
 );
 
 analog_core_I analog_core_I_0 (
@@ -146,16 +167,17 @@ analog_core_I analog_core_I_0 (
     .vpb(analog_io[2]),
     .vnb(analog_io[3]),
     .th1(analog_io[4]),
-    .th2(analog_io[5])
-	/*,
+    .th2(analog_io[5]),
+	//digital i/o
     .div2(clkdiv2_I[0]),
     .cclk(cclk_I[0]),
     .lo(cos_out[0]),
     .fb1(fb1_I[0]),
     .high_buf(comp_high_I[0]),
     .phi1b_dig(phi1b_dig_I[0])]
-	*/
+
 );
+*/
 
 digital_unison #(
     .NUM_CORES(8)
