@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1663910114
+timestamp 1663956652
 << metal1 >>
 rect 406162 36972 406274 36978
 rect 406162 36872 406168 36972
@@ -170,114 +170,114 @@ timestamp 1663891137
 transform 1 0 26 0 1 -162
 box -26 -328 50758 37140
 << labels >>
-flabel metal2 5078 35378 5134 36978 1 FreeSans 1600 0 0 0 fb1[0]
-port 1 n default input
-flabel metal2 55862 35378 55918 36978 1 FreeSans 1600 0 0 0 fb1[1]
+flabel metal2 5078 36978 5134 36978 5 FreeSans 1600 0 0 0 fb1[0]
+port 1 s default input
+flabel metal2 55862 36978 55918 36978 1 FreeSans 1600 0 0 0 fb1[1]
 port 2 n default input
-flabel metal2 106646 35378 106702 36978 1 FreeSans 1600 0 0 0 fb1[2]
+flabel metal2 106646 36978 106702 36978 1 FreeSans 1600 0 0 0 fb1[2]
 port 3 n default input
-flabel metal2 157430 35378 157486 36978 1 FreeSans 1600 0 0 0 fb1[3]
+flabel metal2 157430 36978 157486 36978 1 FreeSans 1600 0 0 0 fb1[3]
 port 4 n default input
-flabel metal2 208214 35378 208270 36978 1 FreeSans 1600 0 0 0 fb1[4]
+flabel metal2 208214 36978 208270 36978 1 FreeSans 1600 0 0 0 fb1[4]
 port 5 n default input
-flabel metal2 258998 35378 259054 36978 1 FreeSans 1600 0 0 0 fb1[5]
+flabel metal2 258998 36978 259054 36978 1 FreeSans 1600 0 0 0 fb1[5]
 port 6 n default input
-flabel metal2 309782 35378 309838 36978 1 FreeSans 1600 0 0 0 fb1[6]
+flabel metal2 309782 36978 309838 36978 1 FreeSans 1600 0 0 0 fb1[6]
 port 7 n default input
-flabel metal2 360566 35378 360622 36978 1 FreeSans 1600 0 0 0 fb1[7]
+flabel metal2 360566 36978 360622 36978 1 FreeSans 1600 0 0 0 fb1[7]
 port 8 n default input
-flabel metal2 13542 35378 13598 36978 1 FreeSans 1600 0 0 0 cclk[0]
+flabel metal2 13542 36978 13598 36978 1 FreeSans 1600 0 0 0 cclk[0]
 port 9 n default input
-flabel metal2 64326 35378 64382 36978 1 FreeSans 1600 0 0 0 cclk[1]
+flabel metal2 64326 36978 64382 36978 1 FreeSans 1600 0 0 0 cclk[1]
 port 10 n default input
-flabel metal2 115110 35378 115166 36978 1 FreeSans 1600 0 0 0 cclk[2]
+flabel metal2 115110 36978 115166 36978 1 FreeSans 1600 0 0 0 cclk[2]
 port 11 n default input
-flabel metal2 165894 35378 165950 36978 1 FreeSans 1600 0 0 0 cclk[3]
+flabel metal2 165894 36978 165950 36978 1 FreeSans 1600 0 0 0 cclk[3]
 port 12 n default input
-flabel metal2 216678 35378 216734 36978 1 FreeSans 1600 0 0 0 cclk[4]
+flabel metal2 216678 36978 216734 36978 1 FreeSans 1600 0 0 0 cclk[4]
 port 13 n default input
-flabel metal2 267462 35378 267518 36978 1 FreeSans 1600 0 0 0 cclk[5]
+flabel metal2 267462 36978 267518 36978 1 FreeSans 1600 0 0 0 cclk[5]
 port 14 n default input
-flabel metal2 318246 35378 318302 36978 1 FreeSans 1600 0 0 0 cclk[6]
+flabel metal2 318246 36978 318302 36978 1 FreeSans 1600 0 0 0 cclk[6]
 port 15 n default input
-flabel metal2 369030 35378 369086 36978 1 FreeSans 1600 0 0 0 cclk[7]
+flabel metal2 369030 36978 369086 36978 1 FreeSans 1600 0 0 0 cclk[7]
 port 16 n default input
-flabel metal2 22006 35378 22062 36978 1 FreeSans 1600 0 0 0 div2[0]
+flabel metal2 22006 36978 22062 36978 1 FreeSans 1600 0 0 0 div2[0]
 port 17 n default input
-flabel metal2 72790 35378 72846 36978 1 FreeSans 1600 0 0 0 div2[1]
+flabel metal2 72790 36978 72846 36978 1 FreeSans 1600 0 0 0 div2[1]
 port 18 n default input
-flabel metal2 123574 35378 123630 36978 1 FreeSans 1600 0 0 0 div2[2]
+flabel metal2 123574 36978 123630 36978 1 FreeSans 1600 0 0 0 div2[2]
 port 19 n default input
-flabel metal2 174358 35378 174414 36978 1 FreeSans 1600 0 0 0 div2[3]
+flabel metal2 174358 36978 174414 36978 1 FreeSans 1600 0 0 0 div2[3]
 port 20 n default input
-flabel metal2 225142 35378 225198 36978 1 FreeSans 1600 0 0 0 div2[4]
+flabel metal2 225142 36978 225198 36978 1 FreeSans 1600 0 0 0 div2[4]
 port 21 n default input
-flabel metal2 275926 35378 275982 36978 1 FreeSans 1600 0 0 0 div2[5]
+flabel metal2 275926 36978 275982 36978 1 FreeSans 1600 0 0 0 div2[5]
 port 22 n default input
-flabel metal2 326710 35378 326766 36978 1 FreeSans 1600 0 0 0 div2[6]
+flabel metal2 326710 36978 326766 36978 1 FreeSans 1600 0 0 0 div2[6]
 port 23 n default input
-flabel metal2 377494 35378 377550 36978 1 FreeSans 1600 0 0 0 div2[7]
+flabel metal2 377494 36978 377550 36978 1 FreeSans 1600 0 0 0 div2[7]
 port 24 n default input
-flabel metal2 30470 35378 30526 36978 1 FreeSans 1600 0 0 0 high_buf[0]
+flabel metal2 30470 36978 30526 36978 1 FreeSans 1600 0 0 0 high_buf[0]
 port 25 n default output
-flabel metal2 81254 35378 81310 36978 1 FreeSans 1600 0 0 0 high_buf[1]
+flabel metal2 81254 36978 81310 36978 1 FreeSans 1600 0 0 0 high_buf[1]
 port 26 n default output
-flabel metal2 132038 35378 132094 36978 1 FreeSans 1600 0 0 0 high_buf[2]
+flabel metal2 132038 36978 132094 36978 1 FreeSans 1600 0 0 0 high_buf[2]
 port 27 n default output
-flabel metal2 182822 35378 182878 36978 1 FreeSans 1600 0 0 0 high_buf[3]
+flabel metal2 182822 36978 182878 36978 1 FreeSans 1600 0 0 0 high_buf[3]
 port 28 n default output
-flabel metal2 233606 35378 233662 36978 1 FreeSans 1600 0 0 0 high_buf[4]
+flabel metal2 233606 36978 233662 36978 1 FreeSans 1600 0 0 0 high_buf[4]
 port 29 n default output
-flabel metal2 284390 35378 284446 36978 1 FreeSans 1600 0 0 0 high_buf[5]
+flabel metal2 284390 36978 284446 36978 1 FreeSans 1600 0 0 0 high_buf[5]
 port 30 n default output
-flabel metal2 335174 35378 335230 36978 1 FreeSans 1600 0 0 0 high_buf[6]
+flabel metal2 335174 36978 335230 36978 1 FreeSans 1600 0 0 0 high_buf[6]
 port 31 n default output
-flabel metal2 385958 35378 386014 36978 1 FreeSans 1600 0 0 0 high_buf[7]
+flabel metal2 385958 36978 386014 36978 1 FreeSans 1600 0 0 0 high_buf[7]
 port 32 n default output
-flabel metal2 38934 35378 38990 36978 1 FreeSans 1600 0 0 0 phi1b_dig[0]
+flabel metal2 38934 36978 38990 36978 1 FreeSans 1600 0 0 0 phi1b_dig[0]
 port 33 n default output
-flabel metal2 89718 35378 89774 36978 1 FreeSans 1600 0 0 0 phi1b_dig[1]
+flabel metal2 89718 36978 89774 36978 1 FreeSans 1600 0 0 0 phi1b_dig[1]
 port 34 n default output
-flabel metal2 140502 35378 140558 36978 1 FreeSans 1600 0 0 0 phi1b_dig[2]
+flabel metal2 140502 36978 140558 36978 1 FreeSans 1600 0 0 0 phi1b_dig[2]
 port 35 n default output
-flabel metal2 191286 35378 191342 36978 1 FreeSans 1600 0 0 0 phi1b_dig[3]
+flabel metal2 191286 36978 191342 36978 1 FreeSans 1600 0 0 0 phi1b_dig[3]
 port 36 n default output
-flabel metal2 242070 35378 242126 36978 1 FreeSans 1600 0 0 0 phi1b_dig[4]
+flabel metal2 242070 36978 242126 36978 1 FreeSans 1600 0 0 0 phi1b_dig[4]
 port 37 n default output
-flabel metal2 292854 35378 292910 36978 1 FreeSans 1600 0 0 0 phi1b_dig[5]
+flabel metal2 292854 36978 292910 36978 1 FreeSans 1600 0 0 0 phi1b_dig[5]
 port 38 n default output
-flabel metal2 343638 35378 343694 36978 1 FreeSans 1600 0 0 0 phi1b_dig[6]
+flabel metal2 343638 36978 343694 36978 1 FreeSans 1600 0 0 0 phi1b_dig[6]
 port 39 n default output
-flabel metal2 394422 35378 394478 36978 1 FreeSans 1600 0 0 0 phi1b_dig[7]
+flabel metal2 394422 36978 394478 36978 1 FreeSans 1600 0 0 0 phi1b_dig[7]
 port 40 n default output
-flabel metal2 47398 35378 47454 36978 1 FreeSans 1600 0 0 0 lo[0]
+flabel metal2 47398 36978 47454 36978 1 FreeSans 1600 0 0 0 lo[0]
 port 41 n default input
-flabel metal2 98182 35378 98238 36978 1 FreeSans 1600 0 0 0 lo[1]
+flabel metal2 98182 36978 98238 36978 1 FreeSans 1600 0 0 0 lo[1]
 port 42 n default input
-flabel metal2 148966 35378 149022 36978 1 FreeSans 1600 0 0 0 lo[2]
+flabel metal2 148966 36978 149022 36978 1 FreeSans 1600 0 0 0 lo[2]
 port 43 n default input
-flabel metal2 199750 35378 199806 36978 1 FreeSans 1600 0 0 0 lo[3]
+flabel metal2 199750 36978 199806 36978 1 FreeSans 1600 0 0 0 lo[3]
 port 44 n default input
-flabel metal2 250534 35378 250590 36978 1 FreeSans 1600 0 0 0 lo[4]
+flabel metal2 250534 36978 250590 36978 1 FreeSans 1600 0 0 0 lo[4]
 port 45 n default input
-flabel metal2 301318 35378 301374 36978 1 FreeSans 1600 0 0 0 lo[5]
+flabel metal2 301318 36978 301374 36978 1 FreeSans 1600 0 0 0 lo[5]
 port 46 n default input
-flabel metal2 352102 35378 352158 36978 1 FreeSans 1600 0 0 0 lo[6]
+flabel metal2 352102 36978 352158 36978 1 FreeSans 1600 0 0 0 lo[6]
 port 47 n default input
-flabel metal2 402886 35378 402942 36978 1 FreeSans 1600 0 0 0 lo[7]
+flabel metal2 402886 36978 402942 36978 1 FreeSans 1600 0 0 0 lo[7]
 port 48 n default input
-flabel metal1 406268 36872 407704 36972 1 FreeSans 1600 0 0 0 vnb
+flabel metal1 407704 36872 407704 36972 1 FreeSans 1600 0 0 0 vnb
 port 49 n default bidirectional
-flabel metal1 406569 32893 407704 32994 1 FreeSans 1600 0 0 0 vpb
+flabel metal1 407704 32893 407704 32994 1 FreeSans 1600 0 0 0 vpb
 port 50 n default bidirectional
-flabel metal1 407472 28900 407704 29000 1 FreeSans 1600 0 0 0 vccd1
+flabel metal1 407704 28900 407704 29000 1 FreeSans 1600 0 0 0 vccd1
 port 51 n power bidirectional
-flabel metal1 407172 24900 407704 25000 1 FreeSans 1600 0 0 0 th1
+flabel metal1 407704 24900 407704 25000 1 FreeSans 1600 0 0 0 th1
 port 52 n default bidirectional
-flabel metal1 406872 20900 407704 21000 1 FreeSans 1600 0 0 0 th2
+flabel metal1 407704 20900 407704 21000 1 FreeSans 1600 0 0 0 th2
 port 53 n default bidirectional
-flabel metal1 406572 16900 407704 17000 1 FreeSans 1600 0 0 0 vssd1
+flabel metal1 407704 16900 407704 17000 1 FreeSans 1600 0 0 0 vssd1
 port 54 n ground bidirectional
-flabel metal1 406272 12900 407700 13000 1 FreeSans 1600 0 0 0 vdda1
+flabel metal1 407704 12900 407704 13000 1 FreeSans 1600 0 0 0 vdda1
 port 55 n power bidirectional
 << end >>
