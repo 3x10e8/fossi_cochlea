@@ -54,10 +54,28 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	digital_unison_instance_5 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_0 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_0 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_I_0 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_0 vdda1 vssa1 vdda1 vssd1, \
 	analog_core_Q_1 vccd1 vssd1 vccd1 vssd1, \
 	analog_core_Q_1 vdda1 vssa1 vdda1 vssd1, \
 	analog_core_I_1 vccd1 vssd1 vccd1 vssd1, \
-	analog_core_I_1 vdda1 vssa1 vdda1 vssd1"
+	analog_core_I_1 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_Q_2 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_2 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_I_2 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_2 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_Q_3 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_3 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_I_3 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_3 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_Q_4 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_4 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_I_4 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_4 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_Q_5 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_Q_5 vdda1 vssa1 vdda1 vssd1, \
+	analog_core_I_5 vccd1 vssd1 vccd1 vssd1, \
+	analog_core_I_5 vdda1 vssa1 vdda1 vssd1"
 # ADC example: https://open-source-silicon.slack.com/archives/C0161A4A59V/p1659367271479269?thread_ts=1659363344.518659&cid=C0161A4A59V
 
 set COMMENTED_OUT {
